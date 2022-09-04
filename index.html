@@ -15,7 +15,6 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
-
 </head>
 
 <body>
@@ -38,38 +37,48 @@
     <script>
         //var map = L.map('map').setView([8.9806, 38.7578], 13);
 
-
         var cities = L.layerGroup();
 
-        var mAddisAbaba = L.marker([9.0272, 38.7369]).bindPopup('Addis Ababa').addTo(cities);
-        var mNazret = L.marker([8.55, 39.27]).bindPopup('Nazret').addTo(cities);
-        var mGonder = L.marker([12.6, 37.4667]).bindPopup('Gonder').addTo(cities);
-        var mMekele = L.marker([13.4969, 39.4769]).bindPopup('Mekele').addTo(cities);
-        var mAwasa = L.marker([7.05, 38.4667]).bindPopup('Awasa').addTo(cities);
-        var mDireDawa = L.marker([9.5833, 41.8667]).bindPopup('Dire Dawa').addTo(cities);
-        var mBahirDar = L.marker([11.585, 37.39]).bindPopup('Bahir Dar').addTo(cities);
-        var mHarar = L.marker([9.32, 42.15]).bindPopup('Harar').addTo(cities);
-        var mJijiga = L.marker([9.35, 42.8]).bindPopup('Jijiga').addTo(cities);
-        var mAsosa = L.marker([10.067, 34.5333]).bindPopup('Asosa').addTo(cities);
-        var mGambela = L.marker([8.25, 34.5833]).bindPopup('Gambela').addTo(cities);
-        var mSemera = L.marker([11.7956, 41.0086]).bindPopup('Semera').addTo(cities);
+        // Icon for Cities
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // iconSize: [25, 41],
+            //shadowSize: [41, 41]
+        });
+
+        var mAddisAbaba = L.marker([9.0272, 38.7369], { icon: blueIcon }).bindPopup('Addis Ababa').addTo(cities);
+        var mNazret = L.marker([8.55, 39.27], { icon: blueIcon }).bindPopup('Nazret').addTo(cities);
+        var mGonder = L.marker([12.6, 37.4667], { icon: blueIcon }).bindPopup('Gonder').addTo(cities);
+        var mMekele = L.marker([13.4969, 39.4769], { icon: blueIcon }).bindPopup('Mekele').addTo(cities);
+        var mAwasa = L.marker([7.05, 38.4667], { icon: blueIcon }).bindPopup('Awasa').addTo(cities);
+        var mDireDawa = L.marker([9.5833, 41.8667], { icon: blueIcon }).bindPopup('Dire Dawa').addTo(cities);
+        var mBahirDar = L.marker([11.585, 37.39], { icon: blueIcon }).bindPopup('Bahir Dar').addTo(cities);
+        var mHarar = L.marker([9.32, 42.15], { icon: blueIcon }).bindPopup('Harar').addTo(cities);
+        var mJijiga = L.marker([9.35, 42.8], { icon: blueIcon }).bindPopup('Jijiga').addTo(cities);
+        var mAsosa = L.marker([10.067, 34.5333], { icon: blueIcon }).bindPopup('Asosa').addTo(cities);
+        var mGambela = L.marker([8.25, 34.5833], { icon: blueIcon }).bindPopup('Gambela').addTo(cities);
+        var mSemera = L.marker([11.7956, 41.0086], { icon: blueIcon }).bindPopup('Semera').addTo(cities);
 
         // American Spaces
         var amSpaces = L.layerGroup();
 
         // Icon for AmSpaces
         var redIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
             //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
             popupAnchor: [1, -34],
             //shadowSize: [41, 41]
         });
 
-        var mBahirDarAC = L.marker([11.59363418, 37.37839321], { icon: redIcon }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mBahirDarAC = L.marker([11.593571, 37.379195], { icon: redIcon }).bindPopup('Bahir Dar AC').addTo(amSpaces);
         var mDireDawaAC = L.marker([9.583438, 41.856938], { icon: redIcon }).bindPopup('Dire Dawa AC').addTo(amSpaces);
-        var mJimmaAC = L.marker([7.676687, 36.835938], { icon: redIcon }).bindPopup('Jimma AC').addTo(amSpaces);
+        var mJimmaAC = L.marker([7.67724, 36.835999], { icon: redIcon }).bindPopup('Jimma AC').addTo(amSpaces);
         var mMekeleAC = L.marker([13.48392, 39.45552], { icon: redIcon }).bindPopup('Mekele AC').addTo(amSpaces);
         //var mCJCRAC = L.marker([9.03014, 38.7628805], {icon:redIcon} ).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.marker([9.05821, 38.7635], { icon: redIcon }).bindPopup("Satchmo").addTo(amSpaces)
@@ -79,10 +88,10 @@
 
         // Icon for Ref
         var greenIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
             //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
             popupAnchor: [1, -34],
             //shadowSize: [41, 41]
         });
