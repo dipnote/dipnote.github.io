@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+
+</head>
+
+<body>
+    <!-- div should be after js call and above script code below -->
+    <div id="map"></div>
+
+    <!-- css -->
+    <style>
+        /* define height of map container */
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+
+    <!-- js code  -->
+    <script>
+        //var map = L.map('map').setView([8.9806, 38.7578], 13);
+        // change
+
+
+        var cities = L.layerGroup();
+
+        var mAddisAbaba = L.marker([9.0272, 38.7369]).bindPopup('Addis Ababa').addTo(cities);
+        var mNazret = L.marker([8.55, 39.27]).bindPopup('Nazret').addTo(cities);
+        var mGonder = L.marker([12.6, 37.4667]).bindPopup('Gonder').addTo(cities);
+        var mMekele = L.marker([13.4969, 39.4769]).bindPopup('Mekele').addTo(cities);
+        var mAwasa = L.marker([7.05, 38.4667]).bindPopup('Awasa').addTo(cities);
+        var mDireDawa = L.marker([9.5833, 41.8667]).bindPopup('Dire Dawa').addTo(cities);
+        var mBahirDar = L.marker([11.585, 37.39]).bindPopup('Bahir Dar').addTo(cities);
+        var mHarar = L.marker([9.32, 42.15]).bindPopup('Harar').addTo(cities);
+        var mJijiga = L.marker([9.35, 42.8]).bindPopup('Jijiga').addTo(cities);
+        var mAsosa = L.marker([10.067, 34.5333]).bindPopup('Asosa').addTo(cities);
+        var mGambela = L.marker([8.25, 34.5833]).bindPopup('Gambela').addTo(cities);
+        var mSemera = L.marker([11.7956, 41.0086]).bindPopup('Semera').addTo(cities);
+
+        // American Spaces
+        var amSpaces = L.layerGroup();
+
+        var mBahirDarAC = L.marker([11.59363418, 37.37839321]).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mDireDawaAC = L.marker([9.583438, 41.856938]).bindPopup('Dire Dawa AC').addTo(amSpaces);
+        var mJimmaAC = L.marker([7.676687, 36.835938]).bindPopup('Jimma AC').addTo(amSpaces);
+        var mMekeleAC = L.marker([13.48392, 39.45552]).bindPopup('Mekele AC').addTo(amSpaces);
+        //var mCJCRAC = L.marker([9.03014, 38.7628805]).bindPopup('CJCRAC').addTo(amSpaces);
+        var mSatchmo = L.marker([9.05821, 38.7635]).bindPopup("Satchmo").addTo(amSpaces)
+
+
+        // 225km security radius
+        var radCircle = L.layerGroup();
+        var rad225 = L.circle([8.9806, 38.7578], { radius: 225000 }).addTo(radCircle);
+
+
+        var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+        var mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+        var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
+
+        var map = L.map('map', {
+            center: [8.9806, 38.7578],
+            zoom: 7,
+            layers: [osm, cities]
+        });
+
+        var baseLayers = {
+            'OpenStreetMap': osm,
+            'Streets': streets
+        };
+
+        var overlays = {
+            'Major Cities': cities,
+            'American Spaces': amSpaces,
+            '225km Radius': radCircle
+        };
+
+        var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+        var crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
+        var rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
+
+        var parks = L.layerGroup([crownHill, rubyHill]);
+
+        var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+        layerControl.addBaseLayer(satellite, 'Satellite');
+        layerControl.addOverlay(parks, 'Parks');
+
+        // LAT LONG POPUP
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("You clicked the map at " + e.latlng.toString())
+                .openOn(map);
+        }
+
+        map.on('click', onMapClick);
+
+
+    </script>
+</body>
+
+</html>
