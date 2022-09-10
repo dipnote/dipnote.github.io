@@ -11,7 +11,6 @@
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin="" />
 
-
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
@@ -37,6 +36,8 @@
     <!-- js code  -->
     <script>
         //var map = L.map('map').setView([8.9806, 38.7578], 13);
+
+
 
 
         // American Spaces
@@ -906,9 +907,6 @@
         };
 
         var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
-        // var crownHill = L.marker([39.75, -105.09]).bindPopup('This is Crown Hill Park.');
-        // var rubyHill = L.marker([39.68, -105.00]).bindPopup('This is Ruby Hill Park.');
-        // var parks = L.layerGroup([crownHill, rubyHill]);
 
         var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
         layerControl.addBaseLayer(satellite, 'Satellite');
