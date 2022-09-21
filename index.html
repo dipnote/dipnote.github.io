@@ -889,7 +889,7 @@
 
 
         // Icon for Ref
-        var refAirport = L.layerGroup();
+        //    var refAirport = L.layerGroup();
 
         // var blackIcon = new L.Icon({
         //     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
@@ -953,6 +953,155 @@
 
 
 
+        var refUSAID = L.layerGroup();
+        // Icon for USAID
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // iconSize: [25, 41],
+            //shadowSize: [41, 41]
+        });
+
+
+        var ET010105 = L.marker([14.04024481, 37.90181623], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010201 = L.marker([14.30964153, 38.5741679], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010203 = L.marker([13.94696954, 39.16315699], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010205 = L.marker([14.15617299, 38.7637977], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010206 = L.marker([14.06587618, 38.57241603], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010207 = L.marker([13.82442426, 38.62074066], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010208 = L.marker([13.64118639, 38.77360249], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010209 = L.marker([13.91618571, 38.79308998], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010210 = L.marker([13.36399203, 38.88620317], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010211 = L.marker([13.63333266, 38.99349533], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010213 = L.marker([14.1217438, 38.72738438], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010214 = L.marker([14.37433371, 38.76572367], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010215 = L.marker([14.40126287, 38.94029127], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010216 = L.marker([14.50170533, 39.11135477], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010217 = L.marker([14.16720674, 39.1176197], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010218 = L.marker([13.91943961, 38.96113956], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010219 = L.marker([14.04878267, 39.23629872], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010220 = L.marker([14.27766481, 39.14941429], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010221 = L.marker([13.76032345, 39.03548753], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010222 = L.marker([13.53591053, 39.00994808], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010301 = L.marker([14.41408884, 39.39970016], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010302 = L.marker([14.49115567, 39.67718695], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010303 = L.marker([14.26594979, 39.62771945], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010304 = L.marker([14.23093383, 39.42313471], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010305 = L.marker([14.00068439, 39.37159271], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010306 = L.marker([13.83885215, 39.52784463], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010307 = L.marker([13.9213714, 39.74949844], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010308 = L.marker([14.27487109, 39.46571793], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010309 = L.marker([13.78102357, 39.59098125], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010310 = L.marker([14.26912462, 39.28954907], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010312 = L.marker([13.97432987, 39.42993929], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010314 = L.marker([14.06698109, 39.64580982], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010316 = L.marker([13.67741501, 39.67749485], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010317 = L.marker([13.76626981, 39.30423788], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010401 = L.marker([13.00195235, 39.33227454], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010402 = L.marker([12.88255823, 39.34054682], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010403 = L.marker([12.75121461, 39.34606086], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010404 = L.marker([12.93386785, 39.50513586], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010405 = L.marker([12.75693449, 39.49092675], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010409 = L.marker([12.78510813, 39.54227476], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010601 = L.marker([13.38169276, 39.16499793], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010602 = L.marker([13.39249331, 39.35565564], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010603 = L.marker([13.17608956, 39.43598914], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010604 = L.marker([13.51879471, 39.15592247], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010605 = L.marker([13.64029446, 39.16953221], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010606 = L.marker([13.12557199, 39.18121865], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET010607 = L.marker([13.24433996, 39.5033466], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET010608 = L.marker([13.04670472, 39.71310531], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030205 = L.marker([11.85328227, 38.43453493], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030206 = L.marker([11.56394142, 38.56166584], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030207 = L.marker([11.29608245, 38.30261052], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030214 = L.marker([11.39652808, 38.46937606], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030301 = L.marker([12.1713756, 38.7174125], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030303 = L.marker([12.05601342, 39.32466386], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030306 = L.marker([11.84110138, 39.74288076], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030307 = L.marker([11.78315546, 39.51614466], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030309 = L.marker([11.82334635, 39.59416046], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030310 = L.marker([11.99175979, 38.93484134], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030311 = L.marker([11.47361258, 38.83901693], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030312 = L.marker([11.84143411, 39.27688333], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030313 = L.marker([11.82182348, 39.03814923], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030314 = L.marker([11.76345154, 38.74226525], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030315 = L.marker([11.66847268, 38.91258874], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030397 = L.marker([11.66434033, 39.65865464], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030398 = L.marker([12.02886263, 39.04643369], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030399 = L.marker([12.15088188, 39.63358131], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030409 = L.marker([11.0447859, 39.4743648], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET030801 = L.marker([12.69051422, 38.57570495], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030802 = L.marker([12.66622752, 38.88913156], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET030803 = L.marker([12.44576096, 38.54769528], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030804 = L.marker([12.33663721, 39.07041371], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET030805 = L.marker([13.07739886, 38.88136361], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030806 = L.marker([12.93597209, 38.49771014], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET030807 = L.marker([12.61841197, 39.03628405], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET030808 = L.marker([12.76988718, 39.17292028], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET040820 = L.marker([8.297879477, 39.50229938], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET040902 = L.marker([9.3270407, 41.07961795], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET040903 = L.marker([9.177194072, 41.12281905], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET040912 = L.marker([8.857616602, 40.98447386], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041001 = L.marker([9.468217425, 42.15325788], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041004 = L.marker([8.747614805, 42.57145212], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041006 = L.marker([9.350153617, 41.97730111], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041007 = L.marker([9.229679773, 41.87241312], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041008 = L.marker([9.384298346, 41.807265], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041011 = L.marker([9.215023566, 41.43699488], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041012 = L.marker([8.897365455, 41.32756709], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041013 = L.marker([9.063957224, 41.63894803], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041014 = L.marker([8.758437467, 42.20608687], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041015 = L.marker([9.600771497, 42.62361463], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET041016 = L.marker([9.029087035, 41.86603941], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041207 = L.marker([4.77289569, 38.17073358], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET041211 = L.marker([3.961723791, 38.21655124], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET041219 = L.marker([4.199026762, 37.77441599], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET041407 = L.marker([5.281936067, 39.63958933], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET041497 = L.marker([4.929416165, 39.54726463], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET041515 = L.marker([5.397582911, 38.12740053], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041518 = L.marker([5.412622693, 38.61846417], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041594 = L.marker([5.555357446, 38.05361356], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041702 = L.marker([7.338093518, 38.39791704], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041703 = L.marker([7.451029079, 38.65281652], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET041783 = L.marker([7.558168434, 38.79807534], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET050604 = L.marker([6.019599052, 43.70378681], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050605 = L.marker([5.362365365, 44.15156965], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050606 = L.marker([5.199299558, 44.65158205], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050607 = L.marker([5.210770313, 45.03672914], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050699 = L.marker([6.475327091, 42.69828761], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050701 = L.marker([7.492569932, 45.62374213], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050702 = L.marker([7.645054347, 46.65093372], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050703 = L.marker([6.994863532, 46.28990992], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050704 = L.marker([6.810841845, 45.5560148], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050788 = L.marker([7.256955521, 45.34819685], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050901 = L.marker([5.029273364, 40.90141221], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET050991 = L.marker([5.046565202, 40.1163294], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET051103 = L.marker([4.069297669, 39.6340819], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET051104 = L.marker([4.378115102, 39.7312741], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET060305 = L.marker([9.78697232, 34.70225825], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET060306 = L.marker([10.12879104, 35.11448509], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET070205 = L.marker([7.208876648, 38.0469898], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070207 = L.marker([7.339928758, 37.66252844], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070301 = L.marker([7.269262925, 37.4871555], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070303 = L.marker([7.253815324, 37.92723642], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070304 = L.marker([7.235722379, 37.74151579], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070305 = L.marker([7.235648126, 37.65568164], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070501 = L.marker([6.288670323, 38.25811332], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070503 = L.marker([6.04497901, 38.16442624], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070504 = L.marker([6.284237041, 38.39391274], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET070704 = L.marker([4.955256727, 36.50252762], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET070708 = L.marker([5.126552842, 35.99317675], { icon: blueIcon }).bindPopup("Nutrition").addTo(refUSAID);
+        var ET071205 = L.marker([5.573418114, 37.15991236], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET071303 = L.marker([5.305127288, 37.55148748], { icon: blueIcon }).bindPopup("Health").addTo(refUSAID);
+        var ET150201 = L.marker([9.571585042, 41.78341762], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET160010 = L.marker([6.919152266, 38.33805864], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET160032 = L.marker([6.938789647, 38.20901508], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+        var ET160033 = L.marker([6.831046272, 38.21451447], { icon: blueIcon }).bindPopup("Food").addTo(refUSAID);
+
+
 
         // 225km security radius
         var radCircle = L.layerGroup();
@@ -974,7 +1123,8 @@
         var map = L.map('map', {
             center: [8.9806, 38.7578],
             zoom: 7,
-            layers: [osm, cities]
+            layers: [osm, radCircle]
+            //layers: [osm, cities]
         });
 
         var baseLayers = {
@@ -984,7 +1134,7 @@
         };
 
         var overlays = {
-            'Major Cities': cities,
+            'USAID Sites': refUSAID,
             'American Spaces': amSpaces,
             '225km Radius': radCircle,
             'Refugees: Conflict': refConflict,
