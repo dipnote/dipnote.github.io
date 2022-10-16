@@ -34,13 +34,30 @@
     </style>
 
     <!-- js code  -->
+    <!-- TODO move to separate js code -->
+
+
+    <!-- health geoJSON data -->
+    <script src="./data/health_sites/heatlh_locations.js"> </script>
+
+
+
     <script>
+
+        const iconHealth = new L.Icon({
+            iconUrl: './img/icons8-hospital-64.png',
+            iconSize: [22, 30],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // shadowUrl: 'my-icon-shadow.png',
+            // shadowSize: [68, 95],
+            // shadowAnchor: [22, 94]
+        });
 
 
         // https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=ruVKjP8Ntl9CX5wxj38p
 
-
-        //var map = L.map('map').setView([8.9806, 38.7578], 13);
+        // var map = L.map('map').setView([8.9806, 38.7578], 13);
 
         // American Spaces
         var amSpaces = L.layerGroup();
@@ -72,7 +89,7 @@
             iconAnchor: [5, 18],
             popupAnchor: [1, -34],
             // iconSize: [25, 41],
-            //shadowSize: [41, 41]
+            // shadowSize: [41, 41]
         });
 
         var mAddisAbaba = L.marker([9.0272, 38.7369], { icon: blueIcon }).bindPopup('Addis Ababa').addTo(cities);
@@ -1168,7 +1185,8 @@
             'Refugees: Drought': refDrought,
             'Refugees: Flooding': refFlood,
             'Airports': refAirport,
-            'Amb Fund Cultural Pres': refAFCP
+            'Amb Fund Cultural Pres': refAFCP,
+            // 'Health Facilities': L.geoJSON(myGeoJson).addTo(map)
 
         };
 
@@ -1176,6 +1194,16 @@
 
         var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
         layerControl.addBaseLayer(satellite, 'Satellite');
+
+
+        // GEOJSON TEST
+        // geoJsonHealthLayer = 
+        L.geoJSON(geoJsonHealth, {
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, {icon: iconHealth})
+            }
+        }).addTo(map)
+        // Default to on and not a choosable layer
 
         // layerControl.addOverlay(parks, 'Parks');
 
@@ -1193,6 +1221,7 @@
 
 
     </script>
+
 </body>
 
 </html>
