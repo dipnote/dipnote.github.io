@@ -40,23 +40,26 @@
     <!-- health geoJSON data -->
     <script src="./data/health_sites/heatlh_locations.js"> </script>
 
-
-
     <script>
 
         const iconHealth = new L.Icon({
-            iconUrl: './img/icons8-hospital-64.png',
+            iconUrl: './img/health.svg',
             iconSize: [22, 30],
             iconAnchor: [5, 18],
             popupAnchor: [1, -34],
-            // shadowUrl: 'my-icon-shadow.png',
-            // shadowSize: [68, 95],
-            // shadowAnchor: [22, 94]
+
         });
 
 
-        // https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=ruVKjP8Ntl9CX5wxj38p
+        // Health Locations GeoJSON
+        let refHealth = L.layerGroup();
+        L.geoJSON(geoJsonHealth, {
+            pointToLayer: function (feature, latlng) {
+                return L.marker(latlng, { icon: iconHealth }).bindPopup(feature.properties.name)
+            }
+        }).addTo(refHealth);
 
+        // https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=ruVKjP8Ntl9CX5wxj38p
         // var map = L.map('map').setView([8.9806, 38.7578], 13);
 
         // American Spaces
@@ -77,8 +80,6 @@
         var mMekeleAC = L.marker([13.48392, 39.45552], { icon: greenIcon }).bindPopup('Mekele AC').addTo(amSpaces);
         //var mCJCRAC = L.marker([9.03014, 38.7628805], {icon:greenIcon} ).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.marker([9.05821, 38.7635], { icon: greenIcon }).bindPopup("Satchmo").addTo(amSpaces);
-
-
 
         var cities = L.layerGroup();
         // Icon for Cities
@@ -117,8 +118,6 @@
             popupAnchor: [1, -34],
             //shadowSize: [41, 41]
         });
-
-
 
         // CONFLICT GROUP RED
         var mKoraDawe = L.marker([9.5809, 42.4217], { icon: redIcon }).bindPopup("Kora Dawe").addTo(refConflict);
@@ -891,7 +890,6 @@
 
 
         // Airports Black
-
         // custom icons for aiports
 
         var refAirport = L.layerGroup();
@@ -969,8 +967,6 @@
         const mHASK = L.marker([5.6923, 38.9764], { icon: airportIcon }).bindPopup("Shakiso Airport").addTo(refAirport);
         const mHAMJ = L.marker([5.833000183105469, 35.53300094604492], { icon: airportIcon }).bindPopup("Tume Airport").addTo(refAirport);
         const mHAMR = L.marker([5.8646, 35.7485], { icon: airportIcon }).bindPopup("Mui River Airport").addTo(refAirport);
-
-
 
         var refUSAID = L.layerGroup();
         // Icon for USAID
@@ -1151,7 +1147,6 @@
         var radCircle = L.layerGroup();
         var rad225 = L.circle([8.9806, 38.7578], { radius: 225000 }).addTo(radCircle);
 
-
         const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
         const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
         const cartoUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
@@ -1186,26 +1181,13 @@
             'Refugees: Flooding': refFlood,
             'Airports': refAirport,
             'Amb Fund Cultural Pres': refAFCP,
-            // 'Health Facilities': L.geoJSON(myGeoJson).addTo(map)
-
+            'Health Facilities': refHealth,
         };
 
         var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
 
         var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
         layerControl.addBaseLayer(satellite, 'Satellite');
-
-
-        // GEOJSON TEST
-        // geoJsonHealthLayer = 
-        L.geoJSON(geoJsonHealth, {
-            pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, {icon: iconHealth})
-            }
-        }).addTo(map)
-        // Default to on and not a choosable layer
-
-        // layerControl.addOverlay(parks, 'Parks');
 
         // LAT LONG POPUP
         var popup = L.popup();
