@@ -1,0 +1,12 @@
+<!-- https://www.aleksandrhovhannisyan.com/blog/svg-tutorial-how-to-code-svg-icons-by-hand/ -->
+
+<svg version="1.1" viewBox="0.0 0.0 100.0 100.0" fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<clipPath id="p.0">
+<path d="m0 0l100.0 0l0 100.0l-100.0 0l0 -100.0z" clip-rule="nonzero"/>
+</clipPath>
+<g clip-path="url(#p.0)">
+<path fill="#000000" fill-opacity="0.0" d="m0 0l100.0 0l0 100.0l-100.0 0z" fill-rule="evenodd"/>
+<path fill="#ff0000" d="m-0.0490916 50.123055l0 0c0 -27.61354 22.407097 -49.998737 50.047653 -49.998737l0 0c13.27346 0 26.003277 5.2677093 35.389034 14.644292c9.385757 9.376583 14.658615 22.093956 14.658615 35.354446l0 0c0 27.61354 -22.407097 49.99874 -50.04765 49.99874l0 0c-27.640556 0 -50.047653 -22.3852 -50.047653 -49.99874z" fill-rule="evenodd"/>
+</g>
+<path fill="#ffffff" d="m16.831535 39.518536l22.562511 0l0 -22.530096l21.209038 0l0 22.530096l22.562511 0l0 21.209042l-22.562511 0l0 22.530098l-21.209038 0l0 -22.530098l-22.562511 0z" fill-rule="evenodd"/>
+</svg>
