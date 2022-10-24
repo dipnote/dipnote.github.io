@@ -39,6 +39,7 @@
 
     <!-- health geoJSON data -->
     <script src="./data/health_sites/heatlh_locations.js"> </script>
+    <script src="./data/gadm41_ETH_3.json"> </script>
 
     <script>
 
@@ -52,10 +53,18 @@
 
 
         // Health Locations GeoJSON
+        // let refHealth = L.layerGroup();
+        // L.geoJSON(geoJsonHealth, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.marker(latlng, { icon: iconHealth }).bindPopup(feature.properties.name)
+        //     }
+        // }).addTo(refHealth);
+
+        // Health Locations GeoJSON
         let refHealth = L.layerGroup();
         L.geoJSON(geoJsonHealth, {
             pointToLayer: function (feature, latlng) {
-                return L.marker(latlng, { icon: iconHealth }).bindPopup(feature.properties.name)
+                return L.circleMarker(latlng, { radius: 10,color:'red', weight: 2, fill: false }).bindPopup(feature.properties.name)
             }
         }).addTo(refHealth);
 
@@ -64,22 +73,22 @@
 
         // American Spaces
         var amSpaces = L.layerGroup();
-        // Icon for AmSpaces
-        var greenIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
-            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [12, 20],
-            iconAnchor: [5, 18],
-            popupAnchor: [1, -34],
-            //shadowSize: [41, 41]
-        });
 
-        var mBahirDarAC = L.marker([11.593571, 37.379195], { icon: greenIcon }).bindPopup('Bahir Dar AC').addTo(amSpaces);
-        var mDireDawaAC = L.marker([9.583438, 41.856938], { icon: greenIcon }).bindPopup('Dire Dawa AC').addTo(amSpaces);
-        var mJimmaAC = L.marker([7.67724, 36.835999], { icon: greenIcon }).bindPopup('Jimma AC').addTo(amSpaces);
-        var mMekeleAC = L.marker([13.48392, 39.45552], { icon: greenIcon }).bindPopup('Mekele AC').addTo(amSpaces);
-        //var mCJCRAC = L.marker([9.03014, 38.7628805], {icon:greenIcon} ).bindPopup('CJCRAC').addTo(amSpaces);
-        var mSatchmo = L.marker([9.05821, 38.7635], { icon: greenIcon }).bindPopup("Satchmo").addTo(amSpaces);
+        // var greenIcon = new L.Icon({
+        //     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+        //     //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        //     iconSize: [12, 20],
+        //     iconAnchor: [5, 18],
+        //     popupAnchor: [1, -34],
+        //     //shadowSize: [41, 41]
+        // });
+
+        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Jimma AC').addTo(amSpaces);
+        var mMekeleAC = L.circleMarker([13.48392, 39.45552], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Mekele AC').addTo(amSpaces);
+        //var mCJCRAC = L.circleMarker([9.03014, 38.7628805], {radius: 10,color:'green', weight: 3, fill: false ).bindPopup('CJCRAC').addTo(amSpaces);
+        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup("Satchmo").addTo(amSpaces);
 
         var cities = L.layerGroup();
         // Icon for Cities
@@ -1162,7 +1171,8 @@
         var map = L.map('map', {
             center: [8.9806, 38.7578],
             zoom: 7,
-            layers: [osm, radCircle]
+            layers: [osm]
+            // layers: [osm, radCircle]
             //layers: [osm, cities]
         });
 
@@ -1189,17 +1199,26 @@
         var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
         layerControl.addBaseLayer(satellite, 'Satellite');
 
+        L.geoJSON(etjson, {
+            style: function (feature) {
+                return { color: "#09a0aa00" };  // removes overlay borders
+                //return { color: feature.properties.color };
+            }
+        }).bindPopup(function (layer) {
+            return "Region: " + layer.feature.properties.NAME_1 + "<br\> " + "Zone: " + layer.feature.properties.NAME_2 + "<br\> " + "Woreda: " + layer.feature.properties.NAME_3;
+        }).addTo(map);
+
         // LAT LONG POPUP
-        var popup = L.popup();
+        // var popup = L.popup();
 
-        function onMapClick(e) {
-            popup
-                .setLatLng(e.latlng)
-                .setContent(e.latlng.toString())
-                .openOn(map);
-        }
+        // function onMapClick(e) {
+        //     popup
+        //         .setLatLng(e.latlng)
+        //         .setContent(e.latlng.toString())
+        //         .openOn(map);
+        // }
 
-        map.on('click', onMapClick);
+        // map.on('click', onMapClick);
 
 
     </script>
