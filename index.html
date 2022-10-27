@@ -38,7 +38,8 @@
 
 
     <!-- health geoJSON data -->
-    <script src="./data/health_sites/heatlh_locations.js"> </script>
+    <script src="./data/health_sites/pepfar_cdc_usaid_sites.js"> </script>
+    <script src="./data/health_sites/health_locations.js"> </script>
     <script src="./data/gadm41_ETH_3.json"> </script>
 
     <script>
@@ -61,10 +62,18 @@
         // }).addTo(refHealth);
 
         // Health Locations GeoJSON
+        // let refHealth = L.layerGroup();
+        // L.geoJSON(geoJsonHealth, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.circleMarker(latlng, { radius: 10,color:'red', weight: 2, fill: false }).bindPopup(feature.properties.name)
+        //     }
+        // }).addTo(refHealth);
+
+        // Health Locations GeoJSON
         let refHealth = L.layerGroup();
-        L.geoJSON(geoJsonHealth, {
+        L.geoJSON(geoJSON_pepfar_data, {
             pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10,color:'red', weight: 2, fill: false }).bindPopup(feature.properties.name)
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.agency_funding  + '</br> PEPFAR Support: ' + feature.properties.PEPFAR_support )
             }
         }).addTo(refHealth);
 
@@ -83,12 +92,12 @@
         //     //shadowSize: [41, 41]
         // });
 
-        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Bahir Dar AC').addTo(amSpaces);
-        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Dire Dawa AC').addTo(amSpaces);
-        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Jimma AC').addTo(amSpaces);
-        var mMekeleAC = L.circleMarker([13.48392, 39.45552], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup('Mekele AC').addTo(amSpaces);
+        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10, color: 'green', weight: 3, fill: false }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'green', weight: 3, fill: false }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'green', weight: 3, fill: false }).bindPopup('Jimma AC').addTo(amSpaces);
+        var mMekeleAC = L.circleMarker([13.48392, 39.45552], { radius: 10, color: 'green', weight: 3, fill: false }).bindPopup('Mekele AC').addTo(amSpaces);
         //var mCJCRAC = L.circleMarker([9.03014, 38.7628805], {radius: 10,color:'green', weight: 3, fill: false ).bindPopup('CJCRAC').addTo(amSpaces);
-        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10,color:'green', weight: 3, fill: false }).bindPopup("Satchmo").addTo(amSpaces);
+        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: false }).bindPopup("Satchmo").addTo(amSpaces);
 
         var cities = L.layerGroup();
         // Icon for Cities
