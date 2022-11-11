@@ -15,7 +15,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -33,7 +33,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -51,7 +51,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -69,7 +69,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -87,7 +87,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -105,7 +105,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 13",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -123,7 +123,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 1",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -141,7 +141,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 13",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -159,7 +159,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -177,7 +177,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 11",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -195,7 +195,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -213,7 +213,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 1",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -231,7 +231,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 13",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -249,7 +249,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 9",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -267,7 +267,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -285,7 +285,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kolfe Keraniyo Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -303,7 +303,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 10",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -321,7 +321,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -339,7 +339,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -357,7 +357,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -393,7 +393,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 8",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -411,7 +411,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -429,7 +429,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 9",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -447,7 +447,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -465,7 +465,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -483,7 +483,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 9",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -501,7 +501,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -519,7 +519,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -537,7 +537,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -555,7 +555,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -573,7 +573,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -591,7 +591,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -609,7 +609,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -627,7 +627,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -645,7 +645,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 10",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -663,7 +663,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 7",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -681,7 +681,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -699,7 +699,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 3",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -717,7 +717,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -735,7 +735,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 5",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -753,7 +753,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 11",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -771,7 +771,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -789,7 +789,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -807,7 +807,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -825,7 +825,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -843,7 +843,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 12",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -861,7 +861,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 1",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -879,7 +879,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 7",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -897,7 +897,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 6",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -915,7 +915,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -933,7 +933,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 11",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -951,7 +951,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 7",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -969,7 +969,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -987,7 +987,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 6",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1005,7 +1005,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1023,7 +1023,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1041,7 +1041,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 5",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1059,7 +1059,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 5",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1095,7 +1095,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 5",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1113,7 +1113,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 10",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1131,7 +1131,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1149,7 +1149,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1167,7 +1167,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1185,7 +1185,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1203,7 +1203,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1221,7 +1221,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1239,7 +1239,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 1",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1257,7 +1257,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1275,7 +1275,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -1293,7 +1293,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -1311,7 +1311,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 6",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1329,7 +1329,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gulele Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1347,7 +1347,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 9",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1365,7 +1365,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1383,7 +1383,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1401,7 +1401,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1419,7 +1419,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nefas Silk-Lafto Woreda 8",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1437,7 +1437,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 6",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1455,7 +1455,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 12",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1473,7 +1473,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1491,7 +1491,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -1509,7 +1509,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 7",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1527,7 +1527,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 2",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1545,7 +1545,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1563,7 +1563,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 5",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1581,7 +1581,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kirkos Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1599,7 +1599,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1617,7 +1617,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 4",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1635,7 +1635,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1653,7 +1653,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 2",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1671,7 +1671,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arada Woreda 7",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1689,7 +1689,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 4",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1707,7 +1707,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 7",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1725,7 +1725,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1743,7 +1743,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lideta Woreda 3",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1761,7 +1761,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1779,7 +1779,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Ketema Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1815,7 +1815,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 12",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1833,7 +1833,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1851,7 +1851,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1887,7 +1887,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1905,7 +1905,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 4",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1923,7 +1923,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 1",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1941,7 +1941,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 3",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1959,7 +1959,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 4",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1977,7 +1977,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 1",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -1995,7 +1995,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2013,7 +2013,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 4",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2031,7 +2031,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 3",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2049,7 +2049,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 3",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2067,7 +2067,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 8",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2085,7 +2085,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 2",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2103,7 +2103,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 14",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2121,7 +2121,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki Kality Woreda 10",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2139,7 +2139,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 6",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2157,7 +2157,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 14",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2175,7 +2175,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -2193,7 +2193,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 14",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2211,7 +2211,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 10",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2229,7 +2229,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 13",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2247,7 +2247,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 9",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2265,7 +2265,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2283,7 +2283,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 9",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2301,7 +2301,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 11",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2319,7 +2319,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 8",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2337,7 +2337,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 11",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2355,7 +2355,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 15",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2373,7 +2373,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 12",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2391,7 +2391,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yeka Woreda 13",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2409,7 +2409,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bole Woreda 10",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2445,7 +2445,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Awash Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2463,7 +2463,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amibara",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2481,7 +2481,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amibara",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2499,7 +2499,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amibara",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2517,7 +2517,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gewane",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2535,7 +2535,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mile",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2553,7 +2553,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semera Logia Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2571,7 +2571,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semera Logia Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2589,7 +2589,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dubti Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2607,7 +2607,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asayita",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2625,7 +2625,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asayita Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2643,7 +2643,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Quara",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2661,7 +2661,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metema",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2679,7 +2679,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -2697,7 +2697,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metema",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2715,7 +2715,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metema",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2733,7 +2733,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guangua",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2751,7 +2751,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Genida Wuha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2769,7 +2769,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metema",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2787,7 +2787,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Armacho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2805,7 +2805,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Armacho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2823,7 +2823,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Armacho",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2841,7 +2841,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Zigem",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2859,7 +2859,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jawi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2877,7 +2877,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chagni Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2895,7 +2895,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chagni Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2913,7 +2913,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jawi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2931,7 +2931,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2949,7 +2949,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Banja Shekudad",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2967,7 +2967,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adagn Ager Chako",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -2985,7 +2985,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ayehu Guagusa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3003,7 +3003,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ayehu Guagusa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3021,7 +3021,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dengila Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3039,7 +3039,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dengila Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3057,7 +3057,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Alefa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3075,7 +3075,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fagita Lekoma",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3093,7 +3093,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ankasha Guagusa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3111,7 +3111,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wonberima",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3129,7 +3129,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ankasha Guagusa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3147,7 +3147,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enjibara Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3165,7 +3165,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enjibara Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3183,7 +3183,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wonberima",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3201,7 +3201,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semen Achefer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3219,7 +3219,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semen Achefer",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3237,7 +3237,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debub Achefer",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3255,7 +3255,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debub Achefer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3273,7 +3273,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debub Achefer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3291,7 +3291,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dengila",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3309,7 +3309,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guagusa Shikudad",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3327,7 +3327,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tegede",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3345,7 +3345,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bure (Amhara)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3363,7 +3363,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semen Achefer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3381,7 +3381,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semen Mecha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3399,7 +3399,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Takusa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3417,7 +3417,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Central Armacho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3435,7 +3435,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Takusa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3453,7 +3453,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bure Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3471,7 +3471,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bure Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3489,7 +3489,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aykel Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3507,7 +3507,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aykel Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3525,7 +3525,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bure Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3543,7 +3543,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Semen Mecha",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3561,7 +3561,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Marawi Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3579,7 +3579,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sekela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3597,7 +3597,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jabi Tehnan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3615,7 +3615,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sekela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3633,7 +3633,7 @@ let geoJSON_pepfar_data = {
      "woreda":"West Dembia",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3651,7 +3651,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Finote Selam Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3669,7 +3669,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dembecha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3687,7 +3687,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Finote Selam Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3705,7 +3705,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3723,7 +3723,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tach Armacho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3741,7 +3741,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tach Armacho",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3759,7 +3759,7 @@ let geoJSON_pepfar_data = {
      "woreda":"East Dembia",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3777,7 +3777,7 @@ let geoJSON_pepfar_data = {
      "woreda":"East Dembia",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3795,7 +3795,7 @@ let geoJSON_pepfar_data = {
      "woreda":"East Dembia",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3813,7 +3813,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dembecha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3831,7 +3831,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3849,7 +3849,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3867,7 +3867,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3885,7 +3885,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jabi Tehnan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3903,7 +3903,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3921,7 +3921,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tegede",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3939,7 +3939,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3957,7 +3957,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -3975,7 +3975,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -3993,7 +3993,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4011,7 +4011,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lay Armcho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4029,7 +4029,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4047,7 +4047,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4065,7 +4065,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Quarit",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4083,7 +4083,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4101,7 +4101,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Quarit",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4119,7 +4119,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4155,7 +4155,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Elias",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4173,7 +4173,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4191,7 +4191,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4209,7 +4209,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4227,7 +4227,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -4245,7 +4245,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4263,7 +4263,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4281,7 +4281,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4299,7 +4299,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Amhara)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4317,7 +4317,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yilma Na Densa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4335,7 +4335,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dembecha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4353,7 +4353,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adet Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4371,7 +4371,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4389,7 +4389,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yilma Na Densa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4407,7 +4407,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Amhara)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4425,7 +4425,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Machakel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4443,7 +4443,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gozamin",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4461,7 +4461,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yilma Na Densa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4479,7 +4479,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bahir Dar Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4497,7 +4497,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dega Damot",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4515,7 +4515,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dega Damot",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4533,7 +4533,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wegera",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4551,7 +4551,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wegera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4569,7 +4569,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gondar Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4587,7 +4587,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Amhara)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4605,7 +4605,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goncha Kolola",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4623,7 +4623,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woreta Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4641,7 +4641,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Markos Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4659,7 +4659,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Markos Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4677,7 +4677,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Baso Liben",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4695,7 +4695,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Markos Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4713,7 +4713,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -4731,7 +4731,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Markos Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4749,7 +4749,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bibugn",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4767,7 +4767,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bibugn",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4785,7 +4785,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Baso Liben",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4803,7 +4803,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Baso Liben",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4821,7 +4821,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Amhara)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4839,7 +4839,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dabat",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4857,7 +4857,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sinan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4875,7 +4875,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Zemen Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4893,7 +4893,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Addis Zemen Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4911,7 +4911,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Belsa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4929,7 +4929,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Baso Liben",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4947,7 +4947,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aneded",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4965,7 +4965,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adi Arkay",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -4983,7 +4983,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fogera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5001,7 +5001,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mota Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5019,7 +5019,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Este",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5037,7 +5037,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aneded",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5055,7 +5055,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sedie",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5073,7 +5073,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Libokemkem",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5091,7 +5091,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debark Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5109,7 +5109,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mota Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5127,7 +5127,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gozamin",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5145,7 +5145,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -5163,7 +5163,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debark Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5181,7 +5181,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Farta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5199,7 +5199,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debay Tilatgen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5217,7 +5217,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Awabel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5235,7 +5235,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Awabel",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5253,7 +5253,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Este",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5271,7 +5271,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Este",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5289,7 +5289,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hulet Ej Enese",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5307,7 +5307,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debay Tilatgen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5325,7 +5325,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kinfaze Begela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5343,7 +5343,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Tabor Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5361,7 +5361,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Tabor Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5379,7 +5379,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gazgibla",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5397,7 +5397,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Awabel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5415,7 +5415,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ebinat",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5433,7 +5433,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ebinat",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5451,7 +5451,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mekaneyesus Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5469,7 +5469,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adi Arkay",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5487,7 +5487,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mekaneyesus Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5505,7 +5505,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enarj Enawga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5523,7 +5523,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debay Tilatgen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5541,7 +5541,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Misrak Belesa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5559,7 +5559,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goncha Siso Enese",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5577,7 +5577,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Misrak Belesa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5595,7 +5595,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Janamora",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5613,7 +5613,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goncha Siso Enese",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5649,7 +5649,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dejen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5667,7 +5667,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dejen Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5685,7 +5685,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enemay",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5703,7 +5703,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Farta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5721,7 +5721,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dejen Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5739,7 +5739,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enemay",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5757,7 +5757,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enarj Enawga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5775,7 +5775,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ebinat",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5793,7 +5793,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bichena Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5811,7 +5811,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bichena Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5829,7 +5829,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dejen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5847,7 +5847,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guna Begemeder",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5865,7 +5865,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Simada",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5883,7 +5883,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enebse Sar Midir",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5901,7 +5901,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ebinat",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5919,7 +5919,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enebse Sar Midir",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5937,7 +5937,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mena Mektawa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5955,7 +5955,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lay Gayint",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5973,7 +5973,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sedi Muja",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -5991,7 +5991,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebel Berenta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6009,7 +6009,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebel Berenta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6027,7 +6027,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebel Berenta",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6045,7 +6045,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enebse Sar Midir",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6063,7 +6063,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tselemet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6081,7 +6081,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lay Gayint",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6099,7 +6099,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sedi Muja",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6117,7 +6117,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Beyeda",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6135,7 +6135,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nifas Mewcha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6153,7 +6153,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nifas Mewcha Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6171,7 +6171,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sehala",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6189,7 +6189,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lay Gayint",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6207,7 +6207,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tach Gayint",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6225,7 +6225,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tach Gayint",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6243,7 +6243,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bugna",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6261,7 +6261,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mehal Saynt",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6279,7 +6279,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dehena",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6297,7 +6297,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dehena",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6315,7 +6315,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Meket",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6333,7 +6333,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mekane Selam Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6351,7 +6351,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wegidi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6369,7 +6369,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sayint",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6387,7 +6387,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mekane Selam Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6405,7 +6405,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sayint",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6423,7 +6423,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ziquala",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6441,7 +6441,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ziquala",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6459,7 +6459,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bugna",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6477,7 +6477,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dehena",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6495,7 +6495,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merhabete",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6513,7 +6513,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ensaro",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6531,7 +6531,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dawnt",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6549,7 +6549,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wadla",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6567,7 +6567,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mida Woremo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6585,7 +6585,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dehena",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6603,7 +6603,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wadla",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6621,7 +6621,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sekota Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6639,7 +6639,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abergele",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6657,7 +6657,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lasta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6675,7 +6675,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Alem Ketema Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6693,7 +6693,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wadla",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6711,7 +6711,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kelela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6729,7 +6729,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gazgibla",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6747,7 +6747,7 @@ let geoJSON_pepfar_data = {
      "woreda":"SekotaTown",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6765,7 +6765,7 @@ let geoJSON_pepfar_data = {
      "woreda":"SekotaTown",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6783,7 +6783,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lalibela Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6801,7 +6801,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Legambo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6819,7 +6819,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lalibela Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6837,7 +6837,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mekdela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6855,7 +6855,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mida Woremo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6873,7 +6873,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mida Woremo",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6909,7 +6909,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gazo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6927,7 +6927,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Moretna Jiru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6945,7 +6945,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sekota Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6963,7 +6963,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kelela",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6981,7 +6981,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Legambo",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -6999,7 +6999,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Saya Debirna Wayu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7017,7 +7017,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Saya Debirna Wayu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7035,7 +7035,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lasta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7053,7 +7053,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sekota Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7071,7 +7071,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Delanta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7089,7 +7089,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tenta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7107,7 +7107,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tenta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7125,7 +7125,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tenta",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7143,7 +7143,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jama",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7161,7 +7161,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Legahida",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7179,7 +7179,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jama",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7197,7 +7197,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gidan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7215,7 +7215,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Angot",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7233,7 +7233,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Legambo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7251,7 +7251,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Minjar Shenkora",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7269,7 +7269,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hagere Mariam Kesem",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7287,7 +7287,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Minjar Shenkora",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7305,7 +7305,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gubalafto",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7323,7 +7323,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Minjar Shenkora",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7341,7 +7341,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Were Ilu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7359,7 +7359,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Were Ilu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7377,7 +7377,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Menz Keya Gebreal",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7395,7 +7395,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gubalafto",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7413,7 +7413,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Angolala Tera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7431,7 +7431,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Were Ilu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7449,7 +7449,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Raya Kobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7467,7 +7467,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7485,7 +7485,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Birhan Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7503,7 +7503,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -7521,7 +7521,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Birhan Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7539,7 +7539,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debre Birhan Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7557,7 +7557,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kutaber",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7575,7 +7575,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Menz Lalo Midir",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7593,7 +7593,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asagirt",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7629,7 +7629,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gishe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7647,7 +7647,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woldiya Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7665,7 +7665,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woldiya Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7683,7 +7683,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7701,7 +7701,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7719,7 +7719,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -7737,7 +7737,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambasel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7755,7 +7755,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7773,7 +7773,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7791,7 +7791,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7809,7 +7809,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kobo Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7827,7 +7827,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7845,7 +7845,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7863,7 +7863,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mojana Waderea",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7881,7 +7881,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kobo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7899,7 +7899,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Raya Kobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7917,7 +7917,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7935,7 +7935,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -7953,7 +7953,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7971,7 +7971,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -7989,7 +7989,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -8007,7 +8007,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8025,7 +8025,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8043,7 +8043,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8061,7 +8061,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8079,7 +8079,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8097,7 +8097,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8115,7 +8115,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Albuko",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8133,7 +8133,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kobo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8151,7 +8151,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Basona Werana",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8169,7 +8169,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mersa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8187,7 +8187,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Menz Mama Midir",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8205,7 +8205,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mehal Meda Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8223,7 +8223,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Raya Kobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8241,7 +8241,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dese Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8259,7 +8259,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hayik Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8277,7 +8277,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Berehet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8295,7 +8295,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8331,7 +8331,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kombolcha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8349,7 +8349,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kombolcha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8367,7 +8367,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -8385,7 +8385,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kombolcha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8403,7 +8403,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gubalafto",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8421,7 +8421,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Werebabu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8439,7 +8439,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tarma Ber",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8457,7 +8457,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kalu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8475,7 +8475,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Antsokiya Gemza",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8493,7 +8493,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ankober",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8511,7 +8511,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tarma Ber",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8529,7 +8529,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8547,7 +8547,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dawa Chefa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8565,7 +8565,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Efrata Gidim",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8583,7 +8583,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kemisie Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8601,7 +8601,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -8619,7 +8619,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Werebabu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8637,7 +8637,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kemisie Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8655,7 +8655,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kalu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8673,7 +8673,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"USAID"
      }
    },
@@ -8691,7 +8691,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shewa Robit Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8709,7 +8709,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shewa Robit Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8727,7 +8727,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shewa Robit Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8745,7 +8745,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Artuma Fursi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8763,7 +8763,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Artuma Fursi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8781,7 +8781,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ataye Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8799,7 +8799,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ataye Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8817,7 +8817,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jile Timuga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8835,7 +8835,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jile Timuga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8853,7 +8853,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bati Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8871,7 +8871,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kewet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8889,7 +8889,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Argoba Liyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8907,7 +8907,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bati Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8925,7 +8925,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dewe Harewa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8943,7 +8943,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bati",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8961,7 +8961,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mao Komo Sp. Woreda",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8979,7 +8979,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Assosa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -8997,7 +8997,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Assosa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9033,7 +9033,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bambasi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9051,7 +9051,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9069,7 +9069,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wenbera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9087,7 +9087,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kamashi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9105,7 +9105,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bulen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9123,7 +9123,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dangur",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9141,7 +9141,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dibate",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9159,7 +9159,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mandura",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9177,7 +9177,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Pawe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9195,7 +9195,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Pawe",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9213,7 +9213,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Pawe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9231,7 +9231,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9249,7 +9249,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9267,7 +9267,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9285,7 +9285,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9303,7 +9303,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9321,7 +9321,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9339,7 +9339,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9357,7 +9357,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9375,7 +9375,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9393,7 +9393,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9411,7 +9411,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9429,7 +9429,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9447,7 +9447,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire Dawa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9465,7 +9465,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wantawo",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9483,7 +9483,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wantawo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9501,7 +9501,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Makuey",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9519,7 +9519,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jikawo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9537,7 +9537,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jikawo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9555,7 +9555,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lare",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9573,7 +9573,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lare",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9591,7 +9591,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Etang",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9609,7 +9609,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9627,7 +9627,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9645,7 +9645,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9663,7 +9663,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9681,7 +9681,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Etang",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9699,7 +9699,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Etang",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9717,7 +9717,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Etang",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9735,7 +9735,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9753,7 +9753,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Etang",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9771,7 +9771,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gog",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9789,7 +9789,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gambella Zurya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9807,7 +9807,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9825,7 +9825,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9843,7 +9843,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gambella",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9861,7 +9861,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gambella",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9879,7 +9879,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abobo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9897,7 +9897,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gambella Zurya",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9915,7 +9915,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dima (Gambella)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9933,7 +9933,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gambella Zurya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9951,7 +9951,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mengesh",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9969,7 +9969,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mengesh",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -9987,7 +9987,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dima (Gambella)",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10005,7 +10005,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mengesh",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10023,7 +10023,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dima (Gambella)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10041,7 +10041,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Godere",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10059,7 +10059,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Godere",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10077,7 +10077,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10095,7 +10095,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10113,7 +10113,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10131,7 +10131,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10149,7 +10149,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10167,7 +10167,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10185,7 +10185,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10203,7 +10203,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harar",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10221,7 +10221,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Begi",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10239,7 +10239,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Anfilo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10257,7 +10257,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gidami",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10275,7 +10275,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Seyo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10293,7 +10293,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Horo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10311,7 +10311,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Denbi Dollo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10329,7 +10329,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Denbi Dollo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10347,7 +10347,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yemalogi Welel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10365,7 +10365,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawa Gelan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10383,7 +10383,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gawo Kebe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10401,7 +10401,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dale Wabera",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10419,7 +10419,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sadi Chanka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10437,7 +10437,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mendi Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10455,7 +10455,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bure (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10473,7 +10473,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mendi Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10491,7 +10491,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Babo Gambel",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10509,7 +10509,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dale Sadi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10527,7 +10527,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kiltu Kara",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10545,7 +10545,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nono Sele",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10599,7 +10599,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Huka (Halu)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10617,7 +10617,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lalo Kile",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10635,7 +10635,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ayira",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10653,7 +10653,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yubdo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10671,7 +10671,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metu Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10689,7 +10689,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guliso",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10707,7 +10707,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Darimu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10725,7 +10725,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nejo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10743,7 +10743,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Darimu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10761,7 +10761,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nejo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10779,7 +10779,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10815,7 +10815,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metu Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10833,7 +10833,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boji Dirmej",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10869,7 +10869,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Genji",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10887,7 +10887,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bilo Nopha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10923,7 +10923,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Alge Sachi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10941,7 +10941,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lalo Asabi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10959,7 +10959,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bicho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10977,7 +10977,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Homa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -10995,7 +10995,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hurumu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11013,7 +11013,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nole Kaba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11031,7 +11031,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yayu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11049,7 +11049,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Doreni",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11067,7 +11067,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gimbi Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11103,7 +11103,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gimbi Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11121,7 +11121,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gimbi Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11157,7 +11157,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sigamo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11193,7 +11193,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chora",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11211,7 +11211,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chewaka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11229,7 +11229,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Setema",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11247,7 +11247,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Diga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11265,7 +11265,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11283,7 +11283,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Haro Limu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11301,7 +11301,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bedele Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11319,7 +11319,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bedele Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11337,7 +11337,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gechi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11355,7 +11355,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jima Arjo",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11373,7 +11373,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ibantu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11391,7 +11391,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dedesa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11409,7 +11409,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dedesa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11427,7 +11427,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sasiga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11445,7 +11445,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Limu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11463,7 +11463,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Leka Dulecha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11481,7 +11481,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guma",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11499,7 +11499,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jima Arjo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11517,7 +11517,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebe Senbo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11535,7 +11535,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guto Gida",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11553,7 +11553,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nekemte Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11571,7 +11571,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nekemte Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11589,7 +11589,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nekemte Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11607,7 +11607,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Agaro Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11625,7 +11625,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Agaro Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11643,7 +11643,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Borecha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11661,7 +11661,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gida Ayana",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11679,7 +11679,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wayu Tuka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11697,7 +11697,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gida Ayana",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11715,7 +11715,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gida Ayana",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11733,7 +11733,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nunu Kumba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11751,7 +11751,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gomma",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11769,7 +11769,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abe Dongoro",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11805,7 +11805,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mana",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11823,7 +11823,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11841,7 +11841,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11859,7 +11859,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11877,7 +11877,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11895,7 +11895,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11913,7 +11913,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kiremu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11931,7 +11931,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jimma Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11949,7 +11949,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sibu Sire",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -11967,7 +11967,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sibu Sire",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12003,7 +12003,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wama Hagelo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12021,7 +12021,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abe Dongoro",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12039,7 +12039,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amuru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12057,7 +12057,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Limu Seka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12075,7 +12075,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Limu Kosa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12093,7 +12093,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gobu Seyo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12111,7 +12111,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kersa (Jimma)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12129,7 +12129,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gudeya Bila",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12147,7 +12147,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amuru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12165,7 +12165,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jerdga Jerte",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12183,7 +12183,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bako Tibe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12219,7 +12219,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shambu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12255,7 +12255,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jima Genete",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12273,7 +12273,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shambu Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12309,7 +12309,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tiro Afeta",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12327,7 +12327,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Omonada",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12381,7 +12381,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dano",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12399,7 +12399,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Illu Gelan",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12417,7 +12417,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jima Rare",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12435,7 +12435,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abey Chomen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12453,7 +12453,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chomen Guduru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12471,7 +12471,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Teletele",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12489,7 +12489,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abey Chomen",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12507,7 +12507,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sokoru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12525,7 +12525,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nono",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12543,7 +12543,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Cheliya",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12561,7 +12561,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jibat",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12579,7 +12579,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gudru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12597,7 +12597,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Midakegn",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12615,7 +12615,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Liban Jawi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12633,7 +12633,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hababo Gudru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12651,7 +12651,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12669,7 +12669,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tikur Enchini",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12705,7 +12705,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ameya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12723,7 +12723,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Toke Kutayu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12741,7 +12741,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Toke Kutayu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12759,7 +12759,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12777,7 +12777,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ginde Beret",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12795,7 +12795,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12813,7 +12813,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12831,7 +12831,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wonchi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12849,7 +12849,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wonchi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12867,7 +12867,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goro (South West Shewa)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12885,7 +12885,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Elfata",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12903,7 +12903,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chobi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12921,7 +12921,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woliso Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12939,7 +12939,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woliso Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12957,7 +12957,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woliso",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12975,7 +12975,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Woliso Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -12993,7 +12993,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambo Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13011,7 +13011,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abuna Gendeberet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13029,7 +13029,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jeldu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13047,7 +13047,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jeldu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13065,7 +13065,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jeldu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13083,7 +13083,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yabelo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13101,7 +13101,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dendi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13119,7 +13119,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Siraro",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13137,7 +13137,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Becho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13155,7 +13155,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Becho",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13173,7 +13173,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Meta Walkite",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13191,7 +13191,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bule Hora Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13209,7 +13209,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Were Jarso",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13227,7 +13227,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Eijersa Lafo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13245,7 +13245,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Seden Sodo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13263,7 +13263,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Meta Robi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13299,7 +13299,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kuyu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13317,7 +13317,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dire",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13335,7 +13335,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ada Berga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Work Place",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13353,7 +13353,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tole",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13371,7 +13371,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shala",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13389,7 +13389,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tole",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13407,7 +13407,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ilu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13425,7 +13425,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ada Berga",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13443,7 +13443,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ada Berga",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13461,7 +13461,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ejere",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13479,7 +13479,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kercha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13497,7 +13497,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kuyu",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13515,7 +13515,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kercha Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13533,7 +13533,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hambela Wamena",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13551,7 +13551,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bishan Guracha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13587,7 +13587,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sebeta Hawas",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13605,7 +13605,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Holeta Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13623,7 +13623,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13641,7 +13641,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hidabu Abote",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13659,7 +13659,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wolmera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13677,7 +13677,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mulo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13713,7 +13713,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13731,7 +13731,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13749,7 +13749,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13785,7 +13785,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13803,7 +13803,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kersana Malima",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13821,7 +13821,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sebeta Hawas",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13839,7 +13839,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kersana Malima",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13857,7 +13857,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bore",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13875,7 +13875,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13893,7 +13893,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Burayu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13911,7 +13911,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sebeta Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13929,7 +13929,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sodo Dacha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13947,7 +13947,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Degem",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13965,7 +13965,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adami Tulu Jido Kombolcha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -13983,7 +13983,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yaya Gulele",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14001,7 +14001,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sululta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14019,7 +14019,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shashemene Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14037,7 +14037,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sebeta Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14055,7 +14055,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Burayu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14073,7 +14073,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arsi Negele Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14091,7 +14091,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Oromia)",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14109,7 +14109,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Batu (Ziway) Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14127,7 +14127,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dera (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14145,7 +14145,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Batu (Ziway) Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14163,7 +14163,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Batu (Ziway) Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14181,7 +14181,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fiche Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14199,7 +14199,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fiche Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14217,7 +14217,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sululta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14235,7 +14235,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sululta Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14253,7 +14253,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kofele",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14271,7 +14271,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Akaki",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14289,7 +14289,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kokosa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14307,7 +14307,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kokosa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14325,7 +14325,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Odo Shakiso",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14343,7 +14343,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dugda",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14379,7 +14379,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Heben Arsi",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14397,7 +14397,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arero",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14415,7 +14415,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kore",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14433,7 +14433,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gelan Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14451,7 +14451,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Deberelibanos",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14487,7 +14487,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wuchale",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14505,7 +14505,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dukem Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14523,7 +14523,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Liben (East Shewa)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14541,7 +14541,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lega Tafo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14559,7 +14559,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shakiso Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14577,7 +14577,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kore",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14613,7 +14613,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bora",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14631,7 +14631,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Munesa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14649,7 +14649,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bereh",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14667,7 +14667,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bishoftu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14685,7 +14685,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Saba Boru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14703,7 +14703,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bishoftu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14721,7 +14721,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Munesa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14739,7 +14739,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bishoftu Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14757,7 +14757,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Munesa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14775,7 +14775,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adola Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14811,7 +14811,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adola Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14829,7 +14829,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bishoftu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14847,7 +14847,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jida",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14865,7 +14865,7 @@ let geoJSON_pepfar_data = {
      "woreda":"#N/A",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14883,7 +14883,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tiyo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14901,7 +14901,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dodola",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14919,7 +14919,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adaa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14937,7 +14937,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lome",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14955,7 +14955,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sendafa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14973,7 +14973,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Moyale (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -14991,7 +14991,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sendafa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15009,7 +15009,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Moyale (Oromia)",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15027,7 +15027,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Girja",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15045,7 +15045,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Nensebo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15063,7 +15063,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gimbichu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15081,7 +15081,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asela Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15099,7 +15099,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mojo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15117,7 +15117,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asela Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15135,7 +15135,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Asela Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15153,7 +15153,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lome",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15171,7 +15171,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aleltu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15189,7 +15189,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Digluna Tijo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15207,7 +15207,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dodola Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15225,7 +15225,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gedeb Asasa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15243,7 +15243,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hitosa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15261,7 +15261,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15279,7 +15279,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Limuna Bilbilo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15297,7 +15297,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15315,7 +15315,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bokoji Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15333,7 +15333,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15351,7 +15351,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bokoji Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15369,7 +15369,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15387,7 +15387,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15405,7 +15405,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15423,7 +15423,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Clinic",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15441,7 +15441,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15459,7 +15459,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15477,7 +15477,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15495,7 +15495,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kimbibit",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15513,7 +15513,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15531,7 +15531,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15549,7 +15549,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15567,7 +15567,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wadera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15585,7 +15585,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dodota",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15603,7 +15603,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Abichu Gnaa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15621,7 +15621,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adama",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15639,7 +15639,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Lude Hitosa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15657,7 +15657,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goro Dola",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15675,7 +15675,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enkelo Wabe",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15693,7 +15693,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adaba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15711,7 +15711,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boset",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15729,7 +15729,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boset",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15747,7 +15747,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shirka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15765,7 +15765,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sire",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15783,7 +15783,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shirka",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15801,7 +15801,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tena",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15819,7 +15819,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dekisis",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15837,7 +15837,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Adaba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15855,7 +15855,7 @@ let geoJSON_pepfar_data = {
      "woreda":"NegeleTown",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15873,7 +15873,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jeju",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15891,7 +15891,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Harena Buluk",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15909,7 +15909,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Robe",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15927,7 +15927,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15963,7 +15963,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sude",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15981,7 +15981,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merti",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -15999,7 +15999,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boset",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16035,7 +16035,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Agarfa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16053,7 +16053,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merti",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16071,7 +16071,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merti",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16089,7 +16089,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dolo Mena",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16107,7 +16107,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fentale",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16125,7 +16125,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16143,7 +16143,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chole",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16161,7 +16161,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Guna",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16179,7 +16179,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Fentale",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16197,7 +16197,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Metehara Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16215,7 +16215,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goba Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16233,7 +16233,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goba Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16251,7 +16251,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bele Gasegar",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16269,7 +16269,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bele Gasegar",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16287,7 +16287,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Robe Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16305,7 +16305,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Robe Town",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16323,7 +16323,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aseko",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16359,7 +16359,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gololcha (Arsi)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16377,7 +16377,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sinana",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16395,7 +16395,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Berbere",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16413,7 +16413,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Seru",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16431,7 +16431,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gasera",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16467,7 +16467,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Daro Lebu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16503,7 +16503,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goro (Bale)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16557,7 +16557,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habro",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16593,7 +16593,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Habro",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16647,7 +16647,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chiro Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16665,7 +16665,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ginir Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16683,7 +16683,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mieso (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16701,7 +16701,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bedesa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16719,7 +16719,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chiro Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16773,7 +16773,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Doba",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16791,7 +16791,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tulo (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16827,7 +16827,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Melka Belo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16845,7 +16845,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Goro Gutu",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16863,7 +16863,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Deder Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16881,7 +16881,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Meta",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16953,7 +16953,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Girawa",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -16971,7 +16971,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Haro Maya Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17061,7 +17061,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kombolcha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17079,7 +17079,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Babile (Oromia)",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17115,7 +17115,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Babile Town (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17133,7 +17133,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gursum (Oromia)",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17169,7 +17169,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ambo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17187,7 +17187,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bilate Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17205,7 +17205,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aleta Chuko Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17223,7 +17223,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dara",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17241,7 +17241,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boricha",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17259,7 +17259,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yirga Alem Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17277,7 +17277,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dara Otilcho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17295,7 +17295,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Aleta Wondo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17313,7 +17313,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yirga Alem Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17331,7 +17331,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebedino",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17349,7 +17349,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tula",
      "facility_type":"Health Center",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17367,7 +17367,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17385,7 +17385,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17403,7 +17403,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tula",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17421,7 +17421,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shebedino",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17439,7 +17439,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17457,7 +17457,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17475,7 +17475,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17493,7 +17493,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hawassa Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Private",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17511,7 +17511,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hula",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17529,7 +17529,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wondo Genet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17547,7 +17547,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wondo Genet Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17565,7 +17565,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bona Zuria",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17583,7 +17583,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bona Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17601,7 +17601,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Daya Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17619,7 +17619,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chere",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17637,7 +17637,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hamer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17673,7 +17673,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jinka Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17691,7 +17691,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debub Ari",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17709,7 +17709,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Melekoza",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17727,7 +17727,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bena Tsemay",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17745,7 +17745,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bulki Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17763,7 +17763,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ayida",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17781,7 +17781,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sawla Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17799,7 +17799,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sawla Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17817,7 +17817,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kemba Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17835,7 +17835,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gidole Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17853,7 +17853,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arbaminch Zuriya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17871,7 +17871,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Karat Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17889,7 +17889,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Selamber Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17907,7 +17907,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kindo Koyisha",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17925,7 +17925,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arbaminch Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17943,7 +17943,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tibaro",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17961,7 +17961,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Segen Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17979,7 +17979,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arbaminch Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -17997,7 +17997,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arbaminch Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18015,7 +18015,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gesuba Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18033,7 +18033,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chencha Zuria",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18051,7 +18051,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chencha Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18069,7 +18069,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hadero Tunito",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18087,7 +18087,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Arbaminch Zuriya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18105,7 +18105,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hadero Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18123,7 +18123,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boloso Sore",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18141,7 +18141,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Areka Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18159,7 +18159,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boloso Sore",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18177,7 +18177,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sodo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18195,7 +18195,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sodo Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18213,7 +18213,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Abaya",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18231,7 +18231,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tebela Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18249,7 +18249,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sodo Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18267,7 +18267,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kacha Bira",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18285,7 +18285,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Welkite Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18303,7 +18303,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Cheha",
      "facility_type":"Hospital",
      "ownership_DATIM":"NGO/Charity",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18321,7 +18321,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Enemor Ener",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18339,7 +18339,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hosaena Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18357,7 +18357,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Boditi Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18375,7 +18375,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hosaena Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18393,7 +18393,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Hobicha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18411,7 +18411,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Azernet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18429,7 +18429,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Amaro",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18447,7 +18447,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Durame Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18465,7 +18465,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Durame Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18483,7 +18483,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Emdibir Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18501,7 +18501,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shone Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18519,7 +18519,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Merab Azernet",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18537,7 +18537,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Ezha",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18555,7 +18555,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Misrak Badawacho",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18573,7 +18573,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gumer",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18591,7 +18591,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Muhor Na Aklil",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18609,7 +18609,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Weeraa",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18627,7 +18627,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kulito Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18645,7 +18645,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chelelektu Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18663,7 +18663,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Werabe Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18681,7 +18681,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Muhor Na Aklil",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18699,7 +18699,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Yirgachefe Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18717,7 +18717,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Atotii Ulo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18735,7 +18735,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kokir Gedabano",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18753,7 +18753,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Wenago",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18771,7 +18771,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gedeb",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18789,7 +18789,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dila Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18807,7 +18807,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dila Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18825,7 +18825,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Butajira Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18843,7 +18843,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Butajira Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18861,7 +18861,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18879,7 +18879,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Buee Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18897,7 +18897,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Dolo Odo",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18933,7 +18933,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jijiga Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18951,7 +18951,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Jijiga Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18969,7 +18969,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kebri Beyah Town",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -18987,7 +18987,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Awubere",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19005,7 +19005,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Togochale Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19023,7 +19023,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Kebri Beyah",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19041,7 +19041,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gode Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19059,7 +19059,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bero",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19077,7 +19077,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bero",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19095,7 +19095,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tepi Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19113,7 +19113,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Masha Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19131,7 +19131,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Sheko",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19149,7 +19149,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Debub Bench",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19167,7 +19167,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Maji",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19185,7 +19185,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mizan Aman Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19203,7 +19203,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mizan Aman Town",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19221,7 +19221,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19239,7 +19239,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Chena",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19257,7 +19257,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Shishoende",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19275,7 +19275,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Gimbo",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19293,7 +19293,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Bonga Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19311,7 +19311,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Tercha Town",
      "facility_type":"Hospital",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19329,7 +19329,7 @@ let geoJSON_pepfar_data = {
      "woreda":"Mareka",
      "facility_type":"Health Center",
      "ownership_DATIM":"Public",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19347,7 +19347,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19365,7 +19365,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19383,7 +19383,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19401,7 +19401,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19419,7 +19419,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19437,7 +19437,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19455,7 +19455,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19473,7 +19473,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19491,7 +19491,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19509,7 +19509,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19527,7 +19527,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19545,7 +19545,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19563,7 +19563,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19581,7 +19581,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19599,7 +19599,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19617,7 +19617,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19635,7 +19635,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19653,7 +19653,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19671,7 +19671,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19689,7 +19689,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19707,7 +19707,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19725,7 +19725,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19743,7 +19743,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19761,7 +19761,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19779,7 +19779,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19797,7 +19797,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19815,7 +19815,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19833,7 +19833,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19851,7 +19851,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19869,7 +19869,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19887,7 +19887,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19905,7 +19905,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19923,7 +19923,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19941,7 +19941,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19959,7 +19959,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19977,7 +19977,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -19995,7 +19995,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20013,7 +20013,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20031,7 +20031,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20049,7 +20049,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20067,7 +20067,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20085,7 +20085,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20103,7 +20103,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20121,7 +20121,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20139,7 +20139,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20157,7 +20157,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20175,7 +20175,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20193,7 +20193,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20211,7 +20211,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20229,7 +20229,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20247,7 +20247,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20265,7 +20265,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20283,7 +20283,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20301,7 +20301,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20319,7 +20319,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20337,7 +20337,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20355,7 +20355,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20373,7 +20373,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20391,7 +20391,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20409,7 +20409,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20427,7 +20427,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20445,7 +20445,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20463,7 +20463,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20481,7 +20481,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20499,7 +20499,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20517,7 +20517,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20535,7 +20535,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20553,7 +20553,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20571,7 +20571,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20589,7 +20589,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20607,7 +20607,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20625,7 +20625,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20643,7 +20643,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20661,7 +20661,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20679,7 +20679,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20697,7 +20697,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20715,7 +20715,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20787,7 +20787,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20805,7 +20805,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20823,7 +20823,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20841,7 +20841,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20859,7 +20859,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20877,7 +20877,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20895,7 +20895,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20913,7 +20913,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20931,7 +20931,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20949,7 +20949,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20967,7 +20967,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -20985,7 +20985,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21021,7 +21021,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21039,7 +21039,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21057,7 +21057,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21111,7 +21111,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21129,7 +21129,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21147,7 +21147,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21165,7 +21165,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21183,7 +21183,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21201,7 +21201,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21219,7 +21219,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21237,7 +21237,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21255,7 +21255,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21273,7 +21273,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21291,7 +21291,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21309,7 +21309,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21327,7 +21327,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21345,7 +21345,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21363,7 +21363,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21381,7 +21381,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21399,7 +21399,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21417,7 +21417,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21435,7 +21435,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21453,7 +21453,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21471,7 +21471,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21489,7 +21489,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21507,7 +21507,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21525,7 +21525,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21543,7 +21543,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21561,7 +21561,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21579,7 +21579,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21597,7 +21597,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21615,7 +21615,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21633,7 +21633,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21651,7 +21651,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21669,7 +21669,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21687,7 +21687,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21705,7 +21705,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21723,7 +21723,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21741,7 +21741,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21759,7 +21759,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21777,7 +21777,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21795,7 +21795,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21813,7 +21813,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21831,7 +21831,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21849,7 +21849,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21867,7 +21867,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    },
@@ -21885,7 +21885,7 @@ let geoJSON_pepfar_data = {
      "woreda":"",
      "facility_type":"",
      "ownership_DATIM":"",
-     "pepfar":"Supported Site",
+     "pepfar":"PEPFAR Site",
      "agency_funding":"CDC"
      }
    }

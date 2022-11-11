@@ -74,7 +74,7 @@
         let refHealth = L.layerGroup();
         L.geoJSON(geoJSON_pepfar_data, {
             pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.agency_funding + '</br> PEPFAR: ' + feature.properties.pepfar)
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
             }
         }).addTo(refHealth);
 
