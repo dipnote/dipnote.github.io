@@ -17,7 +17,7 @@
         "name": "Jimma Agricultural Research Center",
         "name:am": ""
       }
-    }, 
+    },
     {
       "type": "node",
       "id": 999999999,
@@ -28,7 +28,8 @@
         "name": "Jimma Institute of Technology",
         "name:am": ""
       }
-    },    {
+    },
+    {
       "type": "node",
       "id": 999999999,
       "lat": 7.682005,
