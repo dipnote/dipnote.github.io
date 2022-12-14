@@ -10,6 +10,17 @@
     {
       "type": "node",
       "id": 463219668,
+      "lat": 7.682005,
+      "lon": 36.855973,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Univ Institute of Technology",
+        "name:am": "ቤተል ሜዲካል ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 463219668,
       "lat": 9.0143922,
       "lon": 38.7307305,
       "tags": {
