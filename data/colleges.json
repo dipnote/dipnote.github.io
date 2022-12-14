@@ -9,13 +9,34 @@
   "elements": [
     {
       "type": "node",
-      "id": 19668,
+      "id": 999999999,
+      "lat": 7.667938,
+      "lon": 36.786313,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Agricultural Research Center",
+        "name:am": ""
+      }
+    }, 
+    {
+      "type": "node",
+      "id": 999999999,
+      "lat": 7.687938,
+      "lon": 36.820391,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Institute of Technology",
+        "name:am": ""
+      }
+    },    {
+      "type": "node",
+      "id": 999999999,
       "lat": 7.682005,
       "lon": 36.855973,
       "tags": {
         "amenity": "college",
         "name": "Jimma Univ Institute of Technology",
-        "name:am": "ቤተል ሜዲካል ኮሌጅ"
+        "name:am": ""
       }
     },
     {
@@ -46,7 +67,7 @@
       "lon": 37.717964,
       "tags": {
         "amenity": "college",
-        "name": "Debre Mark'os Teachers College",
+        "name": "Debre Markos Teachers College",
         "name:am": "ደብረማርቆስ መምህራን ኮሌጅ"
       }
     },
