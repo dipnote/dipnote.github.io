@@ -104,7 +104,7 @@
         var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
         var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
         var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
-        var mMekeleAC = L.circleMarker([13.48392, 39.45552], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Mekele AC').addTo(amSpaces);
+        var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
         //var mCJCRAC = L.circleMarker([9.03014, 38.7628805], {radius: 10,color:'green', weight: 3, fill: true ).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
 
@@ -123,7 +123,7 @@
         var mAddisAbaba = L.marker([9.0272, 38.7369], { icon: blueIcon }).bindPopup('Addis Ababa').addTo(cities);
         var mNazret = L.marker([8.55, 39.27], { icon: blueIcon }).bindPopup('Nazret').addTo(cities);
         var mGonder = L.marker([12.6, 37.4667], { icon: blueIcon }).bindPopup('Gonder').addTo(cities);
-        var mMekele = L.marker([13.4969, 39.4769], { icon: blueIcon }).bindPopup('Mekele').addTo(cities);
+        var mMekelle = L.marker([13.4969, 39.4769], { icon: blueIcon }).bindPopup('Mekelle').addTo(cities);
         var mAwasa = L.marker([7.05, 38.4667], { icon: blueIcon }).bindPopup('Awasa').addTo(cities);
         var mDireDawa = L.marker([9.5833, 41.8667], { icon: blueIcon }).bindPopup('Dire Dawa').addTo(cities);
         var mBahirDar = L.marker([11.585, 37.39], { icon: blueIcon }).bindPopup('Bahir Dar').addTo(cities);
@@ -956,7 +956,7 @@
         const mHAAX = L.marker([14.14680004119873, 38.77280044555664], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
         const mHAAL = L.marker([9.003685, 38.725498], { icon: airportIcon }).bindPopup("Lideta Army Airport").addTo(refAirport);
         const mHALL = L.marker([11.975000381469727, 38.97999954223633], { icon: airportIcon }).bindPopup("Lalibella Airport").addTo(refAirport);
-        const mHAMK = L.marker([13.467399597167969, 39.53350067138672], { icon: airportIcon }).bindPopup("Mekele Airport").addTo(refAirport);
+        const mHAMK = L.marker([13.467399597167969, 39.53350067138672], { icon: airportIcon }).bindPopup("Mekelle Airport").addTo(refAirport);
         const mHAKD = L.marker([6.732577, 44.241339], { icon: airportIcon }).bindPopup("Kebri Dahar Airport").addTo(refAirport);
         const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
         const mHAHM = L.marker([8.7163, 39.0059], { icon: airportIcon }).bindPopup("Harar Meda Airport").addTo(refAirport);
@@ -1170,10 +1170,6 @@
 
 
 
-        // 225km security radius
-        var radCircle = L.layerGroup();
-        var rad225 = L.circle([8.9806, 38.7578], { radius: 225000 }).addTo(radCircle);
-
         const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
         const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
         const cartoUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
@@ -1203,7 +1199,6 @@
         var overlays = {
             'USAID Sites': refUSAID,
             'American Spaces': amSpaces,
-            '225km Radius': radCircle,
             'Refugees: Conflict': refConflict,
             'Refugees: Drought': refDrought,
             'Refugees: Flooding': refFlood,
