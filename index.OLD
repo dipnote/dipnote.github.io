@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Public Affairs Planner</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+</head>
+
+<body>
+    <!-- div should be after js call and above script code below -->
+    <!-- <div id="map" style="height: 100vh;"></div> -->
+    <div id="map"></div>
+
+    <!-- css -->
+    <style>
+        /* define height of map container */
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+
+    <!-- js code  -->
+    <!-- TODO move to separate js code -->
+
+
+    <!-- health geoJSON data -->
+    <script src="./data/health_sites/pepfar_cdc_usaid_sites.js"> </script>
+    <script src="./data/health_sites/health_locations.js"> </script>
+    <script src="./data/gadm41_ETH_3.json"> </script>
+    <script src="./data/unis_public.js"> </script>
+
+    <script>
+
+        const iconHealth = new L.Icon({
+            iconUrl: './img/health.svg',
+            iconSize: [22, 30],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+
+        });
+
+
+        // Health Locations GeoJSON
+        // let refHealth = L.layerGroup();
+        // L.geoJSON(geoJsonHealth, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.marker(latlng, { icon: iconHealth }).bindPopup(feature.properties.name)
+        //     }
+        // }).addTo(refHealth);
+
+        // Health Locations GeoJSON
+        // let refHealth = L.layerGroup();
+        // L.geoJSON(geoJsonHealth, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.circleMarker(latlng, { radius: 10,color:'red', weight: 2, fill: false }).bindPopup(feature.properties.name)
+        //     }
+        // }).addTo(refHealth);
+
+        // Health Locations GeoJSON
+        let refHealth = L.layerGroup();
+        L.geoJSON(geoJSON_pepfar_data, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
+            }
+        }).addTo(refHealth);
+
+        // Public Universities GeoJSON
+        let refUnivPublic = L.layerGroup();
+        L.geoJSON(geoJSON_pub_univ_data, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br>' + feature.properties.link)
+            }
+        }).addTo(refUnivPublic);
+
+        // https://api.maptiler.com/tiles/terrain-rgb-v2/{z}/{x}/{y}.webp?key=ruVKjP8Ntl9CX5wxj38p
+        // var map = L.map('map').setView([8.9806, 38.7578], 13);
+
+        // American Spaces
+        var amSpaces = L.layerGroup();
+
+        // var greenIcon = new L.Icon({
+        //     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+        //     //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        //     iconSize: [12, 20],
+        //     iconAnchor: [5, 18],
+        //     popupAnchor: [1, -34],
+        //     //shadowSize: [41, 41]
+        // });
+
+        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
+        var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
+        //var mCJCRAC = L.circleMarker([9.03014, 38.7628805], {radius: 10,color:'green', weight: 3, fill: true ).bindPopup('CJCRAC').addTo(amSpaces);
+        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
+
+        var cities = L.layerGroup();
+        // Icon for Cities
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // iconSize: [25, 41],
+            // shadowSize: [41, 41]
+        });
+
+        var mAddisAbaba = L.marker([9.0272, 38.7369], { icon: blueIcon }).bindPopup('Addis Ababa').addTo(cities);
+        var mNazret = L.marker([8.55, 39.27], { icon: blueIcon }).bindPopup('Nazret').addTo(cities);
+        var mGonder = L.marker([12.6, 37.4667], { icon: blueIcon }).bindPopup('Gonder').addTo(cities);
+        var mMekelle = L.marker([13.4969, 39.4769], { icon: blueIcon }).bindPopup('Mekelle').addTo(cities);
+        var mAwasa = L.marker([7.05, 38.4667], { icon: blueIcon }).bindPopup('Awasa').addTo(cities);
+        var mDireDawa = L.marker([9.5833, 41.8667], { icon: blueIcon }).bindPopup('Dire Dawa').addTo(cities);
+        var mBahirDar = L.marker([11.585, 37.39], { icon: blueIcon }).bindPopup('Bahir Dar').addTo(cities);
+        var mHarar = L.marker([9.32, 42.15], { icon: blueIcon }).bindPopup('Harar').addTo(cities);
+        var mJijiga = L.marker([9.35, 42.8], { icon: blueIcon }).bindPopup('Jijiga').addTo(cities);
+        var mAsosa = L.marker([10.067, 34.5333], { icon: blueIcon }).bindPopup('Asosa').addTo(cities);
+        var mGambela = L.marker([8.25, 34.5833], { icon: blueIcon }).bindPopup('Gambela').addTo(cities);
+        var mSemera = L.marker([11.7956, 41.0086], { icon: blueIcon }).bindPopup('Semera').addTo(cities);
+
+
+        // Refugee Camps Conflict
+        var refConflict = L.layerGroup();
+        // Icon for Ref
+        var redIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            //shadowSize: [41, 41]
+        });
+
+        // CONFLICT GROUP RED
+        var mKoraDawe = L.marker([9.5809, 42.4217], { icon: redIcon }).bindPopup("Kora Dawe").addTo(refConflict);
+        var mOrda2nd = L.marker([9.4343, 42.6265], { icon: redIcon }).bindPopup("Orda 2nd").addTo(refConflict);
+        var mOmore = L.marker([4.3120, 37.5600], { icon: redIcon }).bindPopup("Omore").addTo(refConflict);
+        var mAsguda = L.marker([10.6156, 40.3132], { icon: redIcon }).bindPopup("Asguda").addTo(refConflict);
+        var mGidelo = L.marker([6.9205, 38.2836], { icon: redIcon }).bindPopup("Gidelo").addTo(refConflict);
+        var mAhmedImam = L.marker([9.4681, 42.2263], { icon: redIcon }).bindPopup("Ahmed Imam").addTo(refConflict);
+        var mKelemoSefer = L.marker([11.2590, 37.4813], { icon: redIcon }).bindPopup("Kelemo Sefer").addTo(refConflict);
+        var mArmada = L.marker([7.0456, 41.3902], { icon: redIcon }).bindPopup("Armada").addTo(refConflict);
+        var mBohona = L.marker([12.5254, 37.1610], { icon: redIcon }).bindPopup("Bohona").addTo(refConflict);
+        var mGenetSefer = L.marker([11.2515, 37.4860], { icon: redIcon }).bindPopup("Genet Sefer").addTo(refConflict);
+        var mAtayezerosost = L.marker([10.3448, 39.9549], { icon: redIcon }).bindPopup("Ataye zero sost").addTo(refConflict);
+        var mChalalaqiZone5 = L.marker([9.0994, 36.5588], { icon: redIcon }).bindPopup("Chalalaqi Zone 5").addTo(refConflict);
+        var mShenbekumaYedefas = L.marker([10.6823, 37.2756], { icon: redIcon }).bindPopup("Shenbekuma Yedefas").addTo(refConflict);
+        var mBisiq = L.marker([4.7473, 39.7682], { icon: redIcon }).bindPopup("Bisiq").addTo(refConflict);
+        var mKiltuKara02 = L.marker([9.6927, 35.2637], { icon: redIcon }).bindPopup("Kiltu Kara 02").addTo(refConflict);
+        var mBorore = L.marker([6.6489, 41.2227], { icon: redIcon }).bindPopup("Borore").addTo(refConflict);
+        var mMisrakEniboreMamija = L.marker([8.1087, 38.3444], { icon: redIcon }).bindPopup("Misrak Enibore Mamija").addTo(refConflict);
+        var mKersamale = L.marker([5.3665, 39.4935], { icon: redIcon }).bindPopup("Kersamale").addTo(refConflict);
+        var mGeregeraGeyorgies = L.marker([11.1679, 37.6025], { icon: redIcon }).bindPopup("Geregera Geyorgies").addTo(refConflict);
+        var mHaroOgadenConflict = L.marker([6.9634, 41.3849], { icon: redIcon }).bindPopup("Haro Ogaden Conflict").addTo(refConflict);
+        var mKetena03 = L.marker([11.2514, 37.1697], { icon: redIcon }).bindPopup("Ketena 03").addTo(refConflict);
+        var mMoun = L.marker([8.3268, 33.2749], { icon: redIcon }).bindPopup("Moun").addTo(refConflict);
+        var mZone2 = L.marker([9.0950, 36.9550], { icon: redIcon }).bindPopup("Zone 2").addTo(refConflict);
+        var mErimich = L.marker([7.2894, 35.3680], { icon: redIcon }).bindPopup("Erimich").addTo(refConflict);
+        var mAmbukay = L.marker([10.7596, 36.4492], { icon: redIcon }).bindPopup("Ambukay").addTo(refConflict);
+        var mDinjaTsion = L.marker([11.0149, 37.4109], { icon: redIcon }).bindPopup("Dinja Tsion").addTo(refConflict);
+        var mDugsi = L.marker([8.7691, 42.3449], { icon: redIcon }).bindPopup("Dugsi").addTo(refConflict);
+        var mDirabas = L.marker([6.2410, 40.7202], { icon: redIcon }).bindPopup("Dirabas").addTo(refConflict);
+        var mDuudahida = L.marker([9.3748, 42.7705], { icon: redIcon }).bindPopup("Duudahida").addTo(refConflict);
+        var mFalka = L.marker([6.9470, 38.1992], { icon: redIcon }).bindPopup("Falka").addTo(refConflict);
+        var mHarisoConflict = L.marker([10.5873, 41.5409], { icon: redIcon }).bindPopup("Hariso Conflict").addTo(refConflict);
+        var mKikilftu = L.marker([9.2800, 40.8899], { icon: redIcon }).bindPopup("Kikilftu").addTo(refConflict);
+        var mTakadhagar = L.marker([5.1765, 39.9390], { icon: redIcon }).bindPopup("Takad hagar").addTo(refConflict);
+        var mGot7SoyomaKasa = L.marker([9.8817, 36.6267], { icon: redIcon }).bindPopup("Got 7 Soyoma Kasa").addTo(refConflict);
+        var mMazoraHaroShibo = L.marker([7.0549, 38.2117], { icon: redIcon }).bindPopup("Mazora Haro Shibo").addTo(refConflict);
+        var mHalahago = L.marker([9.2736, 42.5764], { icon: redIcon }).bindPopup("Halahago").addTo(refConflict);
+        var mBilisuma = L.marker([9.3923, 42.5228], { icon: redIcon }).bindPopup("Bilisuma").addTo(refConflict);
+        var mMalkaAde = L.marker([4.6976, 39.1553], { icon: redIcon }).bindPopup("Malka Ade").addTo(refConflict);
+        var mFinoteSelam02 = L.marker([10.6828, 37.2625], { icon: redIcon }).bindPopup("Finote Selam 02").addTo(refConflict);
+        var mShat = L.marker([11.1013, 37.4864], { icon: redIcon }).bindPopup("Shat").addTo(refConflict);
+        var mAyentoMesek = L.marker([11.6092, 38.5394], { icon: redIcon }).bindPopup("Ayento Mesek").addTo(refConflict);
+        var mNidi = L.marker([10.2685, 39.3879], { icon: redIcon }).bindPopup("Nidi").addTo(refConflict);
+        var mEnsesatClinic = L.marker([12.6310, 39.0431], { icon: redIcon }).bindPopup("Ensesat Clinic").addTo(refConflict);
+        var mBalbala = L.marker([5.4993, 37.3933], { icon: redIcon }).bindPopup("Balbala").addTo(refConflict);
+        var mKebele01 = L.marker([11.8507, 38.0174], { icon: redIcon }).bindPopup("Kebele 01").addTo(refConflict);
+        var mGori01 = L.marker([9.6172, 35.3255], { icon: redIcon }).bindPopup("Gori 01").addTo(refConflict);
+        var mShilcasley = L.marker([9.4792, 42.8578], { icon: redIcon }).bindPopup("Shilcasley").addTo(refConflict);
+        var mKetena04 = L.marker([11.2678, 37.1713], { icon: redIcon }).bindPopup("Ketena 04").addTo(refConflict);
+        var mFugnanSulie = L.marker([10.5842, 39.8865], { icon: redIcon }).bindPopup("Fugnan Sulie").addTo(refConflict);
+        var mAlfachoHost = L.marker([5.6974, 37.6176], { icon: redIcon }).bindPopup("Alfacho Host").addTo(refConflict);
+        var mKetena3 = L.marker([5.3356, 37.3141], { icon: redIcon }).bindPopup("Ketena 3").addTo(refConflict);
+        var mZengebal = L.marker([10.8688, 37.3054], { icon: redIcon }).bindPopup("Zengebal").addTo(refConflict);
+        var mHassanGabi = L.marker([4.5419, 41.0312], { icon: redIcon }).bindPopup("Hassan Gabi").addTo(refConflict);
+        var mAdadJiko = L.marker([4.9063, 40.8261], { icon: redIcon }).bindPopup("Adad Jiko").addTo(refConflict);
+        var mBuriArba = L.marker([9.0508, 40.3965], { icon: redIcon }).bindPopup("Buri Arba").addTo(refConflict);
+        var mKoodwanaag = L.marker([7.9655, 41.7192], { icon: redIcon }).bindPopup("Koodwanaag").addTo(refConflict);
+        var mBuurdhubo = L.marker([5.7626, 39.9466], { icon: redIcon }).bindPopup("Buurdhubo").addTo(refConflict);
+        var mHanjow = L.marker([5.1788, 40.6606], { icon: redIcon }).bindPopup("Hanjow").addTo(refConflict);
+        var mFendika02 = L.marker([11.5634, 36.4943], { icon: redIcon }).bindPopup("Fendika 02").addTo(refConflict);
+        var mAndaBet = L.marker([11.4098, 37.9540], { icon: redIcon }).bindPopup("Anda Bet").addTo(refConflict);
+        var mMaksegniet = L.marker([10.8117, 37.3207], { icon: redIcon }).bindPopup("Maksegniet").addTo(refConflict);
+        var mKubito = L.marker([7.2580, 35.3683], { icon: redIcon }).bindPopup("Kubito").addTo(refConflict);
+        var mKuerlieyConflict = L.marker([8.3983, 33.9890], { icon: redIcon }).bindPopup("Kuerliey Conflict").addTo(refConflict);
+        var mHayga = L.marker([5.2011, 40.0002], { icon: redIcon }).bindPopup("Hayga").addTo(refConflict);
+        var mBarakadaWabarka = L.marker([4.9676, 40.7785], { icon: redIcon }).bindPopup("Barakada Wabarka").addTo(refConflict);
+        var mZone4 = L.marker([9.0953, 36.9547], { icon: redIcon }).bindPopup("Zone 4").addTo(refConflict);
+        var mNegessokutir1 = L.marker([10.1140, 39.9277], { icon: redIcon }).bindPopup("Negesso kutir 1").addTo(refConflict);
+        var mMuqli = L.marker([4.9862, 40.1523], { icon: redIcon }).bindPopup("Muqli").addTo(refConflict);
+        var mZone7 = L.marker([9.0978, 36.5299], { icon: redIcon }).bindPopup("Zone 7").addTo(refConflict);
+        var mAmbesa = L.marker([6.9385, 38.2493], { icon: redIcon }).bindPopup("Ambesa").addTo(refConflict);
+        var mSire02Goxi3 = L.marker([9.0409, 36.8705], { icon: redIcon }).bindPopup("Sire 02 Goxi 3").addTo(refConflict);
+        var mAddisWoyin = L.marker([11.5731, 36.4871], { icon: redIcon }).bindPopup("Addis Woyin").addTo(refConflict);
+        var mKora = L.marker([9.0794, 42.3180], { icon: redIcon }).bindPopup("Kora").addTo(refConflict);
+        var mNini = L.marker([4.6473, 39.1887], { icon: redIcon }).bindPopup("Nini").addTo(refConflict);
+        var mKorahey = L.marker([4.5469, 40.9390], { icon: redIcon }).bindPopup("Korahey").addTo(refConflict);
+        var mGecha = L.marker([7.5608, 35.4023], { icon: redIcon }).bindPopup("Gecha").addTo(refConflict);
+        var mJidaSefer = L.marker([10.9174, 40.0267], { icon: redIcon }).bindPopup("Jida Sefer").addTo(refConflict);
+        var mDachashibo = L.marker([9.1000, 36.5464], { icon: redIcon }).bindPopup("Dacha shibo").addTo(refConflict);
+        var mMagalaLami = L.marker([9.0269, 40.3907], { icon: redIcon }).bindPopup("Magala Lami").addTo(refConflict);
+        var mGela = L.marker([9.6053, 42.7016], { icon: redIcon }).bindPopup("Gela").addTo(refConflict);
+        var mHamaresakebele19 = L.marker([9.3291, 42.0869], { icon: redIcon }).bindPopup("Hamaresa kebele 19").addTo(refConflict);
+        var mLamburi = L.marker([4.7287, 40.9516], { icon: redIcon }).bindPopup("Lamburi").addTo(refConflict);
+        var mMaksegnoGebeya = L.marker([5.4794, 37.8643], { icon: redIcon }).bindPopup("Maksegno Gebeya").addTo(refConflict);
+        var mFenkatitGendaWuha = L.marker([10.8948, 37.6561], { icon: redIcon }).bindPopup("Fenkatit Genda Wuha").addTo(refConflict);
+        var mBuno2 = L.marker([9.2435, 40.7553], { icon: redIcon }).bindPopup("Buno 2").addTo(refConflict);
+        var mJara = L.marker([3.9719, 40.0013], { icon: redIcon }).bindPopup("Jara").addTo(refConflict);
+        var mQodQodur = L.marker([4.9838, 40.6905], { icon: redIcon }).bindPopup("Qod Qodur").addTo(refConflict);
+        var mGumerukgereba = L.marker([8.9795, 40.1529], { icon: redIcon }).bindPopup("Gumeruk gereba").addTo(refConflict);
+        var mKersaTown = L.marker([9.4494, 41.8618], { icon: redIcon }).bindPopup("Kersa Town").addTo(refConflict);
+        var mMalkaGuba = L.marker([4.8612, 39.3162], { icon: redIcon }).bindPopup("Malka Guba").addTo(refConflict);
+        var mBiftu02 = L.marker([6.8581, 35.3361], { icon: redIcon }).bindPopup("Biftu 02").addTo(refConflict);
+        var mKebele18 = L.marker([12.5701, 37.4608], { icon: redIcon }).bindPopup("Kebele 18").addTo(refConflict);
+        var mAyerTena = L.marker([11.5842, 37.4186], { icon: redIcon }).bindPopup("Ayer Tena").addTo(refConflict);
+        var mLibirar = L.marker([4.8108, 40.9964], { icon: redIcon }).bindPopup("Libirar").addTo(refConflict);
+        var mDudumacadd = L.marker([4.9259, 40.7416], { icon: redIcon }).bindPopup("Duduma cadd").addTo(refConflict);
+        var mAlfachoSite = L.marker([5.6980, 37.6175], { icon: redIcon }).bindPopup("Alfacho Site").addTo(refConflict);
+        var mBedhasoGedi = L.marker([9.0184, 42.1537], { icon: redIcon }).bindPopup("Bedhaso Gedi").addTo(refConflict);
+        var mKebele04 = L.marker([11.8611, 37.9989], { icon: redIcon }).bindPopup("Kebele 04").addTo(refConflict);
+        var mAhmedyahas = L.marker([4.8447, 40.5503], { icon: redIcon }).bindPopup("Ahmed yahas").addTo(refConflict);
+        var mMiyawa = L.marker([9.4716, 42.4096], { icon: redIcon }).bindPopup("Miyawa").addTo(refConflict);
+        var mMaraki = L.marker([11.6137, 37.4324], { icon: redIcon }).bindPopup("Maraki").addTo(refConflict);
+        var mFendika01 = L.marker([11.5632, 36.4902], { icon: redIcon }).bindPopup("Fendika 01").addTo(refConflict);
+        var mZone3 = L.marker([9.0989, 36.5444], { icon: redIcon }).bindPopup("Zone 3").addTo(refConflict);
+        var mAklat = L.marker([10.7924, 37.6214], { icon: redIcon }).bindPopup("Aklat").addTo(refConflict);
+        var mDhagahMadow = L.marker([4.6726, 39.6605], { icon: redIcon }).bindPopup("Dhagah Madow").addTo(refConflict);
+        var mJari = L.marker([11.3687, 39.6490], { icon: redIcon }).bindPopup("Jari").addTo(refConflict);
+        var mShoaRobitkebele04 = L.marker([9.9921, 39.8934], { icon: redIcon }).bindPopup("Shoa Robit kebele 04").addTo(refConflict);
+        var mBegGebiya = L.marker([11.0135, 37.7533], { icon: redIcon }).bindPopup("Beg Gebiya").addTo(refConflict);
+        var mAdawaHassniKore = L.marker([9.4417, 40.3699], { icon: redIcon }).bindPopup("Adawa Hassni Kore").addTo(refConflict);
+        var mGerba = L.marker([9.8914, 39.1525], { icon: redIcon }).bindPopup("Gerba").addTo(refConflict);
+        var mKetena2 = L.marker([5.3259, 37.3340], { icon: redIcon }).bindPopup("Ketena 2").addTo(refConflict);
+        var mKabso = L.marker([9.4053, 42.3776], { icon: redIcon }).bindPopup("Kabso").addTo(refConflict);
+        var mAsli = L.marker([9.8066, 40.9222], { icon: redIcon }).bindPopup("Asli").addTo(refConflict);
+        var mBodbood = L.marker([4.5210, 40.7095], { icon: redIcon }).bindPopup("Bodbood").addTo(refConflict);
+        var mDongoro01 = L.marker([9.2712, 35.6893], { icon: redIcon }).bindPopup("Dongoro 01").addTo(refConflict);
+        var mKiltukara01 = L.marker([9.6902, 35.2530], { icon: redIcon }).bindPopup("Kiltu kara 01").addTo(refConflict);
+        var mDolloZone2 = L.marker([8.5242, 34.7984], { icon: redIcon }).bindPopup("Dollo Zone 2").addTo(refConflict);
+        var mTullo = L.marker([9.0580, 42.1633], { icon: redIcon }).bindPopup("Tullo").addTo(refConflict);
+        var mSuluko = L.marker([5.6614, 37.8919], { icon: redIcon }).bindPopup("Suluko").addTo(refConflict);
+        var mBifata2 = L.marker([5.0706, 40.6974], { icon: redIcon }).bindPopup("Bifata 2").addTo(refConflict);
+        var mLochale = L.marker([4.7941, 39.3230], { icon: redIcon }).bindPopup("Lochale").addTo(refConflict);
+        var mTiroSendare = L.marker([9.5649, 42.6964], { icon: redIcon }).bindPopup("Tiro Sendare").addTo(refConflict);
+        var mKalmale = L.marker([9.4348, 42.7156], { icon: redIcon }).bindPopup("Kalmale").addTo(refConflict);
+        var mGoray = L.marker([4.2041, 37.5871], { icon: redIcon }).bindPopup("Goray").addTo(refConflict);
+        var mShafule = L.marker([5.6463, 37.8899], { icon: redIcon }).bindPopup("Shafule").addTo(refConflict);
+        var mFengeta = L.marker([11.0893, 37.3958], { icon: redIcon }).bindPopup("Fengeta").addTo(refConflict);
+        var mWolehCamp = L.marker([12.5435, 39.0633], { icon: redIcon }).bindPopup("Woleh Camp").addTo(refConflict);
+        var mWalitane = L.marker([9.2643, 40.8720], { icon: redIcon }).bindPopup("Walitane").addTo(refConflict);
+        var mKiltaEba = L.marker([5.7790, 39.3092], { icon: redIcon }).bindPopup("Kilta Eba").addTo(refConflict);
+        var mNejo02 = L.marker([9.5079, 35.4990], { icon: redIcon }).bindPopup("Nejo 02").addTo(refConflict);
+        var mLibiley = L.marker([4.6582, 40.7206], { icon: redIcon }).bindPopup("Libiley").addTo(refConflict);
+        var mFideWadi = L.marker([7.2232, 35.5126], { icon: redIcon }).bindPopup("Fide Wadi").addTo(refConflict);
+        var mGadey = L.marker([10.6432, 37.6466], { icon: redIcon }).bindPopup("Gadey").addTo(refConflict);
+        var mQarari = L.marker([7.9834, 41.7342], { icon: redIcon }).bindPopup("Qarari").addTo(refConflict);
+        var mSalahadtown = L.marker([7.0478, 41.6148], { icon: redIcon }).bindPopup("Salahad town").addTo(refConflict);
+        var mKaldisa = L.marker([7.1666, 41.4544], { icon: redIcon }).bindPopup("Kaldisa").addTo(refConflict);
+        var mMandi04kebele = L.marker([9.7981, 35.1037], { icon: redIcon }).bindPopup("Mandi 04 kebele").addTo(refConflict);
+        var mBardacas = L.marker([4.7022, 39.7328], { icon: redIcon }).bindPopup("Bardacas").addTo(refConflict);
+        var mKetena02 = L.marker([11.2540, 37.1768], { icon: redIcon }).bindPopup("Ketena 02").addTo(refConflict);
+        var mShoaRobitkebele01 = L.marker([9.9961, 39.8966], { icon: redIcon }).bindPopup("Shoa Robit kebele 01").addTo(refConflict);
+        var mBarniArte = L.marker([7.1839, 41.5380], { icon: redIcon }).bindPopup("Barni Arte").addTo(refConflict);
+        var mBirbirsaFora = L.marker([5.7855, 39.3020], { icon: redIcon }).bindPopup("Birbirsa Fora").addTo(refConflict);
+        var mDondore = L.marker([10.0093, 35.2110], { icon: redIcon }).bindPopup("Dondore").addTo(refConflict);
+        var mOdaJebel = L.marker([10.2715, 35.1055], { icon: redIcon }).bindPopup("Oda Jebel").addTo(refConflict);
+        var mBILA02 = L.marker([9.3682, 35.5964], { icon: redIcon }).bindPopup("BILA 02").addTo(refConflict);
+        var mKobo = L.marker([5.8129, 37.9165], { icon: redIcon }).bindPopup("Kobo").addTo(refConflict);
+        var mReerbahay = L.marker([9.0744, 42.4182], { icon: redIcon }).bindPopup("Reerbahay").addTo(refConflict);
+        var mHadhaHulo = L.marker([8.9205, 40.3073], { icon: redIcon }).bindPopup("Hadha Hulo").addTo(refConflict);
+        var mLanjano = L.marker([6.6338, 40.5144], { icon: redIcon }).bindPopup("Lanjano").addTo(refConflict);
+        var mBikiTownConflict = L.marker([9.5256, 41.1950], { icon: redIcon }).bindPopup("Biki Town Conflict").addTo(refConflict);
+        var mQulay = L.marker([4.6315, 40.9729], { icon: redIcon }).bindPopup("Qulay").addTo(refConflict);
+        var mKarma = L.marker([5.6754, 37.8940], { icon: redIcon }).bindPopup("Karma").addTo(refConflict);
+        var mKebele1 = L.marker([11.6118, 38.0563], { icon: redIcon }).bindPopup("Kebele 1").addTo(refConflict);
+        var mZone3 = L.marker([9.0960, 36.9549], { icon: redIcon }).bindPopup("Zone 3").addTo(refConflict);
+        var mKebele2 = L.marker([11.6162, 38.0638], { icon: redIcon }).bindPopup("Kebele 2").addTo(refConflict);
+        var mEndryas = L.marker([11.0686, 37.4500], { icon: redIcon }).bindPopup("Endryas").addTo(refConflict);
+        var mGodane = L.marker([9.4400, 42.5442], { icon: redIcon }).bindPopup("Godane").addTo(refConflict);
+        var mShoaRobitkebele03 = L.marker([10.0026, 39.8952], { icon: redIcon }).bindPopup("Shoa Robit kebele 03").addTo(refConflict);
+        var mGot1Genayi1 = L.marker([9.8711, 36.6345], { icon: redIcon }).bindPopup("Got 1 Genayi 1").addTo(refConflict);
+        var mSire02Goxi6 = L.marker([9.0393, 36.8701], { icon: redIcon }).bindPopup("Sire 02 Goxi 6").addTo(refConflict);
+        var mGumure = L.marker([5.9607, 37.8441], { icon: redIcon }).bindPopup("Gumure").addTo(refConflict);
+        var mSheikosman = L.marker([4.8770, 40.5944], { icon: redIcon }).bindPopup("Sheik osman").addTo(refConflict);
+        var mDulgobay = L.marker([8.0186, 41.7696], { icon: redIcon }).bindPopup("Dulgobay").addTo(refConflict);
+        var mGolbe = L.marker([5.7890, 37.9261], { icon: redIcon }).bindPopup("Golbe").addTo(refConflict);
+        var mZokosa = L.marker([5.8751, 37.9398], { icon: redIcon }).bindPopup("Zokosa").addTo(refConflict);
+        var mButila = L.marker([10.8814, 37.4984], { icon: redIcon }).bindPopup("Butila").addTo(refConflict);
+        var mWarcaday = L.marker([5.0924, 39.9289], { icon: redIcon }).bindPopup("War caday").addTo(refConflict);
+        var mMendi03kebele = L.marker([9.7946, 35.1066], { icon: redIcon }).bindPopup("Mendi 03 kebele").addTo(refConflict);
+        var mGuso = L.marker([9.8386, 36.3020], { icon: redIcon }).bindPopup("Guso").addTo(refConflict);
+        var mMender1 = L.marker([6.9299, 38.1275], { icon: redIcon }).bindPopup("Mender 1").addTo(refConflict);
+        var mAmistena = L.marker([11.3658, 40.9189], { icon: redIcon }).bindPopup("Amistena").addTo(refConflict);
+        var mEbile = L.marker([6.9453, 38.2565], { icon: redIcon }).bindPopup("Ebile").addTo(refConflict);
+        var mHaramsam = L.marker([3.5504, 39.0587], { icon: redIcon }).bindPopup("Haramsam").addTo(refConflict);
+        var mEjersoGoro = L.marker([9.4909, 42.2451], { icon: redIcon }).bindPopup("Ejerso Goro").addTo(refConflict);
+        var mChinaksen03 = L.marker([9.5071, 42.6030], { icon: redIcon }).bindPopup("Chinaksen 03").addTo(refConflict);
+        var mGololKambi = L.marker([4.6956, 40.7920], { icon: redIcon }).bindPopup("Golol Kambi").addTo(refConflict);
+        var mDudmahi = L.marker([11.2038, 36.4417], { icon: redIcon }).bindPopup("Dudmahi").addTo(refConflict);
+        var mHantutu = L.marker([5.9946, 41.8135], { icon: redIcon }).bindPopup("Hantutu").addTo(refConflict);
+        var mGamule = L.marker([5.8528, 37.9252], { icon: redIcon }).bindPopup("Gamule").addTo(refConflict);
+        var mGot1Genayi2 = L.marker([9.8692, 36.6313], { icon: redIcon }).bindPopup("Got 1 Genayi 2").addTo(refConflict);
+        var mDako = L.marker([9.8038, 35.1023], { icon: redIcon }).bindPopup("Dako").addTo(refConflict);
+        var mAwjabur = L.marker([8.7247, 42.3727], { icon: redIcon }).bindPopup("Awjabur").addTo(refConflict);
+        var mMikaelChurchArea = L.marker([9.1271, 37.0563], { icon: redIcon }).bindPopup("Mikael Church Area").addTo(refConflict);
+        var mChinaCamp = L.marker([11.1582, 39.9164], { icon: redIcon }).bindPopup("China Camp").addTo(refConflict);
+        var mTiroGudoNew = L.marker([9.5816, 42.6929], { icon: redIcon }).bindPopup("Tiro Gudo New").addTo(refConflict);
+        var mGirarima = L.marker([10.8550, 37.4576], { icon: redIcon }).bindPopup("Girarima").addTo(refConflict);
+        var mTelimButila = L.marker([10.8797, 37.5454], { icon: redIcon }).bindPopup("Telim Butila").addTo(refConflict);
+        var mMalabley = L.marker([8.8967, 42.3135], { icon: redIcon }).bindPopup("Malabley").addTo(refConflict);
+        var mGolaMeja = L.marker([5.8346, 39.8923], { icon: redIcon }).bindPopup("Gola Meja").addTo(refConflict);
+        var mAlerie = L.marker([7.6438, 34.2387], { icon: redIcon }).bindPopup("Alerie").addTo(refConflict);
+        var mSemu = L.marker([5.5319, 39.9984], { icon: redIcon }).bindPopup("Semu").addTo(refConflict);
+        var mEldub = L.marker([4.2234, 42.4410], { icon: redIcon }).bindPopup("Eldub").addTo(refConflict);
+        var mIzana = L.marker([13.2252, 40.8596], { icon: redIcon }).bindPopup("Izana").addTo(refConflict);
+        var mKulmiya = L.marker([8.7297, 42.2967], { icon: redIcon }).bindPopup("Kulmiya").addTo(refConflict);
+        var mBetNoraKetena3 = L.marker([11.3973, 38.2377], { icon: redIcon }).bindPopup("Bet Nora Ketena 3").addTo(refConflict);
+        var mMerhota = L.marker([10.9812, 37.4231], { icon: redIcon }).bindPopup("Merhota").addTo(refConflict);
+        var mNegele01Kebele = L.marker([5.3340, 39.5842], { icon: redIcon }).bindPopup("Negele 01 Kebele").addTo(refConflict);
+        var mAshetiLebaGedel = L.marker([10.9534, 37.3836], { icon: redIcon }).bindPopup("Asheti Leba Gedel").addTo(refConflict);
+        var mGalun = L.marker([4.7532, 39.8177], { icon: redIcon }).bindPopup("Galun").addTo(refConflict);
+        var mDinkGoraKetena1 = L.marker([11.3998, 38.2366], { icon: redIcon }).bindPopup("Dink Gora Ketena 1").addTo(refConflict);
+        var mLiboma = L.marker([3.7267, 38.9898], { icon: redIcon }).bindPopup("Liboma").addTo(refConflict);
+        var mDigunaLamgie = L.marker([11.0558, 37.3562], { icon: redIcon }).bindPopup("Diguna Lamgie").addTo(refConflict);
+        var mDirir = L.marker([4.6990, 39.4352], { icon: redIcon }).bindPopup("Dirir").addTo(refConflict);
+        var mYero = L.marker([5.8809, 37.7479], { icon: redIcon }).bindPopup("Yero").addTo(refConflict);
+        var mAfwayne = L.marker([6.9166, 41.5628], { icon: redIcon }).bindPopup("Afwayne").addTo(refConflict);
+        var mJigaSilassie = L.marker([10.6739, 37.3744], { icon: redIcon }).bindPopup("Jiga Silassie").addTo(refConflict);
+        var mZiqwalaWegem = L.marker([10.8373, 37.6241], { icon: redIcon }).bindPopup("Ziqwala Wegem").addTo(refConflict);
+        var mKatoConflict = L.marker([9.0189, 40.3475], { icon: redIcon }).bindPopup("Kato Conflict").addTo(refConflict);
+        var mDhagahle = L.marker([9.2429, 42.5953], { icon: redIcon }).bindPopup("Dhagahle").addTo(refConflict);
+        var mDerba = L.marker([5.9266, 37.8286], { icon: redIcon }).bindPopup("Derba").addTo(refConflict);
+        var mKereda = L.marker([5.8859, 37.9278], { icon: redIcon }).bindPopup("Kereda").addTo(refConflict);
+        var mSelase = L.marker([10.9736, 37.2085], { icon: redIcon }).bindPopup("Selase").addTo(refConflict);
+        var mAdada = L.marker([11.5460, 38.3233], { icon: redIcon }).bindPopup("Adada").addTo(refConflict);
+        var mFeresBet02 = L.marker([10.8513, 37.6079], { icon: redIcon }).bindPopup("Feres Bet 02").addTo(refConflict);
+        var mBiyoGababdu = L.marker([9.4669, 42.6938], { icon: redIcon }).bindPopup("Biyo Gababdu").addTo(refConflict);
+        var mArbaMinch = L.marker([10.5666, 37.4874], { icon: redIcon }).bindPopup("Arba Minch").addTo(refConflict);
+        var mKereyuOli = L.marker([9.0243, 42.2013], { icon: redIcon }).bindPopup("Kereyu Oli").addTo(refConflict);
+        var mHaloye = L.marker([4.6614, 39.6038], { icon: redIcon }).bindPopup("Haloye").addTo(refConflict);
+        var mBombasTown = L.marker([9.2239, 42.4626], { icon: redIcon }).bindPopup("Bombas Town").addTo(refConflict);
+        var mAhad = L.marker([5.1108, 40.4106], { icon: redIcon }).bindPopup("Ahad").addTo(refConflict);
+        var mKore = L.marker([5.7014, 37.9019], { icon: redIcon }).bindPopup("Kore").addTo(refConflict);
+        var mEjerti = L.marker([8.3621, 40.6120], { icon: redIcon }).bindPopup("Ejerti").addTo(refConflict);
+        var mGandaBuno = L.marker([9.2435, 40.7578], { icon: redIcon }).bindPopup("Ganda Buno").addTo(refConflict);
+        var mFiltuTown = L.marker([5.1043, 40.6703], { icon: redIcon }).bindPopup("Filtu Town").addTo(refConflict);
+        var mDarasalam = L.marker([5.6034, 39.8941], { icon: redIcon }).bindPopup("Darasalam").addTo(refConflict);
+        var mYelobayi = L.marker([7.7485, 35.4731], { icon: redIcon }).bindPopup("Yelobayi").addTo(refConflict);
+        var mHarobatun = L.marker([5.7550, 39.7633], { icon: redIcon }).bindPopup("Haro batun").addTo(refConflict);
+        var mAyima = L.marker([11.5688, 36.4801], { icon: redIcon }).bindPopup("Ayima").addTo(refConflict);
+        var mGolmasa = L.marker([12.9980, 37.7819], { icon: redIcon }).bindPopup("Golmasa").addTo(refConflict);
+        var mKeberoMeda = L.marker([12.5519, 37.4162], { icon: redIcon }).bindPopup("Kebero Meda").addTo(refConflict);
+        var mYezelayMariam = L.marker([10.9870, 37.6349], { icon: redIcon }).bindPopup("Yezelay Mariam").addTo(refConflict);
+        var mFiliklk = L.marker([10.9490, 37.6851], { icon: redIcon }).bindPopup("Filiklk").addTo(refConflict);
+        var mZone8 = L.marker([9.1019, 36.5314], { icon: redIcon }).bindPopup("Zone 8").addTo(refConflict);
+        var mSharo = L.marker([5.9414, 37.9012], { icon: redIcon }).bindPopup("Sharo").addTo(refConflict);
+        var mBambasiStadium = L.marker([9.7482, 34.7225], { icon: redIcon }).bindPopup("Bambasi Stadium").addTo(refConflict);
+        var mMojoSefer = L.marker([9.9985, 38.2541], { icon: redIcon }).bindPopup("Mojo Sefer").addTo(refConflict);
+        var mArdaHula = L.marker([6.2949, 41.4974], { icon: redIcon }).bindPopup("Arda Hula").addTo(refConflict);
+        var mKubijaaro = L.marker([9.3537, 42.5287], { icon: redIcon }).bindPopup("Kubijaaro").addTo(refConflict);
+        var mBurieSefer4 = L.marker([10.7022, 37.0565], { icon: redIcon }).bindPopup("Burie Sefer 4").addTo(refConflict);
+        var mMentekiesherefa = L.marker([10.2277, 39.8966], { icon: redIcon }).bindPopup("Mentekie sherefa").addTo(refConflict);
+        var mDebreWeyfat = L.marker([11.0666, 37.6218], { icon: redIcon }).bindPopup("Debre Weyfat").addTo(refConflict);
+        var mBolobolo = L.marker([4.9898, 40.5301], { icon: redIcon }).bindPopup("Bolobolo").addTo(refConflict);
+        var mTifate = L.marker([5.9065, 37.7904], { icon: redIcon }).bindPopup("Tifate").addTo(refConflict);
+        var mKoranJidha = L.marker([8.9309, 40.2946], { icon: redIcon }).bindPopup("Koran Jidha").addTo(refConflict);
+        var mBurkaDero = L.marker([7.5047, 41.5426], { icon: redIcon }).bindPopup("Burka Dero").addTo(refConflict);
+        var mGebeyaGubaSefer = L.marker([9.9979, 38.2548], { icon: redIcon }).bindPopup("Gebeya Guba Sefer").addTo(refConflict);
+        var mKajimaSefer = L.marker([10.0105, 38.2454], { icon: redIcon }).bindPopup("Kajima Sefer").addTo(refConflict);
+        var mErerTownConflict = L.marker([9.5610, 41.3826], { icon: redIcon }).bindPopup("Erer Town Conflict").addTo(refConflict);
+        var mHaro01 = L.marker([9.8397, 36.3091], { icon: redIcon }).bindPopup("Haro 01").addTo(refConflict);
+        var mGanda01 = L.marker([9.1888, 35.8283], { icon: redIcon }).bindPopup("Ganda 01").addTo(refConflict);
+        var mZoni3 = L.marker([9.5153, 35.4925], { icon: redIcon }).bindPopup("Zoni 3").addTo(refConflict);
+        var mSheloBalela = L.marker([6.9462, 38.2378], { icon: redIcon }).bindPopup("Shelo Balela").addTo(refConflict);
+        var mEhudit = L.marker([10.5833, 36.7434], { icon: redIcon }).bindPopup("Ehudit").addTo(refConflict);
+        var mBorborMagala = L.marker([4.1375, 38.9275], { icon: redIcon }).bindPopup("Borbor Magala").addTo(refConflict);
+        var mHalobiyo = L.marker([9.1007, 42.4257], { icon: redIcon }).bindPopup("Halobiyo").addTo(refConflict);
+        var mIfaBas = L.marker([8.9766, 42.1437], { icon: redIcon }).bindPopup("Ifa Bas").addTo(refConflict);
+        var mWaraGabaSefer = L.marker([10.0071, 38.2457], { icon: redIcon }).bindPopup("Wara Gaba Sefer").addTo(refConflict);
+        var mGerbiTiyiti = L.marker([5.8174, 39.8715], { icon: redIcon }).bindPopup("Gerbi Tiyiti").addTo(refConflict);
+        var mTuuloAbdullahi = L.marker([6.6357, 40.5294], { icon: redIcon }).bindPopup("Tuulo Abdullahi").addTo(refConflict);
+        var mDano = L.marker([5.7273, 37.9099], { icon: redIcon }).bindPopup("Dano").addTo(refConflict);
+        var mAfdemTownConflict = L.marker([9.4682, 40.9992], { icon: redIcon }).bindPopup("Afdem Town Conflict").addTo(refConflict);
+        var mChilanqo03kebele = L.marker([4.1792, 40.0345], { icon: redIcon }).bindPopup("Chilanqo 03 kebele").addTo(refConflict);
+        var mMaderale = L.marker([11.3372, 40.1719], { icon: redIcon }).bindPopup("Maderale").addTo(refConflict);
+        var mAmola = L.marker([9.5696, 42.4867], { icon: redIcon }).bindPopup("Amola").addTo(refConflict);
+        var mUluka = L.marker([4.6748, 38.9995], { icon: redIcon }).bindPopup("Uluka").addTo(refConflict);
+        var mJirma = L.marker([5.6201, 40.0691], { icon: redIcon }).bindPopup("Jirma").addTo(refConflict);
+        var mMaalimdhore = L.marker([5.0479, 40.5818], { icon: redIcon }).bindPopup("Maalim dhore").addTo(refConflict);
+        var mGooni = L.marker([6.4164, 40.7733], { icon: redIcon }).bindPopup("Gooni").addTo(refConflict);
+        var mDhehyele = L.marker([4.7434, 40.7329], { icon: redIcon }).bindPopup("Dhehyele").addTo(refConflict);
+        var mAzemir = L.marker([10.8946, 37.3073], { icon: redIcon }).bindPopup("Azemir").addTo(refConflict);
+        var mBirenti = L.marker([9.0600, 42.2188], { icon: redIcon }).bindPopup("Birenti").addTo(refConflict);
+        var mNasiDaba = L.marker([11.1050, 41.5981], { icon: redIcon }).bindPopup("Nasi Daba").addTo(refConflict);
+        var mBiiqa = L.marker([9.0372, 42.3971], { icon: redIcon }).bindPopup("Biiqa").addTo(refConflict);
+        var mZambitZigude = L.marker([11.0590, 37.4058], { icon: redIcon }).bindPopup("Zambit Zigude").addTo(refConflict);
+        var mBesna = L.marker([9.7649, 34.7329], { icon: redIcon }).bindPopup("Besna").addTo(refConflict);
+        var mDalsan2 = L.marker([6.3662, 45.2169], { icon: redIcon }).bindPopup("Dalsan 2").addTo(refConflict);
+        var mFechatu = L.marker([9.0138, 42.1288], { icon: redIcon }).bindPopup("Fechatu").addTo(refConflict);
+        var mHoriyo = L.marker([5.8050, 39.9309], { icon: redIcon }).bindPopup("Horiyo").addTo(refConflict);
+        var mFeresBetMichael = L.marker([10.8710, 37.5608], { icon: redIcon }).bindPopup("Feres Bet Michael").addTo(refConflict);
+        var mTVET = L.marker([9.0316, 36.6169], { icon: redIcon }).bindPopup("TVET").addTo(refConflict);
+        var mDhadhabaneTown = L.marker([8.9185, 42.4105], { icon: redIcon }).bindPopup("Dhadhabane Town").addTo(refConflict);
+        var mHareKelotown = L.marker([5.5515, 39.3944], { icon: redIcon }).bindPopup("Hare Kelo town").addTo(refConflict);
+        var mKilaj = L.marker([10.7137, 36.4932], { icon: redIcon }).bindPopup("Kilaj").addTo(refConflict);
+        var mAfaseConflict = L.marker([9.3552, 42.8199], { icon: redIcon }).bindPopup("Afase Conflict").addTo(refConflict);
+        var mAsabolo = L.marker([11.3116, 40.3853], { icon: redIcon }).bindPopup("Asabolo").addTo(refConflict);
+        var mAmuma = L.marker([9.0953, 36.9556], { icon: redIcon }).bindPopup("Amuma").addTo(refConflict);
+        var mPoljay = L.marker([7.6464, 34.2503], { icon: redIcon }).bindPopup("Poljay").addTo(refConflict);
+        var mDidole = L.marker([4.8468, 38.7990], { icon: redIcon }).bindPopup("Didole").addTo(refConflict);
+        var mZazibeleAberach = L.marker([10.6608, 36.4755], { icon: redIcon }).bindPopup("Zazibele Aberach").addTo(refConflict);
+        var mLagahidaTown01 = L.marker([7.3883, 41.7737], { icon: redIcon }).bindPopup("Lagahida Town 01").addTo(refConflict);
+        var mAboSefer = L.marker([10.7064, 37.0607], { icon: redIcon }).bindPopup("Abo Sefer").addTo(refConflict);
+        var mJimba = L.marker([5.8298, 39.9280], { icon: redIcon }).bindPopup("Jimba").addTo(refConflict);
+        var mDharakaley = L.marker([4.7636, 40.8791], { icon: redIcon }).bindPopup("Dharakaley").addTo(refConflict);
+        var mAfgoye = L.marker([6.3213, 41.2076], { icon: redIcon }).bindPopup("Afgoye").addTo(refConflict);
+        var mRare = L.marker([7.3146, 41.4502], { icon: redIcon }).bindPopup("Rare").addTo(refConflict);
+        var mSisibiDaba = L.marker([10.8312, 40.1392], { icon: redIcon }).bindPopup("Sisibi Daba").addTo(refConflict);
+        var mBelaAdlo = L.marker([10.7740, 40.1382], { icon: redIcon }).bindPopup("Bela Adlo").addTo(refConflict);
+        var mKebele01 = L.marker([12.5466, 37.0613], { icon: redIcon }).bindPopup("Kebele 01").addTo(refConflict);
+        var mKebele02 = L.marker([12.5496, 37.0659], { icon: redIcon }).bindPopup("Kebele 02").addTo(refConflict);
+        var mAdeza = L.marker([12.5530, 37.1354], { icon: redIcon }).bindPopup("Adeza").addTo(refConflict);
+        var mEresTiba = L.marker([4.5336, 39.0408], { icon: redIcon }).bindPopup("Eres Tiba").addTo(refConflict);
+        var mEnchilala = L.marker([10.9286, 37.4316], { icon: redIcon }).bindPopup("Enchilala").addTo(refConflict);
+        var mAle = L.marker([9.5273, 42.3225], { icon: redIcon }).bindPopup("Ale").addTo(refConflict);
+        var mYaholandGiloConflict = L.marker([8.3097, 33.3546], { icon: redIcon }).bindPopup("Yahol and Gilo Conflict").addTo(refConflict);
+        var mSandacare = L.marker([9.5428, 42.7383], { icon: redIcon }).bindPopup("Sandacare").addTo(refConflict);
+        var mMadomigo = L.marker([3.5649, 39.0420], { icon: redIcon }).bindPopup("Mado migo").addTo(refConflict);
+        var mGalhareri = L.marker([4.4728, 39.6206], { icon: redIcon }).bindPopup("Galhareri").addTo(refConflict);
+        var mAtat = L.marker([12.5470, 37.4152], { icon: redIcon }).bindPopup("Atat").addTo(refConflict);
+        var mKotichTiri = L.marker([3.7904, 39.0231], { icon: redIcon }).bindPopup("Kotich Tiri").addTo(refConflict);
+        var mSomadayeConflict = L.marker([9.2504, 40.7779], { icon: redIcon }).bindPopup("Somadaye Conflict").addTo(refConflict);
+        var mUlagaDimtu = L.marker([3.8802, 38.9668], { icon: redIcon }).bindPopup("Ulaga Dimtu").addTo(refConflict);
+        var mEnangiyaShimie = L.marker([11.0007, 37.4295], { icon: redIcon }).bindPopup("Enangiya Shimie").addTo(refConflict);
+        var mKansahDhere = L.marker([5.0924, 39.8553], { icon: redIcon }).bindPopup("Kansah Dhere").addTo(refConflict);
+        var mBiltsere = L.marker([10.0181, 35.2134], { icon: redIcon }).bindPopup("Biltsere").addTo(refConflict);
+        var mGuboHema = L.marker([6.3625, 39.0896], { icon: redIcon }).bindPopup("Gubo Hema").addTo(refConflict);
+        var mBiyokulul = L.marker([9.4779, 41.1902], { icon: redIcon }).bindPopup("Biyokulul").addTo(refConflict);
+        var mSokoto = L.marker([4.8459, 40.4495], { icon: redIcon }).bindPopup("Sokoto").addTo(refConflict);
+        var mMigraSefer = L.marker([10.7145, 37.0677], { icon: redIcon }).bindPopup("Migra Sefer").addTo(refConflict);
+        var mArraadConflict = L.marker([4.1619, 42.0541], { icon: redIcon }).bindPopup("Arra'ad Conflict").addTo(refConflict);
+        var mTepiMaekel = L.marker([7.1973, 35.4234], { icon: redIcon }).bindPopup("Tepi Maekel").addTo(refConflict);
+        var mBereket = L.marker([10.9852, 37.2137], { icon: redIcon }).bindPopup("Bereket").addTo(refConflict);
+        var mGishAbay = L.marker([10.9888, 37.2081], { icon: redIcon }).bindPopup("Gish Abay").addTo(refConflict);
+        var mHudet01 = L.marker([4.7559, 39.2365], { icon: redIcon }).bindPopup("Hudet 01").addTo(refConflict);
+        var mGebezeMariyam02 = L.marker([10.9961, 37.4228], { icon: redIcon }).bindPopup("Gebeze Mariyam 02").addTo(refConflict);
+        var mDarimi = L.marker([9.6330, 42.5082], { icon: redIcon }).bindPopup("Darimi").addTo(refConflict);
+        var mKarsayaw = L.marker([3.7272, 39.0640], { icon: redIcon }).bindPopup("Karsa yaw").addTo(refConflict);
+        var mGomata = L.marker([10.9848, 37.2083], { icon: redIcon }).bindPopup("Gomata").addTo(refConflict);
+        var mTesohama = L.marker([3.7892, 39.2810], { icon: redIcon }).bindPopup("Tesohama").addTo(refConflict);
+        var mGuyahElementaryschool = L.marker([12.4063, 41.1876], { icon: redIcon }).bindPopup("Guyah Elementary school").addTo(refConflict);
+        var mHargessa = L.marker([5.5980, 39.9730], { icon: redIcon }).bindPopup("Hargessa").addTo(refConflict);
+        var mAwbare = L.marker([5.0075, 39.8581], { icon: redIcon }).bindPopup("Awbare").addTo(refConflict);
+        var mSire01 = L.marker([9.0391, 36.8727], { icon: redIcon }).bindPopup("Sire 01").addTo(refConflict);
+        var mKurfasawa = L.marker([9.2731, 40.8105], { icon: redIcon }).bindPopup("Kurfasawa").addTo(refConflict);
+        var mEntotoSefer = L.marker([10.9777, 37.2037], { icon: redIcon }).bindPopup("Entoto Sefer").addTo(refConflict);
+        var mBundaQaran = L.marker([5.2214, 39.8593], { icon: redIcon }).bindPopup("Bunda Qaran").addTo(refConflict);
+        var mGebezeMariyam = L.marker([10.9964, 37.4261], { icon: redIcon }).bindPopup("Gebeze Mariyam").addTo(refConflict);
+        var mHudet02 = L.marker([4.7603, 39.2381], { icon: redIcon }).bindPopup("Hudet 02").addTo(refConflict);
+        var mDaledora = L.marker([9.2784, 40.3023], { icon: redIcon }).bindPopup("Daledora").addTo(refConflict);
+        var mFeresBet01 = L.marker([10.8508, 37.5996], { icon: redIcon }).bindPopup("Feres Bet 01").addTo(refConflict);
+        var mBurbieConflict = L.marker([8.4231, 33.2313], { icon: redIcon }).bindPopup("Burbie Conflict").addTo(refConflict);
+        var mGolbo = L.marker([4.6647, 40.5700], { icon: redIcon }).bindPopup("Golbo").addTo(refConflict);
+        var mHarsuma = L.marker([13.4936, 40.2911], { icon: redIcon }).bindPopup("Harsuma").addTo(refConflict);
+        var mFokder = L.marker([7.9789, 41.7521], { icon: redIcon }).bindPopup("Fokder").addTo(refConflict);
+        var mAbulgode = L.marker([10.3945, 35.0597], { icon: redIcon }).bindPopup("Abulgode").addTo(refConflict);
+        var mKuni = L.marker([7.5809, 41.3307], { icon: redIcon }).bindPopup("Kuni").addTo(refConflict);
+        var mSeraAmerar = L.marker([10.0975, 34.5993], { icon: redIcon }).bindPopup("Sera Amerar").addTo(refConflict);
+        var mAbayMinch = L.marker([10.9869, 37.2099], { icon: redIcon }).bindPopup("Abay Minch").addTo(refConflict);
+        var mHawan = L.marker([4.1245, 40.0044], { icon: redIcon }).bindPopup("Hawan").addTo(refConflict);
+        var mMadomigo = L.marker([3.5590, 39.0450], { icon: redIcon }).bindPopup("Madomigo").addTo(refConflict);
+        var mArgaAbo = L.marker([11.5707, 36.4923], { icon: redIcon }).bindPopup("Arga Abo").addTo(refConflict);
+        var mWelahamo = L.marker([6.6415, 38.9204], { icon: redIcon }).bindPopup("Welahamo").addTo(refConflict);
+        var mDhedhirtu = L.marker([4.4780, 39.5919], { icon: redIcon }).bindPopup("Dhedhirtu").addTo(refConflict);
+        var mKalkalcha = L.marker([3.8919, 38.8323], { icon: redIcon }).bindPopup("Kalkalcha").addTo(refConflict);
+        var mHandag = L.marker([13.2112, 40.8595], { icon: redIcon }).bindPopup("Handag").addTo(refConflict);
+        var mSantimaYeshoh = L.marker([10.9237, 37.5377], { icon: redIcon }).bindPopup("Santima Yeshoh").addTo(refConflict);
+        var mKulechMeda = L.marker([13.1656, 37.8939], { icon: redIcon }).bindPopup("Kulech Meda").addTo(refConflict);
+        var mBelelaMerkato = L.marker([6.9436, 38.2569], { icon: redIcon }).bindPopup("Belela Merkato").addTo(refConflict);
+        var mKebele3 = L.marker([11.6062, 38.0683], { icon: redIcon }).bindPopup("Kebele 3").addTo(refConflict);
+        var mNejo04 = L.marker([9.5037, 35.5079], { icon: redIcon }).bindPopup("Nejo 04").addTo(refConflict);
+        var mGuchiMagala = L.marker([3.8633, 38.9637], { icon: redIcon }).bindPopup("Guchi Magala").addTo(refConflict);
+        var mQoboBiqa = L.marker([9.4434, 42.5757], { icon: redIcon }).bindPopup("Qobo Biqa").addTo(refConflict);
+        var mJajo = L.marker([8.1602, 41.6464], { icon: redIcon }).bindPopup("Jajo").addTo(refConflict);
+        var mTeterGenbi = L.marker([10.9532, 37.5168], { icon: redIcon }).bindPopup("Teter Genbi").addTo(refConflict);
+        var mLayketema = L.marker([11.1112, 37.5623], { icon: redIcon }).bindPopup("Lay ketema").addTo(refConflict);
+        var mHighschoolSite = L.marker([6.9366, 38.2543], { icon: redIcon }).bindPopup("High school Site").addTo(refConflict);
+        var mTowfiq = L.marker([5.8039, 39.9197], { icon: redIcon }).bindPopup("Towfiq").addTo(refConflict);
+        var mMazegaja = L.marker([6.9438, 38.2549], { icon: redIcon }).bindPopup("Mazegaja").addTo(refConflict);
+        var mBILA01 = L.marker([9.3575, 35.6009], { icon: redIcon }).bindPopup("BILA 01").addTo(refConflict);
+        var mShangieDerekie = L.marker([10.8849, 37.6227], { icon: redIcon }).bindPopup("Shangie Derekie").addTo(refConflict);
+        var mDhungo = L.marker([5.1829, 39.8539], { icon: redIcon }).bindPopup("Dhungo").addTo(refConflict);
+        var mMelesMsanaMeda = L.marker([10.9675, 37.5308], { icon: redIcon }).bindPopup("Meles Msana Meda").addTo(refConflict);
+        var mWorldVision = L.marker([9.7471, 34.7247], { icon: redIcon }).bindPopup("World Vision").addTo(refConflict);
+        var mSire01Goxi1ffaa = L.marker([9.0387, 36.8727], { icon: redIcon }).bindPopup("Sire 01 Goxi 1ffaa").addTo(refConflict);
+        var mTyido = L.marker([10.4839, 37.0237], { icon: redIcon }).bindPopup("Tyido").addTo(refConflict);
+        var mBali = L.marker([3.5727, 39.0693], { icon: redIcon }).bindPopup("Bali").addTo(refConflict);
+        var mAdeley = L.marker([6.5381, 40.3496], { icon: redIcon }).bindPopup("Adeley").addTo(refConflict);
+        var mKelleastedader = L.marker([5.8246, 37.9537], { icon: redIcon }).bindPopup("Kelle astedader").addTo(refConflict);
+        var mHonogoBonkicha = L.marker([6.9929, 38.2029], { icon: redIcon }).bindPopup("Honogo Bonkicha").addTo(refConflict);
+        var mAzezo = L.marker([12.5595, 37.4306], { icon: redIcon }).bindPopup("Azezo").addTo(refConflict);
+        var mKebele20 = L.marker([12.5558, 37.4306], { icon: redIcon }).bindPopup("Kebele 20").addTo(refConflict);
+        var mGuderJawi = L.marker([10.7062, 36.4345], { icon: redIcon }).bindPopup("Guder Jawi").addTo(refConflict);
+        var mBalliCad = L.marker([5.5757, 40.0786], { icon: redIcon }).bindPopup("Balli Cad").addTo(refConflict);
+        var mWoynema = L.marker([10.6973, 37.0598], { icon: redIcon }).bindPopup("Woynema").addTo(refConflict);
+        var mGangeso = L.marker([6.9989, 38.2349], { icon: redIcon }).bindPopup("Gangeso").addTo(refConflict);
+        var mWetebet = L.marker([10.5602, 37.4902], { icon: redIcon }).bindPopup("Wetebet").addTo(refConflict);
+        var mRobitKetena2 = L.marker([11.4119, 38.4323], { icon: redIcon }).bindPopup("Robit Ketena 2").addTo(refConflict);
+        var mGesagisShimbirma = L.marker([10.8486, 37.5924], { icon: redIcon }).bindPopup("Gesagis Shimbirma").addTo(refConflict);
+        var mGudbaSekela = L.marker([10.9031, 37.5397], { icon: redIcon }).bindPopup("Gudba Sekela").addTo(refConflict);
+        var mMircha = L.marker([10.9923, 37.4917], { icon: redIcon }).bindPopup("Mircha").addTo(refConflict);
+        var mAgewdarGiyorgies = L.marker([10.9472, 37.5489], { icon: redIcon }).bindPopup("Agewdar Giyorgies").addTo(refConflict);
+        var mSadenGofa = L.marker([3.8576, 38.9761], { icon: redIcon }).bindPopup("Saden Gofa").addTo(refConflict);
+        var mGenetAbocity = L.marker([10.8229, 37.4278], { icon: redIcon }).bindPopup("Genet Abo city").addTo(refConflict);
+        var mGuboGubala = L.marker([6.3491, 39.0921], { icon: redIcon }).bindPopup("Gubo Gubala").addTo(refConflict);
+        var mMendi02kebele = L.marker([9.7983, 35.1052], { icon: redIcon }).bindPopup("Mendi 02 kebele").addTo(refConflict);
+        var mZarimaSchool = L.marker([13.3402, 37.8772], { icon: redIcon }).bindPopup("Zarima School").addTo(refConflict);
+        var mDorbade = L.marker([5.8740, 37.9280], { icon: redIcon }).bindPopup("Dorbade").addTo(refConflict);
+        var mGombo = L.marker([9.8041, 35.1063], { icon: redIcon }).bindPopup("Gombo").addTo(refConflict);
+        var mRoqa = L.marker([8.1271, 41.6682], { icon: redIcon }).bindPopup("Roqa").addTo(refConflict);
+        var mMindikiru = L.marker([12.6339, 39.0293], { icon: redIcon }).bindPopup("Mindikiru").addTo(refConflict);
+        var mMagalaad = L.marker([8.4586, 41.9046], { icon: redIcon }).bindPopup("Magalaad").addTo(refConflict);
+        var mLiegus = L.marker([10.9841, 37.6300], { icon: redIcon }).bindPopup("Liegus").addTo(refConflict);
+        var mLalabije = L.marker([3.6345, 39.0360], { icon: redIcon }).bindPopup("Lalabije").addTo(refConflict);
+        var mAyenYibert = L.marker([11.0003, 37.4955], { icon: redIcon }).bindPopup("Ayen Yibert").addTo(refConflict);
+        var mWoybeygn = L.marker([11.0368, 37.4636], { icon: redIcon }).bindPopup("Woybeygn").addTo(refConflict);
+        var mBaqasa = L.marker([6.0536, 41.3545], { icon: redIcon }).bindPopup("Baqasa").addTo(refConflict);
+        var mAsbuliConflict = L.marker([9.9761, 41.1638], { icon: redIcon }).bindPopup("Asbuli Conflict").addTo(refConflict);
+        var mMiessoTown = L.marker([9.2906, 40.8329], { icon: redIcon }).bindPopup("Miesso Town").addTo(refConflict);
+        var mHaruun = L.marker([6.2768, 40.9535], { icon: redIcon }).bindPopup("Haruun").addTo(refConflict);
+        var mQabanawa = L.marker([3.5466, 39.0504], { icon: redIcon }).bindPopup("Qabanawa").addTo(refConflict);
+        var mBussa = L.marker([7.4246, 41.6589], { icon: redIcon }).bindPopup("Bussa").addTo(refConflict);
+        var mBerak = L.marker([6.0520, 40.1404], { icon: redIcon }).bindPopup("Berak").addTo(refConflict);
+        var mKeraro = L.marker([5.5609, 39.3859], { icon: redIcon }).bindPopup("Keraro").addTo(refConflict);
+        var mGodo = L.marker([6.9691, 38.2667], { icon: redIcon }).bindPopup("Godo").addTo(refConflict);
+        var mHardinConflict = L.marker([9.0102, 40.3285], { icon: redIcon }).bindPopup("Hardin Conflict").addTo(refConflict);
+        var mAfderaHighschool = L.marker([13.2081, 40.8467], { icon: redIcon }).bindPopup("Afdera High school").addTo(refConflict);
+        var mNipnip = L.marker([8.3473, 33.8943], { icon: redIcon }).bindPopup("Nipnip").addTo(refConflict);
+        var mUdaledaba = L.marker([11.1618, 40.2173], { icon: redIcon }).bindPopup("Udaledaba").addTo(refConflict);
+        var mHorsed = L.marker([5.2044, 39.9611], { icon: redIcon }).bindPopup("Horsed").addTo(refConflict);
+        var mBurqaNagaya = L.marker([8.0831, 41.6568], { icon: redIcon }).bindPopup("Burqa Nagaya").addTo(refConflict);
+        var mKuli = L.marker([10.7115, 36.4205], { icon: redIcon }).bindPopup("Kuli").addTo(refConflict);
+        var mWeyinshetFabrica = L.marker([9.6628, 39.5038], { icon: redIcon }).bindPopup("Weyinshet Fabrica").addTo(refConflict);
+        var mDarusalam = L.marker([3.7677, 39.2322], { icon: redIcon }).bindPopup("Darusalam").addTo(refConflict);
+        var mGurodamoleTown = L.marker([6.6059, 40.4652], { icon: redIcon }).bindPopup("Gurodamole Town").addTo(refConflict);
+        var mHalgan = L.marker([3.5387, 39.0578], { icon: redIcon }).bindPopup("Halgan").addTo(refConflict);
+        var mSekotaTown02 = L.marker([12.6240, 39.0344], { icon: redIcon }).bindPopup("Sekota Town 02").addTo(refConflict);
+        var mSheloIlancho = L.marker([6.9293, 38.2395], { icon: redIcon }).bindPopup("Shelo Ilancho").addTo(refConflict);
+        var mWedamo = L.marker([3.7118, 39.0357], { icon: redIcon }).bindPopup("Wedamo").addTo(refConflict);
+        var mSamara = L.marker([11.8023, 41.0038], { icon: redIcon }).bindPopup("Samara").addTo(refConflict);
+        var mSaden = L.marker([3.7734, 38.9697], { icon: redIcon }).bindPopup("Saden").addTo(refConflict);
+        var mEllalhey = L.marker([3.7661, 39.2257], { icon: redIcon }).bindPopup("Ellalhey").addTo(refConflict);
+        var mTsitsika = L.marker([12.7752, 38.7993], { icon: redIcon }).bindPopup("Tsitsika").addTo(refConflict);
+        var mZarimaCenter = L.marker([13.3417, 37.8795], { icon: redIcon }).bindPopup("Zarima Center").addTo(refConflict);
+        var mBudin7Tsitsika = L.marker([12.7816, 38.7978], { icon: redIcon }).bindPopup("Budin 7 Tsitsika").addTo(refConflict);
+        var mDirma = L.marker([12.4592, 39.9739], { icon: redIcon }).bindPopup("Dirma").addTo(refConflict);
+        var mMaibulit = L.marker([12.6261, 39.0246], { icon: redIcon }).bindPopup("Maibulit").addTo(refConflict);
+        var mHaybena = L.marker([5.6314, 37.5036], { icon: redIcon }).bindPopup("Haybena").addTo(refConflict);
+        var mGoroSoda = L.marker([3.5518, 39.0482], { icon: redIcon }).bindPopup("Goro Soda").addTo(refConflict);
+        var mTuliguledTown = L.marker([9.6175, 42.7519], { icon: redIcon }).bindPopup("Tuliguled Town").addTo(refConflict);
+        var mDebark03 = L.marker([13.1499, 37.8981], { icon: redIcon }).bindPopup("Debark 03").addTo(refConflict);
+        var mGabagabo = L.marker([9.3479, 42.5722], { icon: redIcon }).bindPopup("Gabagabo").addTo(refConflict);
+        var mChinaCamp = L.marker([9.6417, 39.5085], { icon: redIcon }).bindPopup("China Camp").addTo(refConflict);
+        var mMoyale03kebele = L.marker([3.5429, 39.0535], { icon: redIcon }).bindPopup("Moyale 03 kebele").addTo(refConflict);
+        var mRoge = L.marker([8.3767, 41.8772], { icon: redIcon }).bindPopup("Roge").addTo(refConflict);
+        var mBurgab = L.marker([3.5534, 39.0552], { icon: redIcon }).bindPopup("Burgab").addTo(refConflict);
+        var mDebark02 = L.marker([13.1571, 37.8969], { icon: redIcon }).bindPopup("Debark 02").addTo(refConflict);
+        var mDebark01 = L.marker([13.1572, 37.9001], { icon: redIcon }).bindPopup("Debark 01").addTo(refConflict);
+        var mMino = L.marker([8.0351, 41.7207], { icon: redIcon }).bindPopup("Mino").addTo(refConflict);
+        var mJaraCamp = L.marker([11.6768, 39.8974], { icon: redIcon }).bindPopup("Jara Camp").addTo(refConflict);
+        var mBeledulAmin = L.marker([3.5851, 39.0436], { icon: redIcon }).bindPopup("Beledul Amin").addTo(refConflict);
+        var mElmahan = L.marker([4.7543, 39.2461], { icon: redIcon }).bindPopup("Elmahan").addTo(refConflict);
+        var mGuyah = L.marker([12.4192, 41.1865], { icon: redIcon }).bindPopup("Guyah").addTo(refConflict);
+        var mQoliji = L.marker([9.1814, 42.3908], { icon: redIcon }).bindPopup("Qoliji").addTo(refConflict);
+        var mQoliji2 = L.marker([42.3936, 9.1773], { icon: redIcon }).bindPopup("Qoliji 2").addTo(refConflict);
+
+
+        // REFUGESS DROUGHT ORANGE
+        // Icon for Ref
+        var refDrought = L.layerGroup();
+
+        var orangeIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            //shadowSize: [41, 41]
+        });
+
+        var mAleen = L.marker([6.2752, 45.1402], { icon: orangeIcon }).bindPopup("Aleen").addTo(refDrought);
+        var mElbuko = L.marker([7.2790, 40.6754], { icon: orangeIcon }).bindPopup("Elbuko").addTo(refDrought);
+        var mDhuhunTown = L.marker([7.2211, 42.7036], { icon: orangeIcon }).bindPopup("Dhuhun Town").addTo(refDrought);
+        var mDardher = L.marker([7.1540, 43.1440], { icon: orangeIcon }).bindPopup("Dardher").addTo(refDrought);
+        var mDudun = L.marker([6.3679, 43.2789], { icon: orangeIcon }).bindPopup("Dudun").addTo(refDrought);
+        var mMagalaAlan = L.marker([5.0769, 43.2083], { icon: orangeIcon }).bindPopup("Magala Alan").addTo(refDrought);
+        var mHarwayu = L.marker([4.6745, 38.1503], { icon: orangeIcon }).bindPopup("Harwayu").addTo(refDrought);
+        var mGoldheer = L.marker([6.2345, 44.3361], { icon: orangeIcon }).bindPopup("Goldheer").addTo(refDrought);
+        var mBima = L.marker([4.7449, 39.2328], { icon: orangeIcon }).bindPopup("Bima").addTo(refDrought);
+        var mAjo = L.marker([7.6900, 40.9826], { icon: orangeIcon }).bindPopup("Ajo").addTo(refDrought);
+        var mButiiji = L.marker([9.5622, 40.7541], { icon: orangeIcon }).bindPopup("Butiiji").addTo(refDrought);
+        var mRaro = L.marker([4.0136, 39.2233], { icon: orangeIcon }).bindPopup("Raro").addTo(refDrought);
+        var mKurakur = L.marker([9.7306, 40.5226], { icon: orangeIcon }).bindPopup("Kurakur").addTo(refDrought);
+        var mSukelaQala = L.marker([4.1854, 39.9225], { icon: orangeIcon }).bindPopup("Sukela Qala").addTo(refDrought);
+        var mAfdamTown = L.marker([9.4743, 40.9982], { icon: orangeIcon }).bindPopup("Afdam Town").addTo(refDrought);
+        var mKelafoTown01 = L.marker([5.5931, 44.2014], { icon: orangeIcon }).bindPopup("Kelafo Town 01").addTo(refDrought);
+        var mIjiid = L.marker([6.3933, 43.5299], { icon: orangeIcon }).bindPopup("Ijiid").addTo(refDrought);
+        var mHuleTokoffa = L.marker([8.1911, 37.3877], { icon: orangeIcon }).bindPopup("Hule Tokoffa").addTo(refDrought);
+        var mElwaynetown = L.marker([6.6155, 43.1438], { icon: orangeIcon }).bindPopup("Elwayne town").addTo(refDrought);
+        var mGoob = L.marker([8.0285, 46.5956], { icon: orangeIcon }).bindPopup("Goob").addTo(refDrought);
+        var mArdaHola = L.marker([3.5994, 39.1370], { icon: orangeIcon }).bindPopup("Arda Hola").addTo(refDrought);
+        var mHorashagahTown = L.marker([6.9634, 43.5042], { icon: orangeIcon }).bindPopup("Horashagah Town").addTo(refDrought);
+        var mMaramaydh = L.marker([6.9865, 43.3191], { icon: orangeIcon }).bindPopup("Maramaydh").addTo(refDrought);
+        var mKarinka = L.marker([5.7664, 43.8565], { icon: orangeIcon }).bindPopup("Karinka").addTo(refDrought);
+        var mShekoshTown = L.marker([7.4087, 43.9227], { icon: orangeIcon }).bindPopup("Shekosh Town").addTo(refDrought);
+        var mUlaag = L.marker([7.3036, 43.4279], { icon: orangeIcon }).bindPopup("Ulaag").addTo(refDrought);
+        var mCeebalacad = L.marker([7.5696, 42.9257], { icon: orangeIcon }).bindPopup("Ceebala cad").addTo(refDrought);
+        var mHerokheyre = L.marker([6.4889, 42.8373], { icon: orangeIcon }).bindPopup("Hero kheyre").addTo(refDrought);
+        var mLisimolay = L.marker([5.8343, 43.0273], { icon: orangeIcon }).bindPopup("Lisimolay").addTo(refDrought);
+        var mHararaf = L.marker([6.6602, 45.3743], { icon: orangeIcon }).bindPopup("Hararaf").addTo(refDrought);
+        var mWalWaal = L.marker([7.0630, 45.4132], { icon: orangeIcon }).bindPopup("Wal Waal").addTo(refDrought);
+        var mQarud = L.marker([6.3591, 42.4933], { icon: orangeIcon }).bindPopup("Qarud").addTo(refDrought);
+        var mGaraslay = L.marker([7.0802, 42.7914], { icon: orangeIcon }).bindPopup("Garaslay").addTo(refDrought);
+        var mWashako = L.marker([5.4241, 44.1043], { icon: orangeIcon }).bindPopup("Washako").addTo(refDrought);
+        var mBanguduud = L.marker([6.3750, 40.4364], { icon: orangeIcon }).bindPopup("Banguduud").addTo(refDrought);
+        var mGalaBabbo = L.marker([6.7364, 41.1644], { icon: orangeIcon }).bindPopup("Gala Babbo").addTo(refDrought);
+        var mBelda = L.marker([7.7717, 40.9778], { icon: orangeIcon }).bindPopup("Belda").addTo(refDrought);
+        var mGedUgas = L.marker([9.4104, 40.7375], { icon: orangeIcon }).bindPopup("GedUgas").addTo(refDrought);
+        var mGosolaley = L.marker([8.2425, 43.2998], { icon: orangeIcon }).bindPopup("Gosolaley").addTo(refDrought);
+        var mKobi = L.marker([8.2264, 37.4082], { icon: orangeIcon }).bindPopup("Kobi").addTo(refDrought);
+        var mLiaanmo = L.marker([6.1149, 43.5529], { icon: orangeIcon }).bindPopup("Liaanmo").addTo(refDrought);
+        var mDanaAdin = L.marker([4.6067, 42.4189], { icon: orangeIcon }).bindPopup("DanaAdin").addTo(refDrought);
+        var mDabab = L.marker([4.6203, 42.8053], { icon: orangeIcon }).bindPopup("Dabab").addTo(refDrought);
+        var mAwloSaar = L.marker([6.0006, 44.3364], { icon: orangeIcon }).bindPopup("Awlo Saar").addTo(refDrought);
+        var mMalkasalah = L.marker([5.5747, 43.3411], { icon: orangeIcon }).bindPopup("Malka salah").addTo(refDrought);
+        var mKarinCagaar = L.marker([7.3587, 43.2543], { icon: orangeIcon }).bindPopup("Karin Cagaar").addTo(refDrought);
+        var mDeereela = L.marker([9.5245, 41.1033], { icon: orangeIcon }).bindPopup("Deereela").addTo(refDrought);
+        var mAndoUbayd = L.marker([10.1121, 42.2142], { icon: orangeIcon }).bindPopup("Ando Ubayd").addTo(refDrought);
+        var mHoora = L.marker([10.3252, 41.7606], { icon: orangeIcon }).bindPopup("Hoora").addTo(refDrought);
+        var mSirsire = L.marker([4.4719, 42.6332], { icon: orangeIcon }).bindPopup("Sirsire").addTo(refDrought);
+        var mNusdarik = L.marker([7.6070, 44.7646], { icon: orangeIcon }).bindPopup("Nusdarik").addTo(refDrought);
+        var mBaqaqsa = L.marker([5.6771, 40.3047], { icon: orangeIcon }).bindPopup("Baqaqsa").addTo(refDrought);
+        var mMutulu = L.marker([8.2179, 37.4039], { icon: orangeIcon }).bindPopup("Mutulu").addTo(refDrought);
+        var mGarlogubey = L.marker([6.8701, 45.0323], { icon: orangeIcon }).bindPopup("Garlogubey").addTo(refDrought);
+        var mBulale = L.marker([7.9505, 43.8103], { icon: orangeIcon }).bindPopup("Bulale").addTo(refDrought);
+        var mAlihudle = L.marker([5.2041, 43.5447], { icon: orangeIcon }).bindPopup("Ali hudle").addTo(refDrought);
+        var mMalayko = L.marker([7.2189, 43.2301], { icon: orangeIcon }).bindPopup("Malayko").addTo(refDrought);
+        var mKetiba = L.marker([7.3532, 40.5290], { icon: orangeIcon }).bindPopup("Ketiba").addTo(refDrought);
+        var mGafow = L.marker([6.9629, 45.3518], { icon: orangeIcon }).bindPopup("Gafow").addTo(refDrought);
+        var mMarsinTown02Kebele = L.marker([7.6079, 44.9450], { icon: orangeIcon }).bindPopup("Marsin Town 02 Kebele").addTo(refDrought);
+        var mHarareytown = L.marker([6.9802, 42.9835], { icon: orangeIcon }).bindPopup("Hararey town").addTo(refDrought);
+        var mFarburo = L.marker([5.8058, 43.5405], { icon: orangeIcon }).bindPopup("Farburo").addTo(refDrought);
+        var mEladan = L.marker([5.2462, 43.4851], { icon: orangeIcon }).bindPopup("Eladan").addTo(refDrought);
+        var mEleletown = L.marker([6.2490, 43.9161], { icon: orangeIcon }).bindPopup("Elele town").addTo(refDrought);
+        var mHaroHagansa = L.marker([5.3635, 38.2189], { icon: orangeIcon }).bindPopup("Haro Hagansa").addTo(refDrought);
+        var mKulmis = L.marker([5.1441, 43.3918], { icon: orangeIcon }).bindPopup("Kulmis").addTo(refDrought);
+        var mDoogaad = L.marker([4.8366, 43.1390], { icon: orangeIcon }).bindPopup("Doogaad").addTo(refDrought);
+        var mGabal = L.marker([6.0636, 42.9750], { icon: orangeIcon }).bindPopup("Gabal").addTo(refDrought);
+        var mXidigta = L.marker([6.4024, 42.3519], { icon: orangeIcon }).bindPopup("Xidigta").addTo(refDrought);
+        var mDigTown = L.marker([7.7674, 44.4977], { icon: orangeIcon }).bindPopup("Dig Town").addTo(refDrought);
+        var mShahda = L.marker([8.2260, 46.3242], { icon: orangeIcon }).bindPopup("Shahda").addTo(refDrought);
+        var mQararo = L.marker([7.8476, 45.8924], { icon: orangeIcon }).bindPopup("Qararo").addTo(refDrought);
+        var mLagahidaTown02 = L.marker([7.3848, 41.7797], { icon: orangeIcon }).bindPopup("Lagahida Town 02").addTo(refDrought);
+        var mElbahay = L.marker([7.8162, 44.9763], { icon: orangeIcon }).bindPopup("Elbahay").addTo(refDrought);
+        var mGoljanotown = L.marker([8.8802, 42.7082], { icon: orangeIcon }).bindPopup("Goljano town").addTo(refDrought);
+        var mHaraday = L.marker([6.4383, 43.5020], { icon: orangeIcon }).bindPopup("Har'aday").addTo(refDrought);
+        var mHarafama = L.marker([6.1163, 41.2921], { icon: orangeIcon }).bindPopup("Harafama").addTo(refDrought);
+        var mDalaad = L.marker([6.6261, 44.1179], { icon: orangeIcon }).bindPopup("Dalaad").addTo(refDrought);
+        var mRoobDaay = L.marker([6.9985, 45.3524], { icon: orangeIcon }).bindPopup("Roob Da'ay").addTo(refDrought);
+        var mAfase = L.marker([9.6999, 40.7633], { icon: orangeIcon }).bindPopup("Afase").addTo(refDrought);
+        var mDanottown = L.marker([7.5589, 45.2957], { icon: orangeIcon }).bindPopup("Danot town").addTo(refDrought);
+        var mGalhamurtown = L.marker([7.5503, 47.1142], { icon: orangeIcon }).bindPopup("Galhamur town").addTo(refDrought);
+        var mSamat = L.marker([5.1513, 42.9791], { icon: orangeIcon }).bindPopup("Samat").addTo(refDrought);
+        var mWab = L.marker([4.2097, 39.9196], { icon: orangeIcon }).bindPopup("Wab").addTo(refDrought);
+        var mHaarsoog = L.marker([5.5288, 43.3973], { icon: orangeIcon }).bindPopup("Haarsoog").addTo(refDrought);
+        var mLuuqdhere = L.marker([5.5881, 44.3513], { icon: orangeIcon }).bindPopup("Luuq dhere").addTo(refDrought);
+        var mBulaAd = L.marker([5.2108, 42.1669], { icon: orangeIcon }).bindPopup("Bula Ad").addTo(refDrought);
+        var mTowfiiq = L.marker([6.4560, 40.4903], { icon: orangeIcon }).bindPopup("Towfiiq").addTo(refDrought);
+        var mGurgur = L.marker([10.4312, 41.9832], { icon: orangeIcon }).bindPopup("Gurgur").addTo(refDrought);
+        var mDaawodiid = L.marker([6.7876, 42.6736], { icon: orangeIcon }).bindPopup("Daawo diid").addTo(refDrought);
+        var mGubodad = L.marker([5.6283, 43.5686], { icon: orangeIcon }).bindPopup("Gubodad").addTo(refDrought);
+        var mHadelelacenter = L.marker([10.2119, 40.1028], { icon: orangeIcon }).bindPopup("Hadelela center").addTo(refDrought);
+        var mGarboTown02 = L.marker([7.3061, 43.2979], { icon: orangeIcon }).bindPopup("Garbo Town 02").addTo(refDrought);
+        var mCaramadow = L.marker([4.7771, 43.0934], { icon: orangeIcon }).bindPopup("Caramadow").addTo(refDrought);
+        var mDinto = L.marker([5.0045, 41.9511], { icon: orangeIcon }).bindPopup("Dinto").addTo(refDrought);
+        var mDalaAd = L.marker([3.8014, 39.2356], { icon: orangeIcon }).bindPopup("Dala Ad").addTo(refDrought);
+        var mJiqta = L.marker([5.6880, 43.2422], { icon: orangeIcon }).bindPopup("Jiqta").addTo(refDrought);
+        var mAlijiir = L.marker([9.7647, 40.8259], { icon: orangeIcon }).bindPopup("Ali jiir").addTo(refDrought);
+        var mSedatale = L.marker([5.5918, 43.1514], { icon: orangeIcon }).bindPopup("Sedatale").addTo(refDrought);
+        var mDaraye = L.marker([5.4851, 43.1704], { icon: orangeIcon }).bindPopup("Daraye").addTo(refDrought);
+        var mKaloan = L.marker([7.3758, 45.9251], { icon: orangeIcon }).bindPopup("Kalo'an").addTo(refDrought);
+        var mKayane = L.marker([5.9630, 43.4566], { icon: orangeIcon }).bindPopup("Kayane").addTo(refDrought);
+        var mHargadab = L.marker([6.2809, 41.1647], { icon: orangeIcon }).bindPopup("Hargadab").addTo(refDrought);
+        var mDananTown = L.marker([6.5125, 43.4918], { icon: orangeIcon }).bindPopup("Danan Town").addTo(refDrought);
+        var mGoroBali = L.marker([5.3103, 38.3812], { icon: orangeIcon }).bindPopup("Goro Bali").addTo(refDrought);
+        var mBurgaabo = L.marker([5.5999, 44.3260], { icon: orangeIcon }).bindPopup("Bur gaabo").addTo(refDrought);
+        var mDhugdhug = L.marker([7.8962, 43.6933], { icon: orangeIcon }).bindPopup("Dhugdhug").addTo(refDrought);
+        var mGaladiTown04 = L.marker([6.9681, 46.4047], { icon: orangeIcon }).bindPopup("Galadi Town 04").addTo(refDrought);
+        var mKebele02 = L.marker([6.9792, 46.4088], { icon: orangeIcon }).bindPopup("Kebele2").addTo(refDrought);
+        var mAlloqod = L.marker([6.5313, 43.7713], { icon: orangeIcon }).bindPopup("Alloqod").addTo(refDrought);
+        var mQarawiish = L.marker([5.4744, 43.0357], { icon: orangeIcon }).bindPopup("Qarawiish").addTo(refDrought);
+        var mShinile = L.marker([6.6775, 43.5452], { icon: orangeIcon }).bindPopup("Shinile").addTo(refDrought);
+        var mRosiley = L.marker([5.8564, 41.4626], { icon: orangeIcon }).bindPopup("Rosiley").addTo(refDrought);
+        var mSegegTown01 = L.marker([7.6822, 42.8384], { icon: orangeIcon }).bindPopup("Segeg Town01").addTo(refDrought);
+        var mBurqoyar = L.marker([6.7093, 43.4778], { icon: orangeIcon }).bindPopup("Burqoyar").addTo(refDrought);
+        var mGarale = L.marker([3.9418, 39.8841], { icon: orangeIcon }).bindPopup("Garale").addTo(refDrought);
+        var mAnaMalab = L.marker([4.3354, 40.1526], { icon: orangeIcon }).bindPopup("Ana Malab").addTo(refDrought);
+        var mDarortown = L.marker([8.2220, 44.7027], { icon: orangeIcon }).bindPopup("Daror town").addTo(refDrought);
+        var mHida = L.marker([5.4672, 38.2604], { icon: orangeIcon }).bindPopup("Hida").addTo(refDrought);
+        var mDirindir = L.marker([5.0194, 42.0820], { icon: orangeIcon }).bindPopup("Dirindir").addTo(refDrought);
+        var mGudhis = L.marker([6.8066, 42.3015], { icon: orangeIcon }).bindPopup("Gudhis").addTo(refDrought);
+        var mWarAd = L.marker([3.6231, 39.0647], { icon: orangeIcon }).bindPopup("War Ad").addTo(refDrought);
+        var mHajisalah = L.marker([8.5844, 45.2439], { icon: orangeIcon }).bindPopup("Haji salah").addTo(refDrought);
+        var mAwaretown = L.marker([8.2633, 44.1601], { icon: orangeIcon }).bindPopup("Aware town").addTo(refDrought);
+        var mBadacas = L.marker([6.4961, 43.5442], { icon: orangeIcon }).bindPopup("Badacas").addTo(refDrought);
+        var mKooya = L.marker([5.9940, 41.3020], { icon: orangeIcon }).bindPopup("Kooya").addTo(refDrought);
+        var mKintota = L.marker([5.2826, 38.4016], { icon: orangeIcon }).bindPopup("Kintota").addTo(refDrought);
+        var mJigesa = L.marker([5.3745, 38.2974], { icon: orangeIcon }).bindPopup("Jigesa").addTo(refDrought);
+        var mHajeeda = L.marker([6.2306, 41.0463], { icon: orangeIcon }).bindPopup("Hajeeda").addTo(refDrought);
+        var mKurawa = L.marker([6.0080, 41.7958], { icon: orangeIcon }).bindPopup("Kurawa").addTo(refDrought);
+        var mKatoDrought = L.marker([9.0202, 40.3459], { icon: orangeIcon }).bindPopup("Kato Drought").addTo(refDrought);
+        var mGabicas = L.marker([6.1350, 43.6454], { icon: orangeIcon }).bindPopup("Gabicas").addTo(refDrought);
+        var mBiralays2 = L.marker([5.6557, 43.3972], { icon: orangeIcon }).bindPopup("Biralays 2").addTo(refDrought);
+        var mHardinDrought = L.marker([9.0144, 40.3283], { icon: orangeIcon }).bindPopup("Hardin Drought").addTo(refDrought);
+        var mManjo = L.marker([9.2934, 40.7551], { icon: orangeIcon }).bindPopup("Manjo").addTo(refDrought);
+        var mKorile = L.marker([7.5035, 45.0159], { icon: orangeIcon }).bindPopup("Korile").addTo(refDrought);
+        var mHargelle01 = L.marker([5.2194, 42.1959], { icon: orangeIcon }).bindPopup("Hargelle 01").addTo(refDrought);
+        var mGodgodTown = L.marker([4.9102, 43.2236], { icon: orangeIcon }).bindPopup("Godgod Town").addTo(refDrought);
+        var mKunBul = L.marker([5.0725, 42.3570], { icon: orangeIcon }).bindPopup("Kun Bul").addTo(refDrought);
+        var mQohletown = L.marker([5.1265, 43.1733], { icon: orangeIcon }).bindPopup("Qohle town").addTo(refDrought);
+        var mAsli = L.marker([9.8056, 40.9218], { icon: orangeIcon }).bindPopup("Asli").addTo(refDrought);
+        var mLebbaKalu = L.marker([5.9952, 41.8163], { icon: orangeIcon }).bindPopup("Lebba Kalu").addTo(refDrought);
+        var mWaafDhuug = L.marker([6.8187, 45.0909], { icon: orangeIcon }).bindPopup("Waaf Dhuug").addTo(refDrought);
+        var mAydora = L.marker([9.8526, 41.3656], { icon: orangeIcon }).bindPopup("Aydora").addTo(refDrought);
+        var mChame = L.marker([5.2223, 38.4702], { icon: orangeIcon }).bindPopup("Chame").addTo(refDrought);
+        var mBufataFaya = L.marker([5.4003, 38.2701], { icon: orangeIcon }).bindPopup("Bufata Faya").addTo(refDrought);
+        var mKoracle = L.marker([6.9649, 45.3317], { icon: orangeIcon }).bindPopup("Koracle").addTo(refDrought);
+        var mHaroDibe = L.marker([6.6186, 40.4836], { icon: orangeIcon }).bindPopup("Haro Dibe").addTo(refDrought);
+        var mJerey = L.marker([5.7511, 43.8180], { icon: orangeIcon }).bindPopup("Jerey").addTo(refDrought);
+        var mDidibisa = L.marker([6.1131, 41.6802], { icon: orangeIcon }).bindPopup("Didibisa").addTo(refDrought);
+        var mArraadDrought = L.marker([4.1602, 42.0497], { icon: orangeIcon }).bindPopup("Arra'ad Drought").addTo(refDrought);
+        var mIlalaSara = L.marker([5.3310, 38.2791], { icon: orangeIcon }).bindPopup("Ilala Sara").addTo(refDrought);
+        var mBasira = L.marker([6.1197, 41.6701], { icon: orangeIcon }).bindPopup("Basira").addTo(refDrought);
+        var mKoraley = L.marker([4.1903, 42.0919], { icon: orangeIcon }).bindPopup("Koraley").addTo(refDrought);
+        var mGunagadoTown = L.marker([7.8014, 43.9584], { icon: orangeIcon }).bindPopup("Gunagado Town").addTo(refDrought);
+        var mEjersa = L.marker([5.6062, 38.2384], { icon: orangeIcon }).bindPopup("Ejersa").addTo(refDrought);
+        var mGurdumi = L.marker([8.0061, 44.3347], { icon: orangeIcon }).bindPopup("Gurdumi").addTo(refDrought);
+        var mKojowa = L.marker([4.0632, 39.3213], { icon: orangeIcon }).bindPopup("Kojowa").addTo(refDrought);
+        var mElaButa = L.marker([5.9707, 41.7960], { icon: orangeIcon }).bindPopup("Ela Buta").addTo(refDrought);
+        var mHartiBar = L.marker([6.1046, 41.6804], { icon: orangeIcon }).bindPopup("Harti Bar").addTo(refDrought);
+        var mElgoof = L.marker([3.8535, 39.0683], { icon: orangeIcon }).bindPopup("Elgoof").addTo(refDrought);
+        var mZoniHantutu = L.marker([6.0146, 41.7868], { icon: orangeIcon }).bindPopup("Zoni Hantutu").addTo(refDrought);
+        var mHadhkalay = L.marker([10.1182, 41.6140], { icon: orangeIcon }).bindPopup("Hadhkalay").addTo(refDrought);
+        var mBodadhere = L.marker([7.7856, 45.5335], { icon: orangeIcon }).bindPopup("Bodadhere").addTo(refDrought);
+        var mLahelowTown = L.marker([6.5669, 45.1729], { icon: orangeIcon }).bindPopup("Lahelow Town").addTo(refDrought);
+        var mBare01 = L.marker([4.6304, 42.6259], { icon: orangeIcon }).bindPopup("Bare 01").addTo(refDrought);
+        var mJimba = L.marker([5.4333, 42.3210], { icon: orangeIcon }).bindPopup("Jimba").addTo(refDrought);
+        var mSidaMisoma = L.marker([5.3949, 38.2688], { icon: orangeIcon }).bindPopup("Sida Misoma").addTo(refDrought);
+        var mEastimiTown2 = L.marker([6.4669, 42.1779], { icon: orangeIcon }).bindPopup("East imi Town 2").addTo(refDrought);
+        var mQolodow = L.marker([5.8948, 43.5224], { icon: orangeIcon }).bindPopup("Qolodow").addTo(refDrought);
+        var mAlan = L.marker([4.5476, 42.3145], { icon: orangeIcon }).bindPopup("Alan").addTo(refDrought);
+        var mZoniButtu = L.marker([6.3369, 41.4708], { icon: orangeIcon }).bindPopup("Zoni Buttu").addTo(refDrought);
+        var mDhadachaBaya = L.marker([5.3552, 38.3685], { icon: orangeIcon }).bindPopup("Dhadacha Baya").addTo(refDrought);
+        var mTodob = L.marker([5.2961, 43.4958], { icon: orangeIcon }).bindPopup("Todob").addTo(refDrought);
+        var mYuub = L.marker([6.7926, 44.9909], { icon: orangeIcon }).bindPopup("Yu'ub").addTo(refDrought);
+        var mFadato = L.marker([10.1949, 41.6630], { icon: orangeIcon }).bindPopup("Fadato").addTo(refDrought);
+        var mAdadletown = L.marker([5.7954, 43.5413], { icon: orangeIcon }).bindPopup("Adadle town").addTo(refDrought);
+        var mTogDer = L.marker([3.7722, 39.3680], { icon: orangeIcon }).bindPopup("Tog Der").addTo(refDrought);
+        var mGashamoTown = L.marker([8.1262, 45.3419], { icon: orangeIcon }).bindPopup("Gashamo Town").addTo(refDrought);
+        var mDarso = L.marker([4.7266, 41.8841], { icon: orangeIcon }).bindPopup("Darso").addTo(refDrought);
+        var mWeydkal = L.marker([5.0114, 42.7915], { icon: orangeIcon }).bindPopup("Weydkal").addTo(refDrought);
+        var mHariso = L.marker([10.5688, 41.5479], { icon: orangeIcon }).bindPopup("Hariso").addTo(refDrought);
+        var mIswad = L.marker([9.1515, 43.3500], { icon: orangeIcon }).bindPopup("Iswad").addTo(refDrought);
+        var mAsbuli = L.marker([9.9833, 41.1639], { icon: orangeIcon }).bindPopup("Asbuli").addTo(refDrought);
+        var mMasalaAduun = L.marker([4.8796, 42.5083], { icon: orangeIcon }).bindPopup("Masala Aduun").addTo(refDrought);
+        var mLibanHilme = L.marker([5.1633, 38.5433], { icon: orangeIcon }).bindPopup("Liban Hilme").addTo(refDrought);
+        var mDeruDenfile = L.marker([5.1625, 38.5441], { icon: orangeIcon }).bindPopup("Deru Denfile").addTo(refDrought);
+        var mUrageKorole = L.marker([5.1633, 38.5433], { icon: orangeIcon }).bindPopup("Urage Korole").addTo(refDrought);
+        var mGermedu = L.marker([5.5463, 39.3890], { icon: orangeIcon }).bindPopup("Germedu").addTo(refDrought);
+        var mZoneBeha1 = L.marker([39.5367, 5.3620], { icon: orangeIcon }).bindPopup("Zone Beha 1").addTo(refDrought);
+
+
+        // Refugees Flood Purple
+
+        // Icon for Ref
+        var refFlood = L.layerGroup();
+
+        var violetIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            //shadowSize: [41, 41]
+        });
+
+        var mAfase = L.marker([9.6987, 40.7643], { icon: violetIcon }).bindPopup("Afase").addTo(refFlood);
+        var mLalaba = L.marker([9.4832, 40.1076], { icon: violetIcon }).bindPopup("Lalaba").addTo(refFlood);
+        var mTrongolecluster = L.marker([4.7918, 36.0313], { icon: violetIcon }).bindPopup("Trongole cluster").addTo(refFlood);
+        var mGalaha = L.marker([11.4330, 40.9171], { icon: violetIcon }).bindPopup("Galaha").addTo(refFlood);
+        var mDemichcluster = L.marker([4.7845, 36.0120], { icon: violetIcon }).bindPopup("Demich cluster").addTo(refFlood);
+        var mSuftu01 = L.marker([3.9680, 41.8566], { icon: violetIcon }).bindPopup("Suftu 01").addTo(refFlood);
+        var mEdboren = L.marker([4.6249, 35.9655], { icon: violetIcon }).bindPopup("Edboren").addTo(refFlood);
+        var mKirensa = L.marker([9.2201, 40.1353], { icon: violetIcon }).bindPopup("Kirensa").addTo(refFlood);
+        var mMego = L.marker([11.5069, 41.6097], { icon: violetIcon }).bindPopup("Mego").addTo(refFlood);
+        var mSireMeret = L.marker([4.6178, 35.9617], { icon: violetIcon }).bindPopup("Sire Meret").addTo(refFlood);
+        var mHadiburi = L.marker([11.5227, 41.5594], { icon: violetIcon }).bindPopup("Hadiburi").addTo(refFlood);
+        var mFohaytu = L.marker([11.5273, 41.5301], { icon: violetIcon }).bindPopup("Fohaytu").addTo(refFlood);
+        var mSarSefer = L.marker([6.6068, 37.9377], { icon: violetIcon }).bindPopup("Sar Sefer").addTo(refFlood);
+        var mBundadaFlashflood = L.marker([6.6212, 44.3416], { icon: violetIcon }).bindPopup("Bundada Flash flood").addTo(refFlood);
+        var mGnezefet = L.marker([4.5330, 36.2121], { icon: violetIcon }).bindPopup("Gnezefet").addTo(refFlood);
+        var mFadato = L.marker([10.1954, 41.6638], { icon: violetIcon }).bindPopup("Fadato").addTo(refFlood);
+        var mBuboa = L.marker([4.4566, 36.2146], { icon: violetIcon }).bindPopup("Buboa").addTo(refFlood);
+        var mAdodaRifo = L.marker([10.1598, 40.7050], { icon: violetIcon }).bindPopup("Adoda Rifo").addTo(refFlood);
+        var mKusura = L.marker([9.5362, 40.3915], { icon: violetIcon }).bindPopup("Kusura").addTo(refFlood);
+        var mHado = L.marker([4.6453, 36.1900], { icon: violetIcon }).bindPopup("Hado").addTo(refFlood);
+        var mShara = L.marker([4.7071, 35.9973], { icon: violetIcon }).bindPopup("Shara").addTo(refFlood);
+        var mSeyis = L.marker([4.5789, 35.9477], { icon: violetIcon }).bindPopup("Seyis").addTo(refFlood);
+        var mSelegn = L.marker([4.6748, 35.9720], { icon: violetIcon }).bindPopup("Selegn").addTo(refFlood);
+        var mAdaydhurwa = L.marker([5.2551, 44.5294], { icon: violetIcon }).bindPopup("Aday dhurwa").addTo(refFlood);
+        var mSadey = L.marker([3.9537, 41.1908], { icon: violetIcon }).bindPopup("Sadey").addTo(refFlood);
+        var mBalita = L.marker([6.3941, 36.6369], { icon: violetIcon }).bindPopup("Balita").addTo(refFlood);
+        var mTafa = L.marker([6.4007, 36.6007], { icon: violetIcon }).bindPopup("Tafa").addTo(refFlood);
+        var mGocho = L.marker([6.8070, 37.3790], { icon: violetIcon }).bindPopup("Gocho").addTo(refFlood);
+        var mZelamandida = L.marker([6.3270, 37.6376], { icon: violetIcon }).bindPopup("Zelamandida").addTo(refFlood);
+        var mGayisa = L.marker([6.4843, 36.6859], { icon: violetIcon }).bindPopup("Gayisa").addTo(refFlood);
+        var mSite6 = L.marker([7.7112, 37.0971], { icon: violetIcon }).bindPopup("Site 6").addTo(refFlood);
+        var mMans = L.marker([4.0655, 37.9896], { icon: violetIcon }).bindPopup("Mans").addTo(refFlood);
+        var mNaftu = L.marker([12.4349, 39.9677], { icon: violetIcon }).bindPopup("Naftu").addTo(refFlood);
+        var mSite4 = L.marker([7.7224, 37.1267], { icon: violetIcon }).bindPopup("Site 4").addTo(refFlood);
+        var mMalab = L.marker([3.5941, 39.0310], { icon: violetIcon }).bindPopup("Malab").addTo(refFlood);
+        var mBirbirsa = L.marker([6.3555, 38.2838], { icon: violetIcon }).bindPopup("Birbirsa").addTo(refFlood);
+        var mHospital = L.marker([5.9350, 38.1629], { icon: violetIcon }).bindPopup("Hospital").addTo(refFlood);
+        var mMalkaAlati = L.marker([5.9413, 38.1561], { icon: violetIcon }).bindPopup("Malka Alati").addTo(refFlood);
+        var mSodomta = L.marker([12.8232, 40.9893], { icon: violetIcon }).bindPopup("Sodomta").addTo(refFlood);
+        var mJirmeDida = L.marker([5.9497, 38.1433], { icon: violetIcon }).bindPopup("Jirme Dida").addTo(refFlood);
+        var mArero = L.marker([6.4220, 38.1488], { icon: violetIcon }).bindPopup("Arero").addTo(refFlood);
+        var mDomainDevelopmentDorpsHall = L.marker([7.6697, 36.8481], { icon: violetIcon }).bindPopup("Domain Development Dorps Hall").addTo(refFlood);
+        var mYemberoMidrokCamp = L.marker([8.1762, 36.4598], { icon: violetIcon }).bindPopup("Yembero Midrok Camp").addTo(refFlood);
+        var mKabanawa = L.marker([3.5485, 39.0584], { icon: violetIcon }).bindPopup("Kabanawa").addTo(refFlood);
+        var mDawbalaAmesa = L.marker([3.9309, 38.9863], { icon: violetIcon }).bindPopup("Dawbala Amesa").addTo(refFlood);
+        var mBufataFaya = L.marker([5.4000, 38.2699], { icon: violetIcon }).bindPopup("Bufata Faya").addTo(refFlood);
+        var mArdaBiya = L.marker([5.6308, 38.2386], { icon: violetIcon }).bindPopup("Arda Biya").addTo(refFlood);
+        var mGoroGudina = L.marker([5.6246, 38.2452], { icon: violetIcon }).bindPopup("Goro Gudina").addTo(refFlood);
+        var mHaratu = L.marker([5.6070, 38.1494], { icon: violetIcon }).bindPopup("Haratu").addTo(refFlood);
+        var mGoroAbayi = L.marker([5.6591, 38.2463], { icon: violetIcon }).bindPopup("Goro Abayi").addTo(refFlood);
+        var mSidaMisoma = L.marker([5.3948, 38.2688], { icon: violetIcon }).bindPopup("Sida Misoma").addTo(refFlood);
+        var mBuleKagna = L.marker([5.6228, 38.2382], { icon: violetIcon }).bindPopup("Bule Kagna").addTo(refFlood);
+        var mGerba01 = L.marker([5.7810, 38.2692], { icon: violetIcon }).bindPopup("Gerba 01").addTo(refFlood);
+        var mMedresa = L.marker([8.0911, 36.4639], { icon: violetIcon }).bindPopup("Medresa").addTo(refFlood);
+        var mWadera01 = L.marker([5.7785, 39.3087], { icon: violetIcon }).bindPopup("Wadera 01").addTo(refFlood);
+        var mMelkaMuda = L.marker([5.7790, 38.4116], { icon: violetIcon }).bindPopup("Melka Muda").addTo(refFlood);
+        var mFonaLoni = L.marker([5.7803, 38.4036], { icon: violetIcon }).bindPopup("Fona Loni").addTo(refFlood);
+        var mGuchiBadiya = L.marker([3.8019, 38.9605], { icon: violetIcon }).bindPopup("Guchi Badiya").addTo(refFlood);
+        var mToreMagala = L.marker([5.9382, 38.1575], { icon: violetIcon }).bindPopup("Tore Magala").addTo(refFlood);
+        var mBitata = L.marker([5.4896, 39.4731], { icon: violetIcon }).bindPopup("Bitata").addTo(refFlood);
+        var mGerba02 = L.marker([5.7739, 38.2699], { icon: violetIcon }).bindPopup("Gerba 02").addTo(refFlood);
+        var mGorobute = L.marker([3.5580, 39.0516], { icon: violetIcon }).bindPopup("Gorobute").addTo(refFlood);
+        var mDoloKela = L.marker([5.3255, 39.5921], { icon: violetIcon }).bindPopup("Dolo Kela").addTo(refFlood);
+        var mLibenNegele = L.marker([5.3396, 39.5605], { icon: violetIcon }).bindPopup("Liben Negele").addTo(refFlood);
+        var mKariyolochich = L.marker([4.6305, 35.9699], { icon: violetIcon }).bindPopup("Kariyolochich").addTo(refFlood);
+        var mMounFlood = L.marker([8.3269, 33.2750], { icon: violetIcon }).bindPopup("Moun Flood").addTo(refFlood);
+        var mMoche04 = L.marker([7.4791, 37.9980], { icon: violetIcon }).bindPopup("Moche 04").addTo(refFlood);
+        var mHadhawe = L.marker([6.2407, 43.6033], { icon: violetIcon }).bindPopup("Hadhawe").addTo(refFlood);
+        var mGnimemer = L.marker([4.7633, 36.0407], { icon: violetIcon }).bindPopup("Gnimemer").addTo(refFlood);
+        var mTringole = L.marker([4.7814, 36.0647], { icon: violetIcon }).bindPopup("Tringole").addTo(refFlood);
+        var mChergose = L.marker([7.4680, 37.9988], { icon: violetIcon }).bindPopup("Chergose").addTo(refFlood);
+        var mLochber = L.marker([4.8027, 36.0150], { icon: violetIcon }).bindPopup("Lochber").addTo(refFlood);
+        var mDange = L.marker([7.4566, 37.9821], { icon: violetIcon }).bindPopup("Dange").addTo(refFlood);
+        var mGurenarama = L.marker([4.6505, 36.1930], { icon: violetIcon }).bindPopup("Gurenarama").addTo(refFlood);
+        var mArikol = L.marker([4.7424, 35.9969], { icon: violetIcon }).bindPopup("Arikol").addTo(refFlood);
+        var mKelem = L.marker([4.7920, 36.0168], { icon: violetIcon }).bindPopup("Kelem").addTo(refFlood);
+        var mFejej = L.marker([4.5583, 36.2341], { icon: violetIcon }).bindPopup("Fejej").addTo(refFlood);
+        var mYereker = L.marker([4.4616, 36.2455], { icon: violetIcon }).bindPopup("Yereker").addTo(refFlood);
+        var mKolomagnato = L.marker([4.7921, 36.0145], { icon: violetIcon }).bindPopup("Kolomagnato").addTo(refFlood);
+        var mOkote = L.marker([4.6346, 35.9482], { icon: violetIcon }).bindPopup("Okote").addTo(refFlood);
+        var mDelgnmur = L.marker([4.7463, 36.0068], { icon: violetIcon }).bindPopup("Delgnmur").addTo(refFlood);
+        var mArsemay = L.marker([4.7099, 35.9858], { icon: violetIcon }).bindPopup("Arsemay").addTo(refFlood);
+        var mGabulle = L.marker([11.5735, 41.4104], { icon: violetIcon }).bindPopup("Gabulle").addTo(refFlood);
+        var mQudhacdher = L.marker([5.9136, 43.3466], { icon: violetIcon }).bindPopup("Qudhac dher").addTo(refFlood);
+        var mGunbubur = L.marker([4.6421, 35.9688], { icon: violetIcon }).bindPopup("Gunbubur").addTo(refFlood);
+        var mNalabat = L.marker([4.6634, 35.9623], { icon: violetIcon }).bindPopup("Nalabat").addTo(refFlood);
+        var mAllowIgaadhsi = L.marker([5.6691, 44.0884], { icon: violetIcon }).bindPopup("Allow Igaadhsi").addTo(refFlood);
+        var mWaladayaGabare = L.marker([4.2886, 42.0654], { icon: violetIcon }).bindPopup("Waladaya Gabare").addTo(refFlood);
+        var mAkula = L.marker([4.7399, 36.1604], { icon: violetIcon }).bindPopup("Akula").addTo(refFlood);
+        var mGabikebele = L.marker([10.1967, 42.1406], { icon: violetIcon }).bindPopup("Gabi kebele").addTo(refFlood);
+        var m01Kebele = L.marker([5.3394, 41.8875], { icon: violetIcon }).bindPopup("01 Kebele").addTo(refFlood);
+        var mNibnibFlood = L.marker([8.3239, 33.7485], { icon: violetIcon }).bindPopup("Nibnib Flood").addTo(refFlood);
+        var mMustahiltown = L.marker([44.7392, 5.2574], { icon: violetIcon }).bindPopup("Mustahil town").addTo(refFlood);
+
+
+        // Airports Black
+        // custom icons for aiports
+
+        var refAirport = L.layerGroup();
+        const YOUR_API_KEY = "72988d9175074bdcbc8fe8ce0005452a";
+
+        const airportIcon = new L.icon({
+            iconUrl: 'https://api.geoapify.com/v1/icon/?type=awesome&scaleFactor=1&color=%2372a2d4&size=small&icon=plane-departure&apiKey=' + YOUR_API_KEY,
+            cursor: 'pointer',
+            anchor: 'bottom',
+            offset: [0, 6]
+        })
+
+
+        // Icon for Ref
+        //    var refAirport = L.layerGroup();
+
+        // var blackIcon = new L.Icon({
+        //     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
+        //     //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        //     iconSize: [12, 20],
+        //     iconAnchor: [5, 18],
+        //     popupAnchor: [1, -34],
+        //     //shadowSize: [41, 41]
+        // });
+
+        //         var (ET\d\d\d\d\d\d) = L.marker\(\[\d\d?.\d+, \d\d?.\d+\]\), { icon: blueIcon })
+
+        const mHAAB = L.marker([8.97789, 38.799301], { icon: airportIcon }).bindPopup('<p>HAAB<br/>Bole Airport</p>').addTo(refAirport);
+        const mHABD = L.marker([11.608099937438965, 37.32160186767578], { icon: airportIcon }).bindPopup("Bahir Dar Airport").addTo(refAirport);
+        const mHAGN = L.marker([12.51990032196045, 37.433998107910156], { icon: airportIcon }).bindPopup("Gonder Airport").addTo(refAirport);
+        const mHASO = L.marker([10.018500328063965, 34.586299896240234], { icon: airportIcon }).bindPopup("Asosa Airport").addTo(refAirport);
+        const mHADR = L.marker([9.624699592590332, 41.85419845581055], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
+        const mHAGM = L.marker([8.12876033782959, 34.5630989074707], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
+        const mHAJM = L.marker([7.66609001159668, 36.81660079956055], { icon: airportIcon }).bindPopup("Jimma Airport").addTo(refAirport);
+        const mHAAM = L.marker([6.0393900871276855, 37.59049987792969], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
+        const mHAGO = L.marker([5.93513011932, 43.5786018372], { icon: airportIcon }).bindPopup("Gode Airport").addTo(refAirport);
+        const mHAAX = L.marker([14.14680004119873, 38.77280044555664], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
+        const mHAAL = L.marker([9.003685, 38.725498], { icon: airportIcon }).bindPopup("Lideta Army Airport").addTo(refAirport);
+        const mHALL = L.marker([11.975000381469727, 38.97999954223633], { icon: airportIcon }).bindPopup("Lalibella Airport").addTo(refAirport);
+        const mHAMK = L.marker([13.467399597167969, 39.53350067138672], { icon: airportIcon }).bindPopup("Mekelle Airport").addTo(refAirport);
+        const mHAKD = L.marker([6.732577, 44.241339], { icon: airportIcon }).bindPopup("Kebri Dahar Airport").addTo(refAirport);
+        const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
+        const mHAHM = L.marker([8.7163, 39.0059], { icon: airportIcon }).bindPopup("Harar Meda Airport").addTo(refAirport);
+        const mHALA = L.marker([7.099869, 38.396187], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
+        const mHADC = L.marker([11.082500457763672, 39.71139907836914], { icon: airportIcon }).bindPopup("Combolcha Airport").addTo(refAirport);
+        const mHADD = L.marker([8.553999900817871, 34.858001708984375], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
+        const mHAMT = L.marker([6.9571, 35.5547], { icon: airportIcon }).bindPopup("Mizan Teferi Airport").addTo(refAirport);
+        const mHATP = L.marker([7.2024, 35.415], { icon: airportIcon }).bindPopup("Tippi Airport").addTo(refAirport);
+        const mHABE = L.marker([9.38639, 34.5219], { icon: airportIcon }).bindPopup("Beica Airport").addTo(refAirport);
+        const mHAGR = L.marker([8.1614, 35.5529], { icon: airportIcon }).bindPopup("Gore Airport").addTo(refAirport);
+        const mHABC = L.marker([5.78287, 36.562], { icon: airportIcon }).bindPopup("Baco Airport").addTo(refAirport);
+        const mHIL = L.marker([6.077545, 44.763736], { icon: airportIcon }).bindPopup("Shilavo Airport").addTo(refAirport);
+        const mETSHC = L.marker([14.078100204467773, 38.272499084472656], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
+        const mHASM = L.marker([11.7875, 40.9915], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
+        const mHADM = L.marker([10.350000381469727, 37.71699905395508], { icon: airportIcon }).bindPopup("Debra Marcos Airport").addTo(refAirport);
+        const mHADT = L.marker([11.967000007629395, 38.0], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
+        const mHAMM = L.marker([12.932999610899998, 36.1669998169], { icon: airportIcon }).bindPopup("Metema Airport").addTo(refAirport);
+        const mHAMA = L.marker([10.7254, 38.7415], { icon: airportIcon }).bindPopup("Mekane Selam Airport").addTo(refAirport);
+        const mHAPW = L.marker([11.3126, 36.4164], { icon: airportIcon }).bindPopup("Beles Airport").addTo(refAirport);
+        const mET0006 = L.marker([11.1269, 35.04396], { icon: airportIcon }).bindPopup("Bameza - GERD Airport").addTo(refAirport);
+        const mHAFN = L.marker([9.583000183105469, 37.349998474121094], { icon: airportIcon }).bindPopup("Fincha Airport").addTo(refAirport);
+        const mHAGH = L.marker([7.15000009537, 40.716999054], { icon: airportIcon }).bindPopup("Ghinnir Airport").addTo(refAirport);
+        const mHAGB = L.marker([7.119033, 40.045166], { icon: airportIcon }).bindPopup("Robe Airport").addTo(refAirport);
+        const mHAAD = L.marker([7.022953, 39.273162], { icon: airportIcon }).bindPopup("Adaba Airport").addTo(refAirport);
+        const mHADO = L.marker([7.020559787750244, 39.05110168457031], { icon: airportIcon }).bindPopup("Dodola Airport").addTo(refAirport);
+        const mHAML = L.marker([6.408491, 39.722443], { icon: airportIcon }).bindPopup("Masslo Airport").addTo(refAirport);
+        const mHASH = L.marker([7.74175, 40.69557], { icon: airportIcon }).bindPopup("Sheikh Hussein Airport").addTo(refAirport);
+        const mHAMN = L.marker([9.767, 35.099998], { icon: airportIcon }).bindPopup("Mendi Airport").addTo(refAirport);
+        const mHANJ = L.marker([9.55, 35.466995], { icon: airportIcon }).bindPopup("Nejjo Airport").addTo(refAirport);
+        const mHANK = L.marker([9.050000190734863, 36.599998474121094], { icon: airportIcon }).bindPopup("Nekemte Airport").addTo(refAirport);
+        const mHASD = L.marker([6.80281, 37.68622], { icon: airportIcon }).bindPopup("Soddu Airport").addTo(refAirport);
+        const mHAWC = L.marker([7.166999816894531, 37.16699981689453], { icon: airportIcon }).bindPopup("Waca Airport").addTo(refAirport);
+        const mHANG = L.marker([5.2897, 39.7023], { icon: airportIcon }).bindPopup("Negele Airport").addTo(refAirport);
+        const mMYS = L.marker([3.5623, 39.0433], { icon: airportIcon }).bindPopup("Moyale Airport").addTo(refAirport);
+        const mHASK = L.marker([5.6923, 38.9764], { icon: airportIcon }).bindPopup("Shakiso Airport").addTo(refAirport);
+        const mHAMJ = L.marker([5.833000183105469, 35.53300094604492], { icon: airportIcon }).bindPopup("Tume Airport").addTo(refAirport);
+        const mHAMR = L.marker([5.8646, 35.7485], { icon: airportIcon }).bindPopup("Mui River Airport").addTo(refAirport);
+
+        var refUSAID = L.layerGroup();
+        // Icon for USAID
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // iconSize: [25, 41],
+            //shadowSize: [41, 41]
+        });
+
+
+        var ET010105 = L.marker([14.04024481, 37.90181623], { icon: blueIcon }).bindPopup('<p>ET010105<br/>Food</p>').addTo(refUSAID);
+        var ET010201 = L.marker([14.30964153, 38.5741679], { icon: blueIcon }).bindPopup('<p>ET010201<br/>Health</p>').addTo(refUSAID);
+        var ET010203 = L.marker([13.94696954, 39.16315699], { icon: blueIcon }).bindPopup('<p>ET010203<br/>Food</p>').addTo(refUSAID);
+        var ET010205 = L.marker([14.15617299, 38.7637977], { icon: blueIcon }).bindPopup('<p>ET010205<br/>Food</p>').addTo(refUSAID);
+        var ET010206 = L.marker([14.06587618, 38.57241603], { icon: blueIcon }).bindPopup('<p>ET010206<br/>Food</p>').addTo(refUSAID);
+        var ET010207 = L.marker([13.82442426, 38.62074066], { icon: blueIcon }).bindPopup('<p>ET010207<br/>Food</p>').addTo(refUSAID);
+        var ET010208 = L.marker([13.64118639, 38.77360249], { icon: blueIcon }).bindPopup('<p>ET010208<br/>Food</p>').addTo(refUSAID);
+        var ET010209 = L.marker([13.91618571, 38.79308998], { icon: blueIcon }).bindPopup('<p>ET010209<br/>Food</p>').addTo(refUSAID);
+        var ET010210 = L.marker([13.36399203, 38.88620317], { icon: blueIcon }).bindPopup('<p>ET010210<br/>Food</p>').addTo(refUSAID);
+        var ET010211 = L.marker([13.63333266, 38.99349533], { icon: blueIcon }).bindPopup('<p>ET010211<br/>Food</p>').addTo(refUSAID);
+        var ET010213 = L.marker([14.1217438, 38.72738438], { icon: blueIcon }).bindPopup('<p>ET010213<br/>Health</p>').addTo(refUSAID);
+        var ET010214 = L.marker([14.37433371, 38.76572367], { icon: blueIcon }).bindPopup('<p>ET010214<br/>Food</p>').addTo(refUSAID);
+        var ET010215 = L.marker([14.40126287, 38.94029127], { icon: blueIcon }).bindPopup('<p>ET010215<br/>Food</p>').addTo(refUSAID);
+        var ET010216 = L.marker([14.50170533, 39.11135477], { icon: blueIcon }).bindPopup('<p>ET010216<br/>Health</p>').addTo(refUSAID);
+        var ET010217 = L.marker([14.16720674, 39.1176197], { icon: blueIcon }).bindPopup('<p>ET010217<br/>Health</p>').addTo(refUSAID);
+        var ET010218 = L.marker([13.91943961, 38.96113956], { icon: blueIcon }).bindPopup('<p>ET010218<br/>Food</p>').addTo(refUSAID);
+        var ET010219 = L.marker([14.04878267, 39.23629872], { icon: blueIcon }).bindPopup('<p>ET010219<br/>Food</p>').addTo(refUSAID);
+        var ET010220 = L.marker([14.27766481, 39.14941429], { icon: blueIcon }).bindPopup('<p>ET010220<br/>Food</p>').addTo(refUSAID);
+        var ET010221 = L.marker([13.76032345, 39.03548753], { icon: blueIcon }).bindPopup('<p>ET010221<br/>Food</p>').addTo(refUSAID);
+        var ET010222 = L.marker([13.53591053, 39.00994808], { icon: blueIcon }).bindPopup('<p>ET010222<br/>Food</p>').addTo(refUSAID);
+        var ET010301 = L.marker([14.41408884, 39.39970016], { icon: blueIcon }).bindPopup('<p>ET010301<br/>Food</p>').addTo(refUSAID);
+        var ET010302 = L.marker([14.49115567, 39.67718695], { icon: blueIcon }).bindPopup('<p>ET010302<br/>Food</p>').addTo(refUSAID);
+        var ET010303 = L.marker([14.26594979, 39.62771945], { icon: blueIcon }).bindPopup('<p>ET010303<br/>Food</p>').addTo(refUSAID);
+        var ET010304 = L.marker([14.23093383, 39.42313471], { icon: blueIcon }).bindPopup('<p>ET010304<br/>Food</p>').addTo(refUSAID);
+        var ET010305 = L.marker([14.00068439, 39.37159271], { icon: blueIcon }).bindPopup('<p>ET010305<br/>Food</p>').addTo(refUSAID);
+        var ET010306 = L.marker([13.83885215, 39.52784463], { icon: blueIcon }).bindPopup('<p>ET010306<br/>Health</p>').addTo(refUSAID);
+        var ET010307 = L.marker([13.9213714, 39.74949844], { icon: blueIcon }).bindPopup('<p>ET010307<br/>Food</p>').addTo(refUSAID);
+        var ET010308 = L.marker([14.27487109, 39.46571793], { icon: blueIcon }).bindPopup('<p>ET010308<br/>Health</p>').addTo(refUSAID);
+        var ET010309 = L.marker([13.78102357, 39.59098125], { icon: blueIcon }).bindPopup('<p>ET010309<br/>Food</p>').addTo(refUSAID);
+        var ET010310 = L.marker([14.26912462, 39.28954907], { icon: blueIcon }).bindPopup('<p>ET010310<br/>Health</p>').addTo(refUSAID);
+        var ET010312 = L.marker([13.97432987, 39.42993929], { icon: blueIcon }).bindPopup('<p>ET010312<br/>Food</p>').addTo(refUSAID);
+        var ET010314 = L.marker([14.06698109, 39.64580982], { icon: blueIcon }).bindPopup('<p>ET010314<br/>Food</p>').addTo(refUSAID);
+        var ET010316 = L.marker([13.67741501, 39.67749485], { icon: blueIcon }).bindPopup('<p>ET010316<br/>Food</p>').addTo(refUSAID);
+        var ET010317 = L.marker([13.76626981, 39.30423788], { icon: blueIcon }).bindPopup('<p>ET010317<br/>Food</p>').addTo(refUSAID);
+        var ET010401 = L.marker([13.00195235, 39.33227454], { icon: blueIcon }).bindPopup('<p>ET010401<br/>Food</p>').addTo(refUSAID);
+        var ET010402 = L.marker([12.88255823, 39.34054682], { icon: blueIcon }).bindPopup('<p>ET010402<br/>Food</p>').addTo(refUSAID);
+        var ET010403 = L.marker([12.75121461, 39.34606086], { icon: blueIcon }).bindPopup('<p>ET010403<br/>Food</p>').addTo(refUSAID);
+        var ET010404 = L.marker([12.93386785, 39.50513586], { icon: blueIcon }).bindPopup('<p>ET010404<br/>Food</p>').addTo(refUSAID);
+        var ET010405 = L.marker([12.75693449, 39.49092675], { icon: blueIcon }).bindPopup('<p>ET010405<br/>Food</p>').addTo(refUSAID);
+        var ET010409 = L.marker([12.78510813, 39.54227476], { icon: blueIcon }).bindPopup('<p>ET010409<br/>Food</p>').addTo(refUSAID);
+        var ET010601 = L.marker([13.38169276, 39.16499793], { icon: blueIcon }).bindPopup('<p>ET010601<br/>Food</p>').addTo(refUSAID);
+        var ET010602 = L.marker([13.39249331, 39.35565564], { icon: blueIcon }).bindPopup('<p>ET010602<br/>Health</p>').addTo(refUSAID);
+        var ET010603 = L.marker([13.17608956, 39.43598914], { icon: blueIcon }).bindPopup('<p>ET010603<br/>Food</p>').addTo(refUSAID);
+        var ET010604 = L.marker([13.51879471, 39.15592247], { icon: blueIcon }).bindPopup('<p>ET010604<br/>Health</p>').addTo(refUSAID);
+        var ET010605 = L.marker([13.64029446, 39.16953221], { icon: blueIcon }).bindPopup('<p>ET010605<br/>Health</p>').addTo(refUSAID);
+        var ET010606 = L.marker([13.12557199, 39.18121865], { icon: blueIcon }).bindPopup('<p>ET010606<br/>Health</p>').addTo(refUSAID);
+        var ET010607 = L.marker([13.24433996, 39.5033466], { icon: blueIcon }).bindPopup('<p>ET010607<br/>Food</p>').addTo(refUSAID);
+        var ET010608 = L.marker([13.04670472, 39.71310531], { icon: blueIcon }).bindPopup('<p>ET010608<br/>Food</p>').addTo(refUSAID);
+        var ET030205 = L.marker([11.85328227, 38.43453493], { icon: blueIcon }).bindPopup('<p>ET030205<br/>Food</p>').addTo(refUSAID);
+        var ET030206 = L.marker([11.56394142, 38.56166584], { icon: blueIcon }).bindPopup('<p>ET030206<br/>Food</p>').addTo(refUSAID);
+        var ET030207 = L.marker([11.29608245, 38.30261052], { icon: blueIcon }).bindPopup('<p>ET030207<br/>Food</p>').addTo(refUSAID);
+        var ET030214 = L.marker([11.39652808, 38.46937606], { icon: blueIcon }).bindPopup('<p>ET030214<br/>Food</p>').addTo(refUSAID);
+        var ET030301 = L.marker([12.1713756, 38.7174125], { icon: blueIcon }).bindPopup('<p>ET030301<br/>Food</p>').addTo(refUSAID);
+        var ET030303 = L.marker([12.05601342, 39.32466386], { icon: blueIcon }).bindPopup('<p>ET030303<br/>Food</p>').addTo(refUSAID);
+        var ET030306 = L.marker([11.84110138, 39.74288076], { icon: blueIcon }).bindPopup('<p>ET030306<br/>Food</p>').addTo(refUSAID);
+        var ET030307 = L.marker([11.78315546, 39.51614466], { icon: blueIcon }).bindPopup('<p>ET030307<br/>Food</p>').addTo(refUSAID);
+        var ET030309 = L.marker([11.82334635, 39.59416046], { icon: blueIcon }).bindPopup('<p>ET030309<br/>Food</p>').addTo(refUSAID);
+        var ET030310 = L.marker([11.99175979, 38.93484134], { icon: blueIcon }).bindPopup('<p>ET030310<br/>Food</p>').addTo(refUSAID);
+        var ET030311 = L.marker([11.47361258, 38.83901693], { icon: blueIcon }).bindPopup('<p>ET030311<br/>Food</p>').addTo(refUSAID);
+        var ET030312 = L.marker([11.84143411, 39.27688333], { icon: blueIcon }).bindPopup('<p>ET030312<br/>Food</p>').addTo(refUSAID);
+        var ET030313 = L.marker([11.82182348, 39.03814923], { icon: blueIcon }).bindPopup('<p>ET030313<br/>Food</p>').addTo(refUSAID);
+        var ET030314 = L.marker([11.76345154, 38.74226525], { icon: blueIcon }).bindPopup('<p>ET030314<br/>Food</p>').addTo(refUSAID);
+        var ET030315 = L.marker([11.66847268, 38.91258874], { icon: blueIcon }).bindPopup('<p>ET030315<br/>Food</p>').addTo(refUSAID);
+        var ET030397 = L.marker([11.66434033, 39.65865464], { icon: blueIcon }).bindPopup('<p>ET030397<br/>Food</p>').addTo(refUSAID);
+        var ET030398 = L.marker([12.02886263, 39.04643369], { icon: blueIcon }).bindPopup('<p>ET030398<br/>Food</p>').addTo(refUSAID);
+        var ET030399 = L.marker([12.15088188, 39.63358131], { icon: blueIcon }).bindPopup('<p>ET030399<br/>Food</p>').addTo(refUSAID);
+        var ET030409 = L.marker([11.0447859, 39.4743648], { icon: blueIcon }).bindPopup('<p>ET030409<br/>Health</p>').addTo(refUSAID);
+        var ET030801 = L.marker([12.69051422, 38.57570495], { icon: blueIcon }).bindPopup('<p>ET030801<br/>Food</p>').addTo(refUSAID);
+        var ET030802 = L.marker([12.66622752, 38.88913156], { icon: blueIcon }).bindPopup('<p>ET030802<br/>Health</p>').addTo(refUSAID);
+        var ET030803 = L.marker([12.44576096, 38.54769528], { icon: blueIcon }).bindPopup('<p>ET030803<br/>Food</p>').addTo(refUSAID);
+        var ET030804 = L.marker([12.33663721, 39.07041371], { icon: blueIcon }).bindPopup('<p>ET030804<br/>Health</p>').addTo(refUSAID);
+        var ET030805 = L.marker([13.07739886, 38.88136361], { icon: blueIcon }).bindPopup('<p>ET030805<br/>Food</p>').addTo(refUSAID);
+        var ET030806 = L.marker([12.93597209, 38.49771014], { icon: blueIcon }).bindPopup('<p>ET030806<br/>Food</p>').addTo(refUSAID);
+        var ET030807 = L.marker([12.61841197, 39.03628405], { icon: blueIcon }).bindPopup('<p>ET030807<br/>Health</p>').addTo(refUSAID);
+        var ET030808 = L.marker([12.76988718, 39.17292028], { icon: blueIcon }).bindPopup('<p>ET030808<br/>Food</p>').addTo(refUSAID);
+        var ET040820 = L.marker([8.297879477, 39.50229938], { icon: blueIcon }).bindPopup('<p>ET040820<br/>Food</p>').addTo(refUSAID);
+        var ET040902 = L.marker([9.3270407, 41.07961795], { icon: blueIcon }).bindPopup('<p>ET040902<br/>Food</p>').addTo(refUSAID);
+        var ET040903 = L.marker([9.177194072, 41.12281905], { icon: blueIcon }).bindPopup('<p>ET040903<br/>Food</p>').addTo(refUSAID);
+        var ET040912 = L.marker([8.857616602, 40.98447386], { icon: blueIcon }).bindPopup('<p>ET040912<br/>Food</p>').addTo(refUSAID);
+        var ET041001 = L.marker([9.468217425, 42.15325788], { icon: blueIcon }).bindPopup('<p>ET041001<br/>Food</p>').addTo(refUSAID);
+        var ET041004 = L.marker([8.747614805, 42.57145212], { icon: blueIcon }).bindPopup('<p>ET041004<br/>Food</p>').addTo(refUSAID);
+        var ET041006 = L.marker([9.350153617, 41.97730111], { icon: blueIcon }).bindPopup('<p>ET041006<br/>Food</p>').addTo(refUSAID);
+        var ET041007 = L.marker([9.229679773, 41.87241312], { icon: blueIcon }).bindPopup('<p>ET041007<br/>Food</p>').addTo(refUSAID);
+        var ET041008 = L.marker([9.384298346, 41.807265], { icon: blueIcon }).bindPopup('<p>ET041008<br/>Food</p>').addTo(refUSAID);
+        var ET041011 = L.marker([9.215023566, 41.43699488], { icon: blueIcon }).bindPopup('<p>ET041011<br/>Food</p>').addTo(refUSAID);
+        var ET041012 = L.marker([8.897365455, 41.32756709], { icon: blueIcon }).bindPopup('<p>ET041012<br/>Food</p>').addTo(refUSAID);
+        var ET041013 = L.marker([9.063957224, 41.63894803], { icon: blueIcon }).bindPopup('<p>ET041013<br/>Food</p>').addTo(refUSAID);
+        var ET041014 = L.marker([8.758437467, 42.20608687], { icon: blueIcon }).bindPopup('<p>ET041014<br/>Food</p>').addTo(refUSAID);
+        var ET041015 = L.marker([9.600771497, 42.62361463], { icon: blueIcon }).bindPopup('<p>ET041015<br/>Health</p>').addTo(refUSAID);
+        var ET041016 = L.marker([9.029087035, 41.86603941], { icon: blueIcon }).bindPopup('<p>ET041016<br/>Food</p>').addTo(refUSAID);
+        var ET041207 = L.marker([4.77289569, 38.17073358], { icon: blueIcon }).bindPopup('<p>ET041207<br/>Nutrition</p>').addTo(refUSAID);
+        var ET041211 = L.marker([3.961723791, 38.21655124], { icon: blueIcon }).bindPopup('<p>ET041211<br/>Health</p>').addTo(refUSAID);
+        var ET041219 = L.marker([4.199026762, 37.77441599], { icon: blueIcon }).bindPopup('<p>ET041219<br/>Health</p>').addTo(refUSAID);
+        var ET041407 = L.marker([5.281936067, 39.63958933], { icon: blueIcon }).bindPopup('<p>ET041407<br/>Health</p>').addTo(refUSAID);
+        var ET041497 = L.marker([4.929416165, 39.54726463], { icon: blueIcon }).bindPopup('<p>ET041497<br/>Nutrition</p>').addTo(refUSAID);
+        var ET041515 = L.marker([5.397582911, 38.12740053], { icon: blueIcon }).bindPopup('<p>ET041515<br/>Food</p>').addTo(refUSAID);
+        var ET041518 = L.marker([5.412622693, 38.61846417], { icon: blueIcon }).bindPopup('<p>ET041518<br/>Food</p>').addTo(refUSAID);
+        var ET041594 = L.marker([5.555357446, 38.05361356], { icon: blueIcon }).bindPopup('<p>ET041594<br/>Food</p>').addTo(refUSAID);
+        var ET041702 = L.marker([7.338093518, 38.39791704], { icon: blueIcon }).bindPopup('<p>ET041702<br/>Food</p>').addTo(refUSAID);
+        var ET041703 = L.marker([7.451029079, 38.65281652], { icon: blueIcon }).bindPopup('<p>ET041703<br/>Food</p>').addTo(refUSAID);
+        var ET041783 = L.marker([7.558168434, 38.79807534], { icon: blueIcon }).bindPopup('<p>ET041783<br/>Food</p>').addTo(refUSAID);
+        var ET050604 = L.marker([6.019599052, 43.70378681], { icon: blueIcon }).bindPopup('<p>ET050604<br/>Health</p>').addTo(refUSAID);
+        var ET050605 = L.marker([5.362365365, 44.15156965], { icon: blueIcon }).bindPopup('<p>ET050605<br/>Health</p>').addTo(refUSAID);
+        var ET050606 = L.marker([5.199299558, 44.65158205], { icon: blueIcon }).bindPopup('<p>ET050606<br/>Health</p>').addTo(refUSAID);
+        var ET050607 = L.marker([5.210770313, 45.03672914], { icon: blueIcon }).bindPopup('<p>ET050607<br/>Health</p>').addTo(refUSAID);
+        var ET050699 = L.marker([6.475327091, 42.69828761], { icon: blueIcon }).bindPopup('<p>ET050699<br/>Health</p>').addTo(refUSAID);
+        var ET050701 = L.marker([7.492569932, 45.62374213], { icon: blueIcon }).bindPopup('<p>ET050701<br/>Health</p>').addTo(refUSAID);
+        var ET050702 = L.marker([7.645054347, 46.65093372], { icon: blueIcon }).bindPopup('<p>ET050702<br/>Health</p>').addTo(refUSAID);
+        var ET050703 = L.marker([6.994863532, 46.28990992], { icon: blueIcon }).bindPopup('<p>ET050703<br/>Health</p>').addTo(refUSAID);
+        var ET050704 = L.marker([6.810841845, 45.5560148], { icon: blueIcon }).bindPopup('<p>ET050704<br/>Health</p>').addTo(refUSAID);
+        var ET050788 = L.marker([7.256955521, 45.34819685], { icon: blueIcon }).bindPopup('<p>ET050788<br/>Health</p>').addTo(refUSAID);
+        var ET050901 = L.marker([5.029273364, 40.90141221], { icon: blueIcon }).bindPopup('<p>ET050901<br/>Health</p>').addTo(refUSAID);
+        var ET050991 = L.marker([5.046565202, 40.1163294], { icon: blueIcon }).bindPopup('<p>ET050991<br/>Health</p>').addTo(refUSAID);
+        var ET051103 = L.marker([4.069297669, 39.6340819], { icon: blueIcon }).bindPopup('<p>ET051103<br/>Nutrition</p>').addTo(refUSAID);
+        var ET051104 = L.marker([4.378115102, 39.7312741], { icon: blueIcon }).bindPopup('<p>ET051104<br/>Nutrition</p>').addTo(refUSAID);
+        var ET060305 = L.marker([9.78697232, 34.70225825], { icon: blueIcon }).bindPopup('<p>ET060305<br/>Health</p>').addTo(refUSAID);
+        var ET060306 = L.marker([10.12879104, 35.11448509], { icon: blueIcon }).bindPopup('<p>ET060306<br/>Health</p>').addTo(refUSAID);
+        var ET070205 = L.marker([7.208876648, 38.0469898], { icon: blueIcon }).bindPopup('<p>ET070205<br/>Food</p>').addTo(refUSAID);
+        var ET070207 = L.marker([7.339928758, 37.66252844], { icon: blueIcon }).bindPopup('<p>ET070207<br/>Food</p>').addTo(refUSAID);
+        var ET070301 = L.marker([7.269262925, 37.4871555], { icon: blueIcon }).bindPopup('<p>ET070301<br/>Food</p>').addTo(refUSAID);
+        var ET070303 = L.marker([7.253815324, 37.92723642], { icon: blueIcon }).bindPopup('<p>ET070303<br/>Food</p>').addTo(refUSAID);
+        var ET070304 = L.marker([7.235722379, 37.74151579], { icon: blueIcon }).bindPopup('<p>ET070304<br/>Food</p>').addTo(refUSAID);
+        var ET070305 = L.marker([7.235648126, 37.65568164], { icon: blueIcon }).bindPopup('<p>ET070305<br/>Food</p>').addTo(refUSAID);
+        var ET070501 = L.marker([6.288670323, 38.25811332], { icon: blueIcon }).bindPopup('<p>ET070501<br/>Food</p>').addTo(refUSAID);
+        var ET070503 = L.marker([6.04497901, 38.16442624], { icon: blueIcon }).bindPopup('<p>ET070503<br/>Food</p>').addTo(refUSAID);
+        var ET070504 = L.marker([6.284237041, 38.39391274], { icon: blueIcon }).bindPopup('<p>ET070504<br/>Food</p>').addTo(refUSAID);
+        var ET070704 = L.marker([4.955256727, 36.50252762], { icon: blueIcon }).bindPopup('<p>ET070704<br/>Nutrition</p>').addTo(refUSAID);
+        var ET070708 = L.marker([5.126552842, 35.99317675], { icon: blueIcon }).bindPopup('<p>ET070708<br/>Nutrition</p>').addTo(refUSAID);
+        var ET071205 = L.marker([5.573418114, 37.15991236], { icon: blueIcon }).bindPopup('<p>ET071205<br/>Health</p>').addTo(refUSAID);
+        var ET071303 = L.marker([5.305127288, 37.55148748], { icon: blueIcon }).bindPopup('<p>ET071303<br/>Health</p>').addTo(refUSAID);
+        var ET150201 = L.marker([9.571585042, 41.78341762], { icon: blueIcon }).bindPopup('<p>ET150201<br/>Food</p>').addTo(refUSAID);
+        var ET160010 = L.marker([6.919152266, 38.33805864], { icon: blueIcon }).bindPopup('<p>ET160010<br/>Food</p>').addTo(refUSAID);
+        var ET160032 = L.marker([6.938789647, 38.20901508], { icon: blueIcon }).bindPopup('<p>ET160032<br/>Food</p>').addTo(refUSAID);
+        var ET160033 = L.marker([6.831046272, 38.21451447], { icon: blueIcon }).bindPopup('<p>ET160033<br/>Food</p>').addTo(refUSAID);
+
+
+        // Ambassador's Fund for Cultural Pres
+
+        var refAFCP = L.layerGroup();
+        var blueIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+            //shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [12, 20],
+            iconAnchor: [5, 18],
+            popupAnchor: [1, -34],
+            // iconSize: [25, 41],
+            //shadowSize: [41, 41]
+        });
+
+        var AFCP01 = L.marker([13.862487, 39.425299], { icon: blueIcon }).bindPopup('<p>Debra Tsion Church<br/>2020</p>').addTo(refAFCP);
+        var AFCP02 = L.marker([7.701226, 36.872284], { icon: blueIcon }).bindPopup('<p>Aba Jiffar Palace<br/>2018</p>').addTo(refAFCP);
+        var AFCP03 = L.marker([12.03161, 39.0411], { icon: blueIcon }).bindPopup('<p>Lalibela Churches<br/>2016</p>').addTo(refAFCP);
+        var AFCP04 = L.marker([12.14038438, 39.07308519], { icon: blueIcon }).bindPopup('<p>Yemrehanna Kristos Church<br/>2015</p>').addTo(refAFCP);
+        var AFCP05 = L.marker([9.312678612, 42.12256134], { icon: blueIcon }).bindPopup('<p>Teferi Mekonnen Palace<br/>2009</p>').addTo(refAFCP);
+        var AFCP06 = L.marker([9.044169595, 38.73298027], { icon: blueIcon }).bindPopup('<p>Mohammad Ali House<br/>2007</p>').addTo(refAFCP);
+        var AFCP07 = L.marker([9.037967, 38.754552], { icon: blueIcon }).bindPopup('<p>Hager Fikir Theater<br/>2006</p>').addTo(refAFCP);
+        var AFCP08 = L.marker([7.746705697, 40.70737687], { icon: blueIcon }).bindPopup('<p>Sheikh Nur Hussein Shrine<br/>2005</p>').addTo(refAFCP);
+        var AFCP09 = L.marker([12.23504732, 37.6350969], { icon: blueIcon }).bindPopup('<p>Guzara Castle<br/>2004</p>').addTo(refAFCP);
+        var AFCP10 = L.marker([14.28597771, 39.01909363], { icon: blueIcon }).bindPopup('<p>Yeha Temple<br/>2002</p>').addTo(refAFCP);
+
+
+
+        const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
+        const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+        const cartoUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+
+        var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+        var carto = L.tileLayer(cartoUrl, { attribution: mbAttr });
+
+        var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        });
+
+        var map = L.map('map', {
+            center: [8.9806, 38.7578],
+            zoom: 7,
+            layers: [osm]
+            // layers: [osm, radCircle]
+            //layers: [osm, cities]
+        });
+
+        var baseLayers = {
+            'OpenStreetMap': osm,
+            'Mapbox': streets,
+            'Carto': carto
+        };
+
+        var overlays = {
+            'USAID Sites': refUSAID,
+            'American Spaces': amSpaces,
+            'Refugees: Conflict': refConflict,
+            'Refugees: Drought': refDrought,
+            'Refugees: Flooding': refFlood,
+            'Airports': refAirport,
+            'Amb Fund Cultural Pres': refAFCP,
+            'Health Facilities': refHealth,
+            'Public Universities': refUnivPublic
+        };
+
+        var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+
+        var satellite = L.tileLayer(mbUrl, { id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
+        layerControl.addBaseLayer(satellite, 'Satellite');
+
+        L.geoJSON(etjson, {
+            style: function (feature) {
+                return { color: "#09a0aa00" };  // removes overlay borders
+                //return { color: feature.properties.color };
+            }
+        }).bindPopup(function (layer) {
+            return "Region: " + layer.feature.properties.NAME_1 + "<br\> " + "Zone: " + layer.feature.properties.NAME_2 + "<br\> " + "Woreda: " + layer.feature.properties.NAME_3;
+        }).addTo(map);
+
+        // LAT LONG POPUP
+        // var popup = L.popup();
+
+        // function onMapClick(e) {
+        //     popup
+        //         .setLatLng(e.latlng)
+        //         .setContent(e.latlng.toString())
+        //         .openOn(map);
+        // }
+
+        // map.on('click', onMapClick);
+
+
+    </script>
+
+</body>
+
+</html>
