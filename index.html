@@ -79,7 +79,7 @@
         let refUnivPublic = L.layerGroup();
         L.geoJSON(geoJSON_pub_univ_data, {
             pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br>' + feature.properties.link)
+                return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
             }
         }).addTo(refUnivPublic);
 
@@ -180,7 +180,7 @@
         var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
         var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
         var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
-        var mCJCRAC = L.circleMarker([9.007687,38.742937], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
+        var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
 
 
@@ -191,8 +191,6 @@
 
         var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
         var carto = L.tileLayer(cartoUrl, { attribution: mbAttr });
-
-   
 
         // overlays for the layer control
         var overlays = {
