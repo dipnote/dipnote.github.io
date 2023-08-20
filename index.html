@@ -18,6 +18,7 @@
 
     <script src="./data/gadm41_ETH_3.json"> </script>
     <script src="./data/unis_public.js"> </script>
+    <script src="./data/rso/rso2.js"> </script>
 
     <style>
         body {
@@ -52,18 +53,10 @@
         // this worked to create the sandwich
         var geojsonLayer = L.geoJSON();
 
-        // Load the GeoJSON data
-        function loadGeoJSONData() {
-            fetch('data/rso/rso2.json')
-                .then(response => response.json())
-                .then(data => {
-                    // If the geojsonLayer exists, remove it
-                    if (geojsonLayer) {
-                        map.removeLayer(geojsonLayer);
-                    }
-                    // Add the fetched data to the map
-                    geojsonLayer = L.geoJSON(data, {
-                        style: function (feature) {
+        // Restricted Travel Area
+        let refRsoTravelData = L.layerGroup();
+        L.geoJSON(layerRSO, {
+            style: function (feature) {
                             // If the "Restricted" attribute is "1", set the fill color to red
                             if (feature.properties.Restricted === "1") {
                                 return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "red", "fillOpacity": 0.2 };
@@ -71,9 +64,9 @@
                             // Otherwise, set the default style
                             return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "green", "fillOpacity": 0.05, "fill": true };
                         }
-                    }).addTo(map);
-                });
-        }
+
+        }).addTo(refRsoTravelData);
+
 
         // Public Universities GeoJSON
         let refUnivPublic = L.layerGroup();
@@ -82,6 +75,7 @@
                 return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
             }
         }).addTo(refUnivPublic);
+
 
 
         // Ambassador's Fund for Cultural Pres
@@ -194,7 +188,7 @@
 
         // overlays for the layer control
         var overlays = {
-            "Restricted Travel": geojsonLayer,
+            "Restricted Travel": refRsoTravelData,
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
@@ -203,20 +197,6 @@
 
         L.control.layers(null, overlays).addTo(map);
 
-        // Add an event listener to load data when the "Restricted" layer is added
-        map.on('overlayadd', function (eventLayer) {
-            if (eventLayer.name === "Restricted Travel" && !geojsonLayer) {
-                loadGeoJSONData();
-            }
-        });
-
-        // Add an event listener to remove data when the "Restricted" layer is removed
-        map.on('overlayremove', function (eventLayer) {
-            if (eventLayer.name === "Restricted Travel" && geojsonLayer) {
-                map.removeLayer(geojsonLayer);
-                geojsonLayer = null;  // Reset the geojsonLayer
-            }
-        });
 
         // Listener for Region and Woreda locator
 
