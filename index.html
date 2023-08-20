@@ -57,13 +57,13 @@
         let refRsoTravelData = L.layerGroup();
         L.geoJSON(layerRSO, {
             style: function (feature) {
-                            // If the "Restricted" attribute is "1", set the fill color to red
-                            if (feature.properties.Restricted === "1") {
-                                return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "red", "fillOpacity": 0.2 };
-                            }
-                            // Otherwise, set the default style
-                            return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "green", "fillOpacity": 0.05, "fill": true };
-                        }
+                // If the "Restricted" attribute is "1", set the fill color to red
+                if (feature.properties.Restricted === "1") {
+                    return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "red", "fillOpacity": 0.2 };
+                }
+                // Otherwise, set the default style
+                return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "green", "fillOpacity": 0.05, "fill": true };
+            }
 
         }).addTo(refRsoTravelData);
 
@@ -123,7 +123,7 @@
         const mHADR = L.marker([9.624699592590332, 41.85419845581055], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
         const mHAGM = L.marker([8.12876033782959, 34.5630989074707], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
         const mHAJM = L.marker([7.66609001159668, 36.81660079956055], { icon: airportIcon }).bindPopup("Jimma Airport").addTo(refAirport);
-        const mHAAM = L.marker([6.0393900871276855, 37.59049987792969], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
+        const mHAAM = L.marker([6.0393900871276855, 3.59049987792969], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
         const mHAGO = L.marker([5.93513011932, 43.5786018372], { icon: airportIcon }).bindPopup("Gode Airport").addTo(refAirport);
         const mHAAX = L.marker([14.14680004119873, 38.77280044555664], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
         const mHAAL = L.marker([9.003685, 38.725498], { icon: airportIcon }).bindPopup("Lideta Army Airport").addTo(refAirport);

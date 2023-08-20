@@ -12,3 +12,5 @@ console.log(
     console.log(feature.properties.featureNam);
   })
 );
+
+
