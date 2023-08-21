@@ -477,21 +477,21 @@ let geoJSON_pub_univ_data = {
           "public": "public",
           "category": "Comprehensive",
           "gen": 4,
-          "estb": 2017,
+          "estb": 2007,
           "location": "Dembidolo",
           "region": "Oromia",
-          "link": "www.dedu.edu.et",
+          "link": "www.dadu.edu.et",
           "twitter": "",
-          "plus_code": "",
-          "president": "Dr. Leta Tesfaye",
+          "plus_code": "HR2R+G7 Dembi Dolo, Ethiopia",
+          "president": "Dr. Leta Tesfaye Jule",
           "usg_association": "",
-          "notes": ""
+          "notes": "https://dadu.edu.et/president-message/"
         },
         "geometry": {
           "type": "Point",
           "coordinates": [
-            39.840737,
-            8.551259
+            34.84248318782985,
+            8.552074371049155
           ]
         }
       },
