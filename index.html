@@ -49,6 +49,12 @@
             }
         ).addTo(map);
 
+        // OpenStreetMap Layer
+        var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+
         // layer for geoJSON red no-go areas
         // this worked to create the sandwich
         var geojsonLayer = L.geoJSON();
@@ -178,13 +184,37 @@
         var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
 
 
+        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
 
-        const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
-        const mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
-        const cartoUrl = "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
 
-        var streets = L.tileLayer(mbUrl, { id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr });
-        var carto = L.tileLayer(cartoUrl, { attribution: mbAttr });
+        googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+
+        // Layer control
+        var baseMaps = {
+            "OpenStreetMap": osmLayer,
+            "Satellite": googleSat,
+            "Streets": googleStreets,
+            "Terrain": googleTerrain,
+            "Hybrid": googleHybrid
+        };
+
+        // L.control.layers(baseMaps).addTo(map);
 
         // overlays for the layer control
         var overlays = {
@@ -195,7 +225,7 @@
             'American Spaces': amSpaces
         };
 
-        L.control.layers(null, overlays).addTo(map);
+        L.control.layers(baseMaps, overlays).addTo(map);
 
 
         // Listener for Region and Woreda locator
