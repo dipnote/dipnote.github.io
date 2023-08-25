@@ -17,8 +17,10 @@
     <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
 
     <script src="./data/gadm41_ETH_3.json"> </script>
-    <script src="./data/unis_public.js"> </script>
+    <script src="./data/education/unis_public.js"> </script>
     <script src="./data/rso/rso2.js"> </script>
+    <script src="./data/health/health_locations_eth.js"> </script>
+    <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
 
     <style>
         body {
@@ -176,13 +178,32 @@
         // American Spaces
         var amSpaces = L.layerGroup();
 
-        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
-        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
-        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
-        var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
-        var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
-        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'green', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
+        var mBahirDarAC = L.circleMarker([11.593571, 37.379195], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+        var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+        var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
+        var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
+        var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
+        var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
 
+        // General Health Locations GeoJSON 
+        let refHealth = L.layerGroup();
+        L.geoJSON(geoJsonHealth, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'green', weight: 2, fill: true }).bindPopup(feature.properties.name)
+            }
+        }).addTo(refHealth);
+
+        // PEPFAR Health Locations GeoJSON
+        let refHealthPEPFAR = L.layerGroup();
+        L.geoJSON(geoJSON_pepfar_data, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
+            }
+        }).addTo(refHealthPEPFAR);
+
+
+
+        // **** BASE LAYERS *****
 
         googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
             maxZoom: 20,
@@ -222,7 +243,9 @@
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
-            'American Spaces': amSpaces
+            "American Spaces": amSpaces,
+            "PEPFAR":refHealthPEPFAR,
+            "Health Sites All": refHealth,
         };
 
         L.control.layers(baseMaps, overlays).addTo(map);
