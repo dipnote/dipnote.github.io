@@ -57,7 +57,8 @@
         });
 
         // *****  TEMP for TRIP
-        L.marker([13.477887, 39.459141]).addTo(map).bindPopup('Northern Star Hotel<br> a href="https://plus.codes/7G5XFFH5+5M2"').openPopup();
+        L.marker([13.477887, 39.459141]).addTo(map).bindPopup('Northern Star Hotel<br> <a href="https://plus.codes/7G5XFFH5+5M2"> PlusCode </a>')
+        // .openPopup();
         // ***** TEMP END
 
 
@@ -219,15 +220,15 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
 
-        googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
+        // googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+        //     maxZoom: 20,
+        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        // });
 
-        googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
+        // googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+        //     maxZoom: 20,
+        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        // });
 
 
         // Layer control
@@ -235,8 +236,8 @@
             "OpenStreetMap": osmLayer,
             "Satellite": googleSat,
             "Streets": googleStreets,
-            "Terrain": googleTerrain,
-            "Hybrid": googleHybrid
+            // "Terrain": googleTerrain,
+            // "Hybrid": googleHybrid
         };
 
         // L.control.layers(baseMaps).addTo(map);
