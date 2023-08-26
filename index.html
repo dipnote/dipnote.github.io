@@ -248,7 +248,7 @@
             "Health Sites All": refHealth,
         };
 
-        L.control.layers(baseMaps, overlays).addTo(map);
+        L.control.layers(baseMaps, overlays,{collapsed:false}).addTo(map);
 
 
         // Listener for Region and Woreda locator
