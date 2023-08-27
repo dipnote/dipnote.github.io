@@ -21,20 +21,26 @@
     <script src="./data/rso/rso2.js"> </script>
     <script src="./data/health/health_locations_eth.js"> </script>
     <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
+    <script src="./data/acled/acled.js"> </script>
 
-    <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
+    <!-- d3 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+</head>
 
-        html,
-        body,
-        #map {
-            height: 100%;
-            width: 100%;
-        }
-    </style>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    html,
+    body,
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+</style>
 </head>
 
 <body>
@@ -197,13 +203,21 @@
             }
         }).addTo(refHealth);
 
-        // PEPFAR Health Locations GeoJSON
-        let refHealthPEPFAR = L.layerGroup();
-        L.geoJSON(geoJSON_pepfar_data, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
-            }
-        }).addTo(refHealthPEPFAR);
+// PEPFAR Health Locations GeoJSON
+let refHealthPEPFAR = L.layerGroup();
+L.geoJSON(geoJSON_pepfar_data, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
+    }
+}).addTo(refHealthPEPFAR);
+
+// ACLED data CSV converted to geoJSON
+let refACLED = L.layerGroup();
+L.geoJSON(layerAcled, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
+    }
+}).addTo(refACLED);
 
 
 
@@ -250,9 +264,13 @@
             "American Spaces": amSpaces,
             "PEPFAR": refHealthPEPFAR,
             "Health Sites All": refHealth,
+            "30 Day Conflict": refACLED,
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: false }).addTo(map);
+
+
+
 
 
         // Listener for Region and Woreda locator
