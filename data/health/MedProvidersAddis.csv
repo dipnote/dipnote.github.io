@@ -1,4 +1,4 @@
-provider,specialty,Address,phoneOffice,phoneMobile,phoneAlt,AmbulanceService,plusCode,latitude,longitude,link,notes
+provider,specialty,location,phoneOffice,phoneMobile,phoneAlt,AmbulanceService,plusCode,latitude,longitude,link,notes
 Dr. Asmeret Andebirhan,Pychiatrist,Lebeza Psych Clinic,011 835 2292,0911348373,0947406511,,,,,,22 Mazzoria Haile G/silassie Ave.
 Prof. Kebede Oli,Cardiologist,Landmark Hospital,011 552 5463,091 121 2472,,no,https://plus.codes/6GXW2P4W+9X,9.005937,38.747438,http://www.landmarkhospital.et/,
 Dr. Gizaw Erena,Cardiologist,iCMC Cardio Med Center Hospital,011 442 4680,,,no,https://plus.codes/6GXW2Q68+4C,9.023618,38.85422,www.icmc.com.et,Near Gotera Ethio- China road

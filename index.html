@@ -22,6 +22,7 @@
     <script src="./data/health/health_locations_eth.js"> </script>
     <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
     <script src="./data/acled/acled.js"> </script>
+    <script src="./data/health/MedProvidersAddis.js"> </script>
 
     <!-- d3 -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
@@ -219,6 +220,14 @@ L.geoJSON(layerAcled, {
     }
 }).addTo(refACLED);
 
+// Med Providers
+let refAddisMedical = L.layerGroup();
+L.geoJSON(medProvidersAddis, {
+    pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br>' + feature.properties.AmbulanceService )
+    }
+}).addTo(refAddisMedical);
+
 
 
         // **** BASE LAYERS *****
@@ -265,6 +274,7 @@ L.geoJSON(layerAcled, {
             "PEPFAR": refHealthPEPFAR,
             "Health Sites All": refHealth,
             "30 Day Conflict": refACLED,
+            "Addis Medical":refAddisMedical,
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: false }).addTo(map);
