@@ -224,7 +224,7 @@ L.geoJSON(layerAcled, {
 let refAddisMedical = L.layerGroup();
 L.geoJSON(medProvidersAddis, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br>' + feature.properties.AmbulanceService )
+        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br> Ambulance Service: ' + feature.properties.AmbulanceService )
     }
 }).addTo(refAddisMedical);
 
