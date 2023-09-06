@@ -3,12 +3,7 @@
 
 <head>
     <title>Travel Planner</title>
-
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -26,9 +21,6 @@
     <script src="./data/acled/acled.js"> </script>
     <script src="./data/health/MedProvidersAddis.js"> </script>
 
-    <!-- d3 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
-    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
 </head>
 
 <style>
@@ -280,9 +272,6 @@ L.geoJSON(medProvidersAddis, {
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
-
-
-
 
 
         // Listener for Region and Woreda locator
