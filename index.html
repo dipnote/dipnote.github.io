@@ -207,12 +207,29 @@ L.geoJSON(geoJSON_pepfar_data, {
 }).addTo(refHealthPEPFAR);
 
 // ACLED data CSV converted to geoJSON
+// let refACLED = L.layerGroup();
+// L.geoJSON(layerAcled, {
+//     pointToLayer: function (feature, latlng) {
+//         return L.circleMarker(latlng, { radius: 10, color: 'olive', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
+//     }
+// }).addTo(refACLED);
+
 let refACLED = L.layerGroup();
 L.geoJSON(layerAcled, {
     pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
+        let color;
+        if (feature.properties.disorder_type === "Political violence") {
+            color = 'red';
+        } else if (feature.properties.disorder_type === "Demonstrations") {
+            color = 'darkgreen';
+        } else {
+            color = 'gray';
+        }
+        return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
+            .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
     }
 }).addTo(refACLED);
+
 
 // Med Providers
 let refAddisMedical = L.layerGroup();
