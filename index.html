@@ -221,21 +221,61 @@
         //     }
         // }).addTo(refACLED);
 
+        /*         let refACLED = L.layerGroup();
+                L.geoJSON(layerAcled, {
+                    pointToLayer: function (feature, latlng) {
+                        let color;
+                        if (feature.properties.disorder_type === "Political violence") {
+                            color = 'red';
+                        } else if (feature.properties.disorder_type === "Demonstrations") {
+                            color = 'darkgreen';
+                        } else {
+                            color = 'gray';
+                        }
+                        return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
+                            .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
+                    }
+                }).addTo(refACLED); */
+
+        // ACLED WITH JSON from API
+
+        let today = new Date();
+        let thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(today.getDate() - 21);
+
+        let todayStr = today.toISOString().split('T')[0];
+        let thirtyDaysAgoStr = thirtyDaysAgo.toISOString().split('T')[0];
+
+        let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${thirtyDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+
+
         let refACLED = L.layerGroup();
-        L.geoJSON(layerAcled, {
-            pointToLayer: function (feature, latlng) {
-                let color;
-                if (feature.properties.disorder_type === "Political violence") {
-                    color = 'red';
-                } else if (feature.properties.disorder_type === "Demonstrations") {
-                    color = 'darkgreen';
-                } else {
-                    color = 'gray';
+
+        // fetch('https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=2023-09-15|2023-09-22&event_date_where=BETWEEN')
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(jsonData => {
+                const events = jsonData.data;
+                for (const event of events) {
+                    const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
+                    let color;
+
+                    if (event.disorder_type === "Political violence") {
+                        color = 'red';
+                    } else if (event.disorder_type === "Demonstrations") {
+                        color = 'darkgreen';
+                    } else {
+                        color = 'gray';
+                    }
+
+                    L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
+                        .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes)
+                        .addTo(refACLED);
                 }
-                return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
-                    .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
-            }
-        }).addTo(refACLED);
+            })
+            .catch(error => console.error('Error:', error));
+
 
 
         // Med Providers
