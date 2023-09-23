@@ -13,6 +13,10 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
 
+    <!-- Search Box  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
     <script src="./data/gadm41_ETH_3.json"> </script>
     <script src="./data/education/unis_public.js"> </script>
     <script src="./data/rso/rso2.js"> </script>
@@ -51,6 +55,9 @@
                     'www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }
         ).addTo(map);
+
+        // Search Box
+        L.Control.geocoder().addTo(map);
 
         // OpenStreetMap Layer
         var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -198,46 +205,46 @@
             }
         }).addTo(refHealth);
 
-// PEPFAR Health Locations GeoJSON
-let refHealthPEPFAR = L.layerGroup();
-L.geoJSON(geoJSON_pepfar_data, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
-    }
-}).addTo(refHealthPEPFAR);
+        // PEPFAR Health Locations GeoJSON
+        let refHealthPEPFAR = L.layerGroup();
+        L.geoJSON(geoJSON_pepfar_data, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
+            }
+        }).addTo(refHealthPEPFAR);
 
-// ACLED data CSV converted to geoJSON
-// let refACLED = L.layerGroup();
-// L.geoJSON(layerAcled, {
-//     pointToLayer: function (feature, latlng) {
-//         return L.circleMarker(latlng, { radius: 10, color: 'olive', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
-//     }
-// }).addTo(refACLED);
+        // ACLED data CSV converted to geoJSON
+        // let refACLED = L.layerGroup();
+        // L.geoJSON(layerAcled, {
+        //     pointToLayer: function (feature, latlng) {
+        //         return L.circleMarker(latlng, { radius: 10, color: 'olive', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
+        //     }
+        // }).addTo(refACLED);
 
-let refACLED = L.layerGroup();
-L.geoJSON(layerAcled, {
-    pointToLayer: function (feature, latlng) {
-        let color;
-        if (feature.properties.disorder_type === "Political violence") {
-            color = 'red';
-        } else if (feature.properties.disorder_type === "Demonstrations") {
-            color = 'darkgreen';
-        } else {
-            color = 'gray';
-        }
-        return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
-            .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
-    }
-}).addTo(refACLED);
+        let refACLED = L.layerGroup();
+        L.geoJSON(layerAcled, {
+            pointToLayer: function (feature, latlng) {
+                let color;
+                if (feature.properties.disorder_type === "Political violence") {
+                    color = 'red';
+                } else if (feature.properties.disorder_type === "Demonstrations") {
+                    color = 'darkgreen';
+                } else {
+                    color = 'gray';
+                }
+                return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
+                    .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
+            }
+        }).addTo(refACLED);
 
 
-// Med Providers
-let refAddisMedical = L.layerGroup();
-L.geoJSON(medProvidersAddis, {
-    pointToLayer: function (feature, latlng) {
-        return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br> Ambulance Service: ' + feature.properties.AmbulanceService )
-    }
-}).addTo(refAddisMedical);
+        // Med Providers
+        let refAddisMedical = L.layerGroup();
+        L.geoJSON(medProvidersAddis, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br> Ambulance Service: ' + feature.properties.AmbulanceService)
+            }
+        }).addTo(refAddisMedical);
 
 
 
@@ -252,6 +259,12 @@ L.geoJSON(medProvidersAddis, {
             maxZoom: 20,
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
+
+        // maptiler
+        // mapTiler = L.tileLayer('https://api.maptiler.com/maps/dataviz/{z}/{x}/{y}.png?key=OC3KF0W4ulmkXInrrDn5'), {
+        //     maxZoom: 20,
+        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        // }
 
         // googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
         //     maxZoom: 20,
@@ -269,6 +282,7 @@ L.geoJSON(medProvidersAddis, {
             "OpenStreetMap": osmLayer,
             "Satellite": googleSat,
             "Streets": googleStreets,
+            // "MapTiler": mapTiler
             // "Terrain": googleTerrain,
             // "Hybrid": googleHybrid
         };
@@ -285,7 +299,7 @@ L.geoJSON(medProvidersAddis, {
             "PEPFAR": refHealthPEPFAR,
             "Health Sites All": refHealth,
             "30 Day Conflict": refACLED,
-            "Addis Medical":refAddisMedical,
+            "Addis Medical": refAddisMedical,
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
