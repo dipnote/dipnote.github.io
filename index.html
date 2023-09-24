@@ -240,13 +240,13 @@
         // ACLED WITH JSON from API
 
         let today = new Date();
-        let thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(today.getDate() - 21);
+        let fourteenDaysAgo = new Date();
+        fourteenDaysAgo.setDate(today.getDate() - 14);
 
         let todayStr = today.toISOString().split('T')[0];
-        let thirtyDaysAgoStr = thirtyDaysAgo.toISOString().split('T')[0];
+        let fourteenDaysAgoStr = fourteenDaysAgo.toISOString().split('T')[0];
 
-        let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${thirtyDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+        let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${fourteenDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
 
 
         let refACLED = L.layerGroup();
@@ -338,7 +338,7 @@
             "American Spaces": amSpaces,
             "PEPFAR": refHealthPEPFAR,
             "Health Sites All": refHealth,
-            "30 Day Conflict": refACLED,
+            "14 Day Conflict": refACLED,
             "Addis Medical": refAddisMedical,
         };
 
