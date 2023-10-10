@@ -13,6 +13,20 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
 
+    <!-- MarkerCluster -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"
+        integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster-src.min.js"
+        integrity="sha512-tWZsle/wNvFCP/7BHWNf3yG/6Ic1YVPT+1Soyag9zzZcga1St3oAa+IgvrT3ZxBLY/njmSEr0EcQoPUrH+UfNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"
+        integrity="sha512-TiMWaqipFi2Vqt4ugRzsF8oRoGFlFFuqIi30FFxEPNw58Ov9mOy6LgC05ysfkxwLE0xVeZtmr92wVg9siAFRWA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+
     <!-- Search Box  -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
@@ -24,7 +38,7 @@
     <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
     <script src="./data/acled/acled.js"> </script>
     <script src="./data/health/MedProvidersAddis.js"> </script>
-   
+
 </head>
 
 <style>
@@ -316,6 +330,7 @@
         // ACCOUNTABILITY
         let gsheetAPI = `https://docs.google.com/spreadsheets/d/12YtajwBvBz0ic8tUFpJu9qiPPQODlrAZvqVESYzmxes/gviz/tq?`
 
+        // let refAccount = L.layerGroup();
         let refAccount = L.layerGroup();
 
         fetch(gsheetAPI)
@@ -326,13 +341,12 @@
                     const latlng = [row.c[6].f, row.c[7].f]
                     L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true })
                         .bindPopup(row.c[2].v + '</br>' + row.c[3].v + '</br>' + row.c[5].v)
-                        .addTo(refAccount);
+                        .addTo(refAccount); 
                 })
             })
             .catch(error => console.error('Error:', error));
 
         // CLOSE ACCOUNTABILITY
-
 
         // Layer control
         var baseMaps = {
