@@ -266,7 +266,7 @@ fetch(apiURL)
             //     color = 'gray';
             // }
 
-            var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'orange', weight: 2, fill: true })
+            var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true })
                 .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
             
             // Add the circleMarker to the marker cluster group
