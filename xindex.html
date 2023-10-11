@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<title>Travel Planner</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- <link rel="stylesheet" href="css/leaflet.css"> -->
-<!-- Search Box  -->
-<link href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" rel="stylesheet"/>
-<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-<script src="./data/gadm41_ETH_3.json"> </script>
-<script src="./data/education/unis_public.js"> </script>
-<script src="./data/rso/rso2.js"> </script>
-<script src="./data/health/health_locations_eth.js"> </script>
-<script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
-<script src="./data/acled/acled.js"> </script>
-<script src="./data/health/MedProvidersAddis.js"> </script>
-<link href="MarkerCluster.css" rel="stylesheet"/>
-<link href="MarkerCluster.Default.css" rel="stylesheet"/><script src="leaflet.markercluster.js"></script></head>
+    <title>Travel Planner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
+
+
+    <!-- Search Box  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script src="./data/gadm41_ETH_3.json"> </script>
+    <script src="./data/education/unis_public.js"> </script>
+    <script src="./data/rso/rso2.js"> </script>
+    <script src="./data/health/health_locations_eth.js"> </script>
+    <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
+    <script src="./data/acled/acled.js"> </script>
+    <script src="./data/health/MedProvidersAddis.js"> </script>
+
+</head>
+
 <style>
     body {
         padding: 0;
@@ -34,10 +41,11 @@
         width: 100%;
     }
 </style>
-</html>
+</head>
+
 <body>
-<div id="map"></div>
-<script>
+    <div id="map"></div>
+    <script>
 
 
         let map = L.map("map", { center: [8.9806, 38.7578], zoom: 7 });
@@ -246,37 +254,28 @@
 
         // fetch('https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=2023-09-15|2023-09-22&event_date_where=BETWEEN')
 
-        
-// Initialize marker cluster group for ACLED data
-var acledMarkers = L.markerClusterGroup();
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(jsonData => {
+                const events = jsonData.data;
+                for (const event of events) {
+                    const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
+                    let color;
 
-fetch(apiURL)
-    .then(response => response.json())
-    .then(jsonData => {
-        const events = jsonData.data;
-        for (const event of events) {
-            const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
-            // let color;
+                    if (event.disorder_type === "Political violence") {
+                        color = 'red';
+                    } else if (event.disorder_type === "Demonstrations") {
+                        color = 'darkgreen';
+                    } else {
+                        color = 'gray';
+                    }
 
-            // if (event.disorder_type === "Political violence") {
-            //     color = 'red';
-            // } else if (event.disorder_type === "Demonstrations") {
-            //     color = 'darkgreen';
-            // } else {
-            //     color = 'gray';
-            // }
-
-            var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'orange', weight: 2, fill: true })
-                .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
-            
-            // Add the circleMarker to the marker cluster group
-            acledMarkers.addLayer(circleMarker);
-        }
-        // Add the marker cluster group to refACLED layer
-        refACLED.addLayer(acledMarkers);
-    })
-    .catch(error => console.error('Error:', error));
-
+                    L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
+                        .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes)
+                        .addTo(refACLED);
+                }
+            })
+            .catch(error => console.error('Error:', error));
 
         // Med Providers
         let refAddisMedical = L.layerGroup();
@@ -377,22 +376,7 @@ fetch(apiURL)
             return "Region: " + layer.feature.properties.NAME_1 + "<br\> " + "Zone: " + layer.feature.properties.NAME_2 + "<br\> " + "Woreda: " + layer.feature.properties.NAME_3;
         }).addTo(map);
 
-    
-    
-    // Initialize marker cluster group
-    var markers = L.markerClusterGroup();
-
-    // Sample markers, replace with your data
-    var marker1 = L.marker([51.5, -0.1]).addTo(map);
-    var marker2 = L.marker([51.6, -0.1]).addTo(map);
-    var marker3 = L.marker([51.4, -0.1]).addTo(map);
-    
-    // Add markers to the cluster group
-    markers.addLayer(marker1);
-    markers.addLayer(marker2);
-    markers.addLayer(marker3);
-    
-    // Add the cluster group to the map
-    map.addLayer(markers);
     </script>
 </body>
+
+</html>
