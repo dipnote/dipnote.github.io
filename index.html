@@ -54,7 +54,7 @@
 
     <script>
 
-        let map = L.map("map", { center: [39.474063,13.497187], zoom: 10 });
+        let map = L.map("map", { center: [13.49667, 39.47528], zoom: 10 });
         L.tileLayer(
             "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
             {
@@ -323,7 +323,7 @@
         }).addTo(refAddisMedical);
 
         // Trip to Mekelle
-        let bounds = [[39.279438,13.585062],[39.638188,13.389437]];
+        // let bounds = [[39.279438,13.585062],[39.638188,13.389437]];
         let refMekelle = L.layerGroup();
         L.geoJSON(geoJSON_mekelleSites, {
             pointToLayer: function (feature, latlng) {
