@@ -323,12 +323,13 @@
         }).addTo(refAddisMedical);
 
         // Trip to Mekelle
+        let bounds = [[39.279438,13.585062],[39.638188,13.389437]];
         let refMekelle = L.layerGroup();
         L.geoJSON(geoJSON_mekelleSites, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
             }
-        }).addTo(refMekelle);
+        }).addTo(refMekelle).fitBounds(bounds);
 
         // **** BASE LAYERS *****
 
