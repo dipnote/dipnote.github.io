@@ -31,7 +31,34 @@ let geoJSON_mekelleSites = {
       {
         "type": "Feature",
         "properties": {
-          "name": "Addis Ababa Science and Technology University",
+          "name": "TPLF Office",
+          "abrv": "GG",
+          "public": "public",
+          "category": "Applied Science",
+          "gen": "",
+          "estb": 2005,
+          "location": "Hawelti Semaetat",
+          "region": "Oromia",
+          "link": "www.astu.edu.et",
+          "phone": "+251 000000000",
+          "twitter": "",
+          "plus_code": "",
+          "president": "",
+          "usg_association": "",
+          "notes": "Sci & Tech. Formerly Nazareth Technical College"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.461359,
+            13.489538
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tigray Reg State Office of Pres",
           "abrv": "AASTU",
           "public": "public",
           "category": "NA",
@@ -50,15 +77,15 @@ let geoJSON_mekelleSites = {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            38.809753,
-            8.885165
+            39.461687,
+            13.502063
           ]
         }
       },
       {
         "type": "Feature",
         "properties": {
-          "name": "Addis Ababa University",
+          "name": "Planet Hotel",
           "abrv": "AAU",
           "public": "public",
           "category": "Research",
@@ -67,7 +94,7 @@ let geoJSON_mekelleSites = {
           "location": "Addis Ababa",
           "region": "Addis Ababa",
           "link": "www.aau.edu.et",
-          "phone": "+251914017180",
+          "phone": "+251 344405660",
           "twitter": "",
           "plus_code": "",
           "president": "",
@@ -77,15 +104,15 @@ let geoJSON_mekelleSites = {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            38.76122,
-            9.04656
+            39.460859,
+            13.496388
           ]
         }
       },
       {
         "type": "Feature",
         "properties": {
-          "name": "Adigrat University",
+          "name": "Sebakare Refugee Camp",
           "abrv": "AGU",
           "public": "public",
           "category": "Comprehensive",
@@ -94,7 +121,7 @@ let geoJSON_mekelleSites = {
           "location": "Adigrat",
           "region": "Tigray",
           "link": "www.adu.edu.et",
-          "phone": "+251914017180",
+          "phone": "+251 000000000",
           "twitter": "",
           "plus_code": "",
           "president": "",
@@ -104,8 +131,8 @@ let geoJSON_mekelleSites = {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            39.466769,
-            14.298411
+            39.4161322707,
+            13.49271907030
           ]
         }
       },
