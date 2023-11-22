@@ -13,6 +13,7 @@ let geoJSON_mekelleSites = {
           "location": "Adama",
           "region": "Oromia",
           "link": "www.astu.edu.et",
+          "phone": "+251914017180",
           "twitter": "",
           "plus_code": "",
           "president": "",
