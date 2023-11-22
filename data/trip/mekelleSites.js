@@ -10,7 +10,7 @@ let geoJSON_mekelleSites = {
           "category": "Applied Science",
           "gen": "",
           "estb": 2005,
-          "location": "Adama",
+          "location": "Godena Guna",
           "region": "Oromia",
           "link": "www.astu.edu.et",
           "phone": "+251 914017180",
