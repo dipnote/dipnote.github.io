@@ -64,7 +64,7 @@ let geoJSON_mekelleSites = {
           "category": "NA",
           "gen": "",
           "estb": 2010,
-          "location": "Addis Ababa",
+          "location": "Mekelle",
           "region": "Addis Ababa",
           "link": "www.aastu.edu.et",
           "phone": "+251914017180",
@@ -77,8 +77,8 @@ let geoJSON_mekelleSites = {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            39.461687,
-            13.502063
+            39.461062,
+            13.502313
           ]
         }
       },
@@ -118,7 +118,7 @@ let geoJSON_mekelleSites = {
           "category": "Comprehensive",
           "gen": 3,
           "estb": 2011,
-          "location": "Adigrat",
+          "location": "Mekelle Industrial Park",
           "region": "Tigray",
           "link": "www.adu.edu.et",
           "phone": "+251 000000000",
