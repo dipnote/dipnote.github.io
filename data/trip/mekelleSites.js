@@ -105,4 +105,5 @@ let geoJSON_mekelleSites = {
           ]
         }
       },
+    ]
    }
