@@ -409,10 +409,12 @@
             "Mekelle": refMekelle
         };
 
-        L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
-
         // make MEKELLE the default. Remove this to go back
         refMekelle.addTo(map);
+
+        L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+
+
 
 
         // Listener for Region and Woreda locator
