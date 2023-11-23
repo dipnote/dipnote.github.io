@@ -63,9 +63,6 @@
             }
         ).addTo(map);
 
-        // make MEKELLE the default. Remove this to go back
-        refMekelle.addTo(map);
-
         // Search Box
         L.Control.geocoder().addTo(map);
 
@@ -413,6 +410,9 @@
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+
+        // make MEKELLE the default. Remove this to go back
+        refMekelle.addTo(map);
 
 
         // Listener for Region and Woreda locator
