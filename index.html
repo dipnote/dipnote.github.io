@@ -325,9 +325,13 @@
         // Trip to Mekelle
         // let bounds = [[39.279438,13.585062],[39.638188,13.389437]];
         let refMekelle = L.layerGroup();
+
+        // make MEKELLE the default. Remove this to go back
+        refMekelle.addTo(map);
+
         L.geoJSON(geoJSON_mekelleSites, {
             pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'orange', weight: 2, fill: true, zIndex:1000 }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
+                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 3, fill: true, zIndex: 1000 }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
             }
         }).addTo(refMekelle);
 
@@ -409,8 +413,7 @@
             "Mekelle": refMekelle
         };
 
-        // make MEKELLE the default. Remove this to go back
-        refMekelle.addTo(map);
+
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
 
