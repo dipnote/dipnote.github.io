@@ -327,7 +327,7 @@
         let refMekelle = L.layerGroup();
         L.geoJSON(geoJSON_mekelleSites, {
             pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true, zIndex:1000 }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
+                return L.circleMarker(latlng, { radius: 10, color: 'orange', weight: 2, fill: true, zIndex:1000 }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
             }
         }).addTo(refMekelle);
 
