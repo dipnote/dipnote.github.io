@@ -120,7 +120,6 @@
 
         }).addTo(refRsoTravelData).bringToBack();
 
-
         // Public Universities GeoJSON
         let refUnivPublic = L.layerGroup();
         L.geoJSON(geoJSON_pub_univ_data, {
@@ -128,9 +127,6 @@
                 return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
             }
         }).addTo(refUnivPublic);
-
-
-
 
 
         // Airports Black
@@ -423,6 +419,12 @@
         };
 
         // L.control.layers(baseMaps).addTo(map);
+
+
+        // pre-check 30 day conflict when loading
+        // Initialize the "30 Day Conflict" layer on the map
+
+        refACLED.addTo(map); // This line makes the "30 Day Conflict" layer visible by default
 
         // overlays for the layer control
         var overlays = {
