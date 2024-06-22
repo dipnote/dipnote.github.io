@@ -292,7 +292,7 @@
 
         let today = new Date();
         let thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(today.getDate() - 30);
+        thirtyDaysAgo.setDate(today.getDate() - 90);
 
         let todayStr = today.toISOString().split('T')[0];
         let thirtyDaysAgoStr = thirtyDaysAgo.toISOString().split('T')[0];
@@ -439,7 +439,7 @@ let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&ema
             "American Spaces": amSpaces,
             "PEPFAR": refHealthPEPFAR,
             "Health Sites All": refHealth,
-            "30 Day Conflict": refACLED,
+            "90 Day Conflict": refACLED,
             "Addis Medical": refAddisMedical,
             "Exchanges": refAccount,
             "Mekelle": refMekelle
