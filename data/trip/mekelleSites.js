@@ -86,20 +86,10 @@ let geoJSON_mekelleSites = {
         "type": "Feature",
         "properties": {
           "name": "Planet Hotel",
-          "abrv": "AAU",
-          "public": "public",
-          "category": "Research",
-          "gen": 1,
-          "estb": 1950,
-          "location": "Addis Ababa",
-          "region": "Addis Ababa",
-          "link": "www.aau.edu.et",
-          "phone": "+251 344405660",
-          "twitter": "",
           "plus_code": "",
           "president": "",
           "usg_association": "",
-          "notes": "Founded as Univ College of Addis Ababa; btwn 1962-75 named Haile Selassie Univ"
+          "notes": ""
         },
         "geometry": {
           "type": "Point",
@@ -112,15 +102,12 @@ let geoJSON_mekelleSites = {
       {
         "type": "Feature",
         "properties": {
-          "name": "Sebakare Refugee Camp",
+          "name": "Makele Hospital",
           "abrv": "AGU",
           "public": "public",
-          "category": "Comprehensive",
-          "gen": 3,
-          "estb": 2011,
-          "location": "Mekelle Industrial Park",
+          "location": "Mekelle",
           "region": "Tigray",
-          "link": "www.adu.edu.et",
+          "link": "",
           "phone": "+251 000000000",
           "twitter": "",
           "plus_code": "",
@@ -131,8 +118,8 @@ let geoJSON_mekelleSites = {
         "geometry": {
           "type": "Point",
           "coordinates": [
-            39.4161322707,
-            13.49271907030
+            39.4842835173938,
+            13.500154766903536,
           ]
         }
       },
