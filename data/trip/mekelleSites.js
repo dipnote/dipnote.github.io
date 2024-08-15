@@ -108,7 +108,7 @@ let geoJSON_mekelleSites = {
           "location": "Mekelle",
           "region": "Tigray",
           "link": "",
-          "phone": "+251 000000000",
+          "phone": "",
           "twitter": "",
           "plus_code": "",
           "president": "",
