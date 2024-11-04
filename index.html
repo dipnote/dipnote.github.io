@@ -1,125 +1,159 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <title>Travel Planner</title>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet" />
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- <link rel="stylesheet" href="css/leaflet.css"> -->
-
-    <!-- Search Box  -->
-    <link href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" rel="stylesheet" />
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-
-    <!-- Font Awesome -->
-    <!-- <script src="https://kit.fontawesome.com/e3b80b3eb5.js" crossorigin="anonymous"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSO Briefer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Data Src -->
-    <script src="./data/gadm41_ETH_3.json"> </script>
-    <script src="./data/education/unis_public.js"> </script>
-    <script src="./data/rso/rso2.js"> </script>
-    <script src="./data/health/health_locations_eth.js"> </script>
-    <script src="./data/health/pepfar_cdc_usaid_sites.js"> </script>
-    <script src="./data/acled/acled.js"> </script>
-    <script src="./data/health/MedProvidersAddis.js"> </script>
-    <script src="./data/trip/mekelleSites.js"> </script>
-    <link href="MarkerCluster.css" rel="stylesheet" />
-    <link href="MarkerCluster.Default.css" rel="stylesheet" />
-    <script src="leaflet.markercluster.js"></script>
+    <script src="data/education/unis_public.js"> </script>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+
+    <!-- Search Box  -->
+    <!-- <link href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> -->
+
 </head>
-<style>
-    body {
-        padding: 0;
-        margin: 0;
-    }
-
-    html,
-    body,
-    #map {
-        height: 100%;
-        width: 100%;
-    }
-</style>
-
-</html>
 
 <body>
+    <h2 style="margin-bottom:0; margin-top: 0;text-align:center">RSO - Addis Ababa</h2>
+    <h5 style="margin-bottom:0; margin-top:0; text-align: center;">(UNCLASS / Open Source)</h5>
     <div id="map"></div>
 
-    <script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
-        let map = L.map("map", { center: [32.003, 35.522], zoom: 9 });
-        // let map = L.map("map", { center: [9.25, 39.46], zoom: 9 }); // Ethiopia
-        L.tileLayer(
-            "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-            {
-                attribution: '&copy; <a href="http://' +
-                    'www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }
-        ).addTo(map);
+
+    <script>
+        // Set up the map centered on Ethiopia
+        var map = L.map('map').setView([9.145, 40.489673], 7);
+
+        // Add a base tile layer from OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
 
         // Search Box
-        L.Control.geocoder().addTo(map);
+        // L.Control.geocoder().addTo(map);
 
         // OpenStreetMap Layer
         var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
 
-        // FIXED MARKER
+        // Mouse Click LAT LON
+        // map.on('click', function (e) {
+        //     var latMouse = e.latlng.lat;
+        //     var lonMouse = e.latlng.lng;
+        //     // console.log("You clicked the map at latitude: " + lat + " and longitude: " + lon);
+        // });
 
-        // var marker = L.marker([13.489812, 39.473687]).addTo(map)
-        //     .bindPopup('Geza Gerlase')
-        //     .openPopup();
-
-        // var marker = L.marker([13.489538, 39.461359]).addTo(map)
-        //     .bindPopup('TPLF')
-        //     .openPopup();
-
-        // var marker = L.marker([13.502313, 39.461062]).addTo(map)
-        //     .bindPopup('Tigray Reg State Pres')
-        //     .openPopup();
-
-        // var marker = L.marker([13.496437, 39.460984]).addTo(map)
-        //     .bindPopup('Planet Hotel')
-        //     .openPopup();
-
-        // var marker = L.marker([13.481738, 39.454141]).addTo(map)
-        //     .bindPopup('American Space')
-        //     .openPopup();
-
-        // var marker = L.marker([13.49271907030, 39.4161322707]).addTo(map)
-        //     .bindPopup('Sebakare Refugee')
-        //     .openPopup();
-
-        // *****  TEMP for TRIP
-        // L.marker([13.477887, 39.459141]).addTo(map).bindPopup('Northern Star Hotel<br> <a href="https://northernstarinternationalhotel.com/"> Website </a>')
-        // .openPopup();
-        // ***** TEMP END
-
-        // layer for geoJSON red no-go areas
-        // this worked to create the sandwich
-        var geojsonLayer = L.geoJSON();
-
-        // Restricted Travel Area
-        let refRsoTravelData = L.layerGroup();
-        L.geoJSON(layerRSO, {
-            style: function (feature) {
-                // If the "Restricted" attribute is "1", set the fill color to red
-                if (feature.properties.Restricted === "1") {
-                    return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "red", "fillOpacity": 0.2 };
+        // Load the GeoJSON data from an external source
+        fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
                 }
-                // Otherwise, set the default style
-                return { "weight": 1, "opacity": 0.5, color: 'black', "fillColor": "green", "fillOpacity": 0.05, "fill": true };
-            }
+                return response.json();
+            })
+            .then(data => {
+                // Add the GeoJSON data to the map
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        return {
+                            color: "purple",
+                            weight: 0.8,
+                            opacity: 0.25,
+                            // dashArray: '1, 5', 
+                            // dashOffset: '3',
+                            fillColor: "#e2fdff",
+                            fillOpacity: 0.1
+                        };
+                    },
+                    onEachFeature: function (feature, layer) {
+                        if (feature.properties && feature.properties.name) {
+                            layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
+                        }
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.error('Error loading the GeoJSON:', error);
+            });
 
-        }).addTo(refRsoTravelData).bringToBack();
+
+        // ACLED WITH JSON from API
+        let daySpan = 30
+
+        let today = new Date();
+        let DaysAgo = new Date();
+        DaysAgo.setDate(today.getDate() - daySpan);
+
+        let todayStr = today.toISOString().split('T')[0];
+        let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
+
+        //let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+
+        // USE "OR for multi ISO"
+        // 232 Eritera 262 Djibouti 887 Yemen
+        let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231:OR:iso=887:OR:iso=404:OR:iso=262:OR:iso=729:OR:iso=728:OR:iso=232:OR:iso=706&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+        //let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=376:OR:iso=400&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+
+        let refACLED = L.layerGroup();
+        // fetch('https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=2023-09-15|2023-09-22&event_date_where=BETWEEN')
+
+
+        // Initialize marker cluster group for ACLED data
+        var acledMarkers = L.markerClusterGroup();
+
+        fetch(apiURL)
+            .then(response => response.json())
+            .then(jsonData => {
+                const events = jsonData.data;
+                for (const event of events) {
+                    const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
+
+                    var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true })
+                        .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
+
+                    // Add the circleMarker to the marker cluster group
+                    acledMarkers.addLayer(circleMarker);
+                }
+                // Add the marker cluster group to refACLED layer
+                refACLED.addLayer(acledMarkers);
+            })
+            .catch(error => console.error('Error:', error));
+
+        // **** BASE LAYERS *****
+
+        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
 
         // Public Universities GeoJSON
         let refUnivPublic = L.layerGroup();
@@ -128,7 +162,6 @@
                 return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
             }
         }).addTo(refUnivPublic);
-
 
         // Airports Black
         // custom icons for aiports
@@ -145,7 +178,7 @@
 
         const mHAAB = L.marker([8.97789, 38.799301], { icon: airportIcon }).bindPopup('<p>HAAB<br/>Bole Airport</p>').addTo(refAirport);
         const mHABD = L.marker([11.608099937438965, 37.32160186767578], { icon: airportIcon }).bindPopup("Bahir Dar Airport").addTo(refAirport);
-        const mHAGN = L.marker([12.51990032196045, 37.433998107910156], { icon: airportIcon }).bindPopup("Gonder Airport").addTo(refAirport);
+        const mHAGN = L.marker([12.52038, 37.43385], { icon: airportIcon }).bindPopup("Gonder Airport").addTo(refAirport);
         const mHASO = L.marker([10.018500328063965, 34.586299896240234], { icon: airportIcon }).bindPopup("Asosa Airport").addTo(refAirport);
         const mHADR = L.marker([9.624699592590332, 41.85419845581055], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
         const mHAGM = L.marker([8.12876033782959, 34.5630989074707], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
@@ -160,7 +193,7 @@
         const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
         const mHAHM = L.marker([8.7163, 39.0059], { icon: airportIcon }).bindPopup("Harar Meda Airport").addTo(refAirport);
         const mHALA = L.marker([7.099869, 38.396187], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
-        const mHADC = L.marker([11.082500457763672, 39.71139907836914], { icon: airportIcon }).bindPopup("Combolcha Airport").addTo(refAirport);
+        const mHADC = L.marker([11.11120,39.72588], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
         const mHADD = L.marker([8.553999900817871, 34.858001708984375], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
         const mHAMT = L.marker([6.9571, 35.5547], { icon: airportIcon }).bindPopup("Mizan Teferi Airport").addTo(refAirport);
         const mHATP = L.marker([7.2024, 35.415], { icon: airportIcon }).bindPopup("Tippi Airport").addTo(refAirport);
@@ -171,7 +204,7 @@
         const mETSHC = L.marker([14.078100204467773, 38.272499084472656], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
         const mHASM = L.marker([11.7875, 40.9915], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
         const mHADM = L.marker([10.350000381469727, 37.71699905395508], { icon: airportIcon }).bindPopup("Debra Marcos Airport").addTo(refAirport);
-        const mHADT = L.marker([11.967000007629395, 38.0], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
+        const mHADT = L.marker([11.88516,38.00909], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
         const mHAMM = L.marker([12.932999610899998, 36.1669998169], { icon: airportIcon }).bindPopup("Metema Airport").addTo(refAirport);
         const mHAMA = L.marker([10.7254, 38.7415], { icon: airportIcon }).bindPopup("Mekane Selam Airport").addTo(refAirport);
         const mHAPW = L.marker([11.3126, 36.4164], { icon: airportIcon }).bindPopup("Beles Airport").addTo(refAirport);
@@ -183,16 +216,13 @@
         const mHADO = L.marker([7.020559787750244, 39.05110168457031], { icon: airportIcon }).bindPopup("Dodola Airport").addTo(refAirport);
         const mHAML = L.marker([6.408491, 39.722443], { icon: airportIcon }).bindPopup("Masslo Airport").addTo(refAirport);
         const mHASH = L.marker([7.74175, 40.69557], { icon: airportIcon }).bindPopup("Sheikh Hussein Airport").addTo(refAirport);
-        const mHAMN = L.marker([9.767, 35.099998], { icon: airportIcon }).bindPopup("Mendi Airport").addTo(refAirport);
         const mHANJ = L.marker([9.55, 35.466995], { icon: airportIcon }).bindPopup("Nejjo Airport").addTo(refAirport);
         const mHANK = L.marker([9.050000190734863, 36.599998474121094], { icon: airportIcon }).bindPopup("Nekemte Airport").addTo(refAirport);
         const mHASD = L.marker([6.80281, 37.68622], { icon: airportIcon }).bindPopup("Soddu Airport").addTo(refAirport);
         const mHAWC = L.marker([7.166999816894531, 37.16699981689453], { icon: airportIcon }).bindPopup("Waca Airport").addTo(refAirport);
         const mHANG = L.marker([5.2897, 39.7023], { icon: airportIcon }).bindPopup("Negele Airport").addTo(refAirport);
-        const mMYS = L.marker([3.5623, 39.0433], { icon: airportIcon }).bindPopup("Moyale Airport").addTo(refAirport);
+        const mMYS = L.marker([3.47350, 39.09841], { icon: airportIcon }).bindPopup("Moyale Airport").addTo(refAirport);
         const mHASK = L.marker([5.6923, 38.9764], { icon: airportIcon }).bindPopup("Shakiso Airport").addTo(refAirport);
-        const mHAMJ = L.marker([5.833000183105469, 35.53300094604492], { icon: airportIcon }).bindPopup("Tume Airport").addTo(refAirport);
-        const mHAMR = L.marker([5.8646, 35.7485], { icon: airportIcon }).bindPopup("Mui River Airport").addTo(refAirport);
 
 
         // Ambassador's Fund for Cultural Pres
@@ -214,33 +244,16 @@
         var AFCP03 = L.marker([12.03161, 39.0411], { icon: blueIcon }).bindPopup('<p>Lalibela Churches<br/>2016</p>').addTo(refAFCP);
         var AFCP04 = L.marker([12.14038438, 39.07308519], { icon: blueIcon }).bindPopup('<p>Yemrehanna Kristos Church<br/>2015</p>').addTo(refAFCP);
         var AFCP05 = L.marker([9.312678612, 42.12256134], { icon: blueIcon }).bindPopup('<p>Teferi Mekonnen Palace<br/>2009</p>').addTo(refAFCP);
-        var AFCP06 = L.marker([9.032813,38.749672], { icon: blueIcon }).bindPopup('<p>Mohammad Ali House<br/>2007</p>').addTo(refAFCP);
+        var AFCP06 = L.marker([9.032813, 38.749672], { icon: blueIcon }).bindPopup('<p>Mohammad Ali House<br/>2007</p>').addTo(refAFCP);
         var AFCP07 = L.marker([9.037967, 38.754552], { icon: blueIcon }).bindPopup('<p>Hager Fikir Theater<br/>2006</p>').addTo(refAFCP);
         var AFCP08 = L.marker([7.746705697, 40.70737687], { icon: blueIcon }).bindPopup('<p>Sheikh Nur Hussein Shrine<br/>2005</p>').addTo(refAFCP);
         var AFCP09 = L.marker([12.23504732, 37.6350969], { icon: blueIcon }).bindPopup('<p>Guzara Castle<br/>2004</p>').addTo(refAFCP);
         var AFCP10 = L.marker([14.28597771, 39.01909363], { icon: blueIcon }).bindPopup('<p>Yeha Temple<br/>2002</p>').addTo(refAFCP);
-
-
+        var AFCP11 = L.marker([9.03124, 38.74224], { icon: blueIcon }).bindPopup('<p>American Gibi<br/>2023</p>').addTo(refAFCP);
 
 
         // American Spaces
         var amSpaces = L.layerGroup();
-
-        // const amSpacesIcon = new L.icon({
-        //     iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23325acb&icon=lightbulb&iconType=awesome&scaleFactor=2&apiKey=' + YOUR_API_KEY,
-        //     iconSize: [36, 60],
-        //     iconAnchor: [0,0],
-        //     //             cursor: 'pointer',
-        //     //             anchor: 'bottom',
-        //     offset: [0,0]
-        // })
-
-        // var mBahirDarAC = L.marker([11.593525811299335, 37.379489150400865], { icon: amSpacesIcon }).bindPopup('Bahir Dar AC').addTo(amSpaces);
-        // var mDireDawaAC = L.marker([9.583438, 41.856938], { icon: amSpacesIcon }).bindPopup('Dire Dawa AC').addTo(amSpaces);
-        // var mJimmaAC = L.marker([7.67724, 36.835999], { icon: amSpacesIcon }).bindPopup('Jimma AC').addTo(amSpaces);
-        // var mMekelleAC = L.marker([13.481813, 39.454062], { icon: amSpacesIcon }).bindPopup('Mekelle AC').addTo(amSpaces);
-        // var mCJCRAC = L.marker([9.007687, 38.742937], { icon: amSpacesIcon }).bindPopup('CJCRAC').addTo(amSpaces);
-        // var mSatchmo = L.marker([9.05821, 38.7635], { icon: amSpacesIcon }).bindPopup("Satchmo").addTo(amSpaces);
 
         var mBahirDarAC = L.circleMarker([11.593525811299335, 37.379489150400865], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
         var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
@@ -248,170 +261,6 @@
         var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
         var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
-
-        // General Health Locations GeoJSON 
-        let refHealth = L.layerGroup();
-        L.geoJSON(geoJsonHealth, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'green', weight: 2, fill: true }).bindPopup(feature.properties.name)
-            }
-        }).addTo(refHealth);
-
-        // PEPFAR Health Locations GeoJSON
-        let refHealthPEPFAR = L.layerGroup();
-        L.geoJSON(geoJSON_pepfar_data, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.facility + '</br>' + feature.properties.facility_type + '</br>' + feature.properties.pepfar)
-            }
-        }).addTo(refHealthPEPFAR);
-
-        // ACLED data CSV converted to geoJSON
-        // let refACLED = L.layerGroup();
-        // L.geoJSON(layerAcled, {
-        //     pointToLayer: function (feature, latlng) {
-        //         return L.circleMarker(latlng, { radius: 10, color: 'olive', weight: 2, fill: true }).bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes )
-        //     }
-        // }).addTo(refACLED);
-
-        /*         let refACLED = L.layerGroup();
-                L.geoJSON(layerAcled, {
-                    pointToLayer: function (feature, latlng) {
-                        let color;
-                        if (feature.properties.disorder_type === "Political violence") {
-                            color = 'red';
-                        } else if (feature.properties.disorder_type === "Demonstrations") {
-                            color = 'darkgreen';
-                        } else {
-                            color = 'gray';
-                        }
-                        return L.circleMarker(latlng, { radius: 10, color: color, weight: 2, fill: true })
-                            .bindPopup(feature.properties.event_date + '</br>' + feature.properties.sub_event_type + '</br>' + feature.properties.notes);
-                    }
-                }).addTo(refACLED); */
-
-        // ACLED WITH JSON from API
-
-        let today = new Date();
-        let thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(today.getDate() - 90);
-
-        let todayStr = today.toISOString().split('T')[0];
-        let thirtyDaysAgoStr = thirtyDaysAgo.toISOString().split('T')[0];
-
-// let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${thirtyDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
-
-// USE "OR for multi ISO"
-let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=376:OR:iso=400:OR:iso=231:OR:iso=404:OR:iso=729:OR:iso=728:OR:iso=232:OR:iso=706&event_date=${thirtyDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
-
-//let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=376:OR:iso=400&event_date=${thirtyDaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
-
-        let refACLED = L.layerGroup();
-
-        // fetch('https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=2023-09-15|2023-09-22&event_date_where=BETWEEN')
-
-
-        // Initialize marker cluster group for ACLED data
-        var acledMarkers = L.markerClusterGroup();
-
-        fetch(apiURL)
-            .then(response => response.json())
-            .then(jsonData => {
-                const events = jsonData.data;
-                for (const event of events) {
-                    const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
-                    // let color;
-
-                    // if (event.disorder_type === "Political violence") {
-                    //     color = 'red';
-                    // } else if (event.disorder_type === "Demonstrations") {
-                    //     color = 'darkgreen';
-                    // } else {
-                    //     color = 'gray';
-                    // }
-
-                    var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true })
-                        .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
-
-                    // Add the circleMarker to the marker cluster group
-                    acledMarkers.addLayer(circleMarker);
-                }
-                // Add the marker cluster group to refACLED layer
-                refACLED.addLayer(acledMarkers);
-            })
-            .catch(error => console.error('Error:', error));
-
-
-        // Med Providers
-        let refAddisMedical = L.layerGroup();
-        L.geoJSON(medProvidersAddis, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'brown', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br>' + feature.properties.location + '</br> Ambulance Service: ' + feature.properties.AmbulanceService)
-            }
-        }).addTo(refAddisMedical);
-
-        // Trip to Mekelle
-        // let bounds = [[39.279438,13.585062],[39.638188,13.389437]];
-        let refMekelle = L.layerGroup();
-
-        // make MEKELLE the default. Remove this to go back
-        // refMekelle.addTo(map);
-
-        L.geoJSON(geoJSON_mekelleSites, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 3, fill: true, zIndex: 1000 }).bindPopup(feature.properties.name + '</br>' + feature.properties.location + '</br>' + feature.properties.phone)
-            }
-        }).addTo(refMekelle);
-
-        // **** BASE LAYERS *****
-
-        googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-
-        googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-
-        // maptiler
-        // mapTiler = L.tileLayer('https://api.maptiler.com/maps/dataviz/{z}/{x}/{y}.png?key=OC3KF0W4ulmkXInrrDn5'), {
-        //     maxZoom: 20,
-        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        // }
-
-        // googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-        //     maxZoom: 20,
-        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        // });
-
-        // googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
-        //     maxZoom: 20,
-        //     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        // });
-
-
-        // ACCOUNTABILITY
-        let gsheetAPI = `https://docs.google.com/spreadsheets/d/12YtajwBvBz0ic8tUFpJu9qiPPQODlrAZvqVESYzmxes/gviz/tq?`
-
-        // let refAccount = L.layerGroup();
-        let refAccount = L.layerGroup();
-
-        fetch(gsheetAPI)
-            .then(res => res.text())
-            .then(rep => {
-                const data = JSON.parse(rep.substr(47).slice(0, -2));
-                data.table.rows.forEach((row) => {
-                    const latlng = [row.c[6].f, row.c[7].f]
-                    var markers = L.markerClusterGroup();
-                    L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true })
-                        .bindPopup(row.c[2].v + '</br>' + row.c[3].v + '</br>' + row.c[5].v)
-                        .addTo(refAccount);
-                })
-            })
-            .catch(error => console.error('Error:', error));
-
-        // CLOSE ACCOUNTABILITY
 
         // Layer control
         var baseMaps = {
@@ -423,58 +272,41 @@ let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&ema
             // "Hybrid": googleHybrid
         };
 
-        // L.control.layers(baseMaps).addTo(map);
-
-
-        // pre-check 30 day conflict when loading
-        // Initialize the "30 Day Conflict" layer on the map
 
         refACLED.addTo(map); // This line makes the "30 Day Conflict" layer visible by default
 
+
         // overlays for the layer control
         var overlays = {
-            "Restricted Travel": refRsoTravelData,
+            // "Restricted Travel": refRsoTravelData,
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
             "American Spaces": amSpaces,
-            "PEPFAR": refHealthPEPFAR,
-            "Health Sites All": refHealth,
-            "90 Day Conflict": refACLED,
-            "Addis Medical": refAddisMedical,
-            "Exchanges": refAccount,
-            "Mekelle": refMekelle
+            // "PEPFAR": refHealthPEPFAR,
+            // "Health Sites All": refHealth,
+            "ACLED": refACLED,
+            // "Addis Medical": refAddisMedical,
+            // "Exchanges": refAccount,
+            // "Journalists": refAccount,
+            // "Crossing Points": refAccount,
+            // "USAID": refAccount,
+            // "AmCits": refAccount,
+            // "US Business Interests": refAccount,
+            // "Chinese Projects": refAccount,
+            // "Satellites": refAccount,
+            // "Hotels": refAccount,
+            // "Tour Sites": refAccount like American Gibi
+            // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
+            // "": refAccount,
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
 
-        // Listener for Region and Woreda locator
-
-        L.geoJSON(etjson, {
-            style: function (feature) {
-                return { color: "#09a0aa00" };  // removes overlay borders
-                //return { color: feature.properties.color };
-            }
-        }).bindPopup(function (layer) {
-            return "Region: " + layer.feature.properties.NAME_1 + "<br\> " + "Zone: " + layer.feature.properties.NAME_2 + "<br\> " + "Woreda: " + layer.feature.properties.NAME_3;
-        }).addTo(map);
-
-
-
         // Initialize marker cluster group
         var markers = L.markerClusterGroup();
 
-        // Sample markers, replace with your data
-        var marker1 = L.marker([51.5, -0.1]).addTo(map);
-        var marker2 = L.marker([51.6, -0.1]).addTo(map);
-        var marker3 = L.marker([51.4, -0.1]).addTo(map);
-
-        // Add markers to the cluster group
-        markers.addLayer(marker1);
-        markers.addLayer(marker2);
-        markers.addLayer(marker3);
-
-        // Add the cluster group to the map
-        map.addLayer(markers);
     </script>
 </body>
+
+</html>

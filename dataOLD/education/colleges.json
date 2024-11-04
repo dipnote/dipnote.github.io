@@ -1,0 +1,3520 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.58.5 b0c4acbb",
+  "osm3s": {
+    "timestamp_osm_base": "2022-10-07T05:30:09Z",
+    "timestamp_areas_base": "2022-10-07T04:48:09Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 999999999,
+      "lat": 7.667938,
+      "lon": 36.786313,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Agricultural Research Center",
+        "name:am": ""
+      }
+    },
+    {
+      "type": "node",
+      "id": 999999999,
+      "lat": 7.687938,
+      "lon": 36.820391,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Institute of Technology",
+        "name:am": ""
+      }
+    },
+    {
+      "type": "node",
+      "id": 999999999,
+      "lat": 7.682005,
+      "lon": 36.855973,
+      "tags": {
+        "amenity": "college",
+        "name": "Jimma Univ Institute of Technology",
+        "name:am": ""
+      }
+    },
+    {
+      "type": "node",
+      "id": 463219668,
+      "lat": 9.0143922,
+      "lon": 38.7307305,
+      "tags": {
+        "amenity": "college",
+        "name": "Bethel Medical College",
+        "name:am": "ቤተል ሜዲካል ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 471337506,
+      "lat": 13.7823258,
+      "lon": 39.60411,
+      "tags": {
+        "amenity": "college",
+        "name": "Wukro Agricultural TVET College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 595140012,
+      "lat": 10.350506,
+      "lon": 37.717964,
+      "tags": {
+        "amenity": "college",
+        "name": "Debre Markos Teachers College",
+        "name:am": "ደብረማርቆስ መምህራን ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 726895314,
+      "lat": 9.0109518,
+      "lon": 38.7374146,
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "addr:subcity": "Lideta",
+        "amenity": "college",
+        "name": "St. Lideta Medical College",
+        "name:am": "ቅድስት ልደታ ሜዲካል ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 742622742,
+      "lat": 9.0064628,
+      "lon": 38.7419597,
+      "tags": {
+        "amenity": "college",
+        "name": "Hibret Machin Tools Enginering Complex",
+        "name:am": "ሕብር",
+        "operator": "government"
+      }
+    },
+    {
+      "type": "node",
+      "id": 846914530,
+      "lat": 8.5401601,
+      "lon": 39.2182203,
+      "tags": {
+        "amenity": "college",
+        "name": "Oromia Police College",
+        "name:am": "ኦሮሚያ ፖሊስ ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 846942764,
+      "lat": 9.0043386,
+      "lon": 38.7527723,
+      "tags": {
+        "addr:kebele": "11/12",
+        "addr:subcity": "Kirkos",
+        "amenity": "college",
+        "contact:fax": "+251 (0) 111 76 80",
+        "contact:phone": "+251 (0) 111 57 41 03, +251 (0) 111 56 10 06",
+        "name": "New Millenium International Hotel and Tourism Institute",
+        "name:am": "ኒው ሚሊኒየም ኢንተርናሽናል የሆቴልና ቱሪዝም ተቋም",
+        "source": "GPS Data, Picure",
+        "source:am": "GPS Data, Picture"
+      }
+    },
+    {
+      "type": "node",
+      "id": 878746541,
+      "lat": 9.0403159,
+      "lon": 38.7590058,
+      "tags": {
+        "addr:housenumber": "692",
+        "addr:kebele": "11/12",
+        "addr:subcity": "Arada",
+        "amenity": "college",
+        "contact:mobile": "+251 (0) 911 36 88 41",
+        "contact:phone": "+251 (0) 11 111 32 85",
+        "name": "Creative Videography Training Institute",
+        "name:am": "ክሬቲቭ የቪዲዮግራፊ ማሰልጠኛ ተቋም",
+        "source": "GPS Data"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1592291953,
+      "lat": 8.7588205,
+      "lon": 38.9991009,
+      "tags": {
+        "amenity": "college",
+        "name": "Defense Engineering College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1592429618,
+      "lat": 8.9989084,
+      "lon": 38.7672992,
+      "tags": {
+        "amenity": "college",
+        "name": "GAGE Technology and Business College",
+        "shop": "ጌጅ ቴክኖሎጂ ና ንግድ ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1592799323,
+      "lat": 7.0808441,
+      "lon": 38.4859312,
+      "tags": {
+        "amenity": "college",
+        "contact:phone": "+251 (0) 46 2207667,+251 (0) 46 2207530,+251 (0) 916 822616,+251 (0) 916 822517",
+        "name": "General Para Medical College Main Campus",
+        "source": "GPS,Photo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3003215861,
+      "lat": 7.0555323,
+      "lon": 38.4718124,
+      "tags": {
+        "amenity": "college",
+        "name": "Hawassa Agricultural College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3145105609,
+      "lat": 6.0319248,
+      "lon": 37.5517743,
+      "tags": {
+        "amenity": "college",
+        "name": "Arba Minch Health Science College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3154105362,
+      "lat": 5.9993343,
+      "lon": 37.5444989,
+      "tags": {
+        "amenity": "college",
+        "name": "College of Social Science & Humanities"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4298877494,
+      "lat": 9.0221665,
+      "lon": 38.8344297,
+      "tags": {
+        "amenity": "college",
+        "name": "Ethiopian Civil Service College",
+        "wikidata": "Q5403540"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4485190437,
+      "lat": 7.0355025,
+      "lon": 38.4754736,
+      "tags": {
+        "amenity": "college",
+        "name": "College of Teacher Education",
+        "name:alt": "Teachers Training College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4486588997,
+      "lat": 7.0532135,
+      "lon": 38.470801,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Hawassa Agricultural College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4517882562,
+      "lat": 8.196589,
+      "lon": 37.7918072,
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550968612,
+      "lat": 9.0339554,
+      "lon": 38.7639581,
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "amenity": "college",
+        "name": "Art School",
+        "operator": "AAU"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4550992556,
+      "lat": 9.0399605,
+      "lon": 38.7620109,
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "amenity": "college",
+        "name": "የድረቀ ፋርማሲ ትምህርት ቤት/አአኢቴ ቢሮ/",
+        "name:am": "የድሮ ፋርማሲ ትምህርት ቤት/አአኢቴ ቢሮ/",
+        "name:en": "Old school Of Pharmacy/AAIT office & lounge/",
+        "operator": "AAU"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4551050143,
+      "lat": 9.0108613,
+      "lon": 38.7374365,
+      "tags": {
+        "amenity": "college",
+        "name": "Lidet Health College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4611634444,
+      "lat": 9.0341255,
+      "lon": 38.7663687,
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "addr:housename": "Graduate Program",
+        "addr:housenumber": "710",
+        "addr:postcode": "1176",
+        "addr:street": "Queen Elizabeth Street",
+        "amenity": "college",
+        "building": "office",
+        "description": "Computational Science Program at Addis Ababa University",
+        "designation": "7th Floor",
+        "internet_access": "yes",
+        "name": "Computational Science Program",
+        "phone": "+251116551915"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4745068299,
+      "lat": 9.0373781,
+      "lon": 38.8379355,
+      "tags": {
+        "amenity": "college",
+        "name": "Kotebe University College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5058262326,
+      "lat": 9.3579715,
+      "lon": 42.8299678,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Jigjiga Univerity Department of Anagement"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5150919922,
+      "lat": 9.0034887,
+      "lon": 38.8049675,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Unity University College",
+        "wikidata": "Q7893827"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5179328937,
+      "lat": 11.0872141,
+      "lon": 39.7268031,
+      "tags": {
+        "amenity": "college",
+        "name": "Kombolcha Agricultural College",
+        "name:ar": "كلية الزراعة كومبولشا"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5182057899,
+      "lat": 9.6694365,
+      "lon": 39.5220251,
+      "tags": {
+        "amenity": "college",
+        "name": "College of Teachers Education"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5251750821,
+      "lat": 8.9900468,
+      "lon": 38.7925052,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Rift Valley University College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5280313724,
+      "lat": 9.0235137,
+      "lon": 38.7990893,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Rift Valley University College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5281468824,
+      "lat": 8.5399073,
+      "lon": 39.2496522,
+      "tags": {
+        "addr:street": "Geda Street",
+        "amenity": "college",
+        "name": "ዩኒቲ ዩኒቨርስቲ ኮሌጅ አዳማ ካምፖስm",
+        "name:en": "Unity University College Adama special campus",
+        "opening_hours": "Mo-Su 08:00-20:00",
+        "phone": "0116298154",
+        "website": "http://uu.midroc-ceo.com/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5352343628,
+      "lat": 7.6858235,
+      "lon": 36.8608833,
+      "tags": {
+        "amenity": "college",
+        "name": "TTC"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5388424521,
+      "lat": 7.6256447,
+      "lon": 38.4316445,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Alage Farming College (Enterance)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5443128376,
+      "lat": 11.8522984,
+      "lon": 38.0307851,
+      "tags": {
+        "addr:street": "Main Road",
+        "amenity": "college",
+        "name": "Debre Tabor Poly Technic College",
+        "phone": "0584411232"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5443129375,
+      "lat": 11.8521453,
+      "lon": 38.0178231,
+      "tags": {
+        "addr:housenumber": "G-4",
+        "addr:street": "Main Road",
+        "amenity": "college",
+        "name": "Fekede Egzi College",
+        "phone": "0584412552"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5450462114,
+      "lat": 11.8521318,
+      "lon": 38.0179482,
+      "tags": {
+        "addr:street": "tewodros II",
+        "amenity": "college",
+        "name": "Fekede Egzi College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5473155417,
+      "lat": 11.8521176,
+      "lon": 38.0305592,
+      "tags": {
+        "amenity": "college",
+        "name": "Debre Tabor poly technic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5511403106,
+      "lat": 11.8516409,
+      "lon": 38.0315459,
+      "tags": {
+        "amenity": "college",
+        "name": "Debre Tabor Poly technic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5515662123,
+      "lat": 9.0368234,
+      "lon": 38.7506929,
+      "tags": {
+        "addr:street": "Abune Petros",
+        "amenity": "college",
+        "email": "microlink@gmail.com",
+        "name": "Micro Link  Information Technology College",
+        "opening_hours": "Mo-Sa 00:00-24:00",
+        "operator": "Mr Abenezer Ashebir",
+        "phone": "011-6-54-10-15",
+        "website": "http://www.Microlinkcollege.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5518748425,
+      "lat": 9.6001202,
+      "lon": 41.8516586,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Melese zenawi t.v.e.t  College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5597005487,
+      "lat": 10.6590236,
+      "lon": 39.1577149,
+      "tags": {
+        "amenity": "college",
+        "name": "collage"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5599151277,
+      "lat": 10.5891515,
+      "lon": 39.0074822,
+      "tags": {
+        "amenity": "college",
+        "name": "college"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5608955140,
+      "lat": 8.9086513,
+      "lon": 38.7655681,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Rift Valley University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622014724,
+      "lat": 6.4226818,
+      "lon": 38.2959834,
+      "tags": {
+        "addr:street": "Addis Ababa to Nairobi road",
+        "amenity": "college",
+        "name:en": "Paradise valley College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5622022921,
+      "lat": 6.4258835,
+      "lon": 38.2871558,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Sumera campus"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5645356021,
+      "lat": 11.5707698,
+      "lon": 37.3301858,
+      "tags": {
+        "amenity": "college",
+        "name": "ባህር ዳር ዩንቨርሲቲ",
+        "name:en": "Bahir Dar University, Yibab campus",
+        "operator": "Bahir Dar University",
+        "website": "http://www.bdu.edu.et"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5645356122,
+      "lat": 11.5978209,
+      "lon": 37.395545,
+      "tags": {
+        "amenity": "college",
+        "name": "ባህር ዳር ዩንቨርስቲ, BiT",
+        "name:en": "Bahir Dar University, BiT",
+        "website": "http://www.bdu.edu.et"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5670559036,
+      "lat": 11.6010831,
+      "lon": 37.3689392,
+      "tags": {
+        "amenity": "college",
+        "name": "ሪፍት ቫሊ ዩኒቨርሲቲ",
+        "name:en": "Rift Valley University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5675969624,
+      "lat": 10.9543186,
+      "lon": 36.9133558,
+      "tags": {
+        "amenity": "college",
+        "name": "እንጅባራ ዩኒቨርሲቲ",
+        "name:en": "Enjibara University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5686728127,
+      "lat": 11.5990128,
+      "lon": 37.375121,
+      "tags": {
+        "amenity": "college",
+        "name": "ዩኒቲ ዩኒቨርስቲ",
+        "name:en": "Unity University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5700641821,
+      "lat": 9.0083582,
+      "lon": 38.7424896,
+      "tags": {
+        "addr:postcode": "7777",
+        "amenity": "college",
+        "name:en": "St Mary College GRE Testing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5942412290,
+      "lat": 7.0348951,
+      "lon": 38.4751509,
+      "tags": {
+        "amenity": "college",
+        "name:en": "TTC hawassa"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5965467785,
+      "lat": 8.9372577,
+      "lon": 38.6542412,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Bethel Medical College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6024265685,
+      "lat": 9.051163,
+      "lon": 38.7652917,
+      "tags": {
+        "amenity": "college",
+        "name": "ተፈሪ መኮንን ኮሌጅ",
+        "name:en": "entoto poly technic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6104027286,
+      "lat": 8.9666901,
+      "lon": 38.7250537,
+      "tags": {
+        "addr:street": "Ring Road",
+        "amenity": "college",
+        "name:en": "Admas University College (mekanisa branch )"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6131827385,
+      "lat": 7.5247321,
+      "lon": 39.2445223,
+      "tags": {
+        "amenity": "college",
+        "name": "አርሲ ዮኒቨርሲቲ በቆጂ ካምፓስ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6162737185,
+      "lat": 8.9298762,
+      "lon": 38.7679268,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Admas University College Kality Campus"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6212742586,
+      "lat": 8.9876041,
+      "lon": 38.7702086,
+      "tags": {
+        "amenity": "college",
+        "name": "Ethio telecom training ,"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6257316788,
+      "lat": 11.6211473,
+      "lon": 37.4612031,
+      "tags": {
+        "amenity": "college",
+        "name": "ባህርዳር ዩንቨርስቲ ዘንዘልማ ካምፓስ",
+        "name:en": "Bahirdar University Zenzelma Campus"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6280109586,
+      "lat": 14.2829114,
+      "lon": 39.4662627,
+      "tags": {
+        "amenity": "college",
+        "name:en": "ኢትዮ-ሌንስ ኮሌጅ Ethio-Lens Collage"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6280109885,
+      "lat": 14.2835665,
+      "lon": 39.4583884,
+      "tags": {
+        "amenity": "college",
+        "name:en": "ኒው ሚሊንየም ኮሌጅ New Millenium Collage"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6372207986,
+      "lat": 13.4870444,
+      "lon": 39.4718971,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Sheba University College: TVET Campus"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6393525386,
+      "lat": 13.4770877,
+      "lon": 39.4839941,
+      "tags": {
+        "amenity": "college",
+        "name": "መቐለ ዩኒቨርሲቲ እንዳየሱስ ግቢ",
+        "name:en": "Mekelle University Endayesus Campus"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6425326386,
+      "lat": 9.0467555,
+      "lon": 38.7631998,
+      "tags": {
+        "amenity": "college",
+        "name": "AAU CBE",
+        "name:en": "AAU CBE"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6463584085,
+      "lat": 6.4274379,
+      "lon": 38.2880392,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Dilla University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6480091214,
+      "lat": 9.0428058,
+      "lon": 38.7196275,
+      "tags": {
+        "amenity": "college",
+        "name": "ከፍተኛ -7 ቴክኒክ ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6561275686,
+      "lat": 7.1010154,
+      "lon": 38.6270522,
+      "tags": {
+        "amenity": "college",
+        "name": "ወንዶ ገነት የደን እና የተፈጥሮ ሃብት ኮሌጅ",
+        "name:en": "Wondo Genet College of Forestry and Natural Resources",
+        "operator": "Hawassa University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6588197685,
+      "lat": 8.2305764,
+      "lon": 43.5583488,
+      "tags": {
+        "amenity": "college",
+        "name": "Degahbour TVET"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6592960285,
+      "lat": 8.2398238,
+      "lon": 34.605692,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Gambella University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6635343385,
+      "lat": 9.0127595,
+      "lon": 38.7298077,
+      "tags": {
+        "addr:street": "Dejazmach Balcha Aba Nefso Street",
+        "amenity": "college",
+        "name:en": "Chair of Housing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6759978211,
+      "lat": 8.953033,
+      "lon": 38.6955816,
+      "tags": {
+        "amenity": "college",
+        "name": "Principles health and business College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6807135152,
+      "lat": 7.549444,
+      "lon": 37.8472309,
+      "tags": {
+        "amenity": "college",
+        "name": "ሆሳዕና ጤና ሰይንስ ኮሌጅ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6857270294,
+      "lat": 7.5810245,
+      "lon": 37.8569129,
+      "tags": {
+        "amenity": "college",
+        "name": "ሆሳዕና ቴክንክና ሙያ ማሰልጠኛ ኮለረጅ",
+        "name:en": "Hosaina Technical & Vocational College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6857314190,
+      "lat": 7.5783567,
+      "lon": 37.841712,
+      "tags": {
+        "amenity": "college",
+        "name": "ቦቢቾ ቃለ ህይወት መጽሐፍ ቅዱስ ኮሌጅ",
+        "name:en": "Bobicho Kale Hiwot Bible College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6857314886,
+      "lat": 7.5731316,
+      "lon": 37.8566261,
+      "tags": {
+        "amenity": "college",
+        "name": "ሆሳዕና ማምህራን ማሰልጠኛ ኮሌጅ",
+        "name:en": "Hosaina Teachers Education College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6861207485,
+      "lat": 9.0285671,
+      "lon": 38.8771848,
+      "tags": {
+        "addr:street": "Road 6",
+        "amenity": "college",
+        "name:en": "ACIPH"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6872292485,
+      "lat": 13.4811076,
+      "lon": 39.486076,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Ethiopia Institute of Technology - Mekelle (EIT-M)",
+        "opening_hours": "24/7",
+        "website": "http://www.mu.edu.et"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6984338045,
+      "lat": 9.0367566,
+      "lon": 38.752065,
+      "tags": {
+        "amenity": "college",
+        "name": "Helen"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6994571485,
+      "lat": 8.9693963,
+      "lon": 37.8903935,
+      "tags": {
+        "amenity": "college",
+        "name": "Ambo University",
+        "name:en": "አምቦ ዪንቨርስቲ"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7005661086,
+      "lat": 9.0180562,
+      "lon": 38.7967771,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Admas walelegn"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7017924711,
+      "lat": 9.0178659,
+      "lon": 38.7886302,
+      "tags": {
+        "amenity": "college",
+        "name:en": "National Aviation College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7105321289,
+      "lat": 9.0215025,
+      "lon": 38.8024313,
+      "tags": {
+        "amenity": "college",
+        "name": "ሲልከን ቫሊ ኮሌጅ",
+        "name:en": "Silicon Valley College",
+        "opening_hours": "Mo-Su 08:00-20:30",
+        "phone": "+251940455050"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7119218485,
+      "lat": 9.3561968,
+      "lon": 42.7907342,
+      "tags": {
+        "amenity": "college",
+        "name": "ሆርን ኢንተርናሽናል ዩንቨርሲቲ ኮሌጅ",
+        "name:en": "Horn International University Collage",
+        "operator": "PLC"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7159217244,
+      "lat": 8.9539552,
+      "lon": 38.765865,
+      "tags": {
+        "amenity": "college",
+        "name": "Aygoda Nursery School"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7162562282,
+      "lat": 9.0311811,
+      "lon": 38.7617692,
+      "tags": {
+        "amenity": "college",
+        "name": "American College of Technology"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7529590187,
+      "lat": 9.0162385,
+      "lon": 38.8011101,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Gage College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7534063885,
+      "lat": 8.5394404,
+      "lon": 39.2643838,
+      "tags": {
+        "amenity": "college",
+        "name": "ሪፍት ቫሊ ዮኒቨርሲቲ",
+        "name:en": "Rift Valley University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7605561685,
+      "lat": 6.9482418,
+      "lon": 35.5470517,
+      "tags": {
+        "amenity": "college",
+        "name": "ሚዛን-አማን ጤና ሳይንስ ኮሌጅ መሰብሰቢያ አዳራሽ",
+        "name:en": "Mizan-Aman Health Science College Meeting hall"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7607667285,
+      "lat": 6.9481204,
+      "lon": 35.5490062,
+      "tags": {
+        "amenity": "college",
+        "name": "ሚዛን-አማን ጤና ሳይንስ ኮሌጅ መግቢያ",
+        "name:en": "Mizan-Aman Health science College Entry"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7611159185,
+      "lat": 6.971249,
+      "lon": 35.569765,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Mizan-Tepi University(Main door)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7778058107,
+      "lat": 6.9484359,
+      "lon": 35.5481891,
+      "tags": {
+        "amenity": "college",
+        "name": "ሚዛን-አማን ጤና ሳይንስ ኮሌጅ",
+        "name:en": "Mizan-Aman Health science College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7814192556,
+      "lat": 6.8626551,
+      "lon": 37.762093,
+      "tags": {
+        "amenity": "college",
+        "name": "Wolaita business and technologyCollege",
+        "phone": "0963366219"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7840028195,
+      "lat": 10.0889538,
+      "lon": 34.5589237,
+      "tags": {
+        "amenity": "college",
+        "name": "አሶሳ ዪኒቨርሲቲ",
+        "name:en": "አሶሳ ዪኒቨርሲቲ Assosa University (ASU)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7840028890,
+      "lat": 8.883915,
+      "lon": 38.8094351,
+      "tags": {
+        "amenity": "college",
+        "name:en": "AASTU College of Biological and Chemical Engineering"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8274449502,
+      "lat": 9.3210962,
+      "lon": 42.0904933,
+      "tags": {
+        "amenity": "college",
+        "name": "Agro Technical and Technology College",
+        "operator": "Menschen für Menschen",
+        "operator:type": "ngo",
+        "website": "https://en.menschenfuermenschen.de/impact/projects/attc/"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8299789217,
+      "lat": 8.9696384,
+      "lon": 37.8903615,
+      "tags": {
+        "addr:street": "New Ambo Road",
+        "amenity": "college",
+        "name": "Yuuniversitii Amboo, Kaampaasii Hacaaluu Hundessa.",
+        "name:en": "Ambo University, Hachalu Hundessa campus."
+      }
+    },
+    {
+      "type": "node",
+      "id": 8361171017,
+      "lat": 9.0445316,
+      "lon": 38.8351394,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Selam Technical and Vocational College",
+        "phone": "011 646 2942"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8364277018,
+      "lat": 6.9642527,
+      "lon": 45.325481,
+      "tags": {
+        "addr:street": "Warder to Kebridahar Main Road",
+        "amenity": "college",
+        "name:en": "Warder Polytechnic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8418053163,
+      "lat": 9.0900409,
+      "lon": 36.5565811,
+      "tags": {
+        "amenity": "college",
+        "name": "New generation University College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8418310117,
+      "lat": 9.0467686,
+      "lon": 38.7197462,
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8491497319,
+      "lat": 8.8654843,
+      "lon": 38.786566,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Yenegew Sew TVET Institute"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8491501318,
+      "lat": 9.0582892,
+      "lon": 38.7183256,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Enat Medical College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8491501519,
+      "lat": 8.9304364,
+      "lon": 38.7676441,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Admas University And College Akaki Kality Branch"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8493717621,
+      "lat": 9.0059393,
+      "lon": 38.7680745,
+      "tags": {
+        "amenity": "college",
+        "name": "ሉናር ኮሌጅ",
+        "name:en": "lunar College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8654503417,
+      "lat": 9.0267881,
+      "lon": 38.8238333,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Ethipian Technical University (ETU)",
+        "office": "government"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8672238020,
+      "lat": 8.9811344,
+      "lon": 38.7471732,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Cordova Academy"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8672238721,
+      "lat": 9.0027598,
+      "lon": 38.8421337,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Cambridge Academy Ethiopia"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8690811919,
+      "lat": 9.0511392,
+      "lon": 38.7651811,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Teferi Mekonen College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8690870318,
+      "lat": 9.0509773,
+      "lon": 38.7619277,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Escoffier Hotel training Institute (Branch 3)"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8697034721,
+      "lat": 13.5101186,
+      "lon": 39.4854665,
+      "tags": {
+        "amenity": "college",
+        "email": "tedrosassefa@gmail.com",
+        "name:en": "Don Bosco Technical College  - ኮሌጅ ቴክኒክ ዶን ቦስኮ",
+        "website": "https://www.infomekelle.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8697034722,
+      "lat": 13.5104565,
+      "lon": 39.4849699,
+      "tags": {
+        "amenity": "college",
+        "email": "tedrosassefa@gmail.com",
+        "name:en": "Don Bosco Technical College  - ኮሌጅ ቴክኒክ ዶን ቦስኮ",
+        "website": "https://www.infomekelle.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8697044817,
+      "lat": 13.5111676,
+      "lon": 39.4858238,
+      "tags": {
+        "amenity": "college",
+        "email": "tedrosassefa@gmail.com",
+        "name:en": "Don Bosco Technical College  - ኮሌጅ ቴክኒክ ዶን ቦስኮ",
+        "website": "https://www.infomekelle.com"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8747576018,
+      "lat": 9.0470897,
+      "lon": 38.7627255,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Eshetu Chole Building"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8752471717,
+      "lat": 9.0387558,
+      "lon": 38.838466,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Kotebe College of Teacher's Education"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8752472017,
+      "lat": 9.0382121,
+      "lon": 38.837465,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Kotebe Metropolitan University"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8874816918,
+      "lat": 11.5771662,
+      "lon": 41.4326223,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Asayita teachers training College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8883907217,
+      "lat": 9.0391092,
+      "lon": 38.7501764,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Damat Hotel And Business collage"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8889015017,
+      "lat": 9.0249229,
+      "lon": 38.7343738,
+      "tags": {
+        "amenity": "college",
+        "name": "Addis ketema tvte"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8996364317,
+      "lat": 9.0325882,
+      "lon": 38.7543147,
+      "tags": {
+        "amenity": "college",
+        "name": "ሮያል ዩኒቨርሲቲ ኮሌጅ ፒያሳ",
+        "name:en": "Royal University College Piazza"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9187621417,
+      "lat": 8.4363767,
+      "lon": 39.213585,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Wonji poli technic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9189748517,
+      "lat": 8.1268706,
+      "lon": 38.3909702,
+      "tags": {
+        "amenity": "college",
+        "name:en": "Butajira Poli Technic College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9838454617,
+      "lat": 9.0377254,
+      "lon": 38.8376801,
+      "tags": {
+        "amenity": "college",
+        "name": "ኮተብል የትምህርት ዩኒቨርሲቲ",
+        "name:en": "Kotebe University of Education"
+      }
+    },
+    {
+      "type": "way",
+      "id": 27293501,
+      "nodes": [
+        299616237, 299616238, 9240005658, 9240005659, 299616239, 299616240,
+        299616241, 299616243, 299616244, 299616245, 299616246, 299616247,
+        299616248, 299616249, 299616250, 299616237
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Civil Service University College",
+        "name:am": "ሲቪል ሰርቪስ ዩኒቨርስቲ ኮሌጅ",
+        "source": "yahoo"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42553479,
+      "nodes": [
+        531340937, 531341233, 531341228, 2041839763, 2059971296, 2059971320,
+        2059971314, 531340888, 2479430166, 531340937
+      ],
+      "tags": {
+        "amenity": "college",
+        "area": "yes",
+        "barrier": "wall",
+        "name": "College of Telecommunication and Information"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42553506,
+      "nodes": [
+        727730385, 531340808, 475352855, 727730394, 531340783, 727730385
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "NECAT Engineering College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 42974800,
+      "nodes": [
+        538240425, 538240407, 538240408, 538239558, 538239539, 538239498,
+        538239514, 538239513, 538239521, 538239520, 538239518, 538239529,
+        538239530, 538239563, 538239562, 538239573, 538239581, 538240423,
+        538240424, 538240425
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "G.Winget Technical College",
+        "name:am": "ጀነራል ዊንጌት የቴክኒክና ሙያ ኮሌጅ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 43040320,
+      "nodes": [
+        539176771, 539176772, 539176773, 539176770, 539176769, 539176776,
+        539176775, 539176767, 539176756, 539176755, 539176762, 539176774,
+        539176771
+      ],
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "amenity": "college",
+        "name": "Higher 12",
+        "name:am": "ከፍተኛ 12"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44679055,
+      "nodes": [
+        648315436, 567018952, 567018951, 567018950, 567018942, 648315436
+      ],
+      "tags": {
+        "amenity": "college",
+        "barrier": "wall",
+        "name": "Tegbareed  College ተግባረ ዕድ",
+        "name:am": "አዲስ አበባ ተግባረ ዕድ",
+        "operator": "government"
+      }
+    },
+    {
+      "type": "way",
+      "id": 50807871,
+      "nodes": [
+        647883308, 732447974, 647883271, 647883399, 647883398, 647883400,
+        647883401, 647883308
+      ],
+      "tags": {
+        "amenity": "college",
+        "barrier": "wall",
+        "name": "AAU College of Commercial",
+        "name:am": "በአዲስ አበባ ዩኒቨርሲቲ የንግድ ሥራ ኮሌጅ",
+        "operator": "government"
+      }
+    },
+    {
+      "type": "way",
+      "id": 151480440,
+      "nodes": [1642964634, 1642964635, 1642964633, 1642964628, 1642964634],
+      "tags": {
+        "addr:subcity": "Kirkos",
+        "amenity": "college",
+        "name": "Africa Beza University College",
+        "name:am": "አፍሪካ ቤዛ ዩኒቨርስቲ ኮሌጅ",
+        "phone": "+251115505998",
+        "source:name": "Transliterated",
+        "source:name:am": "Picture"
+      }
+    },
+    {
+      "type": "way",
+      "id": 151484377,
+      "nodes": [
+        1642999160, 1642999168, 1642999172, 1642999173, 2071352013, 1642999177,
+        1642999175, 1642999170, 1642999161, 1642999160
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Hope Enterprise College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 161438381,
+      "nodes": [1734062963, 1734062968, 1734062987, 1734062983, 1734062963],
+      "tags": {
+        "amenity": "college",
+        "name": "Nifas Silk"
+      }
+    },
+    {
+      "type": "way",
+      "id": 176624300,
+      "nodes": [1871063899, 1871063898, 1871063900, 1871063901, 1871063899],
+      "tags": {
+        "amenity": "college",
+        "name": "MEDCO Bio-Medical College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 202382411,
+      "nodes": [
+        2123561479, 2123561468, 2123561403, 2123561431, 2123561455, 2123561475,
+        2123561477, 2123561478, 2123561479
+      ],
+      "tags": {
+        "amenity": "college",
+        "contact:p.o.box": "1271",
+        "email": "info@sphmmc.edu.et",
+        "fax": "+251112774787",
+        "name": "St.Paul's Hospital Millennium Medical College",
+        "name:am": "የቅዱስ ጳውሎስ ሆስፒታል ሚሊኒየም ሜዲካል ኮሌጅ",
+        "name:en": "St.Paul's Hospital Millennium Medical College",
+        "phone": "+251112750125",
+        "website": "https://sphmmc.edu.et"
+      }
+    },
+    {
+      "type": "way",
+      "id": 203602617,
+      "nodes": [2136120890, 2136120888, 2136120867, 2136120878, 2136120890],
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "way",
+      "id": 206104654,
+      "nodes": [2161051036, 2161051040, 2161051037, 2161051034, 2161051036],
+      "tags": {
+        "amenity": "college",
+        "name": "GAGE Technology and Business College",
+        "name:am": "ጌጅ የቴክኖሎጂና ቢዝነስ ኮሌጅ"
+      }
+    },
+    {
+      "type": "way",
+      "id": 206859394,
+      "nodes": [2169070471, 2169070469, 2169070464, 2169070467, 2169070471],
+      "tags": {
+        "addr:city": "Addis Ababa",
+        "amenity": "college",
+        "name": "Ferensay Legaseyon Technical and Vocational Institute",
+        "name:am": "ፈረንሳይ ለጋሲዮን ቴክኒክና ሙያ ማሰልጠኛ ተቋም",
+        "operator": "Government"
+      }
+    },
+    {
+      "type": "way",
+      "id": 264667770,
+      "nodes": [
+        2703232897, 9314986842, 2703232905, 2703232908, 2703232938, 2703232964,
+        2703232975, 2703232949, 2703232900, 2703232904, 9314986838, 2703232897
+      ],
+      "tags": {
+        "amenity": "college",
+        "barrier": "fence",
+        "ele": "2435",
+        "name": "Maychew Technical College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 287718697,
+      "nodes": [2912918645, 2912918646, 2912918647, 2912918648, 2912918645],
+      "tags": {
+        "addr:city": "Assela",
+        "amenity": "college",
+        "name": "Assela College of Teacher Education"
+      }
+    },
+    {
+      "type": "way",
+      "id": 287718698,
+      "nodes": [
+        2912918649, 2912918650, 6265133339, 2912918651, 2912918652, 6265133338,
+        2912918653, 2912918649
+      ],
+      "tags": {
+        "addr:city": "Assela",
+        "amenity": "college",
+        "name": "Assela College of Teacher Education"
+      }
+    },
+    {
+      "type": "way",
+      "id": 310340338,
+      "nodes": [3157615811, 3157615812, 3157615813, 3157615814, 3157615811],
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "way",
+      "id": 357005429,
+      "nodes": [
+        3624009175, 3624008822, 3624008715, 3624008709, 3624008696, 3624008684,
+        3624008678, 3624008599, 3624008892, 3624009175
+      ],
+      "tags": {
+        "amenity": "college",
+        "barrier": "fence",
+        "name": "Abbiy Addi College of Teacher Education (Abbiyi Adi CTE)"
+      }
+    },
+    {
+      "type": "way",
+      "id": 400024690,
+      "nodes": [
+        4026590360, 4026590353, 3157620804, 4026590335, 4026590331, 4026590329,
+        4026590344, 4026590351, 4026590360
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "College of Natural science"
+      }
+    },
+    {
+      "type": "way",
+      "id": 407500003,
+      "nodes": [4095528841, 4095528833, 4095528834, 4095528842, 4095528841],
+      "tags": {
+        "amenity": "college",
+        "name": "Alkan University College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 456524416,
+      "nodes": [4527765713, 4527765714, 4527765715, 4527765716, 4527765713],
+      "tags": {
+        "addr:city": "Asela",
+        "amenity": "college",
+        "name": "Kenenisa Bekele Polytechnic College",
+        "operator": "Government"
+      }
+    },
+    {
+      "type": "way",
+      "id": 456548887,
+      "nodes": [
+        4527931792, 5020959642, 4527931794, 4527931795, 4527931796, 4527931792
+      ],
+      "tags": {
+        "addr:city": "Asela",
+        "amenity": "college",
+        "name": "Rift Valley College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 498285810,
+      "nodes": [
+        4897397702, 4897397701, 4897397700, 4897397699, 4897397698, 4897397697,
+        4897397696, 4897397695, 4897397694, 4897397693, 4897397692, 4897397691,
+        4897397690, 4897397689, 4897397688, 4897397687, 4897397686, 4897397685,
+        4897397684, 4897397683, 4897397682, 4897397681, 4897397702
+      ],
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "way",
+      "id": 585744924,
+      "nodes": [
+        5597005493, 5597005494, 5597005495, 5597005496, 5597005497, 5597005498,
+        5597005493
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "tecinque"
+      }
+    },
+    {
+      "type": "way",
+      "id": 667866706,
+      "nodes": [
+        6253618376, 6253618377, 6253618378, 6253618379, 6253618380, 6253618381,
+        6253618382, 6253618383, 6253618384, 6253624185, 6253624186, 6253624187,
+        6253624188, 6253624189, 8131404060, 6253624190, 6253624191, 6253624192,
+        6253624193, 6253624194, 6253624195, 6253624196, 6253624197, 6253618376
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Bichena Technical and Vocational School"
+      }
+    },
+    {
+      "type": "way",
+      "id": 737904610,
+      "nodes": [6909435938, 6909435937, 6909435936, 6909435935, 6909435938],
+      "tags": {
+        "amenity": "college",
+        "building": "yes"
+      }
+    },
+    {
+      "type": "way",
+      "id": 845129718,
+      "nodes": [
+        7884620268, 7884620265, 7884620266, 2105381497, 2105381491, 2105381481,
+        2105381466, 2105381448, 7884620244, 7884620243, 7884620250, 7884620268
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Misraq Technical and Vocational College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 906609276,
+      "nodes": [
+        8418707320, 8418707321, 8418707322, 8418707323, 8418707324, 8418707325,
+        8418707326, 8418707327, 8418707320
+      ],
+      "tags": {
+        "amenity": "college"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1001453940,
+      "nodes": [9243497916, 9243497915, 9243497914, 9243497913, 9243497916],
+      "tags": {
+        "amenity": "college",
+        "barrier": "wall",
+        "name": "ዓዲጉዶም ካርል ቴክኒክን ሞያን ኮሌጅ",
+        "name:en": "Adigudom Karl TVET College"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1011014499,
+      "nodes": [
+        9327589922, 9327589921, 9327589920, 9327589919, 9327589918, 9327589917,
+        9327586716, 9327586715, 9327586714, 9327586713, 9327586712, 9327586711,
+        9327586710, 9327586709, 9327586708, 9327586707, 9327586706, 9327586705,
+        9327586704, 9327586703, 9327586702, 9327586701, 9327586700, 9327586699,
+        9327586698, 9327589922
+      ],
+      "tags": {
+        "amenity": "college",
+        "barrier": "wall",
+        "name": "Gohala High School",
+        "name:en": "Gohala High School"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1092889666,
+      "nodes": [
+        10009019520, 10009019521, 10009019522, 10009019523, 10009019524,
+        10009019525, 10009019526, 10009019527, 10009019528, 10009019529,
+        10009019530, 10009019531, 10009019532, 10009019533, 10009019534,
+        10009019535, 10009019536, 10009019537, 10009019538, 10009019520
+      ],
+      "tags": {
+        "amenity": "college",
+        "name": "Liben TVET College"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3157620804,
+      "lat": 6.0099773,
+      "lon": 37.552647
+    },
+    {
+      "type": "node",
+      "id": 4026590329,
+      "lat": 6.0093972,
+      "lon": 37.5530442
+    },
+    {
+      "type": "node",
+      "id": 4026590331,
+      "lat": 6.0094272,
+      "lon": 37.5526269
+    },
+    {
+      "type": "node",
+      "id": 4026590335,
+      "lat": 6.0097522,
+      "lon": 37.5526219
+    },
+    {
+      "type": "node",
+      "id": 4026590344,
+      "lat": 6.0101823,
+      "lon": 37.5541554
+    },
+    {
+      "type": "node",
+      "id": 4026590351,
+      "lat": 6.0104723,
+      "lon": 37.5541353
+    },
+    {
+      "type": "node",
+      "id": 4026590353,
+      "lat": 6.0104823,
+      "lon": 37.5531649
+    },
+    {
+      "type": "node",
+      "id": 4026590360,
+      "lat": 6.0108673,
+      "lon": 37.5536476
+    },
+    {
+      "type": "node",
+      "id": 3157615811,
+      "lat": 6.030925,
+      "lon": 37.5527592
+    },
+    {
+      "type": "node",
+      "id": 3157615812,
+      "lat": 6.0308896,
+      "lon": 37.5528233
+    },
+    {
+      "type": "node",
+      "id": 3157615813,
+      "lat": 6.0308214,
+      "lon": 37.5527852
+    },
+    {
+      "type": "node",
+      "id": 3157615814,
+      "lat": 6.0308568,
+      "lon": 37.5527211
+    },
+    {
+      "type": "node",
+      "id": 8418707320,
+      "lat": 7.2033995,
+      "lon": 35.4068728
+    },
+    {
+      "type": "node",
+      "id": 8418707321,
+      "lat": 7.2033063,
+      "lon": 35.406864
+    },
+    {
+      "type": "node",
+      "id": 8418707322,
+      "lat": 7.2033028,
+      "lon": 35.4069025
+    },
+    {
+      "type": "node",
+      "id": 8418707323,
+      "lat": 7.2032846,
+      "lon": 35.4069008
+    },
+    {
+      "type": "node",
+      "id": 8418707324,
+      "lat": 7.2032704,
+      "lon": 35.4070529
+    },
+    {
+      "type": "node",
+      "id": 8418707325,
+      "lat": 7.2034022,
+      "lon": 35.4070654
+    },
+    {
+      "type": "node",
+      "id": 8418707326,
+      "lat": 7.203414,
+      "lon": 35.4069387
+    },
+    {
+      "type": "node",
+      "id": 8418707327,
+      "lat": 7.2033954,
+      "lon": 35.4069173
+    },
+    {
+      "type": "node",
+      "id": 6909435935,
+      "lat": 9.0899599,
+      "lon": 36.541336
+    },
+    {
+      "type": "node",
+      "id": 6909435936,
+      "lat": 9.0900518,
+      "lon": 36.5419774
+    },
+    {
+      "type": "node",
+      "id": 6909435937,
+      "lat": 9.0902429,
+      "lon": 36.5419493
+    },
+    {
+      "type": "node",
+      "id": 6909435938,
+      "lat": 9.090151,
+      "lon": 36.541308
+    },
+    {
+      "type": "node",
+      "id": 4527765715,
+      "lat": 7.9367955,
+      "lon": 39.1309647
+    },
+    {
+      "type": "node",
+      "id": 4527765716,
+      "lat": 7.9366784,
+      "lon": 39.1276029
+    },
+    {
+      "type": "node",
+      "id": 4527765713,
+      "lat": 7.9403765,
+      "lon": 39.1277031
+    },
+    {
+      "type": "node",
+      "id": 4527765714,
+      "lat": 7.9405571,
+      "lon": 39.1309218
+    },
+    {
+      "type": "node",
+      "id": 4527931792,
+      "lat": 7.9611529,
+      "lon": 39.1345886
+    },
+    {
+      "type": "node",
+      "id": 4527931794,
+      "lat": 7.9603666,
+      "lon": 39.1347549
+    },
+    {
+      "type": "node",
+      "id": 4527931795,
+      "lat": 7.9607438,
+      "lon": 39.1341648
+    },
+    {
+      "type": "node",
+      "id": 4527931796,
+      "lat": 7.9611794,
+      "lon": 39.1344599
+    },
+    {
+      "type": "node",
+      "id": 5020959642,
+      "lat": 7.9608263,
+      "lon": 39.1350601
+    },
+    {
+      "type": "node",
+      "id": 2912918645,
+      "lat": 7.975422,
+      "lon": 39.1256036
+    },
+    {
+      "type": "node",
+      "id": 2912918646,
+      "lat": 7.974657,
+      "lon": 39.126891
+    },
+    {
+      "type": "node",
+      "id": 2912918647,
+      "lat": 7.973722,
+      "lon": 39.1265048
+    },
+    {
+      "type": "node",
+      "id": 2912918648,
+      "lat": 7.974572,
+      "lon": 39.1250457
+    },
+    {
+      "type": "node",
+      "id": 2912918649,
+      "lat": 7.9748799,
+      "lon": 39.1276086
+    },
+    {
+      "type": "node",
+      "id": 2912918650,
+      "lat": 7.975592,
+      "lon": 39.1286506
+    },
+    {
+      "type": "node",
+      "id": 2912918651,
+      "lat": 7.976196,
+      "lon": 39.1274998
+    },
+    {
+      "type": "node",
+      "id": 2912918652,
+      "lat": 7.9752945,
+      "lon": 39.1263331
+    },
+    {
+      "type": "node",
+      "id": 2912918653,
+      "lat": 7.974997,
+      "lon": 39.126891
+    },
+    {
+      "type": "node",
+      "id": 6265133338,
+      "lat": 7.9750622,
+      "lon": 39.1265232
+    },
+    {
+      "type": "node",
+      "id": 6265133339,
+      "lat": 7.9760596,
+      "lon": 39.1283582
+    },
+    {
+      "type": "node",
+      "id": 1734062983,
+      "lat": 8.971925,
+      "lon": 38.7571991
+    },
+    {
+      "type": "node",
+      "id": 1734062963,
+      "lat": 8.9695975,
+      "lon": 38.7580359
+    },
+    {
+      "type": "node",
+      "id": 1734062968,
+      "lat": 8.9707736,
+      "lon": 38.7611915
+    },
+    {
+      "type": "node",
+      "id": 1734062987,
+      "lat": 8.9728543,
+      "lon": 38.7605879
+    },
+    {
+      "type": "node",
+      "id": 1642999160,
+      "lat": 8.9831443,
+      "lon": 38.6974767
+    },
+    {
+      "type": "node",
+      "id": 1642999161,
+      "lat": 8.9836633,
+      "lon": 38.6975772
+    },
+    {
+      "type": "node",
+      "id": 1642999170,
+      "lat": 8.9847328,
+      "lon": 38.6971157
+    },
+    {
+      "type": "node",
+      "id": 1642999175,
+      "lat": 8.9855948,
+      "lon": 38.6977371
+    },
+    {
+      "type": "node",
+      "id": 1642999177,
+      "lat": 8.9855948,
+      "lon": 38.698491
+    },
+    {
+      "type": "node",
+      "id": 2071352013,
+      "lat": 8.9856235,
+      "lon": 38.6989088
+    },
+    {
+      "type": "node",
+      "id": 1642999168,
+      "lat": 8.9837355,
+      "lon": 38.7001814
+    },
+    {
+      "type": "node",
+      "id": 1642999172,
+      "lat": 8.9855271,
+      "lon": 38.6997657
+    },
+    {
+      "type": "node",
+      "id": 1642999173,
+      "lat": 8.9855858,
+      "lon": 38.6993362
+    },
+    {
+      "type": "node",
+      "id": 2136120867,
+      "lat": 8.9968088,
+      "lon": 38.7423658
+    },
+    {
+      "type": "node",
+      "id": 2136120878,
+      "lat": 8.9968871,
+      "lon": 38.7422657
+    },
+    {
+      "type": "node",
+      "id": 2136120888,
+      "lat": 8.9970033,
+      "lon": 38.7425218
+    },
+    {
+      "type": "node",
+      "id": 2136120890,
+      "lat": 8.9970816,
+      "lon": 38.7424216
+    },
+    {
+      "type": "node",
+      "id": 567018942,
+      "lat": 9.0106715,
+      "lon": 38.7429128
+    },
+    {
+      "type": "node",
+      "id": 567018950,
+      "lat": 9.0105641,
+      "lon": 38.7439163
+    },
+    {
+      "type": "node",
+      "id": 567018951,
+      "lat": 9.0108809,
+      "lon": 38.7445088
+    },
+    {
+      "type": "node",
+      "id": 567018952,
+      "lat": 9.0118937,
+      "lon": 38.7444743
+    },
+    {
+      "type": "node",
+      "id": 648315436,
+      "lat": 9.01208,
+      "lon": 38.7431146
+    },
+    {
+      "type": "node",
+      "id": 475352855,
+      "lat": 8.9867635,
+      "lon": 38.7697353
+    },
+    {
+      "type": "node",
+      "id": 531340783,
+      "lat": 8.9865566,
+      "lon": 38.7693077
+    },
+    {
+      "type": "node",
+      "id": 531340808,
+      "lat": 8.9863344,
+      "lon": 38.7700717
+    },
+    {
+      "type": "node",
+      "id": 531340888,
+      "lat": 8.9868892,
+      "lon": 38.7677406
+    },
+    {
+      "type": "node",
+      "id": 531340937,
+      "lat": 8.9880541,
+      "lon": 38.7673598
+    },
+    {
+      "type": "node",
+      "id": 531341228,
+      "lat": 8.9876566,
+      "lon": 38.7702197
+    },
+    {
+      "type": "node",
+      "id": 727730385,
+      "lat": 8.9860939,
+      "lon": 38.7697877
+    },
+    {
+      "type": "node",
+      "id": 727730394,
+      "lat": 8.9868353,
+      "lon": 38.7696583
+    },
+    {
+      "type": "node",
+      "id": 1871063898,
+      "lat": 8.9858887,
+      "lon": 38.767742
+    },
+    {
+      "type": "node",
+      "id": 1871063899,
+      "lat": 8.9860104,
+      "lon": 38.7676559
+    },
+    {
+      "type": "node",
+      "id": 1871063900,
+      "lat": 8.9860491,
+      "lon": 38.767926
+    },
+    {
+      "type": "node",
+      "id": 1871063901,
+      "lat": 8.9861593,
+      "lon": 38.7678321
+    },
+    {
+      "type": "node",
+      "id": 2041839763,
+      "lat": 8.987602,
+      "lon": 38.7701528
+    },
+    {
+      "type": "node",
+      "id": 2059971296,
+      "lat": 8.9865954,
+      "lon": 38.7689706
+    },
+    {
+      "type": "node",
+      "id": 2059971314,
+      "lat": 8.9868403,
+      "lon": 38.7681687
+    },
+    {
+      "type": "node",
+      "id": 2059971320,
+      "lat": 8.986945,
+      "lon": 38.7686426
+    },
+    {
+      "type": "node",
+      "id": 2479430166,
+      "lat": 8.9879408,
+      "lon": 38.7673968
+    },
+    {
+      "type": "node",
+      "id": 531341233,
+      "lat": 8.9887474,
+      "lon": 38.7692031
+    },
+    {
+      "type": "node",
+      "id": 2161051034,
+      "lat": 8.9985819,
+      "lon": 38.7672813
+    },
+    {
+      "type": "node",
+      "id": 2161051036,
+      "lat": 8.998675,
+      "lon": 38.7672303
+    },
+    {
+      "type": "node",
+      "id": 2161051037,
+      "lat": 8.99869,
+      "lon": 38.7674833
+    },
+    {
+      "type": "node",
+      "id": 2161051040,
+      "lat": 8.9987831,
+      "lon": 38.7674323
+    },
+    {
+      "type": "node",
+      "id": 647883271,
+      "lat": 9.0143483,
+      "lon": 38.7504986
+    },
+    {
+      "type": "node",
+      "id": 647883308,
+      "lat": 9.0131799,
+      "lon": 38.7487575
+    },
+    {
+      "type": "node",
+      "id": 647883398,
+      "lat": 9.0123585,
+      "lon": 38.7500735
+    },
+    {
+      "type": "node",
+      "id": 647883399,
+      "lat": 9.0142066,
+      "lon": 38.7505576
+    },
+    {
+      "type": "node",
+      "id": 647883400,
+      "lat": 9.0121992,
+      "lon": 38.7499779
+    },
+    {
+      "type": "node",
+      "id": 647883401,
+      "lat": 9.0121626,
+      "lon": 38.7497884
+    },
+    {
+      "type": "node",
+      "id": 732447974,
+      "lat": 9.013684,
+      "lon": 38.7495021
+    },
+    {
+      "type": "node",
+      "id": 1642964628,
+      "lat": 9.0092513,
+      "lon": 38.7467428
+    },
+    {
+      "type": "node",
+      "id": 1642964633,
+      "lat": 9.0092535,
+      "lon": 38.7468276
+    },
+    {
+      "type": "node",
+      "id": 1642964634,
+      "lat": 9.0093532,
+      "lon": 38.7467423
+    },
+    {
+      "type": "node",
+      "id": 1642964635,
+      "lat": 9.009355,
+      "lon": 38.7468259
+    },
+    {
+      "type": "node",
+      "id": 2105381497,
+      "lat": 9.0240333,
+      "lon": 38.7830826
+    },
+    {
+      "type": "node",
+      "id": 7884620265,
+      "lat": 9.0259549,
+      "lon": 38.7835546
+    },
+    {
+      "type": "node",
+      "id": 7884620266,
+      "lat": 9.0241837,
+      "lon": 38.7831185
+    },
+    {
+      "type": "node",
+      "id": 7884620268,
+      "lat": 9.0258101,
+      "lon": 38.7840267
+    },
+    {
+      "type": "node",
+      "id": 2105381448,
+      "lat": 9.0232745,
+      "lon": 38.7856246
+    },
+    {
+      "type": "node",
+      "id": 2105381466,
+      "lat": 9.023489,
+      "lon": 38.7852874
+    },
+    {
+      "type": "node",
+      "id": 2105381481,
+      "lat": 9.0237945,
+      "lon": 38.7845905
+    },
+    {
+      "type": "node",
+      "id": 2105381491,
+      "lat": 9.0238391,
+      "lon": 38.7843994
+    },
+    {
+      "type": "node",
+      "id": 7884620243,
+      "lat": 9.024693,
+      "lon": 38.7859996
+    },
+    {
+      "type": "node",
+      "id": 7884620244,
+      "lat": 9.0246059,
+      "lon": 38.7859772
+    },
+    {
+      "type": "node",
+      "id": 7884620250,
+      "lat": 9.0251031,
+      "lon": 38.7861081
+    },
+    {
+      "type": "node",
+      "id": 299616237,
+      "lat": 9.031281,
+      "lon": 38.8229045
+    },
+    {
+      "type": "node",
+      "id": 299616249,
+      "lat": 9.0287144,
+      "lon": 38.8233983
+    },
+    {
+      "type": "node",
+      "id": 299616250,
+      "lat": 9.0286534,
+      "lon": 38.8227895
+    },
+    {
+      "type": "node",
+      "id": 299616238,
+      "lat": 9.0316907,
+      "lon": 38.823724
+    },
+    {
+      "type": "node",
+      "id": 299616239,
+      "lat": 9.0321143,
+      "lon": 38.8248789
+    },
+    {
+      "type": "node",
+      "id": 299616240,
+      "lat": 9.0326587,
+      "lon": 38.82714
+    },
+    {
+      "type": "node",
+      "id": 299616241,
+      "lat": 9.0310931,
+      "lon": 38.82725
+    },
+    {
+      "type": "node",
+      "id": 299616243,
+      "lat": 9.0308889,
+      "lon": 38.826353
+    },
+    {
+      "type": "node",
+      "id": 299616244,
+      "lat": 9.0307752,
+      "lon": 38.8253939
+    },
+    {
+      "type": "node",
+      "id": 299616245,
+      "lat": 9.0299806,
+      "lon": 38.8257305
+    },
+    {
+      "type": "node",
+      "id": 299616246,
+      "lat": 9.0295849,
+      "lon": 38.8248846
+    },
+    {
+      "type": "node",
+      "id": 299616247,
+      "lat": 9.0291484,
+      "lon": 38.824964
+    },
+    {
+      "type": "node",
+      "id": 299616248,
+      "lat": 9.0287832,
+      "lon": 38.8240609
+    },
+    {
+      "type": "node",
+      "id": 9240005658,
+      "lat": 9.0321871,
+      "lon": 38.8247234
+    },
+    {
+      "type": "node",
+      "id": 9240005659,
+      "lat": 9.0320865,
+      "lon": 38.8247609
+    },
+    {
+      "type": "node",
+      "id": 538239539,
+      "lat": 9.0501273,
+      "lon": 38.7117106
+    },
+    {
+      "type": "node",
+      "id": 538239498,
+      "lat": 9.0492417,
+      "lon": 38.7121494
+    },
+    {
+      "type": "node",
+      "id": 538239513,
+      "lat": 9.0491628,
+      "lon": 38.7138538
+    },
+    {
+      "type": "node",
+      "id": 538239514,
+      "lat": 9.0491851,
+      "lon": 38.7135424
+    },
+    {
+      "type": "node",
+      "id": 538239518,
+      "lat": 9.0495777,
+      "lon": 38.7144106
+    },
+    {
+      "type": "node",
+      "id": 538239520,
+      "lat": 9.0494233,
+      "lon": 38.7140589
+    },
+    {
+      "type": "node",
+      "id": 538239521,
+      "lat": 9.0493556,
+      "lon": 38.7140056
+    },
+    {
+      "type": "node",
+      "id": 538239529,
+      "lat": 9.0496935,
+      "lon": 38.71486
+    },
+    {
+      "type": "node",
+      "id": 538239530,
+      "lat": 9.0497996,
+      "lon": 38.7154267
+    },
+    {
+      "type": "node",
+      "id": 538239558,
+      "lat": 9.0517072,
+      "lon": 38.7121868
+    },
+    {
+      "type": "node",
+      "id": 538239562,
+      "lat": 9.0512178,
+      "lon": 38.7141371
+    },
+    {
+      "type": "node",
+      "id": 538239563,
+      "lat": 9.0511407,
+      "lon": 38.7155244
+    },
+    {
+      "type": "node",
+      "id": 538239573,
+      "lat": 9.0516424,
+      "lon": 38.714098
+    },
+    {
+      "type": "node",
+      "id": 538239581,
+      "lat": 9.0525782,
+      "lon": 38.7141371
+    },
+    {
+      "type": "node",
+      "id": 538240407,
+      "lat": 9.0535403,
+      "lon": 38.7128096
+    },
+    {
+      "type": "node",
+      "id": 538240408,
+      "lat": 9.0533473,
+      "lon": 38.7122967
+    },
+    {
+      "type": "node",
+      "id": 538240423,
+      "lat": 9.0530509,
+      "lon": 38.7138635
+    },
+    {
+      "type": "node",
+      "id": 538240424,
+      "lat": 9.0541894,
+      "lon": 38.7147037
+    },
+    {
+      "type": "node",
+      "id": 538240425,
+      "lat": 9.0545895,
+      "lon": 38.7140797
+    },
+    {
+      "type": "node",
+      "id": 2123561403,
+      "lat": 9.0480297,
+      "lon": 38.7288474
+    },
+    {
+      "type": "node",
+      "id": 2123561431,
+      "lat": 9.0486696,
+      "lon": 38.7279616
+    },
+    {
+      "type": "node",
+      "id": 2123561455,
+      "lat": 9.0489982,
+      "lon": 38.7281917
+    },
+    {
+      "type": "node",
+      "id": 2123561468,
+      "lat": 9.0492102,
+      "lon": 38.7291839
+    },
+    {
+      "type": "node",
+      "id": 2123561475,
+      "lat": 9.049321,
+      "lon": 38.728155
+    },
+    {
+      "type": "node",
+      "id": 2123561477,
+      "lat": 9.0494527,
+      "lon": 38.7282111
+    },
+    {
+      "type": "node",
+      "id": 2123561478,
+      "lat": 9.0495311,
+      "lon": 38.7281337
+    },
+    {
+      "type": "node",
+      "id": 2123561479,
+      "lat": 9.0497985,
+      "lon": 38.7283909
+    },
+    {
+      "type": "node",
+      "id": 2169070464,
+      "lat": 9.0591332,
+      "lon": 38.7739103
+    },
+    {
+      "type": "node",
+      "id": 2169070467,
+      "lat": 9.0591479,
+      "lon": 38.7735492
+    },
+    {
+      "type": "node",
+      "id": 2169070469,
+      "lat": 9.0592394,
+      "lon": 38.7739147
+    },
+    {
+      "type": "node",
+      "id": 2169070471,
+      "lat": 9.0592541,
+      "lon": 38.7735536
+    },
+    {
+      "type": "node",
+      "id": 539176755,
+      "lat": 9.0567662,
+      "lon": 38.7785265
+    },
+    {
+      "type": "node",
+      "id": 539176756,
+      "lat": 9.0567952,
+      "lon": 38.778506
+    },
+    {
+      "type": "node",
+      "id": 539176762,
+      "lat": 9.0566758,
+      "lon": 38.7783864
+    },
+    {
+      "type": "node",
+      "id": 539176767,
+      "lat": 9.0567662,
+      "lon": 38.7784561
+    },
+    {
+      "type": "node",
+      "id": 539176769,
+      "lat": 9.0570631,
+      "lon": 38.7783379
+    },
+    {
+      "type": "node",
+      "id": 539176770,
+      "lat": 9.0569907,
+      "lon": 38.7782167
+    },
+    {
+      "type": "node",
+      "id": 539176771,
+      "lat": 9.0569468,
+      "lon": 38.7783225
+    },
+    {
+      "type": "node",
+      "id": 539176772,
+      "lat": 9.0569974,
+      "lon": 38.7782949
+    },
+    {
+      "type": "node",
+      "id": 539176773,
+      "lat": 9.0569618,
+      "lon": 38.7782342
+    },
+    {
+      "type": "node",
+      "id": 539176774,
+      "lat": 9.0569083,
+      "lon": 38.7782534
+    },
+    {
+      "type": "node",
+      "id": 539176775,
+      "lat": 9.0569257,
+      "lon": 38.7783591
+    },
+    {
+      "type": "node",
+      "id": 539176776,
+      "lat": 9.0569539,
+      "lon": 38.7784044
+    },
+    {
+      "type": "node",
+      "id": 4897397687,
+      "lat": 11.2995962,
+      "lon": 36.4376593
+    },
+    {
+      "type": "node",
+      "id": 4897397688,
+      "lat": 11.2992911,
+      "lon": 36.4358783
+    },
+    {
+      "type": "node",
+      "id": 4897397689,
+      "lat": 11.3003222,
+      "lon": 36.4357173
+    },
+    {
+      "type": "node",
+      "id": 4897397690,
+      "lat": 11.3002591,
+      "lon": 36.4350307
+    },
+    {
+      "type": "node",
+      "id": 4897397691,
+      "lat": 11.2994174,
+      "lon": 36.4347088
+    },
+    {
+      "type": "node",
+      "id": 4897397692,
+      "lat": 11.2986388,
+      "lon": 36.4342046
+    },
+    {
+      "type": "node",
+      "id": 4897397693,
+      "lat": 11.2986283,
+      "lon": 36.4324772
+    },
+    {
+      "type": "node",
+      "id": 4897397694,
+      "lat": 11.3007851,
+      "lon": 36.4325094
+    },
+    {
+      "type": "node",
+      "id": 4897397695,
+      "lat": 11.3008587,
+      "lon": 36.4347839
+    },
+    {
+      "type": "node",
+      "id": 4897397681,
+      "lat": 11.30553,
+      "lon": 36.4378524
+    },
+    {
+      "type": "node",
+      "id": 4897397686,
+      "lat": 11.3017846,
+      "lon": 36.4373159
+    },
+    {
+      "type": "node",
+      "id": 4897397696,
+      "lat": 11.3031418,
+      "lon": 36.4346444
+    },
+    {
+      "type": "node",
+      "id": 4897397697,
+      "lat": 11.3029734,
+      "lon": 36.4316618
+    },
+    {
+      "type": "node",
+      "id": 4897397698,
+      "lat": 11.3039834,
+      "lon": 36.4317262
+    },
+    {
+      "type": "node",
+      "id": 4897397699,
+      "lat": 11.3043727,
+      "lon": 36.4326703
+    },
+    {
+      "type": "node",
+      "id": 4897397700,
+      "lat": 11.3062138,
+      "lon": 36.4338291
+    },
+    {
+      "type": "node",
+      "id": 4897397701,
+      "lat": 11.3069187,
+      "lon": 36.4357602
+    },
+    {
+      "type": "node",
+      "id": 4897397702,
+      "lat": 11.3061822,
+      "lon": 36.4367902
+    },
+    {
+      "type": "node",
+      "id": 4897397682,
+      "lat": 11.3045831,
+      "lon": 36.4393008
+    },
+    {
+      "type": "node",
+      "id": 4897397683,
+      "lat": 11.3038572,
+      "lon": 36.4409852
+    },
+    {
+      "type": "node",
+      "id": 4897397684,
+      "lat": 11.3026999,
+      "lon": 36.4403522
+    },
+    {
+      "type": "node",
+      "id": 4897397685,
+      "lat": 11.3021212,
+      "lon": 36.4390433
+    },
+    {
+      "type": "node",
+      "id": 6253618376,
+      "lat": 10.4540185,
+      "lon": 38.1956131
+    },
+    {
+      "type": "node",
+      "id": 6253618377,
+      "lat": 10.4539393,
+      "lon": 38.195353
+    },
+    {
+      "type": "node",
+      "id": 6253618378,
+      "lat": 10.4541037,
+      "lon": 38.1950248
+    },
+    {
+      "type": "node",
+      "id": 6253618379,
+      "lat": 10.4550721,
+      "lon": 38.1949009
+    },
+    {
+      "type": "node",
+      "id": 6253618380,
+      "lat": 10.4557907,
+      "lon": 38.1952354
+    },
+    {
+      "type": "node",
+      "id": 6253624185,
+      "lat": 10.4561379,
+      "lon": 38.1973472
+    },
+    {
+      "type": "node",
+      "id": 6253624186,
+      "lat": 10.4559734,
+      "lon": 38.1975268
+    },
+    {
+      "type": "node",
+      "id": 6253624187,
+      "lat": 10.4560709,
+      "lon": 38.1977621
+    },
+    {
+      "type": "node",
+      "id": 6253624188,
+      "lat": 10.4558638,
+      "lon": 38.1979479
+    },
+    {
+      "type": "node",
+      "id": 6253624189,
+      "lat": 10.4555715,
+      "lon": 38.1980346
+    },
+    {
+      "type": "node",
+      "id": 6253624190,
+      "lat": 10.4551302,
+      "lon": 38.1980804
+    },
+    {
+      "type": "node",
+      "id": 6253624191,
+      "lat": 10.4549503,
+      "lon": 38.1980532
+    },
+    {
+      "type": "node",
+      "id": 6253624192,
+      "lat": 10.4547676,
+      "lon": 38.1977745
+    },
+    {
+      "type": "node",
+      "id": 6253624193,
+      "lat": 10.4546884,
+      "lon": 38.1972914
+    },
+    {
+      "type": "node",
+      "id": 6253624194,
+      "lat": 10.4544935,
+      "lon": 38.1968703
+    },
+    {
+      "type": "node",
+      "id": 6253624195,
+      "lat": 10.4541951,
+      "lon": 38.1963377
+    },
+    {
+      "type": "node",
+      "id": 6253624196,
+      "lat": 10.4541586,
+      "lon": 38.1959166
+    },
+    {
+      "type": "node",
+      "id": 6253624197,
+      "lat": 10.4540794,
+      "lon": 38.1957494
+    },
+    {
+      "type": "node",
+      "id": 8131404060,
+      "lat": 10.4552248,
+      "lon": 38.1980857
+    },
+    {
+      "type": "node",
+      "id": 6253618381,
+      "lat": 10.456284,
+      "lon": 38.1953468
+    },
+    {
+      "type": "node",
+      "id": 6253618382,
+      "lat": 10.4564728,
+      "lon": 38.1957927
+    },
+    {
+      "type": "node",
+      "id": 6253618383,
+      "lat": 10.4565398,
+      "lon": 38.1962882
+    },
+    {
+      "type": "node",
+      "id": 6253618384,
+      "lat": 10.4564789,
+      "lon": 38.1966907
+    },
+    {
+      "type": "node",
+      "id": 5597005495,
+      "lat": 10.6592857,
+      "lon": 39.1577276
+    },
+    {
+      "type": "node",
+      "id": 5597005493,
+      "lat": 10.6614652,
+      "lon": 39.1575865
+    },
+    {
+      "type": "node",
+      "id": 5597005494,
+      "lat": 10.6599962,
+      "lon": 39.1566152
+    },
+    {
+      "type": "node",
+      "id": 5597005496,
+      "lat": 10.6595519,
+      "lon": 39.1585359
+    },
+    {
+      "type": "node",
+      "id": 5597005497,
+      "lat": 10.660734,
+      "lon": 39.1594917
+    },
+    {
+      "type": "node",
+      "id": 5597005498,
+      "lat": 10.661824,
+      "lon": 39.1580959
+    },
+    {
+      "type": "node",
+      "id": 10009019520,
+      "lat": 11.6882017,
+      "lon": 36.9342614
+    },
+    {
+      "type": "node",
+      "id": 10009019521,
+      "lat": 11.687935,
+      "lon": 36.9344524
+    },
+    {
+      "type": "node",
+      "id": 10009019522,
+      "lat": 11.6877678,
+      "lon": 36.9341841
+    },
+    {
+      "type": "node",
+      "id": 10009019523,
+      "lat": 11.6867924,
+      "lon": 36.9352086
+    },
+    {
+      "type": "node",
+      "id": 10009019524,
+      "lat": 11.686864,
+      "lon": 36.9353224
+    },
+    {
+      "type": "node",
+      "id": 10009019525,
+      "lat": 11.6863146,
+      "lon": 36.9357534
+    },
+    {
+      "type": "node",
+      "id": 10009019526,
+      "lat": 11.6869039,
+      "lon": 36.9368063
+    },
+    {
+      "type": "node",
+      "id": 10009019527,
+      "lat": 11.6868083,
+      "lon": 36.9368714
+    },
+    {
+      "type": "node",
+      "id": 10009019528,
+      "lat": 11.6873896,
+      "lon": 36.9382577
+    },
+    {
+      "type": "node",
+      "id": 10009019529,
+      "lat": 11.6876563,
+      "lon": 36.938274
+    },
+    {
+      "type": "node",
+      "id": 10009019530,
+      "lat": 11.6880584,
+      "lon": 36.9384935
+    },
+    {
+      "type": "node",
+      "id": 10009019531,
+      "lat": 11.6885162,
+      "lon": 36.9385342
+    },
+    {
+      "type": "node",
+      "id": 10009019532,
+      "lat": 11.6889661,
+      "lon": 36.9385382
+    },
+    {
+      "type": "node",
+      "id": 10009019533,
+      "lat": 11.6893284,
+      "lon": 36.9382374
+    },
+    {
+      "type": "node",
+      "id": 10009019534,
+      "lat": 11.6896111,
+      "lon": 36.9381114
+    },
+    {
+      "type": "node",
+      "id": 10009019535,
+      "lat": 11.6901047,
+      "lon": 36.9380138
+    },
+    {
+      "type": "node",
+      "id": 10009019536,
+      "lat": 11.6906581,
+      "lon": 36.9379731
+    },
+    {
+      "type": "node",
+      "id": 10009019537,
+      "lat": 11.690682,
+      "lon": 36.9367291
+    },
+    {
+      "type": "node",
+      "id": 10009019538,
+      "lat": 11.6907497,
+      "lon": 36.9363266
+    },
+    {
+      "type": "node",
+      "id": 4095528833,
+      "lat": 11.5949329,
+      "lon": 37.3754015
+    },
+    {
+      "type": "node",
+      "id": 4095528834,
+      "lat": 11.5949354,
+      "lon": 37.3763228
+    },
+    {
+      "type": "node",
+      "id": 4095528841,
+      "lat": 11.5954347,
+      "lon": 37.3754001
+    },
+    {
+      "type": "node",
+      "id": 4095528842,
+      "lat": 11.5954373,
+      "lon": 37.3763214
+    },
+    {
+      "type": "node",
+      "id": 9327586698,
+      "lat": 12.4052207,
+      "lon": 38.0884892
+    },
+    {
+      "type": "node",
+      "id": 9327586699,
+      "lat": 12.4052246,
+      "lon": 38.0885294
+    },
+    {
+      "type": "node",
+      "id": 9327586700,
+      "lat": 12.4052652,
+      "lon": 38.0887038
+    },
+    {
+      "type": "node",
+      "id": 9327586701,
+      "lat": 12.4052704,
+      "lon": 38.0887359
+    },
+    {
+      "type": "node",
+      "id": 9327586702,
+      "lat": 12.4052848,
+      "lon": 38.0887802
+    },
+    {
+      "type": "node",
+      "id": 9327586703,
+      "lat": 12.4053032,
+      "lon": 38.0888151
+    },
+    {
+      "type": "node",
+      "id": 9327586704,
+      "lat": 12.4053359,
+      "lon": 38.088858
+    },
+    {
+      "type": "node",
+      "id": 9327586705,
+      "lat": 12.4055389,
+      "lon": 38.0890095
+    },
+    {
+      "type": "node",
+      "id": 9327586706,
+      "lat": 12.4056568,
+      "lon": 38.0892268
+    },
+    {
+      "type": "node",
+      "id": 9327586707,
+      "lat": 12.4058952,
+      "lon": 38.0895057
+    },
+    {
+      "type": "node",
+      "id": 9327586712,
+      "lat": 12.4074656,
+      "lon": 38.0893904
+    },
+    {
+      "type": "node",
+      "id": 9327586713,
+      "lat": 12.4074958,
+      "lon": 38.0892228
+    },
+    {
+      "type": "node",
+      "id": 9327586714,
+      "lat": 12.4075599,
+      "lon": 38.0890873
+    },
+    {
+      "type": "node",
+      "id": 9327586715,
+      "lat": 12.4074879,
+      "lon": 38.0889089
+    },
+    {
+      "type": "node",
+      "id": 9327586716,
+      "lat": 12.4072666,
+      "lon": 38.0886085
+    },
+    {
+      "type": "node",
+      "id": 9327589917,
+      "lat": 12.4072233,
+      "lon": 38.0877972
+    },
+    {
+      "type": "node",
+      "id": 9327589918,
+      "lat": 12.4066235,
+      "lon": 38.0872272
+    },
+    {
+      "type": "node",
+      "id": 9327589919,
+      "lat": 12.406372,
+      "lon": 38.0873211
+    },
+    {
+      "type": "node",
+      "id": 9327589920,
+      "lat": 12.4061794,
+      "lon": 38.0873626
+    },
+    {
+      "type": "node",
+      "id": 9327589921,
+      "lat": 12.405277,
+      "lon": 38.0876108
+    },
+    {
+      "type": "node",
+      "id": 9327589922,
+      "lat": 12.4052194,
+      "lon": 38.0884194
+    },
+    {
+      "type": "node",
+      "id": 9327586708,
+      "lat": 12.4060891,
+      "lon": 38.0898678
+    },
+    {
+      "type": "node",
+      "id": 9327586709,
+      "lat": 12.4064427,
+      "lon": 38.0898035
+    },
+    {
+      "type": "node",
+      "id": 9327586710,
+      "lat": 12.4067872,
+      "lon": 38.0895996
+    },
+    {
+      "type": "node",
+      "id": 9327586711,
+      "lat": 12.4070295,
+      "lon": 38.0895419
+    },
+    {
+      "type": "node",
+      "id": 2703232897,
+      "lat": 12.7842168,
+      "lon": 39.5331668
+    },
+    {
+      "type": "node",
+      "id": 2703232900,
+      "lat": 12.7845149,
+      "lon": 39.5346426
+    },
+    {
+      "type": "node",
+      "id": 2703232904,
+      "lat": 12.7849972,
+      "lon": 39.5337659
+    },
+    {
+      "type": "node",
+      "id": 2703232905,
+      "lat": 12.785003,
+      "lon": 39.532159
+    },
+    {
+      "type": "node",
+      "id": 2703232908,
+      "lat": 12.7853776,
+      "lon": 39.5316789
+    },
+    {
+      "type": "node",
+      "id": 2703232938,
+      "lat": 12.7874089,
+      "lon": 39.5332472
+    },
+    {
+      "type": "node",
+      "id": 2703232949,
+      "lat": 12.7875501,
+      "lon": 39.5370553
+    },
+    {
+      "type": "node",
+      "id": 2703232964,
+      "lat": 12.7883109,
+      "lon": 39.5336654
+    },
+    {
+      "type": "node",
+      "id": 2703232975,
+      "lat": 12.7889265,
+      "lon": 39.5354549
+    },
+    {
+      "type": "node",
+      "id": 9314986838,
+      "lat": 12.7848818,
+      "lon": 39.5336773
+    },
+    {
+      "type": "node",
+      "id": 9314986842,
+      "lat": 12.7845059,
+      "lon": 39.5327963
+    },
+    {
+      "type": "node",
+      "id": 3624008599,
+      "lat": 13.6333342,
+      "lon": 38.9807949
+    },
+    {
+      "type": "node",
+      "id": 3624008678,
+      "lat": 13.6347447,
+      "lon": 38.9782413
+    },
+    {
+      "type": "node",
+      "id": 3624008684,
+      "lat": 13.6348213,
+      "lon": 38.9780897
+    },
+    {
+      "type": "node",
+      "id": 3624008696,
+      "lat": 13.634932,
+      "lon": 38.9779463
+    },
+    {
+      "type": "node",
+      "id": 3624008709,
+      "lat": 13.6349972,
+      "lon": 38.9778339
+    },
+    {
+      "type": "node",
+      "id": 3624008715,
+      "lat": 13.6350721,
+      "lon": 38.9776943
+    },
+    {
+      "type": "node",
+      "id": 3624008822,
+      "lat": 13.6360001,
+      "lon": 38.9759535
+    },
+    {
+      "type": "node",
+      "id": 3624009175,
+      "lat": 13.6399092,
+      "lon": 38.9782138
+    },
+    {
+      "type": "node",
+      "id": 3624008892,
+      "lat": 13.6372743,
+      "lon": 38.9830199
+    },
+    {
+      "type": "node",
+      "id": 9243497913,
+      "lat": 13.2551823,
+      "lon": 39.5158482
+    },
+    {
+      "type": "node",
+      "id": 9243497914,
+      "lat": 13.2569237,
+      "lon": 39.5157489
+    },
+    {
+      "type": "node",
+      "id": 9243497915,
+      "lat": 13.2568323,
+      "lon": 39.5120662
+    },
+    {
+      "type": "node",
+      "id": 9243497916,
+      "lat": 13.2550205,
+      "lon": 39.5121923
+    }
+  ]
+}
