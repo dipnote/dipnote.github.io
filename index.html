@@ -67,38 +67,73 @@
         //     // console.log("You clicked the map at latitude: " + lat + " and longitude: " + lon);
         // });
 
-        // Load the GeoJSON data from an external source
-        fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok " + response.statusText);
+
+          // Layer group for the GeoJSON data (ET-Admin3-2023)
+    var refGeoJSON = L.layerGroup();
+
+// Load the GeoJSON data from an external source
+fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Add the GeoJSON data to the refGeoJSON layer group
+        L.geoJSON(data, {
+            style: function (feature) {
+                return {
+                    color: "purple",
+                    weight: 0.8,
+                    opacity: 0.25,
+                    fillColor: "#e2fdff",
+                    fillOpacity: 0.1
+                };
+            },
+            onEachFeature: function (feature, layer) {
+                if (feature.properties && feature.properties.name) {
+                    layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
                 }
-                return response.json();
-            })
-            .then(data => {
-                // Add the GeoJSON data to the map
-                L.geoJSON(data, {
-                    style: function (feature) {
-                        return {
-                            color: "purple",
-                            weight: 0.8,
-                            opacity: 0.25,
-                            // dashArray: '1, 5', 
-                            // dashOffset: '3',
-                            fillColor: "#e2fdff",
-                            fillOpacity: 0.1
-                        };
-                    },
-                    onEachFeature: function (feature, layer) {
-                        if (feature.properties && feature.properties.name) {
-                            layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
-                        }
-                    }
-                }).addTo(map);
-            })
-            .catch(error => {
-                console.error('Error loading the GeoJSON:', error);
-            });
+            }
+        }).addTo(refGeoJSON); // Add to the refGeoJSON layer group
+    })
+    .catch(error => {
+        console.error('Error loading the GeoJSON:', error);
+    });
+
+        // Load the GeoJSON data from an external source
+        // fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error("Network response was not ok " + response.statusText);
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         // Add the GeoJSON data to the map
+        //         L.geoJSON(data, {
+        //             style: function (feature) {
+        //                 return {
+        //                     color: "purple",
+        //                     weight: 0.8,
+        //                     opacity: 0.25,
+        //                     // dashArray: '1, 5', 
+        //                     // dashOffset: '3',
+        //                     fillColor: "#e2fdff",
+        //                     fillOpacity: 0.1
+        //                 };
+        //             },
+        //             onEachFeature: function (feature, layer) {
+        //                 if (feature.properties && feature.properties.name) {
+        //                     layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
+        //                 }
+        //             }
+        //         }).addTo(map);
+        //     })
+        //     .catch(error => {
+        //         console.error('Error loading the GeoJSON:', error);
+        //     });
 
 
         // ACLED WITH JSON from API
@@ -279,6 +314,7 @@
         // overlays for the layer control
         var overlays = {
             // "Restricted Travel": refRsoTravelData,
+            "Woredas": refGeoJSON,
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
@@ -299,6 +335,7 @@
             // "Tour Sites": refAccount like American Gibi
             // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
             // "": refAccount,
+            // orgainze headers as ADM0 ADM1
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
