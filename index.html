@@ -71,8 +71,7 @@
           // Layer group for the GeoJSON data (ET-Admin3-2023)
     var refGeoJSON = L.layerGroup();
 
-// Load the GeoJSON data from an external source
-fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
+    fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
     .then(response => {
         if (!response.ok) {
             throw new Error("Network response was not ok " + response.statusText);
@@ -93,7 +92,17 @@ fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where y
             },
             onEachFeature: function (feature, layer) {
                 if (feature.properties && feature.properties.name) {
-                    layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
+                    // Bind the popup to mouseover (hover) event instead of click
+                    layer.on('mouseover', function (e) {
+                        layer.bindPopup('<b>' + feature.properties.name + '</b></br>' +
+                                        feature.properties.admin_2 + '</br>' + 
+                                        feature.properties.admin_1 + '</br>' + 
+                                        feature.properties.id).openPopup();
+                    });
+                    // Optional: Close the popup when mouse leaves
+                    layer.on('mouseout', function (e) {
+                        layer.closePopup();
+                    });
                 }
             }
         }).addTo(refGeoJSON); // Add to the refGeoJSON layer group
@@ -102,38 +111,6 @@ fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where y
         console.error('Error loading the GeoJSON:', error);
     });
 
-        // Load the GeoJSON data from an external source
-        // fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
-        //     .then(response => {
-        //         if (!response.ok) {
-        //             throw new Error("Network response was not ok " + response.statusText);
-        //         }
-        //         return response.json();
-        //     })
-        //     .then(data => {
-        //         // Add the GeoJSON data to the map
-        //         L.geoJSON(data, {
-        //             style: function (feature) {
-        //                 return {
-        //                     color: "purple",
-        //                     weight: 0.8,
-        //                     opacity: 0.25,
-        //                     // dashArray: '1, 5', 
-        //                     // dashOffset: '3',
-        //                     fillColor: "#e2fdff",
-        //                     fillOpacity: 0.1
-        //                 };
-        //             },
-        //             onEachFeature: function (feature, layer) {
-        //                 if (feature.properties && feature.properties.name) {
-        //                     layer.bindPopup('<b>' + feature.properties.name + '</b></br>' + feature.properties.admin_2 + '</br>' + feature.properties.admin_1 + '</br>' + feature.properties.id);
-        //                 }
-        //             }
-        //         }).addTo(map);
-        //     })
-        //     .catch(error => {
-        //         console.error('Error loading the GeoJSON:', error);
-        //     });
 
 
         // ACLED WITH JSON from API
