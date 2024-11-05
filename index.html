@@ -24,11 +24,6 @@
         }
     </style>
 
-
-    <!-- Search Box  -->
-    <!-- <link href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" rel="stylesheet" />
-    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script> -->
-
 </head>
 
 <body>
@@ -40,7 +35,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-
 
     <script>
         // Set up the map centered on Ethiopia
@@ -60,56 +54,48 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
 
-        // Mouse Click LAT LON
-        // map.on('click', function (e) {
-        //     var latMouse = e.latlng.lat;
-        //     var lonMouse = e.latlng.lng;
-        //     // console.log("You clicked the map at latitude: " + lat + " and longitude: " + lon);
-        // });
+        // Layer group for the GeoJSON data (ET-Admin3-2023)
+        var refGeoJSON = L.layerGroup();
 
-
-          // Layer group for the GeoJSON data (ET-Admin3-2023)
-    var refGeoJSON = L.layerGroup();
-
-    fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok " + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Add the GeoJSON data to the refGeoJSON layer group
-        L.geoJSON(data, {
-            style: function (feature) {
-                return {
-                    color: "purple",
-                    weight: 0.8,
-                    opacity: 0.25,
-                    fillColor: "#e2fdff",
-                    fillOpacity: 0.1
-                };
-            },
-            onEachFeature: function (feature, layer) {
-                if (feature.properties && feature.properties.name) {
-                    // Bind the popup to mouseover (hover) event instead of click
-                    layer.on('mouseover', function (e) {
-                        layer.bindPopup('<b>' + feature.properties.name + '</b></br>' +
-                                        feature.properties.admin_2 + '</br>' + 
-                                        feature.properties.admin_1 + '</br>' + 
-                                        feature.properties.id).openPopup();
-                    });
-                    // Optional: Close the popup when mouse leaves
-                    layer.on('mouseout', function (e) {
-                        layer.closePopup();
-                    });
+        fetch('data/woredas/ET-Admin3-2023.geojson') // Adjust the path to match where your file is hosted
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
                 }
-            }
-        }).addTo(refGeoJSON); // Add to the refGeoJSON layer group
-    })
-    .catch(error => {
-        console.error('Error loading the GeoJSON:', error);
-    });
+                return response.json();
+            })
+            .then(data => {
+                // Add the GeoJSON data to the refGeoJSON layer group
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        return {
+                            color: "purple",
+                            weight: 0.8,
+                            opacity: 0.25,
+                            fillColor: "#e2fdff",
+                            fillOpacity: 0.1
+                        };
+                    },
+                    onEachFeature: function (feature, layer) {
+                        if (feature.properties && feature.properties.name) {
+                            // Bind the popup to mouseover (hover) event instead of click
+                            layer.on('mouseover', function (e) {
+                                layer.bindPopup('<b>' + feature.properties.name + '</b></br>' +
+                                    feature.properties.admin_2 + '</br>' +
+                                    feature.properties.admin_1 + '</br>' +
+                                    feature.properties.id).openPopup();
+                            });
+                            // Optional: Close the popup when mouse leaves
+                            layer.on('mouseout', function (e) {
+                                layer.closePopup();
+                            });
+                        }
+                    }
+                }).addTo(refGeoJSON); // Add to the refGeoJSON layer group
+            })
+            .catch(error => {
+                console.error('Error loading the GeoJSON:', error);
+            });
 
 
 
@@ -167,6 +153,11 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
 
+        googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
         // Public Universities GeoJSON
         let refUnivPublic = L.layerGroup();
         L.geoJSON(geoJSON_pub_univ_data, {
@@ -205,7 +196,7 @@
         const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
         const mHAHM = L.marker([8.7163, 39.0059], { icon: airportIcon }).bindPopup("Harar Meda Airport").addTo(refAirport);
         const mHALA = L.marker([7.099869, 38.396187], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
-        const mHADC = L.marker([11.11120,39.72588], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
+        const mHADC = L.marker([11.11120, 39.72588], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
         const mHADD = L.marker([8.553999900817871, 34.858001708984375], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
         const mHAMT = L.marker([6.9571, 35.5547], { icon: airportIcon }).bindPopup("Mizan Teferi Airport").addTo(refAirport);
         const mHATP = L.marker([7.2024, 35.415], { icon: airportIcon }).bindPopup("Tippi Airport").addTo(refAirport);
@@ -216,7 +207,7 @@
         const mETSHC = L.marker([14.078100204467773, 38.272499084472656], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
         const mHASM = L.marker([11.7875, 40.9915], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
         const mHADM = L.marker([10.350000381469727, 37.71699905395508], { icon: airportIcon }).bindPopup("Debra Marcos Airport").addTo(refAirport);
-        const mHADT = L.marker([11.88516,38.00909], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
+        const mHADT = L.marker([11.88516, 38.00909], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
         const mHAMM = L.marker([12.932999610899998, 36.1669998169], { icon: airportIcon }).bindPopup("Metema Airport").addTo(refAirport);
         const mHAMA = L.marker([10.7254, 38.7415], { icon: airportIcon }).bindPopup("Mekane Selam Airport").addTo(refAirport);
         const mHAPW = L.marker([11.3126, 36.4164], { icon: airportIcon }).bindPopup("Beles Airport").addTo(refAirport);
@@ -280,7 +271,7 @@
             "Satellite": googleSat,
             "Streets": googleStreets,
             // "MapTiler": mapTiler
-            // "Terrain": googleTerrain,
+            "Terrain": googleTerrain,
             // "Hybrid": googleHybrid
         };
 
