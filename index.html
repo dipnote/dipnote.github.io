@@ -4,52 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSO Briefer - Improved</title>
-    
-    <!-- Leaflet CSS -->
+    <title>RSO Briefer</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <!-- Marker Cluster CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Leaflet Geocoder CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
 
-    <!-- Accessibility and Layout Improvements -->
+    <!-- Data Src -->
+    <script src="data/education/unis_public.js"> </script>
+
     <style>
-        body, html {
+        body {
             padding: 0;
             margin: 0;
-            height: 100%;
-            width: 100%;
-            font-family: Arial, sans-serif;
         }
 
+        html,
+        body,
         #map {
             height: 100%;
             width: 100%;
         }
-
-        /* Popup Styling for Improved Readability */
-        .leaflet-popup-content-wrapper {
-            font-size: 14px;
-        }
     </style>
+
 </head>
 
 <body>
-    <h2 style="text-align:center" aria-label="Map Title: RSO - Addis Ababa">RSO - Addis Ababa</h2>
-    <h5 style="text-align: center;" aria-label="Information Classification: UNCLASS / Open Source">(UNCLASS / Open Source)</h5>
-    
-    <!-- Map container -->
-    <div id="map" role="region" aria-label="Map of RSO sites and other points of interest"></div>
-    
-    <!-- Leaflet and MarkerCluster Scripts -->
+    <h2 style="margin-bottom:0; margin-top: 0;text-align:center">RSO - Addis Ababa</h2>
+    <h5 style="margin-bottom:0; margin-top:0; text-align: center;">(UNCLASS / Open Source)</h5>
+    <div id="map"></div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
     <script>
