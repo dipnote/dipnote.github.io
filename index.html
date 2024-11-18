@@ -63,81 +63,81 @@
         // You can add refRegion as well if needed:
         // refRegion.addTo(map);
 
-// Function to load GeoJSON dynamically
-function loadGeoJSON(layer, url, layerType) {
-    // Clear the layer before adding new data
-    layer.clearLayers();
+        // Function to load GeoJSON dynamically
+        function loadGeoJSON(layer, url, layerType) {
+            // Clear the layer before adding new data
+            layer.clearLayers();
 
-    // Fetch the new GeoJSON data from the given URL
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok " + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Add the fetched GeoJSON data to the given layer
-            L.geoJSON(data, {
-                style: function (feature) {
-                    // Use the layerType to determine the color of the line
-                    if (layerType === 'Regions') {
-                        return {
-                            color: "green",  // Set line color to green for 'Regions'
-                            weight: 1.0,
-                            opacity: 0.5,
-                            fillColor: "#a1e3a1",
-                            fillOpacity: 0.1
-                        };
-                    } else {
-                        return {
-                            color: "purple",  // Default color for other layers
-                            weight: 0.8,
-                            opacity: 0.25,
-                            fillColor: "#e2fdff",
-                            fillOpacity: 0.1
-                        };
+            // Fetch the new GeoJSON data from the given URL
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok " + response.statusText);
                     }
-                },
-                onEachFeature: function (feature, layer) {
-                    // Consolidate popup logic
-                    if (feature.properties) {
-                        let popupContent = '';
+                    return response.json();
+                })
+                .then(data => {
+                    // Add the fetched GeoJSON data to the given layer
+                    L.geoJSON(data, {
+                        style: function (feature) {
+                            // Use the layerType to determine the color of the line
+                            if (layerType === 'Regions') {
+                                return {
+                                    color: "green",  // Set line color to green for 'Regions'
+                                    weight: 1.0,
+                                    opacity: 0.5,
+                                    fillColor: "#a1e3a1",
+                                    fillOpacity: 0.1
+                                };
+                            } else {
+                                return {
+                                    color: "purple",  // Default color for other layers
+                                    weight: 0.8,
+                                    opacity: 0.25,
+                                    fillColor: "#e2fdff",
+                                    fillOpacity: 0.1
+                                };
+                            }
+                        },
+                        onEachFeature: function (feature, layer) {
+                            // Consolidate popup logic
+                            if (feature.properties) {
+                                let popupContent = '';
 
-                        // Check available properties and construct popup content accordingly
-                        if (feature.properties.name) {
-                            popupContent += `<b>${feature.properties.name}</b><br/>`;
-                        }
-                        if (feature.properties.admin_2) {
-                            popupContent += `${feature.properties.admin_2}<br/>`;
-                        }
-                        if (feature.properties.admin_1) {
-                            popupContent += `${feature.properties.admin_1}<br/>`;
-                        }
-                        if (feature.properties.id) {
-                            popupContent += `ID: ${feature.properties.id}<br/>`;
-                        }
-                        if (feature.properties.ADMIN1) {
-                            popupContent += `Region: ${feature.properties.ADMIN1}`;
-                        }
+                                // Check available properties and construct popup content accordingly
+                                if (feature.properties.name) {
+                                    popupContent += `<b>${feature.properties.name}</b><br/>`;
+                                }
+                                if (feature.properties.admin_2) {
+                                    popupContent += `${feature.properties.admin_2}<br/>`;
+                                }
+                                if (feature.properties.admin_1) {
+                                    popupContent += `${feature.properties.admin_1}<br/>`;
+                                }
+                                if (feature.properties.id) {
+                                    popupContent += `ID: ${feature.properties.id}<br/>`;
+                                }
+                                if (feature.properties.ADMIN1) {
+                                    popupContent += `Region: ${feature.properties.ADMIN1}`;
+                                }
 
-                        // Add mouseover and mouseout event handlers to the layer
-                        if (popupContent) {
-                            layer.on('mouseover', function () {
-                                layer.bindPopup(popupContent).openPopup();
-                            });
-                            layer.on('mouseout', function () {
-                                layer.closePopup();
-                            });
+                                // Add mouseover and mouseout event handlers to the layer
+                                if (popupContent) {
+                                    layer.on('mouseover', function () {
+                                        layer.bindPopup(popupContent).openPopup();
+                                    });
+                                    layer.on('mouseout', function () {
+                                        layer.closePopup();
+                                    });
+                                }
+                            }
                         }
-                    }
-                }
-            }).addTo(layer);
-        })
-        .catch(error => {
-            console.error('Error loading the GeoJSON:', error);
-        });
-}
+                    }).addTo(layer);
+                })
+                .catch(error => {
+                    console.error('Error loading the GeoJSON:', error);
+                });
+        }
 
 
 
@@ -363,14 +363,15 @@ function loadGeoJSON(layer, url, layerType) {
             "Terrain": googleTerrain
         };
 
-        // refACLED.addTo(map); // Make the "30 Day Conflict" layer visible by default
-        refRSI.addTo(map); // Add RSI Layer to the map by default
+        refACLED.addTo(map); // Make the "30 Day Conflict" layer visible by default
+        // refRSI.addTo(map); // Add RSI Layer to the map by default
+
 
         // overlays for the layer control
         var overlays = {
             "Woredas": refGeoJSON,
             "Regions": refRegion,
-            "ACLED": refACLED,
+            "ACLED Last 30 Days": refACLED,
             "Conflict Incidents": refRSI,
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
