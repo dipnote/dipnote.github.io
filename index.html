@@ -180,7 +180,8 @@
         var rsiMarkers = L.markerClusterGroup();
 
         // Load RSI data from server
-        fetch('data/conflict/ConflictIncidentTracker.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
+        //fetch('data/conflict/ConflictIncidentTracker.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
+        fetch('data/conflict/2410-Incident-Report-Oct.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
             .then(response => response.json())
             .then(jsonData => {
                 const incidents = jsonData.features;
@@ -260,55 +261,6 @@
 
 
 
-        // const mHAAB = L.marker([8.97789, 38.799301], { icon: airportIcon }).bindPopup('<p>HAAB<br/>Bole Airport</p>').addTo(refAirport);
-        // const mHABD = L.marker([11.608099937438965, 37.32160186767578], { icon: airportIcon }).bindPopup("Bahir Dar Airport").addTo(refAirport);
-        // const mHAGN = L.marker([12.52038, 37.43385], { icon: airportIcon }).bindPopup("Gonder Airport").addTo(refAirport);
-        // const mHASO = L.marker([10.018500328063965, 34.586299896240234], { icon: airportIcon }).bindPopup("Asosa Airport").addTo(refAirport);
-        // const mHADR = L.marker([9.624699592590332, 41.85419845581055], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
-        // const mHAGM = L.marker([8.12876033782959, 34.5630989074707], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
-        // const mHAJM = L.marker([7.66609001159668, 36.81660079956055], { icon: airportIcon }).bindPopup("Jimma Airport").addTo(refAirport);
-        // const mHAAM = L.marker([6.0393900871276855, 3.59049987792969], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
-        // const mHAGO = L.marker([5.93513011932, 43.5786018372], { icon: airportIcon }).bindPopup("Gode Airport").addTo(refAirport);
-        // const mHAAX = L.marker([14.14680004119873, 38.77280044555664], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
-        // const mHAAL = L.marker([9.003685, 38.725498], { icon: airportIcon }).bindPopup("Lideta Army Airport").addTo(refAirport);
-        // const mHALL = L.marker([11.975000381469727, 38.97999954223633], { icon: airportIcon }).bindPopup("Lalibella Airport").addTo(refAirport);
-        // const mHAMK = L.marker([13.467399597167969, 39.53350067138672], { icon: airportIcon }).bindPopup("Mekelle Airport").addTo(refAirport);
-        // const mHAKD = L.marker([6.732577, 44.241339], { icon: airportIcon }).bindPopup("Kebri Dahar Airport").addTo(refAirport);
-        // const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
-        // const mHAHM = L.marker([8.7163, 39.0059], { icon: airportIcon }).bindPopup("Harar Meda Airport").addTo(refAirport);
-        // const mHALA = L.marker([7.099869, 38.396187], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
-        // const mHADC = L.marker([11.11120, 39.72588], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
-        // const mHADD = L.marker([8.553999900817871, 34.858001708984375], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
-        // const mHAMT = L.marker([6.9571, 35.5547], { icon: airportIcon }).bindPopup("Mizan Teferi Airport").addTo(refAirport);
-        // const mHATP = L.marker([7.2024, 35.415], { icon: airportIcon }).bindPopup("Tippi Airport").addTo(refAirport);
-        // const mHABE = L.marker([9.38639, 34.5219], { icon: airportIcon }).bindPopup("Beica Airport").addTo(refAirport);
-        // const mHAGR = L.marker([8.1614, 35.5529], { icon: airportIcon }).bindPopup("Gore Airport").addTo(refAirport);
-        // const mHABC = L.marker([5.78287, 36.562], { icon: airportIcon }).bindPopup("Baco Airport").addTo(refAirport);
-        // const mHIL = L.marker([6.077545, 44.763736], { icon: airportIcon }).bindPopup("Shilavo Airport").addTo(refAirport);
-        // const mETSHC = L.marker([14.078100204467773, 38.272499084472656], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
-        // const mHASM = L.marker([11.7875, 40.9915], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
-        // const mHADM = L.marker([10.350000381469727, 37.71699905395508], { icon: airportIcon }).bindPopup("Debra Marcos Airport").addTo(refAirport);
-        // const mHADT = L.marker([11.88516, 38.00909], { icon: airportIcon }).bindPopup("Debre Tabor Airport").addTo(refAirport);
-        // const mHAMM = L.marker([12.932999610899998, 36.1669998169], { icon: airportIcon }).bindPopup("Metema Airport").addTo(refAirport);
-        // const mHAMA = L.marker([10.7254, 38.7415], { icon: airportIcon }).bindPopup("Mekane Selam Airport").addTo(refAirport);
-        // const mHAPW = L.marker([11.3126, 36.4164], { icon: airportIcon }).bindPopup("Beles Airport").addTo(refAirport);
-        // const mET0006 = L.marker([11.1269, 35.04396], { icon: airportIcon }).bindPopup("Bameza - GERD Airport").addTo(refAirport);
-        // const mHAFN = L.marker([9.583000183105469, 37.349998474121094], { icon: airportIcon }).bindPopup("Fincha Airport").addTo(refAirport);
-        // const mHAGH = L.marker([7.15000009537, 40.716999054], { icon: airportIcon }).bindPopup("Ghinnir Airport").addTo(refAirport);
-        // const mHAGB = L.marker([7.119033, 40.045166], { icon: airportIcon }).bindPopup("Robe Airport").addTo(refAirport);
-        // const mHAAD = L.marker([7.022953, 39.273162], { icon: airportIcon }).bindPopup("Adaba Airport").addTo(refAirport);
-        // const mHADO = L.marker([7.020559787750244, 39.05110168457031], { icon: airportIcon }).bindPopup("Dodola Airport").addTo(refAirport);
-        // const mHAML = L.marker([6.408491, 39.722443], { icon: airportIcon }).bindPopup("Masslo Airport").addTo(refAirport);
-        // const mHASH = L.marker([7.74175, 40.69557], { icon: airportIcon }).bindPopup("Sheikh Hussein Airport").addTo(refAirport);
-        // const mHANJ = L.marker([9.55, 35.466995], { icon: airportIcon }).bindPopup("Nejjo Airport").addTo(refAirport);
-        // const mHANK = L.marker([9.050000190734863, 36.599998474121094], { icon: airportIcon }).bindPopup("Nekemte Airport").addTo(refAirport);
-        // const mHASD = L.marker([6.80281, 37.68622], { icon: airportIcon }).bindPopup("Soddu Airport").addTo(refAirport);
-        // const mHAWC = L.marker([7.166999816894531, 37.16699981689453], { icon: airportIcon }).bindPopup("Waca Airport").addTo(refAirport);
-        // const mHANG = L.marker([5.2897, 39.7023], { icon: airportIcon }).bindPopup("Negele Airport").addTo(refAirport);
-        // const mMYS = L.marker([3.47350, 39.09841], { icon: airportIcon }).bindPopup("Moyale Airport").addTo(refAirport);
-        // const mHASK = L.marker([5.6923, 38.9764], { icon: airportIcon }).bindPopup("Shakiso Airport").addTo(refAirport);
-
-
         // Ambassador's Fund for Cultural Pres
 
         var refAFCP = L.layerGroup();
@@ -374,7 +326,7 @@
             "Woredas": refGeoJSON,
             "Regions": refRegion,
             "ACLED Last 30 Days": refACLED,
-            "Conflict Incidents": refRSI,
+            "Incidents Oct 2024": refRSI,
             "Airports": refAirport,
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
