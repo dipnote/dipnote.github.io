@@ -303,6 +303,14 @@
         var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
         var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
 
+
+        // Places of Interest
+        var POI = L.layerGroup();
+
+        var poiGERG = L.circleMarker([11.21562, 35.09299], { radius: 10, color: 'orange', weight: 3, fill: true }).bindPopup('Grand Ethiopian Renaissance Dam').addTo(POI); 
+
+
+
         // Layer control
         var baseMaps = {
             "OpenStreetMap": osmLayer,
@@ -337,6 +345,7 @@
             "Public Universities": refUnivPublic,
             "American Spaces": amSpaces,
             "LAT-LNG-MGRS": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
+            "Places of Interest": POI,
             // "LAT-LNG-MGRS": refLatLngMGRS,
             // "PEPFAR": refHealthPEPFAR,
             // "Health Sites All": refHealth,
