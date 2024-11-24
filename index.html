@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <!-- MGRS Conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/mgrs@2.0.0/dist/mgrs.min.js"></script>
 
     <script>
         // Set up the map centered on Ethiopia
@@ -56,6 +58,9 @@
 
         // New GeoJSON layer for Regions (ET_admin1_2023)
         var refRegion = L.layerGroup();
+
+        // Create a new layer for LAT-LNG-MGRS markers
+        var refLATLNGMGRS = L.layerGroup();
 
 
         // Add default layers to the map if needed
@@ -331,6 +336,8 @@
             "Amb Fund Cult Pres": refAFCP,
             "Public Universities": refUnivPublic,
             "American Spaces": amSpaces,
+            "LAT-LNG-MGRS": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
+            // "LAT-LNG-MGRS": refLatLngMGRS,
             // "PEPFAR": refHealthPEPFAR,
             // "Health Sites All": refHealth,
             // "Addis Medical": refAddisMedical,
@@ -347,6 +354,8 @@
             // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
             // "": refAccount,
             // orgainze headers as ADM0 ADM1
+            // "Places of Interest": "refPOI"  such as the GERD
+
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
@@ -355,19 +364,61 @@
         loadGeoJSON(refGeoJSON, 'data/adminLevels/ET-admin3-2023.geojson');
         loadGeoJSON(refRegion, 'data/adminLevels/ET_admin1_2023.geojson');
 
-        // Add event listener for overlay control
+        // Create a single marker variable (initially null)
+        var singleMarker = null;
+
+
+        // Add event listener to manage toggling between "Woredas" and "LAT-LNG-MGRS" layers
         map.on('overlayadd', function (eventLayer) {
-            if (eventLayer.name === 'Regions') {
-                // Load the GeoJSON data for Admin1 when "Regions" is checked
-                loadGeoJSON(refRegion, 'data/adminLevels/ET_admin1_2023.geojson', 'Regions');
-            } else if (eventLayer.name === 'Woredas') {
-                // Load the GeoJSON data for Admin3 when "Woredas" is checked
-                loadGeoJSON(refGeoJSON, 'data/adminLevels/ET-admin3-2023.geojson', 'Woredas');
+            // Check if Woredas layer is selected
+            if (eventLayer.layer === refGeoJSON) {
+                // Remove LAT-LNG-MGRS if Woredas is selected
+                map.removeLayer(refLATLNGMGRS);
+            }
+            // Check if LAT-LNG-MGRS layer is selected
+            else if (eventLayer.layer === refLATLNGMGRS) {
+                // Remove Woredas if LAT-LNG-MGRS is selected
+                map.removeLayer(refGeoJSON);
+            }
+        });
+
+        // Add event listener to re-enable layers when needed
+        map.on('overlayremove', function (eventLayer) {
+            if (eventLayer.name === "Woredas") {
+                // Optionally, handle actions when Woredas is removed
+            } else if (eventLayer.name === "LAT-LNG-MGRS") {
+                // Optionally, handle actions when LAT-LNG-MGRS is removed
+            }
+        });
+
+        // Add click event listener for the map to display a single marker
+        var singleMarker = null;
+        map.on('click', function (e) {
+            // Get latitude and longitude from the event
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+            var mgrsCoords = mgrs.forward([lng, lat]);
+
+            // If the marker already exists, update its position and popup
+            if (singleMarker) {
+                singleMarker.setLatLng([lat, lng])
+                    .setPopupContent(
+                        "<b>Latitude:</b> " + lat.toFixed(4) +
+                        "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                        "<br><b>MGRS:</b> " + mgrsCoords
+                    )
+                    .openPopup();
+            } else {
+                // If the marker doesn't exist, create it and add to the map
+                singleMarker = L.marker([lat, lng]).addTo(refLATLNGMGRS);
+                singleMarker.bindPopup(
+                    "<b>Latitude:</b> " + lat.toFixed(4) +
+                    "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                    "<br><b>MGRS:</b> " + mgrsCoords
+                ).openPopup();
             }
         });
 
     </script>
-
 </body>
-
 </html>
