@@ -305,9 +305,8 @@
 
 
         // Places of Interest
-        var POI = L.layerGroup();
-
-        var poiGERG = L.circleMarker([11.21562, 35.09299], { radius: 10, color: 'orange', weight: 3, fill: true }).bindPopup('Grand Ethiopian Renaissance Dam').addTo(POI); 
+        var refPOI = L.layerGroup();
+        var poiGERG = L.circleMarker([11.21562, 35.09299], { radius: 10, color: 'orange', weight: 3, fill: true }).bindPopup('Grand Ethiopian Renaissance Dam').addTo(refPOI); 
 
 
 
@@ -345,8 +344,7 @@
             "Public Universities": refUnivPublic,
             "American Spaces": amSpaces,
             "LAT-LNG-MGRS": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
-            "Places of Interest": POI,
-            // "LAT-LNG-MGRS": refLatLngMGRS,
+            "Places of Interest": refPOI,
             // "PEPFAR": refHealthPEPFAR,
             // "Health Sites All": refHealth,
             // "Addis Medical": refAddisMedical,
@@ -363,8 +361,7 @@
             // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
             // "": refAccount,
             // orgainze headers as ADM0 ADM1
-            // "Places of Interest": "refPOI"  such as the GERD
-
+  
         };
 
         L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
