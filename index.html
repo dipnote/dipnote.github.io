@@ -51,7 +51,8 @@
         minZoom: 5,
         maxZoom: 18,
         attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-        crossOrigin: true
+        crossOrigin: true,
+        // geolocate: true,  //set the initial view to the user's location
     }).addTo(map);
 
     L.control.maptilerGeocoding({ apiKey: key }).addTo(map);
