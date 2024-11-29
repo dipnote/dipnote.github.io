@@ -312,14 +312,12 @@
 
 
     // Places of Interest
-    // Add a permanent tooltip.addTo(refPOI);
     var refPOI = L.layerGroup();
 
     // Add permanent tooltips without markers
     var tooltipGERD = L.tooltip({
         permanent: true,
-        direction: 'top',
-        className: 'custom-tooltip' // Optional: for custom styling
+        direction: 'top'
     })
         .setContent('Grand Ethiopian Renaissance Dam')
         .setLatLng([11.21562, 35.09299])
@@ -327,14 +325,12 @@
 
     var tooltipLaLib = L.tooltip({
         permanent: true,
-        direction: 'top',
-        className: 'custom-tooltip' // Optional: for custom styling
+        direction: 'top'
     })
         .setContent('Lalibela')
         .setLatLng([12.036, 39.046])
         .addTo(refPOI);
 
-    // Add the layer to the map
     // refPOI.addTo(map);
 
 
