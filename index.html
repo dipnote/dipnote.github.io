@@ -312,23 +312,41 @@
 
 
     // Places of Interest
+    // Add a permanent tooltip.addTo(refPOI);
     var refPOI = L.layerGroup();
-    var poiGERG = L.circleMarker([11.21562, 35.09299], { radius: 10, color: 'orange', weight: 3, fill: true }).bindPopup('Grand Ethiopian Renaissance Dam').addTo(refPOI);
 
+    // Add permanent tooltips without markers
+    var tooltipGERD = L.tooltip({
+        permanent: true,
+        direction: 'top',
+        className: 'custom-tooltip' // Optional: for custom styling
+    })
+        .setContent('Grand Ethiopian Renaissance Dam')
+        .setLatLng([11.21562, 35.09299])
+        .addTo(refPOI);
+
+    var tooltipLaLib = L.tooltip({
+        permanent: true,
+        direction: 'top',
+        className: 'custom-tooltip' // Optional: for custom styling
+    })
+        .setContent('Lalibela')
+        .setLatLng([12.036, 39.046])
+        .addTo(refPOI);
+
+    // Add the layer to the map
+    refPOI.addTo(map);
+    
 
 
     // Layer control
     var baseMaps = {
-        "OpenStreetMap" : MapTileLayer,
+        "OpenStreetMap": MapTileLayer,
         "Satellite": googleSat,
         "Streets": googleStreets,
         "Terrain": googleTerrain,
         // "Hybrid": googleHybrid
     };
-
-
-    // refACLED.addTo(map); // Make the "30 Day Conflict" layer visible by default
-    // refRSI.addTo(map); // Add RSI Layer to the map by default
 
 
     // overlays for the layer control
