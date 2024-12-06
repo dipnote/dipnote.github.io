@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSO w Search</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/leaflet.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/style.css" rel="stylesheet">
+
+    <!-- Data Src -->
+    <script src="data/education/unis_public.js"> </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2 style="margin-bottom:0; margin-top: 0;text-align:center">RSO - Addis Ababa</h2>
+    <h5 style="margin-bottom:0; margin-top:0; text-align: center;">(UNCLASS / Open Source)</h5>
+    <div id="map"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <!-- MGRS Conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/mgrs@2.0.0/dist/mgrs.min.js"></script>
+
+</body>
+
+<script>
+    const key = 'OC3KF0W4ulmkXInrrDn5';
+
+    const map = L.map('map').setView([9.15, 40.49], 7);
+    const MapTileLayer = L.tileLayer(`https://api.maptiler.com/maps/openstreetmap/{z}/{x}/{y}.jpg?key=${key}`, {
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom: 5,
+        maxZoom: 18,
+        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+        crossOrigin: true,
+        // geolocate: true,  //set the initial view to the user's location
+    }).addTo(map);
+
+    L.control.maptilerGeocoding({ apiKey: key }).addTo(map);
+
+///////////////////////// START NEW CODE
+
+// Today's date
+let today = new Date();
+
+// Calculate the cutoff dates for 30, 60, and 90 days ago
+let cutoffDate30 = new Date(today);
+cutoffDate30.setDate(today.getDate() - 30);
+
+let cutoffDate60 = new Date(today);
+cutoffDate60.setDate(today.getDate() - 60);
+
+let cutoffDate90 = new Date(today);
+cutoffDate90.setDate(today.getDate() - 90);
+
+// Filter incidents based on date range
+fetch('data/conflict/220714-241130-incidents-all.geojson') 
+    .then(response => response.json())
+    .then(jsonData => {
+        const incidents = jsonData.features; // Get incidents from the GeoJSON data
+
+        // Now you can call filterIncidentsByDateRange
+        let incidentsPast30 = filterIncidentsByDateRange(incidents, cutoffDate30);
+        let incidentsPast60 = filterIncidentsByDateRange(incidents, cutoffDate60);
+        let incidentsPast90 = filterIncidentsByDateRange(incidents, cutoffDate90);
+
+        // Create Leaflet layers for each date range
+        let incidentsLayer30 = L.geoJSON(incidentsPast30, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        let incidentsLayer60 = L.geoJSON(incidentsPast60, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        let incidentsLayer90 = L.geoJSON(incidentsPast90, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        // Add the control layers (base layer and overlays)
+        L.control.layers(null, {
+            "Incidents past 30 days": incidentsLayer30,
+            "Incidents past 60 days": incidentsLayer60,
+            "Incidents past 90 days": incidentsLayer90
+        }).addTo(map);
+    })
+    .catch(error => console.error('Error loading RSI data:', error));
+
+
+// Initialize map and base layer (if not already done)
+// let map = L.map('map').setView([latitude, longitude], zoomLevel);
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+// Add the control layers (base layer and overlays)
+L.control.layers(null, {
+    "Incidents past 30 days": incidentsLayer30,
+    "Incidents past 60 days": incidentsLayer60,
+    "Incidents past 90 days": incidentsLayer90
+}).addTo(map);
+
+
+/////////////////////// END NEW CODE
+
+
+
+    // Layer group for the GeoJSON data (ET-Admin3-2023)
+    var refGeoJSON = L.layerGroup();
+
+    // New GeoJSON layer for Regions (ET_admin1_2023)
+    var refRegion = L.layerGroup();
+
+    // Create a new layer for LAT-LNG-MGRS markers
+    var refLATLNGMGRS = L.layerGroup();
+
+
+    // Add default layers to the map if needed
+    refGeoJSON.addTo(map); // Add Woredas by default
+    // You can add refRegion as well if needed:
+    // refRegion.addTo(map);
+
+    // Function to load GeoJSON dynamically
+    function loadGeoJSON(layer, url, layerType) {
+        // Clear the layer before adding new data
+        layer.clearLayers();
+
+        // Fetch the new GeoJSON data from the given URL
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Add the fetched GeoJSON data to the given layer
+                L.geoJSON(data, {
+                    style: function (feature) {
+                        // Use the layerType to determine the color of the line
+                        if (layerType === 'Regions') {
+                            return {
+                                color: "green",  // Set line color to green for 'Regions'
+                                weight: 1.0,
+                                opacity: 0.5,
+                                fillColor: "#a1e3a1",
+                                fillOpacity: 0.1
+                            };
+                        } else {
+                            return {
+                                color: "purple",  // Default color for other layers
+                                weight: 0.8,
+                                opacity: 0.25,
+                                fillColor: "#e2fdff",
+                                fillOpacity: 0.1
+                            };
+                        }
+                    },
+                    onEachFeature: function (feature, layer) {
+                        // Consolidate popup logic
+                        if (feature.properties) {
+                            let popupContent = '';
+
+                            // Check available properties and construct popup content accordingly
+                            if (feature.properties.name) {
+                                popupContent += `<b>${feature.properties.name}</b><br/>`;
+                            }
+                            if (feature.properties.admin_2) {
+                                popupContent += `${feature.properties.admin_2}<br/>`;
+                            }
+                            if (feature.properties.admin_1) {
+                                popupContent += `${feature.properties.admin_1}<br/>`;
+                            }
+                            if (feature.properties.id) {
+                                popupContent += `ID: ${feature.properties.id}<br/>`;
+                            }
+                            if (feature.properties.ADMIN1) {
+                                popupContent += `Region: ${feature.properties.ADMIN1}`;
+                            }
+
+                            // Add mouseover and mouseout event handlers to the layer
+                            if (popupContent) {
+                                layer.on('mouseover', function () {
+                                    layer.bindPopup(popupContent).openPopup();
+                                });
+                                layer.on('mouseout', function () {
+                                    layer.closePopup();
+                                });
+                            }
+                        }
+                    }
+                }).addTo(layer);
+            })
+            .catch(error => {
+                console.error('Error loading the GeoJSON:', error);
+            });
+    }
+
+
+
+    // ACLED WITH JSON from API
+    let daySpan30 = 30
+    let daySpan60 = 60
+    let daySpan90 = 90
+
+    //let today = new Date();
+    
+    let DaysAgo = new Date();
+    DaysAgo.setDate(today.getDate() - daySpan30);
+
+    let todayStr = today.toISOString().split('T')[0];
+    let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
+
+    // USE "OR for multi ISO"
+    // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia
+
+    // ACLED Data Layer
+    let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231|729&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+    let refACLED = L.layerGroup();
+    var acledMarkers = L.markerClusterGroup();
+
+    fetch(apiURL)
+        .then(response => response.json())
+        .then(jsonData => {
+            const events = jsonData.data;
+            for (const event of events) {
+                const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
+
+                var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true })
+                    .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
+
+                acledMarkers.addLayer(circleMarker);
+            }
+            refACLED.addLayer(acledMarkers);
+        })
+        .catch(error => console.error('Error:', error));
+
+    // RSI Data Layer (from uploaded GeoJSON file)
+    var refRSI = L.layerGroup();
+    var rsiMarkers = L.markerClusterGroup();
+
+   // Load RSI data from server
+fetch('data/conflict/220714-241130-incidents-all.geojson') 
+    .then(response => response.json())
+    .then(jsonData => {
+        const incidents = jsonData.features; // Get incidents from the GeoJSON data
+
+        // Filter incidents based on date range
+        let incidentsPast30 = filterIncidentsByDateRange(incidents, cutoffDate30);
+        let incidentsPast60 = filterIncidentsByDateRange(incidents, cutoffDate60);
+        let incidentsPast90 = filterIncidentsByDateRange(incidents, cutoffDate90);
+
+        // Create Leaflet layers for each date range
+        let incidentsLayer30 = L.geoJSON(incidentsPast30, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        let incidentsLayer60 = L.geoJSON(incidentsPast60, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        let incidentsLayer90 = L.geoJSON(incidentsPast90, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(`Incident Date: ${feature.properties.date}`);
+            }
+        });
+
+        // Add the control layers (base layer and overlays)
+        L.control.layers(null, {
+            "Incidents past 30 days": incidentsLayer30,
+            "Incidents past 60 days": incidentsLayer60,
+            "Incidents past 90 days": incidentsLayer90
+        }).addTo(map);
+    })
+    .catch(error => console.error('Error loading RSI data:', error));
+    // **** BASE LAYERS *****
+    googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+
+    googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+
+    googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    });
+
+    // Public Universities GeoJSON
+    let refUnivPublic = L.layerGroup();
+    L.geoJSON(geoJSON_pub_univ_data, {
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
+        }
+    }).addTo(refUnivPublic);
+
+    // Airports Black
+    // custom icons for aiports
+
+    var refAirport = L.layerGroup();
+    const YOUR_API_KEY = "72988d9175074bdcbc8fe8ce0005452a";
+
+    const airportIcon = new L.icon({
+        iconUrl: 'https://api.geoapify.com/v1/icon/?type=awesome&scaleFactor=1&color=%2372a2d4&size=small&icon=plane-departure&apiKey=' + YOUR_API_KEY,
+        cursor: 'pointer',
+        anchor: 'bottom',
+        offset: [0, 6]
+    })
+
+    const mHADD = L.marker([8.97789, 38.799301], { icon: airportIcon }).bindPopup('<p>Bole Airport<br/>IATA:ADD / ICAO:HAAB<br/>3,800m / 12,467f</p>').addTo(refAirport);
+    const mHABD = L.marker([11.6081, 37.3216], { icon: airportIcon }).bindPopup("<p>BJR<br/>Bahir Dar Airport</p>").addTo(refAirport);
+    const mHAGN = L.marker([12.52038, 37.43385], { icon: airportIcon }).bindPopup("<p>GDQ<br/>Gonder Airport</p>").addTo(refAirport);
+    const mHASO = L.marker([10.0185, 34.5863], { icon: airportIcon }).bindPopup("Asosa Airport").addTo(refAirport);
+    const mHADR = L.marker([9.6247, 41.8542], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
+    const mHAGM = L.marker([8.1288, 34.5631], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
+    const mHAJM = L.marker([7.6661, 36.8166], { icon: airportIcon }).bindPopup("Jimma Airport").addTo(refAirport);
+    const mHAAM = L.marker([6.0394, 37.5905], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
+    const mHAGO = L.marker([5.9351, 43.5786], { icon: airportIcon }).bindPopup("Gode Airport").addTo(refAirport);
+    const mHAAX = L.marker([14.1468, 38.7728], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
+    const mHALL = L.marker([11.9750, 38.9710], { icon: airportIcon }).bindPopup("Lalibela Airport").addTo(refAirport);
+    const mHAMK = L.marker([13.4674, 39.5335], { icon: airportIcon }).bindPopup("Mekelle Airport").addTo(refAirport);
+    const mHAKD = L.marker([6.732577, 44.241339], { icon: airportIcon }).bindPopup("Kebri Dahar Airport").addTo(refAirport);
+    const mHAJJ = L.marker([9.3325, 42.9121], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
+    const mHALA = L.marker([7.099869, 38.396187], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
+    const mHADC = L.marker([11.11120, 39.72588], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
+    const mHDEM = L.marker([8.5540, 34.8580], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
+    const mHIL = L.marker([6.077545, 44.763736], { icon: airportIcon }).bindPopup("Shilavo Airport").addTo(refAirport);
+    const mETSHC = L.marker([14.0781, 38.2725], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
+    const mHASM = L.marker([11.7875, 40.9915], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
+    const mHAGB = L.marker([7.119033, 40.045166], { icon: airportIcon }).bindPopup("Robe Airport").addTo(refAirport);
+    const mHABC = L.marker([5.78287, 36.562], { icon: airportIcon }).bindPopup("Jinka (Baco) Airport").addTo(refAirport);
+    const mHANK = L.marker([9.0363, 36.6103], { icon: airportIcon }).bindPopup('<p>Nekemte Airport<br/> IATA:NEK / ICAO:HANK<br/>1,250m / 4,101f</p>').addTo(refAirport);
+
+
+    // Ambassador's Fund for Cultural Pres
+    var refAFCP = L.layerGroup();
+    var blueIcon = new L.Icon({
+        iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23325acb&size=large&icon=landmark&iconType=awesome&scaleFactor=2&apiKey=' + YOUR_API_KEY,
+        // iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+        // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+        iconSize: [24, 40],
+        iconAnchor: [5, 18],
+        // popupAnchor: [1, -34]
+        // iconSize: [25, 41],
+        //shadowSize: [41, 41]
+    });
+
+    var AFCP01 = L.marker([13.8580, 39.4302], { icon: blueIcon }).bindPopup('<p>Debra Tsion Church<br/>2020</p>').addTo(refAFCP);
+    var AFCP02 = L.marker([7.701226, 36.872284], { icon: blueIcon }).bindPopup('<p>Aba Jiffar Palace<br/>2018</p>').addTo(refAFCP);
+    var AFCP03 = L.marker([12.03161, 39.0411], { icon: blueIcon }).bindPopup('<p>Lalibela Churches<br/>2016</p>').addTo(refAFCP);
+    var AFCP04 = L.marker([12.1404, 39.0731], { icon: blueIcon }).bindPopup('<p>Yemrehanna Kristos Church<br/>2015</p>').addTo(refAFCP);
+    var AFCP05 = L.marker([9.3127, 42.1226], { icon: blueIcon }).bindPopup('<p>Teferi Mekonnen Palace<br/>2009</p>').addTo(refAFCP);
+    var AFCP06 = L.marker([9.032813, 38.749672], { icon: blueIcon }).bindPopup('<p>Mohammad Ali House<br/>2007</p>').addTo(refAFCP);
+    var AFCP07 = L.marker([9.037967, 38.754552], { icon: blueIcon }).bindPopup('<p>Hager Fikir Theater<br/>2006</p>').addTo(refAFCP);
+    var AFCP08 = L.marker([7.7467, 40.7074], { icon: blueIcon }).bindPopup('<p>Sheikh Nur Hussein Shrine<br/>2005</p>').addTo(refAFCP);
+    var AFCP09 = L.marker([12.2350, 37.6351], { icon: blueIcon }).bindPopup('<p>Guzara Castle<br/>2004</p>').addTo(refAFCP);
+    var AFCP10 = L.marker([14.2860, 39.0191], { icon: blueIcon }).bindPopup('<p>Yeha Temple<br/>2002</p>').addTo(refAFCP);
+    var AFCP11 = L.marker([9.03124, 38.74224], { icon: blueIcon }).bindPopup('<p>American Gibi<br/>2023</p>').addTo(refAFCP);
+
+
+    // American Spaces
+    var amSpaces = L.layerGroup();
+
+    var mBahirDarAC = L.circleMarker([11.5935, 37.3795], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+    var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+    var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
+    var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
+    var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
+    var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
+
+
+    // Places of Interest
+    var refPOI = L.layerGroup();
+
+    // Add permanent tooltips without markers
+    var tooltipGERD = L.tooltip({
+        permanent: true,
+        direction: 'top'
+    })
+        .setContent('Grand Ethiopian Renaissance Dam')
+        .setLatLng([11.21562, 35.09299])
+        .addTo(refPOI);
+
+    var tooltipLaLib = L.tooltip({
+        permanent: true,
+        direction: 'top'
+    })
+        .setContent('Lalibela')
+        .setLatLng([12.036, 39.046])
+        .addTo(refPOI);
+
+    // refPOI.addTo(map);
+
+
+
+    // Layer control
+    var baseMaps = {
+        "OpenStreetMap": MapTileLayer,
+        "Satellite": googleSat,
+        "Streets": googleStreets,
+        "Terrain": googleTerrain,
+        // "Hybrid": googleHybrid
+    };
+
+
+    // overlays for the layer control
+    var overlays = {
+        "Woredas": refGeoJSON,
+        "Regions": refRegion,
+        "ACLED Last 30 Days": refACLED,
+        "Incidents Oct 2024": refRSI,
+        "Airports": refAirport,
+        "Amb Fund Cult Pres": refAFCP,
+        "Public Universities": refUnivPublic,
+        "American Spaces": amSpaces,
+        "LAT-LNG-MGRS": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
+        "Places of Interest": refPOI,
+        // "PEPFAR": refHealthPEPFAR,
+        // "Health Sites All": refHealth,
+        // "Addis Medical": refAddisMedical,
+        // "Exchanges": refAccount,
+        // "Journalists": refAccount,
+        // "Crossing Points": refAccount,
+        // "USAID": refAccount,
+        // "AmCits": refAccount,
+        // "US Business Interests": refAccount,
+        // "Chinese Projects": refAccount,
+        // "Satellites": refAccount,
+        // "Hotels": refAccount,
+        // "Tour Sites": refAccount like American Gibi
+        // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
+        // "": refAccount,
+        // orgainze headers as ADM0 ADM1
+    };
+
+    L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+
+    // Load the initial GeoJSON data for Woredas and Regions
+    loadGeoJSON(refGeoJSON, 'data/adminLevels/ET-admin3_2023.geojson');
+    loadGeoJSON(refRegion, 'data/adminLevels/ET_admin1_2023.geojson');
+
+    // Create a single marker variable (initially null)
+    var singleMarker = null;
+
+
+    // Add event listener to manage toggling between "Woredas" and "LAT-LNG-MGRS" layers
+    map.on('overlayadd', function (eventLayer) {
+        // Check if Woredas layer is selected
+        if (eventLayer.layer === refGeoJSON) {
+            // Remove LAT-LNG-MGRS if Woredas is selected
+            map.removeLayer(refLATLNGMGRS);
+        }
+        // Check if LAT-LNG-MGRS layer is selected
+        else if (eventLayer.layer === refLATLNGMGRS) {
+            // Remove Woredas if LAT-LNG-MGRS is selected
+            map.removeLayer(refGeoJSON);
+        }
+    });
+
+    // Add event listener to re-enable layers when needed
+    map.on('overlayremove', function (eventLayer) {
+        if (eventLayer.name === "Woredas") {
+            // Optionally, handle actions when Woredas is removed
+        } else if (eventLayer.name === "LAT-LNG-MGRS") {
+            // Optionally, handle actions when LAT-LNG-MGRS is removed
+        }
+    });
+
+    // Add click event listener for the map to display a single marker
+    var singleMarker = null;
+    map.on('click', function (e) {
+        // Get latitude and longitude from the event
+        var lat = e.latlng.lat;
+        var lng = e.latlng.lng;
+        var mgrsCoords = mgrs.forward([lng, lat]);
+
+        // If the marker already exists, update its position and popup
+        if (singleMarker) {
+            singleMarker.setLatLng([lat, lng])
+                .setPopupContent(
+                    "<b>Latitude:</b> " + lat.toFixed(4) +
+                    "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                    "<br><b>MGRS:</b> " + mgrsCoords
+                )
+                .openPopup();
+        } else {
+            // If the marker doesn't exist, create it and add to the map
+            singleMarker = L.marker([lat, lng]).addTo(refLATLNGMGRS);
+            singleMarker.bindPopup(
+                "<b>Latitude:</b> " + lat.toFixed(4) +
+                "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                "<br><b>MGRS:</b> " + mgrsCoords
+            ).openPopup();
+        }
+    });
+
+</script>
+
+</html>
