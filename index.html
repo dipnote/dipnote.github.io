@@ -156,11 +156,14 @@
 
 
     // ACLED WITH JSON from API
-    let daySpan = 30
+    let daySpan30 = 30
+    let daySpan60 = 60
+    let daySpan90 = 90
 
     let today = new Date();
+    
     let DaysAgo = new Date();
-    DaysAgo.setDate(today.getDate() - daySpan);
+    DaysAgo.setDate(today.getDate() - daySpan30);
 
     let todayStr = today.toISOString().split('T')[0];
     let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
@@ -195,7 +198,7 @@
 
     // Load RSI data from server
     //fetch('data/conflict/ConflictIncidentTracker.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
-    fetch('data/conflict/2410-Incident-Report-Oct.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
+    fetch('data/conflict/220714-241130-incidents-all.geojson') // Adjusted to fetch from the root directory or a path accessible by the server
         .then(response => response.json())
         .then(jsonData => {
             const incidents = jsonData.features;
