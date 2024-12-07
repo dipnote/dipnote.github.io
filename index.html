@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map Centered on Ethiopia with Clusters</title>
+    <title>Ethiopia Unclass Open Source</title>
     <!-- Leaflet.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -13,6 +13,7 @@
 
     <!-- Data Src Universities -->
     <script src="data/education/unis_public.js"> </script>
+    <script src="data/health/MedProvidersAddis.js"> </script>
 
     <style>
         body {
@@ -61,8 +62,6 @@
         }).addTo(map);
 
         ///////////   Admin LAYERS
-
-
 
         // Layer group for the GeoJSON data (ET-Admin3-2023)
         var refGeoJSON = L.layerGroup();
@@ -223,6 +222,17 @@
                     }
                 }).addTo(refUnivPublic);
 
+
+                // Addis Medical Locations GeoJSON
+                let refAddisMedical = L.layerGroup();
+                L.geoJSON(medProvidersAddis, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br> Specialty: ' + feature.properties.specialty + '</br> Phone: ' + feature.properties.phoneOffice + '</br>' + feature.properties.link + '</br> Amubulance? ' + feature.properties.AmbulanceService)
+                    }
+                }).addTo(refAddisMedical);
+
+
+
                 // Airports Black
                 // custom icons for aiports
 
@@ -318,6 +328,14 @@
                     .setLatLng([12.036, 39.046])
                     .addTo(refPOI);
 
+                var tooltipLaEMB = L.tooltip({
+                    permanent: true,
+                    direction: 'top'
+                })
+                    .setContent('US Embassy')
+                    .setLatLng([9.0574, 38.7630])
+                    .addTo(refPOI);
+
                 //////   ACLED
 
                 // ACLED WITH JSON from API
@@ -385,9 +403,9 @@
                     "American Spaces": amSpaces,
                     "Coordinates (deselect other layers)": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
                     "Places of Interest": refPOI,
+                    "Addis Medical": refAddisMedical,
                     // "PEPFAR": refHealthPEPFAR,
                     // "Health Sites All": refHealth,
-                    // "Addis Medical": refAddisMedical,
                     // "Exchanges": refAccount,
                     // "Journalists": refAccount,
                     // "Crossing Points": refAccount,
