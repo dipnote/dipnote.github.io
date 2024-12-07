@@ -72,12 +72,8 @@
         var refLATLNGMGRS = L.layerGroup();
 
         // Add default layers to the map if needed
-        refGeoJSON.addTo(map); // Add Woredas by default
-        // You can add refRegion as well if needed:
-
-
-
-
+        // enable to pre-select Woredas
+        // refGeoJSON.addTo(map); // Add Woredas by default
 
 
         // Function to load GeoJSON dynamically
@@ -387,7 +383,7 @@
                     "Amb Fund Cultural Pres": refAFCP,
                     "Public Universities": refUnivPublic,
                     "American Spaces": amSpaces,
-                    "LAT-LNG-MGRS": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
+                    "Coordinates (deselect other layers)": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
                     "Places of Interest": refPOI,
                     // "PEPFAR": refHealthPEPFAR,
                     // "Health Sites All": refHealth,
