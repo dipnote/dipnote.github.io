@@ -388,7 +388,7 @@
                 ///////  END ACLED
 
                 //// WWW
-                var customLayer = L.layerGroup();
+                var wwwLayer = L.layerGroup();
 
                 // Fetch the GeoJSON file and add it to the layer
                 fetch('data/WhoDoesWhat/241208www.geojson')
@@ -416,7 +416,7 @@
                                 }
                                 layer.bindPopup(popupContent);
                             }
-                        }).addTo(customLayer);
+                        }).addTo(wwwLayer);
                     })
                     .catch(error => {
                         console.error('Error loading the GeoJSON:', error);
@@ -448,7 +448,7 @@
                     "Coordinates (deselect other layers)": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
                     "Places of Interest": refPOI,
                     "Addis Medical": refAddisMedical,
-                    "WWW": customLayer,
+                    "Aid Locations (USAID is blue)": wwwLayer,
                     // "PEPFAR": refHealthPEPFAR,
                     // "Health Sites All": refHealth,
                     // "Exchanges": refAccount,
