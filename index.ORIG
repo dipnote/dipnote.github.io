@@ -11,9 +11,9 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-
+            
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
 
@@ -52,7 +52,7 @@
         </select>
     </div>
 
-
+   
     <!-- MGRS Conversion -->
     <script src="https://cdn.jsdelivr.net/npm/mgrs@2.0.0/dist/mgrs.min.js"></script>
 
@@ -387,42 +387,6 @@
 
                 ///////  END ACLED
 
-                //// WWW
-                var customLayer = L.layerGroup();
-
-                // Fetch the GeoJSON file and add it to the layer
-                fetch('data/WhoDoesWhat/241208www.geojson')
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error("Network response was not ok " + response.statusText);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        L.geoJSON(data, {
-                            pointToLayer: function (feature, latlng) {
-                                return L.circleMarker(latlng, {
-                                    radius: 8,
-                                    color: feature.properties.Donor && feature.properties.Donor.includes("USAID") ? "blue" : "green", // Blue for USAID, green otherwise
-                                    fillColor: feature.properties.Donor && feature.properties.Donor.includes("USAID") ? "lightblue" : "lightgreen",
-                                    fillOpacity: 0.5
-                                });
-                            },
-                            onEachFeature: function (feature, layer) {
-                                // Generate a popup with all properties
-                                let popupContent = '<b>Properties:</b><br>';
-                                for (let key in feature.properties) {
-                                    popupContent += `<b>${key}:</b> ${feature.properties[key]}<br>`;
-                                }
-                                layer.bindPopup(popupContent);
-                            }
-                        }).addTo(customLayer);
-                    })
-                    .catch(error => {
-                        console.error('Error loading the GeoJSON:', error);
-                    });
-
-                ///  END
 
 
                 // Layer control
@@ -448,7 +412,6 @@
                     "Coordinates (deselect other layers)": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
                     "Places of Interest": refPOI,
                     "Addis Medical": refAddisMedical,
-                    "WWW": customLayer,
                     // "PEPFAR": refHealthPEPFAR,
                     // "Health Sites All": refHealth,
                     // "Exchanges": refAccount,
