@@ -810,32 +810,6 @@ let geoJSON_pub_univ_data = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Kotebe Metropolitan University",
-        "abrv": "KMU",
-        "public": "public",
-        "category": "Applied Science",
-        "gen": "NA",
-        "estb": 1962,
-        "location": "Addis Ababa",
-        "region": "Addis Ababa",
-        "link": "www.kmu.edu.et",
-        "twitter": "",
-        "plus_code": "",
-        "president": "",
-        "usg_association": "",
-        "notes": "Yeka Sub City, Woreda 11"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          38.841205,
-          9.037749
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Madda Walabu University",
         "abrv": "MWU",
         "public": "public",
@@ -1258,7 +1232,7 @@ let geoJSON_pub_univ_data = {
         "category": "Education",
         "gen": "NA",
         "estb": 1976,
-        "location": "Sub City 11",
+        "location": "Yeka Sub City, Woreda 11",
         "region": "Addis Ababa",
         "link": "kue.edu.et",
         "twitter": "",
