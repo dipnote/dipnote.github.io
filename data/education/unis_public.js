@@ -342,32 +342,6 @@ let geoJSON_pub_univ_data = {
     {
       "type": "Feature",
       "properties": {
-        "name": "Civil Service Univ",
-        "abrv": "ECSC",
-        "public": "public",
-        "category": "",
-        "gen": "",
-        "estb": "",
-        "location": "Addis Ababa",
-        "region": "Addis Ababa",
-        "link": "www.ecsc.edu.et",
-        "twitter": "",
-        "plus_code": "",
-        "president": "",
-        "usg_association": "",
-        "notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          38.832307,
-          9.023149
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Debark University",
         "abrv": "DKU",
         "public": "public",
@@ -551,11 +525,11 @@ let geoJSON_pub_univ_data = {
       "type": "Feature",
       "properties": {
         "name": "Ethiopian Civil Service University",
-        "abrv": "",
+        "abrv": "ECSC",
         "public": "public",
         "category": "",
         "gen": "",
-        "estb": 1995,
+        "estb": "1985",
         "location": "Addis Ababa",
         "region": "Addis Ababa",
         "link": "www.ecsu.edu.et",
