@@ -386,6 +386,47 @@
 
                 ///////  END ACLED
 
+
+                var refScholarsWoredas = L.layerGroup();
+
+var scholarMarkers = [
+    { name: "Addis Ketema Sub City", lat: 9.0365, lng: 38.7436, count: 3 },
+    { name: "Akaki Kality Sub City", lat: 8.9191, lng: 38.7505, count: 2 },
+    { name: "Arada Sub City", lat: 9.0425, lng: 38.7504, count: 3 },
+    { name: "Bole Sub City", lat: 8.9931, lng: 38.7882, count: 7 },
+    { name: "Gulele Sub City", lat: 9.0637, lng: 38.7338, count: 5 },
+    { name: "Kolfe Keraniyo Sub City", lat: 9.0020, lng: 38.7000, count: 2 },
+    { name: "Lemi Kura Sub City", lat: 8.9465, lng: 38.8355, count: 10 },
+    { name: "Lideta Sub City", lat: 9.0272, lng: 38.7410, count: 3 },
+    { name: "Nifas Silk Lafto Sub City", lat: 8.9814, lng: 38.7250, count: 5 },
+    { name: "Yeka Sub City", lat: 9.0503, lng: 38.8424, count: 4 },
+    { name: "Bahir Dar town", lat: 11.5745, lng: 37.3614, count: 3 },
+    { name: "Bedele town", lat: 8.4560, lng: 36.3528, count: 3 },
+    { name: "Debre Tabor town", lat: 11.8522, lng: 38.0126, count: 2 },
+    { name: "Dessie town", lat: 11.1320, lng: 39.6360, count: 1 },
+    { name: "Debre Markos town", lat: 10.3315, lng: 37.7171, count: 1 },
+    { name: "Hawassa city", lat: 7.0533, lng: 38.4744, count: 1 },
+    { name: "Jimma town", lat: 7.6772, lng: 36.8360, count: 2 },
+    { name: "Nekemte town", lat: 9.0823, lng: 36.5531, count: 1 },
+    { name: "Mekelle city", lat: 13.4967, lng: 39.4753, count: 1 }
+];
+
+var maxCount = Math.max(...scholarMarkers.map(m => m.count));
+var minCount = Math.min(...scholarMarkers.map(m => m.count));
+function scaleRadius(count) {
+    return 4 + ((count - minCount) / (maxCount - minCount)) * (12 - 4);
+}
+
+scholarMarkers.forEach(function (entry) {
+    var marker = L.circleMarker([entry.lat, entry.lng], {
+        radius: scaleRadius(entry.count),
+        color: "#003366",
+        weight: 2,
+        fillOpacity: 0
+    }).bindPopup(`<b>${entry.name}</b><br/>Scholars: ${entry.count}`);
+    refScholarsWoredas.addLayer(marker);
+});
+
                 //// WWW
                 var wwwLayer = L.layerGroup();
 
@@ -453,6 +494,7 @@
                     "Places of Interest": refPOI,
                     "Addis Medical": refAddisMedical,
                     "Aid Locations (USAID in blue)": wwwLayer,
+                    "EducationUSA Scholars": refScholarsWoredas,
                     // "PEPFAR": refHealthPEPFAR,
                     // "Health Sites All": refHealth,
                     // "Exchanges": refAccount,
