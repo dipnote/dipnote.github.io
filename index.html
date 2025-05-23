@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USA Institutions Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            padding: 20px 0;
+            margin:0;
+        }
+        #map {
+            height: calc(100vh - 70px); /* Adjust height to fill most of the screen */
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* Custom style for labels */
+        .name-label .leaflet-tooltip-content {
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        /* Style for the toggle menu */
+        .leaflet-control.leaflet-control-custom-menu {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+        }
+        .leaflet-control-custom-menu .menu-item {
+            margin-bottom: 5px; /* Space between menu items */
+        }
+        .leaflet-control-custom-menu .menu-item:last-child {
+            margin-bottom: 0;
+        }
+        .leaflet-control-custom-menu label {
+            font-size: 14px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        .leaflet-control-custom-menu input[type="checkbox"] {
+            vertical-align: middle;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2>USA Institutions Map - Mandela Washington Fellows 2025</h2>
+    <div id="map"></div>
+
+    <div id="menu-container" style="display: none;">
+        <div class="menu-item">
+            <input type="checkbox" id="toggleCircles" checked>
+            <label for="toggleCircles">350-mile Radius</label>
+        </div>
+        <div class="menu-item">
+            <input type="checkbox" id="toggleNPSUnits">
+            <label for="toggleNPSUnits">NPS Units</label>
+        </div>
+        <div class="menu-item">
+            <input type="checkbox" id="toggleBaseballStadiums">
+            <label for="toggleBaseballStadiums">AAA/AA Stadiums</label>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // JSON data for institutions
+        const institutionsData = [
+            { "NameFirst": "Deborah", "Institute": "University of Tennessee", "LAT": 35.95499, "LONG": -83.9251 },
+            { "NameFirst": "Yared & Kaleab", "Institute": "Bridgewater State University", "LAT": 41.988404, "LONG": -70.963225 },
+            { "NameFirst": "Gelila", "Institute": "Georgia State University", "LAT": 33.75844, "LONG": -84.386491 },
+            { "NameFirst": "Nebiyat", "Institute": "University of Delaware", "LAT": 39.67922, "LONG": -75.75108 },
+            { "NameFirst": "Natnael", "Institute": "The Presidential Precinct", "LAT": 38.033097, "LONG": -78.476535 },
+            { "NameFirst": "Tewodros", "Institute": "University of Texas at Austin", "LAT": 30.2836, "LONG": -97.73317 },
+            { "NameFirst": "Enku", "Institute": "Clark Atlanta University", "LAT": 33.750078, "LONG": -84.411907 },
+            { "NameFirst": "Samuel", "Institute": "Drexel University", "LAT": 39.9569, "LONG": -75.190086 },
+            { "NameFirst": "Mitiku", "Institute": "Wayne State University", "LAT": 42.35861, "LONG": -83.07102 },
+            { "NameFirst": "Warsame & Robine", "Institute": "Texas Tech University", "LAT": 33.58892, "LONG": -101.89017 },
+            { "NameFirst": "Mohammed", "Institute": "Purdue University", "LAT": 40.43009, "LONG": -86.92417 },
+            { "NameFirst": "Shahd", "Institute": "Drake University", "LAT": 41.6033, "LONG": -93.65409 }
+        ];
+
+        // Data for National Park Service (NPS) Units
+        const npsUnitsData = [
+            // (Previous NPS data remains here - truncated for brevity in this explanation)
+            { "name": "Yellowstone", "type": "National Park", "lat": 44.4280, "long": -110.5885 },
+            { "name": "Yosemite", "type": "National Park", "lat": 37.8651, "long": -119.5383 },
+            { "name": "Grand Canyon", "type": "National Park", "lat": 36.1069, "long": -112.1129 },
+            { "name": "Zion", "type": "National Park", "lat": 37.2982, "long": -113.0263 },
+            { "name": "Rocky Mountain", "type": "National Park", "lat": 40.3428, "long": -105.6836 },
+            { "name": "Acadia", "type": "National Park", "lat": 44.3386, "long": -68.2733 },
+            { "name": "Great Smoky Mountains", "type": "National Park", "lat": 35.6532, "long": -83.5070 },
+            { "name": "Everglades", "type": "National Park", "lat": 25.2866, "long": -80.8987 },
+            { "name": "Death Valley", "type": "National Park", "lat": 36.5054, "long": -117.0794 },
+            { "name": "Olympic", "type": "National Park", "lat": 47.8021, "long": -123.6044 },
+            { "name": "Glacier", "type": "National Park", "lat": 48.7596, "long": -113.7870 },
+            { "name": "Arches", "type": "National Park", "lat": 38.7331, "long": -109.5925 },
+            { "name": "Cuyahoga Valley", "type": "National Park", "lat": 41.2808, "long": -81.5710 },
+            { "name": "Joshua Tree", "type": "National Park", "lat": 33.8734, "long": -115.9010 },
+            { "name": "Shenandoah", "type": "National Park", "lat": 38.5369, "long": -78.4402 },
+            { "name": "Statue of Liberty", "type": "National Monument", "lat": 40.6892, "long": -74.0445 },
+            { "name": "Devils Tower", "type": "National Monument", "lat": 44.5902, "long": -104.7154 },
+            { "name": "Muir Woods", "type": "National Monument", "lat": 37.8918, "long": -122.5800 },
+            { "name": "Cabrillo", "type": "National Monument", "lat": 32.6731, "long": -117.2426 },
+            { "name": "Fort Sumter and Fort Moultrie", "type": "National Monument", "lat": 32.7523, "long": -79.8747 },
+            { "name": "White Sands", "type": "National Park", "lat": 32.7798, "long": -106.1716 },
+            { "name": "Bandelier", "type": "National Monument", "lat": 35.7792, "long": -106.3162 },
+            { "name": "Big Cypress", "type": "National Preserve", "lat": 25.9710, "long": -81.0879 },
+            { "name": "Bering Land Bridge", "type": "National Preserve", "lat": 65.8350, "long": -164.2200 },
+            { "name": "Mojave", "type": "National Preserve", "lat": 35.2800, "long": -115.5000 },
+            { "name": "Martin Luther King Jr.", "type": "National Historic Site", "lat": 33.7557, "long": -84.3737 },
+            { "name": "Ford’s Theatre", "type": "National Historic Site", "lat": 38.8967, "long": -77.0250 },
+            { "name": "Sagamore Hill", "type": "National Historic Site", "lat": 40.8795, "long": -73.4987 },
+            { "name": "Independence", "type": "National Historical Park", "lat": 39.9489, "long": -75.1500 },
+            { "name": "San Antonio Missions", "type": "National Historical Park", "lat": 29.3626, "long": -98.4798 },
+            { "name": "Valley Forge", "type": "National Historical Park", "lat": 40.0968, "long": -75.4300 },
+            { "name": "Harpers Ferry", "type": "National Historical Park", "lat": 39.3237, "long": -77.7400 },
+            { "name": "Gettysburg", "type": "National Military Park", "lat": 39.8217, "long": -77.2311 },
+            { "name": "Antietam", "type": "National Battlefield", "lat": 39.4729, "long": -77.7394 },
+            { "name": "Vicksburg", "type": "National Military Park", "lat": 32.3381, "long": -90.8475 },
+            { "name": "Lincoln Memorial", "type": "National Memorial", "lat": 38.8893, "long": -77.0502 },
+            { "name": "Vietnam Veterans Memorial", "type": "National Memorial", "lat": 38.8911, "long": -77.0477 },
+            { "name": "Mount Rushmore", "type": "National Memorial", "lat": 43.8791, "long": -103.4591 },
+            { "name": "Wright Brothers", "type": "National Memorial", "lat": 36.0157, "long": -75.6693 },
+            { "name": "Golden Gate", "type": "National Recreation Area", "lat": 37.8289, "long": -122.4780 },
+            { "name": "Lake Mead", "type": "National Recreation Area", "lat": 36.0400, "long": -114.4000 },
+            { "name": "Delaware Water Gap", "type": "National Recreation Area", "lat": 41.0834, "long": -74.9660 },
+            { "name": "Cape Cod", "type": "National Seashore", "lat": 41.9389, "long": -69.9903 },
+            { "name": "Point Reyes", "type": "National Seashore", "lat": 38.0700, "long": -122.8100 },
+            { "name": "Cape Hatteras", "type": "National Seashore", "lat": 35.2480, "long": -75.5290 },
+            { "name": "Pictured Rocks", "type": "National Lakeshore", "lat": 46.5646, "long": -86.3024 },
+            { "name": "Sleeping Bear Dunes", "type": "National Lakeshore", "lat": 44.8800, "long": -86.0400 },
+            { "name": "Apostle Islands", "type": "National Lakeshore", "lat": 46.9650, "long": -90.6610 },
+            { "name": "Buffalo National River", "type": "National River", "lat": 36.0308, "long": -93.0593 },
+            { "name": "New River Gorge", "type": "National Park and Preserve", "lat": 37.9700, "long": -81.0800 },
+            { "name": "Niobrara National Scenic River", "type": "National Wild and Scenic River", "lat": 42.7989, "long": -100.0307 },
+            { "name": "Ozark National Scenic Riverways", "type": "National Scenic Riverways", "lat": 37.1500, "long": -91.2000 },
+            { "name": "Blue Ridge Parkway", "type": "National Parkway", "lat": 36.5000, "long": -80.9000 },
+            { "name": "Natchez Trace Parkway", "type": "National Parkway", "lat": 33.0000, "long": -89.5000 },
+            { "name": "Appalachian Trail (Harpers Ferry)", "type": "National Scenic Trail", "lat": 39.3237, "long": -77.7400 },
+            { "name": "Lewis and Clark Trail (Gateway Arch)", "type": "National Historic Trail", "lat": 38.6246, "long": -90.1848 },
+            { "name": "Ebey's Landing", "type": "National Historical Reserve", "lat": 48.2166, "long": -122.6833 },
+            { "name": "The White House and President's Park", "type": "Other", "lat": 38.8977, "long": -77.0365 },
+            { "name": "National Mall", "type": "Other", "lat": 38.8895, "long": -77.0229 }
+        ];
+
+        // Sample Data for AAA and AA Baseball Stadiums
+        const baseballStadiumsData = [
+            // AAA Stadiums
+            { "name": "Truist Field (Charlotte Knights)", "league": "AAA - International League", "lat": 35.2246, "long": -80.8491 },
+            { "name": "Durham Bulls Athletic Park (Durham Bulls)", "league": "AAA - International League", "lat": 35.9917, "long": -78.9039 },
+            { "name": "Victory Field (Indianapolis Indians)", "league": "AAA - International League", "lat": 39.7658, "long": -86.1694 },
+            { "name": "PNC Field (Scranton/Wilkes-Barre RailRiders)", "league": "AAA - International League", "lat": 41.3497, "long": -75.7189 },
+            { "name": "Las Vegas Ballpark (Las Vegas Aviators)", "league": "AAA - Pacific Coast League", "lat": 36.1663, "long": -115.3200 },
+            { "name": "Sutter Health Park (Sacramento River Cats)", "league": "AAA - Pacific Coast League", "lat": 38.5812, "long": -121.5078 },
+            { "name": "Chickasaw Bricktown Ballpark (Oklahoma City Dodgers)", "league": "AAA - Pacific Coast League", "lat": 35.4660, "long": -97.5070 },
+            { "name": "Southwest University Park (El Paso Chihuahuas)", "league": "AAA - Pacific Coast League", "lat": 31.7588, "long": -106.4925 },
+            // AA Stadiums
+            { "name": "Hadlock Field (Portland Sea Dogs)", "league": "AA - Eastern League", "lat": 43.6528, "long": -70.2789 },
+            { "name": "Dunkin' Park (Hartford Yard Goats)", "league": "AA - Eastern League", "lat": 41.7717, "long": -72.6750 },
+            { "name": "The Diamond (Richmond Flying Squirrels)", "league": "AA - Eastern League", "lat": 37.5700, "long": -77.4558 },
+            { "name": "MGM Park (Biloxi Shuckers)", "league": "AA - Southern League", "lat": 30.3919, "long": -88.8839 },
+            { "name": "Regions Field (Birmingham Barons)", "league": "AA - Southern League", "lat": 33.5075, "long": -86.8111 },
+            { "name": "AT&T Field (Chattanooga Lookouts)", "league": "AA - Southern League", "lat": 35.0575, "long": -85.3064 },
+            { "name": "Riders Field (Frisco RoughRiders)", "league": "AA - Texas League", "lat": 33.1500, "long": -96.8200 },
+            { "name": "Hodgetown (Amarillo Sod Poodles)", "league": "AA - Texas League", "lat": 35.2075, "long": -101.8311 },
+            { "name": "Hammons Field (Springfield Cardinals)", "league": "AA - Texas League", "lat": 37.2167, "long": -93.2861 }
+        ];
+
+        // Create the map
+        const map = L.map('map').setView([37.8, -96], 4);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // --- Create custom icons ---
+        const greenIcon = new L.Icon({ // For NPS Units
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        });
+
+        const redIcon = new L.Icon({ // For Baseball Stadiums
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        });
+
+
+        // --- Circles Layer (Institutions) ---
+        const milesToMeters = (miles) => miles * 1609.34;
+        const circleRadiusMiles = 350;
+        const circleRadiusMeters = milesToMeters(circleRadiusMiles);
+        const institutionCircleLayers = [];
+
+        institutionsData.forEach(item => {
+            if (item.LAT && item.LONG) {
+                const latLng = [item.LAT, item.LONG];
+                // Institution markers use the default blue icon
+                const marker = L.marker(latLng).addTo(map)
+                    .bindPopup(`<b>${item.NameFirst}</b><br>${item.Institute}`);
+                const labelHtml = `<div><strong>${item.NameFirst}</strong><br><span style="font-size:0.9em;">${item.Institute}</span></div>`;
+                marker.bindTooltip(labelHtml, {
+                    permanent: true, direction: 'right', offset: [10, 0], className: 'name-label'
+                }).openTooltip();
+
+                const circle = L.circle(latLng, {
+                    color: 'green', fillOpacity: 0, weight: 2, radius: circleRadiusMeters
+                });
+                institutionCircleLayers.push(circle);
+                if (document.getElementById('toggleCircles').checked) {
+                    circle.addTo(map);
+                }
+            }
+        });
+
+        // --- NPS Units Layer ---
+        const npsUnitMarkerLayers = [];
+        let npsUnitsLayerGroup = null;
+
+        // --- Baseball Stadiums Layer ---
+        const baseballStadiumMarkerLayers = [];
+        let baseballStadiumsLayerGroup = null;
+
+
+        // --- Custom Leaflet Control for Menu ---
+        L.Control.CustomMenu = L.Control.extend({
+            onAdd: function(mapCtrl) {
+                const container = L.DomUtil.get('menu-container');
+                L.DomEvent.disableClickPropagation(container);
+                container.style.display = 'block';
+                return container;
+            },
+            onRemove: function(mapCtrl) {}
+        });
+        L.control.customMenu = function(opts) { return new L.Control.CustomMenu(opts); }
+        L.control.customMenu({ position: 'topright' }).addTo(map);
+
+        // --- Event Listeners for Toggles ---
+        // Toggle Institution Circles
+        const toggleCirclesCheckbox = document.getElementById('toggleCircles');
+        toggleCirclesCheckbox.addEventListener('change', function() {
+            institutionCircleLayers.forEach(circle => {
+                if (this.checked) { map.addLayer(circle); } else { map.removeLayer(circle); }
+            });
+        });
+
+        // Toggle NPS Units
+        const toggleNPSUnitsCheckbox = document.getElementById('toggleNPSUnits');
+        toggleNPSUnitsCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                if (!npsUnitsLayerGroup) {
+                    npsUnitMarkerLayers.length = 0;
+                    npsUnitsData.forEach(unit => {
+                        if (unit.lat && unit.long) {
+                            const marker = L.marker([unit.lat, unit.long], { icon: greenIcon })
+                                .bindPopup(`<b>${unit.name}</b><br>Type: ${unit.type}`);
+                            npsUnitMarkerLayers.push(marker);
+                        }
+                    });
+                    npsUnitsLayerGroup = L.layerGroup(npsUnitMarkerLayers);
+                }
+                map.addLayer(npsUnitsLayerGroup);
+            } else {
+                if (npsUnitsLayerGroup) { map.removeLayer(npsUnitsLayerGroup); }
+            }
+        });
+
+        // Toggle Baseball Stadiums
+        const toggleBaseballStadiumsCheckbox = document.getElementById('toggleBaseballStadiums');
+        toggleBaseballStadiumsCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                if (!baseballStadiumsLayerGroup) {
+                    baseballStadiumMarkerLayers.length = 0;
+                    baseballStadiumsData.forEach(stadium => {
+                        if (stadium.lat && stadium.long) {
+                            const marker = L.marker([stadium.lat, stadium.long], { icon: redIcon })
+                                .bindPopup(`<b>${stadium.name}</b><br>${stadium.league}`);
+                            baseballStadiumMarkerLayers.push(marker);
+                        }
+                    });
+                    baseballStadiumsLayerGroup = L.layerGroup(baseballStadiumMarkerLayers);
+                }
+                map.addLayer(baseballStadiumsLayerGroup);
+            } else {
+                if (baseballStadiumsLayerGroup) { map.removeLayer(baseballStadiumsLayerGroup); }
+            }
+        });
+
+    </script>
+</body>
+</html>
