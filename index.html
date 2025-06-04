@@ -1,314 +1,589 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- update -->
 
 <head>
-<!--     <title></title> -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <title>Ethiopia Unclass Open Source</title>
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
+    <!-- Data Src Universities -->
+    <script src="data/education/unis_public.js"> </script>
+    <script src="data/health/MedProvidersAddis.js"> </script>
+
     <style>
         body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h4 {
-            text-align: center;
-            color: #2c3e50;
-            padding: 8px 0;
-            margin:0;
-        }
-        #map {
-            height: calc(100vh - 70px); /* Adjust height to fill most of the screen */
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        /* Custom style for labels */
-        .name-label .leaflet-tooltip-content {
-            font-size: 10px;
-            font-weight: bold;
-            padding: 2px 5px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            white-space: nowrap;
         }
 
-        /* Style for the toggle menu */
-        .leaflet-control.leaflet-control-custom-menu {
-            background: white;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-        }
-        .leaflet-control-custom-menu .menu-item {
-            margin-bottom: 5px; /* Space between menu items */
-        }
-        .leaflet-control-custom-menu .menu-item:last-child {
-            margin-bottom: 0;
-        }
-        .leaflet-control-custom-menu label {
-            font-size: 14px;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-        .leaflet-control-custom-menu input[type="checkbox"] {
-            vertical-align: middle;
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h4>MWF 2025 Team Ethiopia</h4>
+
+    <h1>Ethiopia Incident Clusters</h1>
     <div id="map"></div>
 
-    <div id="menu-container" style="display: none;">
-        <div class="menu-item">
-            <input type="checkbox" id="toggleCircles">
-            <label for="toggleCircles">350-mile Radius</label>
-        </div>
-        <div class="menu-item">
-            <input type="checkbox" id="toggleNPSUnits">
-            <label for="toggleNPSUnits">National Parks</label>
-        </div>
-        <div class="menu-item">
-            <input type="checkbox" id="toggleBaseballStadiums">
-            <label for="toggleBaseballStadiums">Baseball</label>
-        </div>
+    <div id="menu">
+        <label>Layer Selection: </label>
+        <select id="incidentFilter">
+            <option value="last30">Incidents past 30 days</option>
+            <option value="31to60">Incidents past 31-60 days</option>
+            <option value="61to90">Incidents past 61-90 days</option>
+        </select>
     </div>
 
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- MGRS Conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/mgrs@2.0.0/dist/mgrs.min.js"></script>
+
     <script>
-        // JSON data for institutions
-        const institutionsData = [
-            { "NameFirst": "Deborah", "Institute": "University of Tennessee", "LAT": 35.95499, "LONG": -83.9251 },
-            { "NameFirst": "Yared & Kaleab", "Institute": "Bridgewater State University", "LAT": 41.988404, "LONG": -70.963225 },
-            { "NameFirst": "Gelila", "Institute": "Georgia State University", "LAT": 33.75844, "LONG": -84.386491 },
-            { "NameFirst": "Nebiyat", "Institute": "University of Delaware", "LAT": 39.67922, "LONG": -75.75108 },
-            { "NameFirst": "Natnael", "Institute": "The Presidential Precinct", "LAT": 38.033097, "LONG": -78.476535 },
-            { "NameFirst": "Tewodros", "Institute": "University of Texas at Austin", "LAT": 30.2836, "LONG": -97.73317 },
-            { "NameFirst": "Enku", "Institute": "Clark Atlanta University", "LAT": 33.750078, "LONG": -84.411907 },
-            { "NameFirst": "Samuel", "Institute": "Drexel University", "LAT": 39.9569, "LONG": -75.190086 },
-            { "NameFirst": "Mitiku", "Institute": "Wayne State University", "LAT": 42.35861, "LONG": -83.07102 },
-            { "NameFirst": "Warsame & Robine", "Institute": "Texas Tech University", "LAT": 33.58892, "LONG": -101.89017 },
-            { "NameFirst": "Mohammed", "Institute": "Purdue University", "LAT": 40.43009, "LONG": -86.92417 },
-            { "NameFirst": "Shahd", "Institute": "Drake University", "LAT": 41.6033, "LONG": -93.65409 }
-        ];
+        // Initialize the map
+        var map = L.map('map').setView([9.15, 40.49], 7); // Coordinates for Ethiopia
 
-        // Data for National Park Service (NPS) Units
-        const npsUnitsData = [
-            // (Previous NPS data remains here - truncated for brevity in this explanation)
-            { "name": "Yellowstone", "type": "National Park", "lat": 44.4280, "long": -110.5885 },
-            { "name": "Yosemite", "type": "National Park", "lat": 37.8651, "long": -119.5383 },
-            { "name": "Grand Canyon", "type": "National Park", "lat": 36.1069, "long": -112.1129 },
-            { "name": "Zion", "type": "National Park", "lat": 37.2982, "long": -113.0263 },
-            { "name": "Rocky Mountain", "type": "National Park", "lat": 40.3428, "long": -105.6836 },
-            { "name": "Acadia", "type": "National Park", "lat": 44.3386, "long": -68.2733 },
-            { "name": "Great Smoky Mountains", "type": "National Park", "lat": 35.6532, "long": -83.5070 },
-            { "name": "Everglades", "type": "National Park", "lat": 25.2866, "long": -80.8987 },
-            { "name": "Death Valley", "type": "National Park", "lat": 36.5054, "long": -117.0794 },
-            { "name": "Olympic", "type": "National Park", "lat": 47.8021, "long": -123.6044 },
-            { "name": "Glacier", "type": "National Park", "lat": 48.7596, "long": -113.7870 },
-            { "name": "Arches", "type": "National Park", "lat": 38.7331, "long": -109.5925 },
-            { "name": "Cuyahoga Valley", "type": "National Park", "lat": 41.2808, "long": -81.5710 },
-            { "name": "Joshua Tree", "type": "National Park", "lat": 33.8734, "long": -115.9010 },
-            { "name": "Shenandoah", "type": "National Park", "lat": 38.5369, "long": -78.4402 },
-            { "name": "Statue of Liberty", "type": "National Monument", "lat": 40.6892, "long": -74.0445 },
-            { "name": "Devils Tower", "type": "National Monument", "lat": 44.5902, "long": -104.7154 },
-            { "name": "Muir Woods", "type": "National Monument", "lat": 37.8918, "long": -122.5800 },
-            { "name": "Cabrillo", "type": "National Monument", "lat": 32.6731, "long": -117.2426 },
-            { "name": "Fort Sumter and Fort Moultrie", "type": "National Monument", "lat": 32.7523, "long": -79.8747 },
-            { "name": "White Sands", "type": "National Park", "lat": 32.7798, "long": -106.1716 },
-            { "name": "Bandelier", "type": "National Monument", "lat": 35.7792, "long": -106.3162 },
-            { "name": "Big Cypress", "type": "National Preserve", "lat": 25.9710, "long": -81.0879 },
-            { "name": "Bering Land Bridge", "type": "National Preserve", "lat": 65.8350, "long": -164.2200 },
-            { "name": "Mojave", "type": "National Preserve", "lat": 35.2800, "long": -115.5000 },
-            { "name": "Martin Luther King Jr.", "type": "National Historic Site", "lat": 33.7557, "long": -84.3737 },
-            { "name": "Ford’s Theatre", "type": "National Historic Site", "lat": 38.8967, "long": -77.0250 },
-            { "name": "Sagamore Hill", "type": "National Historic Site", "lat": 40.8795, "long": -73.4987 },
-            { "name": "Independence", "type": "National Historical Park", "lat": 39.9489, "long": -75.1500 },
-            { "name": "San Antonio Missions", "type": "National Historical Park", "lat": 29.3626, "long": -98.4798 },
-            { "name": "Valley Forge", "type": "National Historical Park", "lat": 40.0968, "long": -75.4300 },
-            { "name": "Harpers Ferry", "type": "National Historical Park", "lat": 39.3237, "long": -77.7400 },
-            { "name": "Gettysburg", "type": "National Military Park", "lat": 39.8217, "long": -77.2311 },
-            { "name": "Antietam", "type": "National Battlefield", "lat": 39.4729, "long": -77.7394 },
-            { "name": "Vicksburg", "type": "National Military Park", "lat": 32.3381, "long": -90.8475 },
-            { "name": "Lincoln Memorial", "type": "National Memorial", "lat": 38.8893, "long": -77.0502 },
-            { "name": "Vietnam Veterans Memorial", "type": "National Memorial", "lat": 38.8911, "long": -77.0477 },
-            { "name": "Mount Rushmore", "type": "National Memorial", "lat": 43.8791, "long": -103.4591 },
-            { "name": "Wright Brothers", "type": "National Memorial", "lat": 36.0157, "long": -75.6693 },
-            { "name": "Golden Gate", "type": "National Recreation Area", "lat": 37.8289, "long": -122.4780 },
-            { "name": "Lake Mead", "type": "National Recreation Area", "lat": 36.0400, "long": -114.4000 },
-            { "name": "Delaware Water Gap", "type": "National Recreation Area", "lat": 41.0834, "long": -74.9660 },
-            { "name": "Cape Cod", "type": "National Seashore", "lat": 41.9389, "long": -69.9903 },
-            { "name": "Point Reyes", "type": "National Seashore", "lat": 38.0700, "long": -122.8100 },
-            { "name": "Cape Hatteras", "type": "National Seashore", "lat": 35.2480, "long": -75.5290 },
-            { "name": "Pictured Rocks", "type": "National Lakeshore", "lat": 46.5646, "long": -86.3024 },
-            { "name": "Sleeping Bear Dunes", "type": "National Lakeshore", "lat": 44.8800, "long": -86.0400 },
-            { "name": "Apostle Islands", "type": "National Lakeshore", "lat": 46.9650, "long": -90.6610 },
-            { "name": "Buffalo National River", "type": "National River", "lat": 36.0308, "long": -93.0593 },
-            { "name": "New River Gorge", "type": "National Park and Preserve", "lat": 37.9700, "long": -81.0800 },
-            { "name": "Niobrara National Scenic River", "type": "National Wild and Scenic River", "lat": 42.7989, "long": -100.0307 },
-            { "name": "Ozark National Scenic Riverways", "type": "National Scenic Riverways", "lat": 37.1500, "long": -91.2000 },
-            { "name": "Blue Ridge Parkway", "type": "National Parkway", "lat": 36.5000, "long": -80.9000 },
-            { "name": "Natchez Trace Parkway", "type": "National Parkway", "lat": 33.0000, "long": -89.5000 },
-            { "name": "Appalachian Trail (Harpers Ferry)", "type": "National Scenic Trail", "lat": 39.3237, "long": -77.7400 },
-            { "name": "Lewis and Clark Trail (Gateway Arch)", "type": "National Historic Trail", "lat": 38.6246, "long": -90.1848 },
-            { "name": "Ebey's Landing", "type": "National Historical Reserve", "lat": 48.2166, "long": -122.6833 },
-            { "name": "The White House and President's Park", "type": "Other", "lat": 38.8977, "long": -77.0365 },
-            { "name": "National Mall", "type": "Other", "lat": 38.8895, "long": -77.0229 }
-        ];
-
-        // Sample Data for AAA and AA Baseball Stadiums
-        const baseballStadiumsData = [
-            // AAA Stadiums
-            { "name": "Truist Field (Charlotte Knights)", "league": "AAA - International League", "lat": 35.2246, "long": -80.8491 },
-            { "name": "Durham Bulls Athletic Park (Durham Bulls)", "league": "AAA - International League", "lat": 35.9917, "long": -78.9039 },
-            { "name": "Victory Field (Indianapolis Indians)", "league": "AAA - International League", "lat": 39.7658, "long": -86.1694 },
-            { "name": "PNC Field (Scranton/Wilkes-Barre RailRiders)", "league": "AAA - International League", "lat": 41.3497, "long": -75.7189 },
-            { "name": "Las Vegas Ballpark (Las Vegas Aviators)", "league": "AAA - Pacific Coast League", "lat": 36.1663, "long": -115.3200 },
-            { "name": "Sutter Health Park (Sacramento River Cats)", "league": "AAA - Pacific Coast League", "lat": 38.5812, "long": -121.5078 },
-            { "name": "Chickasaw Bricktown Ballpark (Oklahoma City Dodgers)", "league": "AAA - Pacific Coast League", "lat": 35.4660, "long": -97.5070 },
-            { "name": "Southwest University Park (El Paso Chihuahuas)", "league": "AAA - Pacific Coast League", "lat": 31.7588, "long": -106.4925 },
-            // AA Stadiums
-            { "name": "Hadlock Field (Portland Sea Dogs)", "league": "AA - Eastern League", "lat": 43.6528, "long": -70.2789 },
-            { "name": "Dunkin' Park (Hartford Yard Goats)", "league": "AA - Eastern League", "lat": 41.7717, "long": -72.6750 },
-            { "name": "The Diamond (Richmond Flying Squirrels)", "league": "AA - Eastern League", "lat": 37.5700, "long": -77.4558 },
-            { "name": "MGM Park (Biloxi Shuckers)", "league": "AA - Southern League", "lat": 30.3919, "long": -88.8839 },
-            { "name": "Regions Field (Birmingham Barons)", "league": "AA - Southern League", "lat": 33.5075, "long": -86.8111 },
-            { "name": "AT&T Field (Chattanooga Lookouts)", "league": "AA - Southern League", "lat": 35.0575, "long": -85.3064 },
-            { "name": "Riders Field (Frisco RoughRiders)", "league": "AA - Texas League", "lat": 33.1500, "long": -96.8200 },
-            { "name": "Hodgetown (Amarillo Sod Poodles)", "league": "AA - Texas League", "lat": 35.2075, "long": -101.8311 },
-            { "name": "Hammons Field (Springfield Cardinals)", "league": "AA - Texas League", "lat": 37.2167, "long": -93.2861 }
-        ];
-
-        // Create the map
-        const map = L.map('map').setView([37.8, -96], 4);
-
-        // Add OpenStreetMap tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 18,
+        // Set up the OpenStreetMap tile layer
+        var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // --- Create custom icons ---
-        const greenIcon = new L.Icon({ // For NPS Units
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
+        ///////////   Admin LAYERS
 
-        const redIcon = new L.Icon({ // For Baseball Stadiums
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
+        // Layer group for the GeoJSON data (ET-Admin3-2023)
+        var refGeoJSON = L.layerGroup();
+        // New GeoJSON layer for Regions (ET_admin1_2023)
+        var refRegion = L.layerGroup();
+        // Create a new layer for LAT-LNG-MGRS markers
+        var refLATLNGMGRS = L.layerGroup();
+
+        // Add default layers to the map if needed
+        // enable to pre-select Woredas
+        // refGeoJSON.addTo(map); // Add Woredas by default
 
 
-        // --- Circles Layer (Institutions) ---
-        const milesToMeters = (miles) => miles * 1609.34;
-        const circleRadiusMiles = 350;
-        const circleRadiusMeters = milesToMeters(circleRadiusMiles);
-        const institutionCircleLayers = [];
+        // Function to load GeoJSON dynamically
+        function loadGeoJSON(layer, url, layerType) {
+            // Clear the layer before adding new data
+            layer.clearLayers();
 
-        institutionsData.forEach(item => {
-            if (item.LAT && item.LONG) {
-                const latLng = [item.LAT, item.LONG];
-                // Institution markers use the default blue icon
-                const marker = L.marker(latLng).addTo(map)
-                    .bindPopup(`<b>${item.NameFirst}</b><br>${item.Institute}`);
-                const labelHtml = `<div><strong>${item.NameFirst}</strong><br><span style="font-size:0.9em;">${item.Institute}</span></div>`;
-                marker.bindTooltip(labelHtml, {
-                    permanent: true, direction: 'right', offset: [10, 0], className: 'name-label'
-                }).openTooltip();
+            // Fetch the new GeoJSON data from the given URL
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Network response was not ok " + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Add the fetched GeoJSON data to the given layer
+                    L.geoJSON(data, {
+                        style: function (feature) {
+                            // Use the layerType to determine the color of the line
+                            if (layerType === 'Regions') {
+                                return {
+                                    color: "green",  // Set line color to green for 'Regions'
+                                    weight: 1.0,
+                                    opacity: 0.5,
+                                    fillColor: "#a1e3a1",
+                                    fillOpacity: 0.1
+                                };
+                            } else {
+                                return {
+                                    color: "purple",  // Default color for other layers
+                                    weight: 0.8,
+                                    opacity: 0.25,
+                                    fillColor: "#e2fdff",
+                                    fillOpacity: 0.1
+                                };
+                            }
+                        },
+                        onEachFeature: function (feature, layer) {
+                            // Consolidate popup logic
+                            if (feature.properties) {
+                                let popupContent = '';
 
-                const circle = L.circle(latLng, {
-                    color: 'green', fillOpacity: 0, weight: 2, radius: circleRadiusMeters
+                                // Check available properties and construct popup content accordingly
+                                if (feature.properties.name) {
+                                    popupContent += `<b>${feature.properties.name}</b><br/>`;
+                                }
+                                if (feature.properties.admin_2) {
+                                    popupContent += `${feature.properties.admin_2}<br/>`;
+                                }
+                                if (feature.properties.admin_1) {
+                                    popupContent += `${feature.properties.admin_1}<br/>`;
+                                }
+                                if (feature.properties.id) {
+                                    popupContent += `ID: ${feature.properties.id}<br/>`;
+                                }
+                                if (feature.properties.ADMIN1) {
+                                    popupContent += `Region: ${feature.properties.ADMIN1}`;
+                                }
+
+                                // Add mouseover and mouseout event handlers to the layer
+                                if (popupContent) {
+                                    layer.on('mouseover', function () {
+                                        layer.bindPopup(popupContent).openPopup();
+                                    });
+                                    layer.on('mouseout', function () {
+                                        layer.closePopup();
+                                    });
+                                }
+                            }
+                        }
+                    }).addTo(layer);
+                })
+                .catch(error => {
+                    console.error('Error loading the GeoJSON:', error);
                 });
-                institutionCircleLayers.push(circle);
-                if (document.getElementById('toggleCircles').checked) {
-                    circle.addTo(map);
+        }
+
+        //////////// END Admin LAYERS
+
+        // Fetch the GeoJSON file
+        fetch('data/conflict/241207-22JUL14-24NOV30-Incident-Cleaned.geojson')
+            .then(response => response.json())
+            .then(data => {
+                // Store the GeoJSON data for future use
+                var allIncidents = data.features;
+
+                // Function to filter incidents by date range
+                function filterIncidents(startDate, endDate) {
+                    var filtered = allIncidents.filter(function (feature) {
+                        var incidentDate = new Date(feature.properties.IncidentDate);
+                        return incidentDate >= startDate && incidentDate <= endDate;
+                    });
+                    return filtered;
                 }
-            }
-        });
 
-        // --- NPS Units Layer ---
-        const npsUnitMarkerLayers = [];
-        let npsUnitsLayerGroup = null;
+                // Layer groups for each date range with marker clusters
+                var last30Layer = L.markerClusterGroup();
+                var last31to60Layer = L.markerClusterGroup();
+                var last61to90Layer = L.markerClusterGroup();
 
-        // --- Baseball Stadiums Layer ---
-        const baseballStadiumMarkerLayers = [];
-        let baseballStadiumsLayerGroup = null;
+                // Function to create markers for each filtered incident and add them to the respective clusters
+                function createMarkerLayer(layer, incidents, color) {
+                    incidents.forEach(function (feature) {
+                        var latlng = [feature.geometry.coordinates[1], feature.geometry.coordinates[0]];
+                        var marker = L.circleMarker(latlng, {
+                            radius: 8,
+                            color: color,
+                            weight: 2,
+                            fillOpacity: 0.25
+                        });
+
+                        // Add popup to marker
+                        marker.bindPopup("<b>Date:</b> " + feature.properties.IncidentDate + "<br>" +
+                            "<b>Type:</b> " + feature.properties.IncidentType + "<br>" +
+                            "<b>Description:</b> " + feature.properties.Description);
+                        layer.addLayer(marker);
+                    });
+                }
+
+                // Create markers for each date range with specific colors
+                createMarkerLayer(last30Layer, filterIncidents(getDateXDaysAgo(30), new Date()), "red");
+                createMarkerLayer(last31to60Layer, filterIncidents(getDateXDaysAgo(60), getDateXDaysAgo(31)), "blue");
+                createMarkerLayer(last61to90Layer, filterIncidents(getDateXDaysAgo(90), getDateXDaysAgo(61)), "gray");
+
+                // **** BASE LAYERS *****
+                googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+                    maxZoom: 20,
+                    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+                });
+
+                googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+                    maxZoom: 20,
+                    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+                });
+
+                googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+                    maxZoom: 20,
+                    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+                });
+
+                // Public Universities GeoJSON
+                let refUnivPublic = L.layerGroup();
+                L.geoJSON(geoJSON_pub_univ_data, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, { radius: 10, color: 'purple', weight: 2, fill: true }).bindPopup(feature.properties.name + '</br> Generation: ' + feature.properties.gen + '</br> Category: ' + feature.properties.category + '</br><a href="http://' + feature.properties.link + '" target="_blank">Website</a><br>')
+                    }
+                }).addTo(refUnivPublic);
 
 
-        // --- Custom Leaflet Control for Menu ---
-        L.Control.CustomMenu = L.Control.extend({
-            onAdd: function(mapCtrl) {
-                const container = L.DomUtil.get('menu-container');
-                L.DomEvent.disableClickPropagation(container);
-                container.style.display = 'block';
-                return container;
-            },
-            onRemove: function(mapCtrl) {}
-        });
-        L.control.customMenu = function(opts) { return new L.Control.CustomMenu(opts); }
-        L.control.customMenu({ position: 'topright' }).addTo(map);
+                // Addis Medical Locations GeoJSON
+                let refAddisMedical = L.layerGroup();
+                L.geoJSON(medProvidersAddis, {
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true }).bindPopup(feature.properties.provider + '</br> Specialty: ' + feature.properties.specialty + '</br> Phone: ' + feature.properties.phoneOffice + '</br>' + feature.properties.link + '</br> Amubulance? ' + feature.properties.AmbulanceService)
+                    }
+                }).addTo(refAddisMedical);
 
-        // --- Event Listeners for Toggles ---
-        // Toggle Institution Circles
-        const toggleCirclesCheckbox = document.getElementById('toggleCircles');
-        toggleCirclesCheckbox.addEventListener('change', function() {
-            institutionCircleLayers.forEach(circle => {
-                if (this.checked) { map.addLayer(circle); } else { map.removeLayer(circle); }
-            });
-        });
 
-        // Toggle NPS Units
-        const toggleNPSUnitsCheckbox = document.getElementById('toggleNPSUnits');
-        toggleNPSUnitsCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                if (!npsUnitsLayerGroup) {
-                    npsUnitMarkerLayers.length = 0;
-                    npsUnitsData.forEach(unit => {
-                        if (unit.lat && unit.long) {
-                            const marker = L.marker([unit.lat, unit.long], { icon: greenIcon })
-                                .bindPopup(`<b>${unit.name}</b><br>Type: ${unit.type}`);
-                            npsUnitMarkerLayers.push(marker);
+
+                // Airports Black
+                // custom icons for aiports
+
+                var refAirport = L.layerGroup();
+                const YOUR_API_KEY = "72988d9175074bdcbc8fe8ce0005452a";
+
+                const airportIcon = new L.icon({
+                    iconUrl: 'https://api.geoapify.com/v1/icon/?type=awesome&scaleFactor=1&color=%2372a2d4&size=small&icon=plane-departure&apiKey=' + YOUR_API_KEY,
+                    cursor: 'pointer',
+                    anchor: 'bottom',
+                    offset: [0, 6]
+                })
+
+                const mHADD = L.marker([8.978, 38.799], { icon: airportIcon }).bindPopup('<p>Bole Airport<br/>IATA:ADD / ICAO:HAAB<br/>3,800m / 12,467f</p>').addTo(refAirport);
+                const mHABD = L.marker([11.608, 37.321], { icon: airportIcon }).bindPopup("<p>BJR<br/>Bahir Dar Airport</p>").addTo(refAirport);
+                const mHAGN = L.marker([12.520, 37.434], { icon: airportIcon }).bindPopup("<p>GDQ<br/>Gonder Airport</p>").addTo(refAirport);
+                const mHASO = L.marker([10.019, 34.586], { icon: airportIcon }).bindPopup("Asosa Airport").addTo(refAirport);
+                const mHADR = L.marker([9.625, 41.854], { icon: airportIcon }).bindPopup("Aba Tenna Dejazmach Yilma Intl Airport").addTo(refAirport);
+                const mHAGM = L.marker([8.129, 34.563], { icon: airportIcon }).bindPopup("Gambella Airport").addTo(refAirport);
+                const mHAJM = L.marker([7.666, 36.817], { icon: airportIcon }).bindPopup("Jimma Airport").addTo(refAirport);
+                const mHAAM = L.marker([6.039, 37.591], { icon: airportIcon }).bindPopup("Arba Minch Airport").addTo(refAirport);
+                const mHAGO = L.marker([5.935, 43.579], { icon: airportIcon }).bindPopup("Gode Airport").addTo(refAirport);
+                const mHAAX = L.marker([14.147, 38.773], { icon: airportIcon }).bindPopup("Axum Airport").addTo(refAirport);
+                const mHALL = L.marker([11.975, 38.971], { icon: airportIcon }).bindPopup("Lalibela Airport").addTo(refAirport);
+                const mHAMK = L.marker([13.468, 39.534], { icon: airportIcon }).bindPopup("Mekelle Airport").addTo(refAirport);
+                const mHAKD = L.marker([6.733, 44.242], { icon: airportIcon }).bindPopup("Kebri Dahar Airport").addTo(refAirport);
+                const mHAJJ = L.marker([9.333, 42.912], { icon: airportIcon }).bindPopup("Wilwal International Airport").addTo(refAirport);
+                const mHALA = L.marker([7.1, 38.397], { icon: airportIcon }).bindPopup("Hawassa International Airport").addTo(refAirport);
+                const mHADC = L.marker([11.111, 39.726], { icon: airportIcon }).bindPopup("Kombolcha Airport").addTo(refAirport);
+                const mHDEM = L.marker([8.554, 34.858], { icon: airportIcon }).bindPopup("Dembidollo Airport").addTo(refAirport);
+                const mHIL = L.marker([6.078, 44.767], { icon: airportIcon }).bindPopup("Shilavo Airport").addTo(refAirport);
+                const mETSHC = L.marker([14.078, 38.272], { icon: airportIcon }).bindPopup("Shire Inda Selassie Airport").addTo(refAirport);
+                const mHASM = L.marker([11.788, 40.992], { icon: airportIcon }).bindPopup("Semera Airport").addTo(refAirport);
+                const mHAGB = L.marker([7.119, 40.045], { icon: airportIcon }).bindPopup("Robe Airport").addTo(refAirport);
+                const mHABC = L.marker([5.783, 36.562], { icon: airportIcon }).bindPopup("Jinka (Baco) Airport").addTo(refAirport);
+                const mHANK = L.marker([9.037, 36.610], { icon: airportIcon }).bindPopup('<p>Nekemte Airport<br/> IATA:NEK / ICAO:HANK<br/>1,250m / 4,101f</p>').addTo(refAirport);
+
+
+                // Ambassador's Fund for Cultural Pres
+                var refAFCP = L.layerGroup();
+                var blueIcon = new L.Icon({
+                    iconUrl: 'https://api.geoapify.com/v1/icon/?type=material&color=%23325acb&size=large&icon=landmark&iconType=awesome&scaleFactor=2&apiKey=' + YOUR_API_KEY,
+                    // iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
+                    // shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [24, 40],
+                    iconAnchor: [5, 18],
+                    // popupAnchor: [1, -34]
+                    // iconSize: [25, 41],
+                    //shadowSize: [41, 41]
+                });
+
+                var AFCP01 = L.marker([13.8580, 39.4302], { icon: blueIcon }).bindPopup('<p>Debra Tsion Church<br/>2020</p>').addTo(refAFCP);
+                var AFCP02 = L.marker([7.701226, 36.872284], { icon: blueIcon }).bindPopup('<p>Aba Jiffar Palace<br/>2018</p>').addTo(refAFCP);
+                var AFCP03 = L.marker([12.03161, 39.0411], { icon: blueIcon }).bindPopup('<p>Lalibela Churches<br/>2016</p>').addTo(refAFCP);
+                var AFCP04 = L.marker([12.1404, 39.0731], { icon: blueIcon }).bindPopup('<p>Yemrehanna Kristos Church<br/>2015</p>').addTo(refAFCP);
+                var AFCP05 = L.marker([9.3127, 42.1226], { icon: blueIcon }).bindPopup('<p>Teferi Mekonnen Palace<br/>2009</p>').addTo(refAFCP);
+                var AFCP06 = L.marker([9.032813, 38.749672], { icon: blueIcon }).bindPopup('<p>Mohammad Ali House<br/>2007</p>').addTo(refAFCP);
+                var AFCP07 = L.marker([9.037967, 38.754552], { icon: blueIcon }).bindPopup('<p>Hager Fikir Theater<br/>2006</p>').addTo(refAFCP);
+                var AFCP08 = L.marker([7.7467, 40.7074], { icon: blueIcon }).bindPopup('<p>Sheikh Nur Hussein Shrine<br/>2005</p>').addTo(refAFCP);
+                var AFCP09 = L.marker([12.2350, 37.6351], { icon: blueIcon }).bindPopup('<p>Guzara Castle<br/>2004</p>').addTo(refAFCP);
+                var AFCP10 = L.marker([14.2860, 39.0191], { icon: blueIcon }).bindPopup('<p>Yeha Temple<br/>2002</p>').addTo(refAFCP);
+                var AFCP11 = L.marker([9.03124, 38.74224], { icon: blueIcon }).bindPopup('<p>American Gibi<br/>2023</p>').addTo(refAFCP);
+
+
+                // American Spaces
+                var amSpaces = L.layerGroup();
+
+                var mBahirDarAC = L.circleMarker([11.5935, 37.3795], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Bahir Dar AC').addTo(amSpaces);
+                var mDireDawaAC = L.circleMarker([9.583438, 41.856938], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Dire Dawa AC').addTo(amSpaces);
+                var mJimmaAC = L.circleMarker([7.67724, 36.835999], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Jimma AC').addTo(amSpaces);
+                var mMekelleAC = L.circleMarker([13.481813, 39.454062], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('Mekelle AC').addTo(amSpaces);
+                var mCJCRAC = L.circleMarker([9.007687, 38.742937], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup('CJCRAC').addTo(amSpaces);
+                var mSatchmo = L.circleMarker([9.05821, 38.7635], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Satchmo").addTo(amSpaces);
+                var mHawassa = L.circleMarker([7.05333, 38.47438], { radius: 10, color: 'blue', weight: 3, fill: true }).bindPopup("Hawassa").addTo(amSpaces);
+
+
+                // Places of Interest
+                var refPOI = L.layerGroup();
+
+                // Add permanent tooltips without markers
+                var tooltipGERD = L.tooltip({
+                    permanent: true,
+                    direction: 'top'
+                }).setContent('Grand Ethiopian Renaissance Dam')
+                    .setLatLng([11.21562, 35.09299])
+                    .addTo(refPOI);
+
+                var tooltipLaLib = L.tooltip({
+                    permanent: true,
+                    direction: 'top'
+                }).setContent('Lalibela')
+                    .setLatLng([12.036, 39.046])
+                    .addTo(refPOI);
+
+                var tooltipICS = L.tooltip({
+                    permanent: true,
+                    direction: 'top'
+                }).setContent('Int Community School')
+                    .setLatLng([8.9955, 38.7286])
+                    .addTo(refPOI);
+
+                var tooltipEMB = L.tooltip({
+                    permanent: true,
+                    direction: 'top'
+                }).setContent('US Embassy')
+                    .setLatLng([9.0574, 38.7630])
+                    .addTo(refPOI);
+
+                //////   ACLED
+
+                // ACLED WITH JSON from API
+                let daySpan30 = 30
+                let daySpan45 = 45
+                let daySpan60 = 60
+                let daySpan90 = 90
+
+                let today = new Date();
+
+                let DaysAgo = new Date();
+                DaysAgo.setDate(today.getDate() - daySpan90);
+
+                let todayStr = today.toISOString().split('T')[0];
+                let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
+
+                // USE "OR for multi ISO"
+                // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia; 729 Sudan
+
+                // ACLED Data Layer
+                let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+                let refACLED = L.layerGroup();
+                var acledMarkers = L.markerClusterGroup();
+
+                fetch(apiURL)
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        const events = jsonData.data;
+                        for (const event of events) {
+                            const latlng = [parseFloat(event.latitude), parseFloat(event.longitude)];
+
+                            var circleMarker = L.circleMarker(latlng, { radius: 10, color: 'red', weight: 2, fill: true })
+                                .bindPopup(event.event_date + '</br>' + event.sub_event_type + '</br>' + event.notes);
+
+                            acledMarkers.addLayer(circleMarker);
+                        }
+                        refACLED.addLayer(acledMarkers);
+                    })
+                    .catch(error => console.error('Error:', error));
+
+
+                ///////  END ACLED
+
+
+                var refScholarsWoredas = L.layerGroup();
+
+var scholarMarkers = [
+    { name: "Addis Ketema Sub City", lat: 9.0365, lng: 38.7436, count: 3 },
+    { name: "Akaki Kality Sub City", lat: 8.9191, lng: 38.7505, count: 2 },
+    { name: "Arada Sub City", lat: 9.0425, lng: 38.7504, count: 3 },
+    { name: "Bole Sub City", lat: 8.9931, lng: 38.7882, count: 7 },
+    { name: "Gulele Sub City", lat: 9.0637, lng: 38.7338, count: 5 },
+    { name: "Kolfe Keraniyo Sub City", lat: 9.0020, lng: 38.7000, count: 2 },
+    { name: "Lemi Kura Sub City", lat: 8.9465, lng: 38.8355, count: 10 },
+    { name: "Lideta Sub City", lat: 9.0272, lng: 38.7410, count: 3 },
+    { name: "Nifas Silk Lafto Sub City", lat: 8.9814, lng: 38.7250, count: 5 },
+    { name: "Yeka Sub City", lat: 9.0503, lng: 38.8424, count: 4 },
+    { name: "Bahir Dar town", lat: 11.5745, lng: 37.3614, count: 3 },
+    { name: "Bedele town", lat: 8.4560, lng: 36.3528, count: 3 },
+    { name: "Debre Tabor town", lat: 11.8522, lng: 38.0126, count: 2 },
+    { name: "Dessie town", lat: 11.1320, lng: 39.6360, count: 1 },
+    { name: "Debre Markos town", lat: 10.3315, lng: 37.7171, count: 1 },
+    { name: "Hawassa city", lat: 7.0533, lng: 38.4744, count: 1 },
+    { name: "Jimma town", lat: 7.6772, lng: 36.8360, count: 2 },
+    { name: "Nekemte town", lat: 9.0823, lng: 36.5531, count: 1 },
+    { name: "Mekelle city", lat: 13.4967, lng: 39.4753, count: 1 }
+];
+
+var maxCount = Math.max(...scholarMarkers.map(m => m.count));
+var minCount = Math.min(...scholarMarkers.map(m => m.count));
+function scaleRadius(count) {
+    return 4 + ((count - minCount) / (maxCount - minCount)) * (12 - 4);
+}
+
+scholarMarkers.forEach(function (entry) {
+    var marker = L.circleMarker([entry.lat, entry.lng], {
+        radius: scaleRadius(entry.count),
+        color: "#003366",
+        weight: 2,
+        fillOpacity: 0
+    }).bindPopup(`<b>${entry.name}</b><br/>Scholars: ${entry.count}`);
+    refScholarsWoredas.addLayer(marker);
+});
+
+                //// WWW
+                var wwwLayer = L.layerGroup();
+
+                // Fetch the GeoJSON file and add it to the layer
+                fetch('data/WhoDoesWhat/241208www.geojson')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Network response was not ok " + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        L.geoJSON(data, {
+                            pointToLayer: function (feature, latlng) {
+                                return L.circleMarker(latlng, {
+                                    radius: 10,
+                                    color: feature.properties.Donor && feature.properties.Donor.includes("USAID") ? "blue" : "green", // Blue for USAID, green otherwise
+                                    fillColor: feature.properties.Donor && feature.properties.Donor.includes("USAID") ? "lightblue" : "lightgreen",
+                                    fillOpacity: 0.25
+                                });
+                            },
+                            onEachFeature: function (feature, layer) {
+                                // Generate a popup with all properties
+                                let popupContent = '<b>Properties:</b><br>';
+                                for (let key in feature.properties) {
+                                    popupContent += `<b>${key}:</b> ${feature.properties[key]}<br>`;
+                                }
+                                layer.bindPopup(popupContent);
+                            }
+                        }).addTo(wwwLayer);
+                    })
+                    .catch(error => {
+                        console.error('Error loading the GeoJSON:', error);
+                    });
+
+                ///  END
+
+                // SCALE
+                L.control.scale({
+                    imperial: false,
+                }).addTo(map);
+
+
+                // Layer control
+                var baseMaps = {
+                    "Open Street Map": osmLayer,
+                    "Satellite": googleSat,
+                    "Streets": googleStreets,
+                    "Terrain": googleTerrain,
+                };
+
+                // Add the layers to the map
+                var overlays = {
+                    "Woredas": refGeoJSON,
+                    "Regions": refRegion,
+                    "Incidents past 30 days (red)": last30Layer,
+                    "Incidents past 31-60 days (blue)": last31to60Layer,
+                    "Incidents past 61-90 days (gray)": last61to90Layer,
+                    "ACLED past 90 Days": refACLED,
+                    "Airports": refAirport,
+                    "Amb Fund Cultural Pres": refAFCP,
+                    "Public Universities": refUnivPublic,
+                    "American Spaces": amSpaces,
+                    "Coordinates (deselect other layers)": refLATLNGMGRS, // Add the new LAT-LNG-MGRS layer
+                    "Places of Interest": refPOI,
+                    "Addis Medical": refAddisMedical,
+                    "Aid Locations (USAID in blue)": wwwLayer,
+                    "EducationUSA Scholars": refScholarsWoredas,
+                    // "PEPFAR": refHealthPEPFAR,
+                    // "Health Sites All": refHealth,
+                    // "Exchanges": refAccount,
+                    // "Journalists": refAccount,
+                    // "Crossing Points": refAccount,
+                    // "USAID": refAccount,
+                    // "AmCits": refAccount,
+                    // "US Business Interests": refAccount,
+                    // "Chinese Projects": refAccount,
+                    // "Satellites": refAccount,
+                    // "Hotels": refAccount,
+                    // "Tour Sites": refAccount like American Gibi
+                    // "PRM Humanitarian Refugess 24 ADDIS ABABA 1696": refAccount,
+                    // "": refAccount,
+                };
+
+                L.control.layers(baseMaps, overlays).addTo(map);
+
+                // Load the initial GeoJSON data for Woredas and Regions
+                loadGeoJSON(refGeoJSON, 'data/adminLevels/ET_admin3_2023.geojson');
+                loadGeoJSON(refRegion, 'data/adminLevels/ET_admin1_2023.geojson');
+
+                // Function to get date X days ago
+                function getDateXDaysAgo(days) {
+                    var date = new Date();
+                    date.setDate(date.getDate() - days);
+                    return date;
+                }
+
+                // Event listener for the select menu to change the visible layers
+                document.getElementById('incidentFilter').addEventListener('change', function (e) {
+                    var value = e.target.value;
+                    var selectedLayer = null;
+
+                    // Hide all layers initially
+                    map.eachLayer(function (layer) {
+                        if (layer instanceof L.MarkerClusterGroup) {
+                            map.removeLayer(layer);
                         }
                     });
-                    npsUnitsLayerGroup = L.layerGroup(npsUnitMarkerLayers);
-                }
-                map.addLayer(npsUnitsLayerGroup);
+
+                    // Show the selected layer
+                    if (value === 'last30') {
+                        selectedLayer = last30Layer;
+                    } else if (value === '31to60') {
+                        selectedLayer = last31to60Layer;
+                    } else if (value === '61to90') {
+                        selectedLayer = last61to90Layer;
+                    }
+
+                    if (selectedLayer) {
+                        selectedLayer.addTo(map);
+                    }
+                });
+
+            })
+            .catch(error => console.error('Error loading GeoJSON:', error));
+
+        // Add click event listener for the map to display a single marker
+        var singleMarker = null;
+        map.on('click', function (e) {
+            // Get latitude and longitude from the event
+            var lat = e.latlng.lat;
+            var lng = e.latlng.lng;
+            var mgrsCoords = mgrs.forward([lng, lat]);
+
+            // If the marker already exists, update its position and popup
+            if (singleMarker) {
+                singleMarker.setLatLng([lat, lng])
+                    .setPopupContent(
+                        "<b>Latitude:</b> " + lat.toFixed(4) +
+                        "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                        "<br><b>MGRS:</b> " + mgrsCoords
+                    )
+                    .openPopup();
             } else {
-                if (npsUnitsLayerGroup) { map.removeLayer(npsUnitsLayerGroup); }
+                // If the marker doesn't exist, create it and add to the map
+                singleMarker = L.marker([lat, lng]).addTo(refLATLNGMGRS);
+                singleMarker.bindPopup(
+                    "<b>Latitude:</b> " + lat.toFixed(4) +
+                    "<br><b>Longitude:</b> " + lng.toFixed(4) +
+                    "<br><b>MGRS:</b> " + mgrsCoords
+                ).openPopup();
             }
         });
-
-        // Toggle Baseball Stadiums
-        const toggleBaseballStadiumsCheckbox = document.getElementById('toggleBaseballStadiums');
-        toggleBaseballStadiumsCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                if (!baseballStadiumsLayerGroup) {
-                    baseballStadiumMarkerLayers.length = 0;
-                    baseballStadiumsData.forEach(stadium => {
-                        if (stadium.lat && stadium.long) {
-                            const marker = L.marker([stadium.lat, stadium.long], { icon: redIcon })
-                                .bindPopup(`<b>${stadium.name}</b><br>${stadium.league}`);
-                            baseballStadiumMarkerLayers.push(marker);
-                        }
-                    });
-                    baseballStadiumsLayerGroup = L.layerGroup(baseballStadiumMarkerLayers);
-                }
-                map.addLayer(baseballStadiumsLayerGroup);
-            } else {
-                if (baseballStadiumsLayerGroup) { map.removeLayer(baseballStadiumsLayerGroup); }
-            }
-        });
-
     </script>
+
 </body>
+
 </html>
