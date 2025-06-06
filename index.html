@@ -42,7 +42,7 @@
 
     <h1>Ethiopia Incident Clusters</h1>
     <div id="map"></div>
-
+<!-- 
     <div id="menu">
         <label>Layer Selection: </label>
         <select id="incidentFilter">
@@ -50,7 +50,7 @@
             <option value="31to60">Incidents past 31-60 days</option>
             <option value="61to90">Incidents past 61-90 days</option>
         </select>
-    </div>
+    </div> -->
 
 
     <!-- MGRS Conversion -->
@@ -174,9 +174,9 @@
                 }
 
                 // Layer groups for each date range with marker clusters
-                var last30Layer = L.markerClusterGroup();
-                var last31to60Layer = L.markerClusterGroup();
-                var last61to90Layer = L.markerClusterGroup();
+                // var last30Layer = L.markerClusterGroup();
+                // var last31to60Layer = L.markerClusterGroup();
+                // var last61to90Layer = L.markerClusterGroup();
 
                 // Function to create markers for each filtered incident and add them to the respective clusters
                 function createMarkerLayer(layer, incidents, color) {
@@ -198,9 +198,9 @@
                 }
 
                 // Create markers for each date range with specific colors
-                createMarkerLayer(last30Layer, filterIncidents(getDateXDaysAgo(30), new Date()), "red");
-                createMarkerLayer(last31to60Layer, filterIncidents(getDateXDaysAgo(60), getDateXDaysAgo(31)), "blue");
-                createMarkerLayer(last61to90Layer, filterIncidents(getDateXDaysAgo(90), getDateXDaysAgo(61)), "gray");
+                // createMarkerLayer(last30Layer, filterIncidents(getDateXDaysAgo(30), new Date()), "red");
+                // createMarkerLayer(last31to60Layer, filterIncidents(getDateXDaysAgo(60), getDateXDaysAgo(31)), "blue");
+                // createMarkerLayer(last61to90Layer, filterIncidents(getDateXDaysAgo(90), getDateXDaysAgo(61)), "gray");
 
                 // **** BASE LAYERS *****
                 googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
@@ -362,7 +362,7 @@
                 let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
 
                 // USE "OR for multi ISO"
-                // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia; 729 Sudan
+                // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia; 729 Sudan; 686 Senagal; 
 
                 // ACLED Data Layer
                 let apiURL = `https://api.acleddata.com/acled/read/?key=ujtQHEeGFTEfGG3BIBGS&email=davisse@fan.gov&iso=231|686&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
@@ -484,9 +484,9 @@ scholarMarkers.forEach(function (entry) {
                 var overlays = {
                     "Woredas": refGeoJSON,
                     "Regions": refRegion,
-                    "Incidents past 30 days (red)": last30Layer,
-                    "Incidents past 31-60 days (blue)": last31to60Layer,
-                    "Incidents past 61-90 days (gray)": last61to90Layer,
+                    // "Incidents past 30 days (red)": last30Layer,
+                    // "Incidents past 31-60 days (blue)": last31to60Layer,
+                    // "Incidents past 61-90 days (gray)": last61to90Layer,
                     "ACLED past 90 Days": refACLED,
                     "Airports": refAirport,
                     "Amb Fund Cultural Pres": refAFCP,
@@ -539,17 +539,17 @@ scholarMarkers.forEach(function (entry) {
                     });
 
                     // Show the selected layer
-                    if (value === 'last30') {
-                        selectedLayer = last30Layer;
-                    } else if (value === '31to60') {
-                        selectedLayer = last31to60Layer;
-                    } else if (value === '61to90') {
-                        selectedLayer = last61to90Layer;
-                    }
+                    // if (value === 'last30') {
+                    //     selectedLayer = last30Layer;
+                    // } else if (value === '31to60') {
+                    //     selectedLayer = last31to60Layer;
+                    // } else if (value === '61to90') {
+                    //     selectedLayer = last61to90Layer;
+                    // }
 
-                    if (selectedLayer) {
-                        selectedLayer.addTo(map);
-                    }
+                    // if (selectedLayer) {
+                    //     selectedLayer.addTo(map);
+                    // }
                 });
 
             })
