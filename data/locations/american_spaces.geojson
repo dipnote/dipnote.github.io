@@ -1,0 +1,75 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.3795, 11.5935]
+      },
+      "properties": {
+        "name": "Bahir Dar AC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.856938, 9.583438]
+      },
+      "properties": {
+        "name": "Dire Dawa AC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.835999, 7.67724]
+      },
+      "properties": {
+        "name": "Jimma AC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.454062, 13.481813]
+      },
+      "properties": {
+        "name": "Mekelle AC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.742937, 9.007687]
+      },
+      "properties": {
+        "name": "CJCRAC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.7635, 9.05821]
+      },
+      "properties": {
+        "name": "Satchmo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.47438, 7.05333]
+      },
+      "properties": {
+        "name": "Hawassa"
+      }
+    }
+  ]
+}

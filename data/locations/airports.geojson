@@ -1,0 +1,266 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.799, 8.978]
+      },
+      "properties": {
+        "name": "Bole Airport",
+        "iata_icao": "ADD / HAAB",
+        "elevation_m_str": "3,800m",
+        "elevation_ft_str": "12,467f",
+        "popup_html": "<p>Bole Airport<br/>IATA:ADD / ICAO:HAAB<br/>3,800m / 12,467f</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.321, 11.608]
+      },
+      "properties": {
+        "name": "Bahir Dar Airport",
+        "iata_icao": "BJR",
+        "popup_html": "<p>BJR<br/>Bahir Dar Airport</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.434, 12.520]
+      },
+      "properties": {
+        "name": "Gonder Airport",
+        "iata_icao": "GDQ",
+        "popup_html": "<p>GDQ<br/>Gonder Airport</p>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.586, 10.019]
+      },
+      "properties": {
+        "name": "Asosa Airport",
+        "popup_html": "Asosa Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [41.854, 9.625]
+      },
+      "properties": {
+        "name": "Aba Tenna Dejazmach Yilma Intl Airport",
+        "popup_html": "Aba Tenna Dejazmach Yilma Intl Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.563, 8.129]
+      },
+      "properties": {
+        "name": "Gambella Airport",
+        "popup_html": "Gambella Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.817, 7.666]
+      },
+      "properties": {
+        "name": "Jimma Airport",
+        "popup_html": "Jimma Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.591, 6.039]
+      },
+      "properties": {
+        "name": "Arba Minch Airport",
+        "popup_html": "Arba Minch Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [43.579, 5.935]
+      },
+      "properties": {
+        "name": "Gode Airport",
+        "popup_html": "Gode Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.773, 14.147]
+      },
+      "properties": {
+        "name": "Axum Airport",
+        "popup_html": "Axum Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.971, 11.975]
+      },
+      "properties": {
+        "name": "Lalibela Airport",
+        "popup_html": "Lalibela Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.534, 13.468]
+      },
+      "properties": {
+        "name": "Mekelle Airport",
+        "popup_html": "Mekelle Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.242, 6.733]
+      },
+      "properties": {
+        "name": "Kebri Dahar Airport",
+        "popup_html": "Kebri Dahar Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.912, 9.333]
+      },
+      "properties": {
+        "name": "Wilwal International Airport",
+        "popup_html": "Wilwal International Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.397, 7.1]
+      },
+      "properties": {
+        "name": "Hawassa International Airport",
+        "popup_html": "Hawassa International Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.726, 11.111]
+      },
+      "properties": {
+        "name": "Kombolcha Airport",
+        "popup_html": "Kombolcha Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.858, 8.554]
+      },
+      "properties": {
+        "name": "Dembidollo Airport",
+        "popup_html": "Dembidollo Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [44.767, 6.078]
+      },
+      "properties": {
+        "name": "Shilavo Airport",
+        "popup_html": "Shilavo Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.272, 14.078]
+      },
+      "properties": {
+        "name": "Shire Inda Selassie Airport",
+        "popup_html": "Shire Inda Selassie Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.992, 11.788]
+      },
+      "properties": {
+        "name": "Semera Airport",
+        "popup_html": "Semera Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.045, 7.119]
+      },
+      "properties": {
+        "name": "Robe Airport",
+        "popup_html": "Robe Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.562, 5.783]
+      },
+      "properties": {
+        "name": "Jinka (Baco) Airport",
+        "popup_html": "Jinka (Baco) Airport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.610, 9.037]
+      },
+      "properties": {
+        "name": "Nekemte Airport",
+        "iata_icao": "NEK / HANK",
+        "elevation_m_str": "1,250m",
+        "elevation_ft_str": "4,101f",
+        "popup_html": "<p>Nekemte Airport<br/> IATA:NEK / ICAO:HANK<br/>1,250m / 4,101f</p>"
+      }
+    }
+  ]
+}
