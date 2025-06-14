@@ -1,0 +1,126 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.4302, 13.8580]
+      },
+      "properties": {
+        "name": "Debra Tsion Church",
+        "year": "2020"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.872284, 7.701226]
+      },
+      "properties": {
+        "name": "Aba Jiffar Palace",
+        "year": "2018"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.0411, 12.03161]
+      },
+      "properties": {
+        "name": "Lalibela Churches",
+        "year": "2016"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.0731, 12.1404]
+      },
+      "properties": {
+        "name": "Yemrehanna Kristos Church",
+        "year": "2015"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [42.1226, 9.3127]
+      },
+      "properties": {
+        "name": "Teferi Mekonnen Palace",
+        "year": "2009"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.749672, 9.032813]
+      },
+      "properties": {
+        "name": "Mohammad Ali House",
+        "year": "2007"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.754552, 9.037967]
+      },
+      "properties": {
+        "name": "Hager Fikir Theater",
+        "year": "2006"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [40.7074, 7.7467]
+      },
+      "properties": {
+        "name": "Sheikh Nur Hussein Shrine",
+        "year": "2005"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.6351, 12.2350]
+      },
+      "properties": {
+        "name": "Guzara Castle",
+        "year": "2004"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [39.0191, 14.2860]
+      },
+      "properties": {
+        "name": "Yeha Temple",
+        "year": "2002"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.74224, 9.03124]
+      },
+      "properties": {
+        "name": "American Gibi",
+        "year": "2023"
+      }
+    }
+  ]
+}
