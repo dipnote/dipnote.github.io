@@ -456,7 +456,7 @@ scholarMarkers.forEach(function (entry) {
                     "Places of Interest": refPOI,
                     "Addis Medical": refAddisMedical,
                     "Aid Locations (USAID in blue)": wwwLayer,
-                    "EducationUSA Scholars": refScholarsWoredas,
+                    // "EducationUSA Scholars": refScholarsWoredas,
                 };
 
                 L.control.layers(baseMaps, overlays).addTo(map);
