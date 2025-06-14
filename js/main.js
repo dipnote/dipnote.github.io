@@ -338,10 +338,16 @@ fetch('data/conflict/241207-22JUL14-24NOV30-Incident-Cleaned.geojson')
         let DaysAgoStr = DaysAgo.toISOString().split('T')[0];
 
         // USE "OR for multi ISO"
-        // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia; 729 Sudan; 686 Senagal;
+        // 232 Eritera; 262 Djibouti; 887 Yemen; 231 Ethiopia; 729 Sudan; 
+
+        // 686 Senagal; 148 Chad; 270 The Gambia; 562 Niger; 226 Equatorial Guinea; 
+        // 854 Burkina Faso, 132 Cabo Verde, 148 Chad, 324 Guinea
+        // 466 Mali, 478 Mauritania, 624 Guinea-Bissau
+
+        //|148|270|562|226|854|132|324|466|478|624
 
         // ACLED Data Layer
-        let apiURL = `https://api.acleddata.com/acled/read/?key=${ACLED_API_KEY}&email=davisse@fan.gov&iso=231|686&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+        let apiURL = `https://api.acleddata.com/acled/read/?key=${ACLED_API_KEY}&email=davisse@fan.gov&iso=231|686|148|270|562|226|854|132|324|466|478|624&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
         let refACLED = L.layerGroup();
         var acledMarkers = L.markerClusterGroup();
 
