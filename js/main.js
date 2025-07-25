@@ -280,8 +280,26 @@ fetch('data/conflict/241207-22JUL14-24NOV30-Incident-Cleaned.geojson')
                         });
                     },
                     onEachFeature: function (feature, layer) {
-                        if (feature.properties && feature.properties.name) {
-                            layer.bindPopup(feature.properties.name);
+                        if (feature.properties && feature.properties["Am Space"]) {
+                            let popupContent = `<b>${feature.properties["Am Space"]}</b><br/>`;
+                            
+                            if (feature.properties.Post) {
+                                popupContent += `<b>Country:</b> ${feature.properties.Post}<br/>`;
+                            }
+                            if (feature.properties["Host Institution"]) {
+                                popupContent += `<b>Host Institution:</b> ${feature.properties["Host Institution"]}<br/>`;
+                            }
+                            if (feature.properties["Plus Code"]) {
+                                popupContent += `<b>Plus Code:</b> ${feature.properties["Plus Code"]}<br/>`;
+                            }
+                            if (feature.properties["Social Media"]) {
+                                popupContent += `<b>Social Media:</b> ${feature.properties["Social Media"]}<br/>`;
+                            }
+                            if (feature.properties.Notes) {
+                                popupContent += `<b>Notes:</b> ${feature.properties.Notes}`;
+                            }
+                            
+                            layer.bindPopup(popupContent);
                         }
                     }
                 }).addTo(amSpaces);

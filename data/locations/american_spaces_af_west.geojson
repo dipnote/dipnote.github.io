@@ -4,118 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Bahir Dar AC",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "11.5935,37.3795",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [37.3795, 11.5935]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Dire Dawa AC",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "9.583438,41.856938",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [41.856938, 9.583438]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Jimma AC",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "7.67724,36.835999",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [36.835999, 7.67724]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Mekelle AC",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "13.481813,39.454062",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [39.454062, 13.481813]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "CJCRAC",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "9.007687,38.742937",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [38.742937, 9.007687]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Satchmo",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "9.05821,38.7635",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [38.7635, 9.05821]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "Post": "Ethiopia",
-        "Am Space": "Hawassa",
-        "Host Institution": "",
-        "Address": "",
-        "Plus Code": "",
-        "Coordinates": "7.05333,38.47438",
-        "Notes": ""
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [38.47438, 7.05333]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Post": "Burkina Faso",
         "Am Space": "Am Corner Bobo-Dioulasso",
         "Host Institution": "Université Aube",
@@ -124,10 +12,7 @@
         "Coordinates": "12.360312,-1.498391",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-1.498391, 12.360312]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -140,10 +25,7 @@
         "Coordinates": "12.238188,-2.399563",
         "Notes": "formerly University of Koudougou"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-2.399563, 12.238188]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -156,10 +38,7 @@
         "Coordinates": "12.304937,-1.497187",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-1.497187, 12.304937]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -172,10 +51,7 @@
         "Coordinates": "14.922937,-23.548687",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-23.548687, 14.922937]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -183,15 +59,12 @@
         "Post": "Chad",
         "Am Space": "Am Center N'djamena",
         "Host Institution": "U.S. Embassy N'Djamena",
-        "Address": "Rond-Point Chagoua B.P. 413 N'Djamena",
+        "Address": "Rond-Point Chagoua B.P. 413 N’Djamena",
         "Plus Code": "422X+R45, N'Djamena, Chad",
         "Coordinates": "12.102062,15.047812",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [15.047812, 12.102062]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -204,10 +77,7 @@
         "Coordinates": "12.109312,15.044062",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [15.044062, 12.109312]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -220,10 +90,7 @@
         "Coordinates": "13.4447496,-16.7327461",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-16.7327461, 13.4447496]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -236,10 +103,7 @@
         "Coordinates": "9.595063,-13.636688",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-13.636688, 9.595063]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -252,10 +116,7 @@
         "Coordinates": "9.680687,-13.582062",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-13.582062, 9.680687]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -268,10 +129,7 @@
         "Coordinates": "10.375063,-9.301438",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-9.301438, 10.375063]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -284,10 +142,7 @@
         "Coordinates": "7.732563,-8.834938",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-8.834938, 7.732563]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -300,10 +155,7 @@
         "Coordinates": "11.862312,-15.600563",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-15.600563, 11.862312]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -316,10 +168,7 @@
         "Coordinates": "12.629812,-8.018937",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-8.018937, 12.629812]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -332,10 +181,7 @@
         "Coordinates": "12.488062,-8.051687",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-8.051687, 12.488062]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -348,10 +194,7 @@
         "Coordinates": "18.098062,-15.996688",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-15.996688, 18.098062]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -364,10 +207,7 @@
         "Coordinates": "16.981488,7.979766",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.979766, 16.981488]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -380,10 +220,7 @@
         "Coordinates": "13.488312,7.103188",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [7.103188, 13.488312]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -396,26 +233,20 @@
         "Coordinates": "13.526187,2.072938",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [2.072938, 13.526187]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
       "properties": {
         "Post": "Niger",
         "Am Space": "Am Corner Niamey",
-        "Host Institution": "l'Association des Volontaires pour l'Education et la Culture (AVEC)",
+        "Host Institution": "l’Association des Volontaires pour l’Education et la Culture (AVEC)",
         "Address": "Yantala Haut, Avenue du Koutous NY-213 BP. 13004",
         "Plus Code": "G3VM+43 Niamey, Niger",
         "Coordinates": "13.542813,2.082641",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [2.082641, 13.542813]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -428,10 +259,7 @@
         "Coordinates": "13.806563,8.984438",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [8.984438, 13.806563]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -444,10 +272,7 @@
         "Coordinates": "14.745188,-17.526187",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-17.526187, 14.745188]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -460,10 +285,7 @@
         "Coordinates": "15.622187,-16.222313",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-16.222313, 15.622187]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -476,10 +298,7 @@
         "Coordinates": "16.018813,-16.505313",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-16.505313, 16.018813]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -492,10 +311,7 @@
         "Coordinates": "14.812062,-16.927563",
         "Notes": ""
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-16.927563, 14.812062]
-      }
+      "geometry": null
     },
     {
       "type": "Feature",
@@ -505,13 +321,9 @@
         "Host Institution": "Centre Culturel Régional de Ziguinchor",
         "Address": "",
         "Plus Code": "HP8M+82J, Ziguinchor",
-        "Coordinates": "12.565812,-16.267437",
-        "Notes": ""
+        "Coordinates": "12.565812,-16.267437"
       },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-16.267437, 12.565812]
-      }
+      "geometry": null
     }
   ]
 }
