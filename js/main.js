@@ -365,7 +365,7 @@ fetch('data/conflict/241207-22JUL14-24NOV30-Incident-Cleaned.geojson')
         //|148|270|562|226|854|132|324|466|478|624
 
         // ACLED Data Layer
-        let apiURL = `https://api.acleddata.com/acled/read/?key=${ACLED_API_KEY}&email=davisse@fan.gov&iso=231|686|148|270|562|226|854|132|324|466|478|624&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
+        let apiURL = `https://api.acleddata.com/acled/read/?key=${ACLED_API_KEY}&email=davisse@fan.gov&iso=231|729|232&event_date=${DaysAgoStr}|${todayStr}&event_date_where=BETWEEN`;
         let refACLED = L.layerGroup();
         var acledMarkers = L.markerClusterGroup();
 
